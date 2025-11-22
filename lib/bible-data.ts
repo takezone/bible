@@ -2,12 +2,16 @@ import type { BibleData, Book, Chapter, Verse, Translation } from '@/types/bible
 import kougoData from '@/data/bible-kougo.json';
 import kjvData from '@/data/bible-kjv.json';
 import webData from '@/data/bible-web.json';
+import bookOrderData from '@/data/book-order.json';
 
 const bibleCache: Record<Translation, BibleData> = {
   kougo: kougoData as BibleData,
   kjv: kjvData as BibleData,
   web: webData as BibleData,
 };
+
+// 書物の順序データ
+export const BOOK_ORDER: Array<{ id: string; name: string; testament: string }> = bookOrderData;
 
 export function getBibleData(translation: Translation): BibleData {
   return bibleCache[translation];
@@ -58,5 +62,20 @@ export function searchVerses(
   return results;
 }
 
-// 書名を日本語から英語IDにマッピング（不要になったため削除）
-// 現在は両方のデータが同じIDを使用しているため、直接IDでアクセス可能
+// 前の書物を取得
+export function getPreviousBook(currentBookId: string): { id: string; name: string } | null {
+  const currentIndex = BOOK_ORDER.findIndex(b => b.id === currentBookId);
+  if (currentIndex > 0) {
+    return BOOK_ORDER[currentIndex - 1];
+  }
+  return null;
+}
+
+// 次の書物を取得
+export function getNextBook(currentBookId: string): { id: string; name: string } | null {
+  const currentIndex = BOOK_ORDER.findIndex(b => b.id === currentBookId);
+  if (currentIndex >= 0 && currentIndex < BOOK_ORDER.length - 1) {
+    return BOOK_ORDER[currentIndex + 1];
+  }
+  return null;
+}

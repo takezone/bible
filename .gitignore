@@ -45,7 +45,16 @@ next-env.d.ts
 *-fixed.json
 scrape-log.txt
 
+# IMPORTANT: Keep these files - they are required for the app
+!data/book-order.json
+!data/bible-*.json
+
 # Temporary directories
 temp-web/
 temp-scrollmapper/
 temp-bibleapi/
+
+# Large map files
+/public/*.pdf
+/public/maps/
+/public/*.geojson

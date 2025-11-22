@@ -16,6 +16,8 @@ interface ChapterViewerProps {
   fontSize: FontSize;
   highlightVerse: number | null;
   onChapterChange: (chapterNum: number) => void;
+  onPreviousChapter: () => void;
+  onNextChapter: () => void;
 }
 
 export function ChapterViewer({
@@ -27,7 +29,9 @@ export function ChapterViewer({
   rightTranslation,
   fontSize,
   highlightVerse,
-  onChapterChange
+  onChapterChange,
+  onPreviousChapter,
+  onNextChapter
 }: ChapterViewerProps) {
   // 翻訳名のマッピング
   const translationNames: Record<Translation, string> = {
@@ -80,7 +84,31 @@ export function ChapterViewer({
   }, [book.id, chapter.chapter, book.name]);
 
   return (
-    <div className="space-y-6">
+    <>
+      {/* メインコンテンツ領域の左右に固定されるナビゲーションボタン */}
+      {/* 左ボタン: メインコンテンツの左padding内に配置 */}
+      <button
+        onClick={onPreviousChapter}
+        className="fixed left-[calc(25%-1rem)] top-1/2 -translate-y-1/2 z-20 bg-white hover:bg-gray-100 text-gray-700 rounded-full shadow-lg p-3 transition-all hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 hidden lg:block xl:left-[calc((100vw-1280px)/2+320px-1rem)]"
+        aria-label="前の章へ"
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+        </svg>
+      </button>
+
+      {/* 右ボタン: メインコンテンツの右padding内に配置 */}
+      <button
+        onClick={onNextChapter}
+        className="fixed right-[-1rem] top-1/2 -translate-y-1/2 z-20 bg-white hover:bg-gray-100 text-gray-700 rounded-full shadow-lg p-3 transition-all hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 hidden lg:block xl:right-[calc((100vw-1280px)/2-1rem)]"
+        aria-label="次の章へ"
+      >
+        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+        </svg>
+      </button>
+
+      <div className="space-y-6">
       {/* 章ナビゲーション */}
       <div className="bg-white rounded-lg shadow p-4">
         <div className="flex items-center justify-between mb-4">
@@ -285,6 +313,7 @@ export function ChapterViewer({
           例: {typeof window !== 'undefined' && `${window.location.origin}/?book=${book.id}&chapter=${chapter.chapter}&verse=3`}
         </p>
       </div>
-    </div>
+      </div>
+    </>
   );
 }

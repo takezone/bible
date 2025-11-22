@@ -2,7 +2,7 @@
 
 import { useState, useEffect, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
-import { getBibleData, searchVerses, getBook, getChapter } from '@/lib/bible-data';
+import { getBibleData, searchVerses, getBook, getChapter, getPreviousBook, getNextBook } from '@/lib/bible-data';
 import type { Book, Chapter, Verse, Translation } from '@/types/bible';
 import { BookSelector } from '@/components/BookSelector';
 import { ChapterViewer, type FontSize } from '@/components/ChapterViewer';
@@ -113,6 +113,62 @@ function BibleApp() {
       setSelectedChapter(newChapter);
       setSelectedVerse(null);
       updateURL(selectedBook.id, chapterNum, null);
+    }
+  };
+
+  const handlePreviousChapter = () => {
+    if (!selectedBook || !selectedChapter) return;
+
+    const currentChapterIndex = selectedBook.chapters.findIndex(ch => ch.chapter === selectedChapter.chapter);
+
+    if (currentChapterIndex > 0) {
+      // 同じ書の前の章へ
+      const prevChapter = selectedBook.chapters[currentChapterIndex - 1];
+      setSelectedChapter(prevChapter);
+      setSelectedVerse(null);
+      updateURL(selectedBook.id, prevChapter.chapter, null);
+    } else {
+      // 前の書の最後の章へ
+      const prevBookInfo = getPreviousBook(selectedBook.id);
+      if (prevBookInfo) {
+        const translation = displayMode === 'single' ? singleTranslation : leftTranslation;
+        const prevBook = getBook(translation, prevBookInfo.id);
+        if (prevBook) {
+          const lastChapter = prevBook.chapters[prevBook.chapters.length - 1];
+          setSelectedBook(prevBook);
+          setSelectedChapter(lastChapter);
+          setSelectedVerse(null);
+          updateURL(prevBook.id, lastChapter.chapter, null);
+        }
+      }
+    }
+  };
+
+  const handleNextChapter = () => {
+    if (!selectedBook || !selectedChapter) return;
+
+    const currentChapterIndex = selectedBook.chapters.findIndex(ch => ch.chapter === selectedChapter.chapter);
+
+    if (currentChapterIndex < selectedBook.chapters.length - 1) {
+      // 同じ書の次の章へ
+      const nextChapter = selectedBook.chapters[currentChapterIndex + 1];
+      setSelectedChapter(nextChapter);
+      setSelectedVerse(null);
+      updateURL(selectedBook.id, nextChapter.chapter, null);
+    } else {
+      // 次の書の最初の章へ
+      const nextBookInfo = getNextBook(selectedBook.id);
+      if (nextBookInfo) {
+        const translation = displayMode === 'single' ? singleTranslation : leftTranslation;
+        const nextBook = getBook(translation, nextBookInfo.id);
+        if (nextBook) {
+          const firstChapter = nextBook.chapters[0];
+          setSelectedBook(nextBook);
+          setSelectedChapter(firstChapter);
+          setSelectedVerse(null);
+          updateURL(nextBook.id, firstChapter.chapter, null);
+        }
+      }
     }
   };
 
@@ -365,7 +421,7 @@ function BibleApp() {
               />
             </aside>
 
-            <div className="lg:col-span-3">
+            <div className="lg:col-span-3 relative">
               {selectedBook && selectedChapter && (
                 <ChapterViewer
                   book={selectedBook}
@@ -377,6 +433,8 @@ function BibleApp() {
                   fontSize={fontSize}
                   highlightVerse={selectedVerse}
                   onChapterChange={handleChapterChange}
+                  onPreviousChapter={handlePreviousChapter}
+                  onNextChapter={handleNextChapter}
                 />
               )}
             </div>
