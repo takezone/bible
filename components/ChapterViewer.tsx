@@ -33,7 +33,7 @@ export function ChapterViewer({
   const translationNames: Record<Translation, string> = {
     kougo: '口語訳',
     kjv: 'King James Version',
-    web: 'World English Bible'
+    web: 'New Heart English Bible'
   };
 
   // 節へのスクロール
@@ -161,57 +161,59 @@ export function ChapterViewer({
         {displayMode === 'parallel' && leftChapter && rightChapter && (
           <>
             {/* PC: 2列表示 */}
-            <div className="hidden md:grid md:grid-cols-2 gap-8">
-              {/* 左側 */}
-              <div>
-                <h3 className="text-lg font-semibold mb-4 text-gray-700">
+            <div className="hidden md:block">
+              {/* ヘッダー */}
+              <div className="grid grid-cols-2 gap-8 mb-4">
+                <h3 className="text-lg font-semibold text-gray-700">
                   {translationNames[leftTranslation]}
                 </h3>
-                <div className="space-y-3">
-                  {leftChapter.verses.map((verse) => (
-                    <div
-                      key={verse.verse}
-                      id={`verse-${verse.verse}`}
-                      className={`flex gap-3 rounded p-2 -mx-2 transition-colors ${
-                        highlightVerse === verse.verse ? 'bg-yellow-100' : ''
-                      }`}
-                    >
-                      <span className="text-gray-400 text-sm font-medium min-w-[2rem] flex-shrink-0">
-                        {verse.verse}
-                      </span>
-                      <p className={`text-gray-800 leading-relaxed ${
-                        fontSize === 'sm' ? 'text-base' :
-                        fontSize === 'lg' ? 'text-xl' :
-                        'text-2xl'
-                      }`}>
-                        {verse.text}
-                      </p>
-                    </div>
-                  ))}
-                </div>
-              </div>
-
-              {/* 右側 */}
-              <div className="border-l border-gray-200 pl-8">
-                <h3 className="text-lg font-semibold mb-4 text-gray-700">
+                <h3 className="text-lg font-semibold text-gray-700 border-l border-gray-200 pl-8">
                   {translationNames[rightTranslation]}
                 </h3>
-                <div className="space-y-3">
-                  {rightChapter.verses.map((verse) => (
-                    <div key={verse.verse} className="flex gap-3">
-                      <span className="text-gray-400 text-sm font-medium min-w-[2rem] flex-shrink-0">
-                        {verse.verse}
-                      </span>
-                      <p className={`text-gray-800 leading-relaxed ${
-                        fontSize === 'sm' ? 'text-base' :
-                        fontSize === 'lg' ? 'text-xl' :
-                        'text-2xl'
-                      }`}>
-                        {verse.text}
-                      </p>
+              </div>
+
+              {/* 節ごとに左右を並べる */}
+              <div className="space-y-3">
+                {leftChapter.verses.map((leftVerse) => {
+                  const rightVerse = rightChapter.verses.find(v => v.verse === leftVerse.verse);
+                  return (
+                    <div
+                      key={leftVerse.verse}
+                      id={`verse-${leftVerse.verse}`}
+                      className={`grid grid-cols-2 gap-8 rounded p-2 -mx-2 transition-colors ${
+                        highlightVerse === leftVerse.verse ? 'bg-yellow-100' : ''
+                      }`}
+                    >
+                      {/* 左側 */}
+                      <div className="flex gap-3">
+                        <span className="text-gray-400 text-sm font-medium min-w-[2rem] flex-shrink-0">
+                          {leftVerse.verse}
+                        </span>
+                        <p className={`text-gray-800 leading-relaxed ${
+                          fontSize === 'sm' ? 'text-base' :
+                          fontSize === 'lg' ? 'text-xl' :
+                          'text-2xl'
+                        }`}>
+                          {leftVerse.text}
+                        </p>
+                      </div>
+
+                      {/* 右側 */}
+                      <div className="flex gap-3 border-l border-gray-200 pl-8">
+                        <span className="text-gray-400 text-sm font-medium min-w-[2rem] flex-shrink-0">
+                          {rightVerse?.verse}
+                        </span>
+                        <p className={`text-gray-800 leading-relaxed ${
+                          fontSize === 'sm' ? 'text-base' :
+                          fontSize === 'lg' ? 'text-xl' :
+                          'text-2xl'
+                        }`}>
+                          {rightVerse?.text}
+                        </p>
+                      </div>
                     </div>
-                  ))}
-                </div>
+                  );
+                })}
               </div>
             </div>
 
@@ -275,12 +277,12 @@ export function ChapterViewer({
         <p className="text-sm text-gray-700">
           <strong>共有用URL:</strong>{' '}
           <code className="bg-white px-2 py-1 rounded text-blue-600 text-xs sm:text-sm break-all">
-            {typeof window !== 'undefined' && `${window.location.origin}/${book.id}/${chapter.chapter}`}
+            {typeof window !== 'undefined' && `${window.location.origin}/?book=${book.id}&chapter=${chapter.chapter}`}
           </code>
         </p>
         <p className="text-xs text-gray-500 mt-2">
-          特定の節を共有する場合は、URLの最後に「/節番号」を追加してください。<br />
-          例: {typeof window !== 'undefined' && `${window.location.origin}/${book.id}/${chapter.chapter}/3`}
+          特定の節を共有する場合は、URLの最後に「&verse=節番号」を追加してください。<br />
+          例: {typeof window !== 'undefined' && `${window.location.origin}/?book=${book.id}&chapter=${chapter.chapter}&verse=3`}
         </p>
       </div>
     </div>

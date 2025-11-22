@@ -229,7 +229,7 @@ export default function Home() {
                     onChange={(e) => setSingleTranslation('web')}
                     className="w-3 h-3"
                   />
-                  <span className="text-gray-700">WEB</span>
+                  <span className="text-gray-700">NHEB</span>
                 </label>
               </div>
             )}
@@ -268,7 +268,7 @@ export default function Home() {
                       onChange={(e) => setLeftTranslation('web')}
                       className="w-3 h-3"
                     />
-                    <span className="text-gray-700">WEB</span>
+                    <span className="text-gray-700">NHEB</span>
                   </label>
                 </div>
 
@@ -305,7 +305,7 @@ export default function Home() {
                       onChange={(e) => setRightTranslation('web')}
                       className="w-3 h-3"
                     />
-                    <span className="text-gray-700">WEB</span>
+                    <span className="text-gray-700">NHEB</span>
                   </label>
                 </div>
               </>
@@ -346,7 +346,7 @@ export default function Home() {
               transform lg:transform-none
               transition-transform duration-300
               ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
-              overflow-y-auto
+              overflow-y-auto lg:overflow-visible
               pt-16 lg:pt-0
             `}>
               <BookSelector

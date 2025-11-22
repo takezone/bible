@@ -32,7 +32,10 @@ export function Credits() {
                   <strong>翻訳:</strong> 日本の聖書学者による共同翻訳。アメリカ聖書協会・イギリス聖書協会の協力のもと、1951年4月に翻訳事業が開始されました。
                 </p>
                 <p>
-                  <strong>特徴:</strong> 日本人の聖書学者による初の口語訳聖書として、戦後の日本で広く読まれるようになりました。
+                  <strong>特徴:</strong> 戦後、広く普及した口語訳聖書。文語訳から口語訳への移行期において、日本聖書協会による標準的な翻訳として定着しました。
+                </p>
+                <p className="text-xs text-gray-500 mt-2">
+                  ※ 日本語の口語訳聖書としては、1952年にキリスト新聞社から賀川豊彦の影響を受けた渡瀬主一郎・武藤富男訳『新約聖書口語訳』が先行して刊行されています。
                 </p>
                 <p className="text-xs text-gray-600 mt-3">
                   データソース: <a href="https://github.com/yuki-kimoto/biblesearch" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">yuki-kimoto/biblesearch (SQLiteデータベース)</a>
@@ -62,28 +65,25 @@ export function Credits() {
               </div>
             </div>
 
-            {/* World English Bible */}
+            {/* New Heart English Bible */}
             <div className="bg-white rounded-lg p-5 shadow-sm">
-              <h3 className="font-bold text-base text-gray-900 mb-3">World English Bible (WEB)</h3>
+              <h3 className="font-bold text-base text-gray-900 mb-3">New Heart English Bible (NHEB)</h3>
               <div className="space-y-2">
                 <p>
-                  <strong>翻訳:</strong> Michael Paul Johnson と多数のボランティアによる現代英語訳聖書
+                  <strong>翻訳:</strong> Wayne A. Mitchell による現代英語訳聖書（World English Bible をベースに改訂）
                 </p>
                 <p>
-                  <strong>翻訳期間:</strong> 1994年 - 2020年
+                  <strong>元となった翻訳:</strong> World English Bible (WEB) を改訂・改善したもの
                 </p>
                 <p>
-                  <strong>元となった翻訳:</strong> American Standard Version (1901) を現代英語に改訂
-                </p>
-                <p>
-                  <strong>特徴:</strong> 完全にパブリックドメインの現代英語訳聖書として、誰でも自由にコピー・配布・利用できます。KJVと異なり、現代の英語表現を使用しているため読みやすくなっています。
+                  <strong>特徴:</strong> 完全にパブリックドメインの現代英語訳聖書として、誰でも自由にコピー・配布・利用できます。WEBの自然な現代英語表現を継承しつつ、さらに読みやすく改訂されています。KJVと異なり、現代の英語表現を使用しているため読みやすくなっています。
                 </p>
                 <p>
                   <strong>ライセンス:</strong> パブリックドメイン（著作権なし）- 著作権料や許可なしで自由に使用可能
                 </p>
                 <p className="text-xs text-gray-600 mt-3">
-                  データソース: <a href="https://github.com/TehShrike/world-english-bible" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">TehShrike/world-english-bible (JSONデータ)</a><br />
-                  公式サイト: <a href="https://worldenglish.bible/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">worldenglish.bible</a>
+                  データソース: <a href="https://github.com/scrollmapper/bible_databases" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">scrollmapper/bible_databases (JSONデータ)</a><br />
+                  NHEB公式サイト: <a href="https://nheb.net/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">nheb.net</a>
                 </p>
               </div>
             </div>
