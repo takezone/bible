@@ -85,11 +85,11 @@ export function ChapterViewer({
 
   return (
     <>
-      {/* メインコンテンツ領域の左右に固定されるナビゲーションボタン */}
-      {/* 左ボタン: メインコンテンツの左padding内に配置 */}
+      {/* PC: 画面左右に固定されるナビゲーションボタン */}
       <button
         onClick={onPreviousChapter}
-        className="fixed left-[calc(25%-1rem)] top-1/2 -translate-y-1/2 z-20 bg-white hover:bg-gray-100 text-gray-700 rounded-full shadow-lg p-3 transition-all hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 hidden lg:block xl:left-[calc((100vw-1280px)/2+320px-1rem)]"
+        disabled={chapter.chapter === 1}
+        className="fixed left-[calc(25%-1rem)] top-1/2 -translate-y-1/2 z-20 bg-white hover:bg-gray-100 text-gray-700 rounded-full shadow-lg p-3 transition-all hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:scale-100 hidden lg:block xl:left-[calc((100vw-1280px)/2+320px-1rem)]"
         aria-label="前の章へ"
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -97,16 +97,41 @@ export function ChapterViewer({
         </svg>
       </button>
 
-      {/* 右ボタン: メインコンテンツの右padding内に配置 */}
       <button
         onClick={onNextChapter}
-        className="fixed right-[-1rem] top-1/2 -translate-y-1/2 z-20 bg-white hover:bg-gray-100 text-gray-700 rounded-full shadow-lg p-3 transition-all hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 hidden lg:block xl:right-[calc((100vw-1280px)/2-1rem)]"
+        disabled={chapter.chapter === book.chapters.length}
+        className="fixed right-[-1rem] top-1/2 -translate-y-1/2 z-20 bg-white hover:bg-gray-100 text-gray-700 rounded-full shadow-lg p-3 transition-all hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:scale-100 hidden lg:block xl:right-[calc((100vw-1280px)/2-1rem)]"
         aria-label="次の章へ"
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
         </svg>
       </button>
+
+      {/* スマホ: 画面下部に固定されるナビゲーションボタン */}
+      <div className="fixed bottom-4 left-0 right-0 z-20 flex justify-center gap-4 lg:hidden">
+        <button
+          onClick={onPreviousChapter}
+          disabled={chapter.chapter === 1}
+          className="bg-white hover:bg-gray-100 text-gray-700 rounded-full shadow-lg p-4 transition-all hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:scale-100"
+          aria-label="前の章へ"
+        >
+          <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+          </svg>
+        </button>
+
+        <button
+          onClick={onNextChapter}
+          disabled={chapter.chapter === book.chapters.length}
+          className="bg-white hover:bg-gray-100 text-gray-700 rounded-full shadow-lg p-4 transition-all hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:scale-100"
+          aria-label="次の章へ"
+        >
+          <svg className="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+          </svg>
+        </button>
+      </div>
 
       <div className="space-y-6">
       {/* 章ナビゲーション */}
