@@ -9,6 +9,7 @@ import { ChapterViewer, type FontSize } from '@/components/ChapterViewer';
 import { SearchBar } from '@/components/SearchBar';
 import { SearchResults } from '@/components/SearchResults';
 import { Credits } from '@/components/Credits';
+import { SettingsModal } from '@/components/SettingsModal';
 
 function BibleApp() {
   const searchParams = useSearchParams();
@@ -37,6 +38,9 @@ function BibleApp() {
 
   // スマホメニューの開閉
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+  // 設定モーダルの開閉
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
   // URLパラメーターから初期値を設定
   useEffect(() => {
@@ -185,9 +189,8 @@ function BibleApp() {
   return (
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white border-b border-gray-200 sticky top-0 z-10">
-        <div className="max-w-7xl mx-auto px-2 sm:px-4 py-2 sm:py-3">
-          {/* 1行目: タイトル、検索、文字サイズ */}
-          <div className="flex items-center gap-2 sm:gap-4 mb-2">
+        <div className="max-w-7xl mx-auto px-2 sm:px-4 py-3">
+          <div className="flex items-center gap-2 sm:gap-4">
             {/* ハンバーガーメニューボタン (モバイルのみ) */}
             <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
@@ -210,174 +213,36 @@ function BibleApp() {
               />
             </div>
 
-            {/* 文字サイズ選択 */}
-            <div className="flex items-center gap-1 sm:gap-2 flex-shrink-0">
-              <span className="text-xs text-gray-700 font-medium hidden sm:inline">文字:</span>
-              <div className="flex gap-1">
-                {[
-                  { value: 'sm' as FontSize, label: '小' },
-                  { value: 'lg' as FontSize, label: '中' },
-                  { value: 'xl' as FontSize, label: '大' }
-                ].map((size) => (
-                  <button
-                    key={size.value}
-                    onClick={() => setFontSize(size.value)}
-                    className={`px-2 py-1 rounded text-xs transition-colors ${
-                      fontSize === size.value
-                        ? 'bg-purple-500 text-white'
-                        : 'bg-gray-100 hover:bg-gray-200'
-                    }`}
-                  >
-                    {size.label}
-                  </button>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* 2行目: 表示モード選択と翻訳選択 */}
-          <div className="flex flex-wrap items-center gap-2 sm:gap-4 text-xs sm:text-sm">
-            {/* 表示モード */}
-            <div className="flex items-center gap-2">
-              <label className="flex items-center gap-1">
-                <input
-                  type="radio"
-                  value="single"
-                  checked={displayMode === 'single'}
-                  onChange={(e) => setDisplayMode('single')}
-                  className="w-3 h-3"
-                />
-                <span className="text-gray-700">単体</span>
-              </label>
-              <label className="flex items-center gap-1">
-                <input
-                  type="radio"
-                  value="parallel"
-                  checked={displayMode === 'parallel'}
-                  onChange={(e) => setDisplayMode('parallel')}
-                  className="w-3 h-3"
-                />
-                <span className="text-gray-700">並列</span>
-              </label>
-            </div>
-
-            <div className="hidden sm:block w-px h-4 bg-gray-300"></div>
-
-            {/* 単体表示時の翻訳選択 */}
-            {displayMode === 'single' && (
-              <div className="flex items-center gap-2 flex-wrap">
-                <label className="flex items-center gap-1">
-                  <input
-                    type="radio"
-                    value="kougo"
-                    checked={singleTranslation === 'kougo'}
-                    onChange={(e) => setSingleTranslation('kougo')}
-                    className="w-3 h-3"
-                  />
-                  <span className="text-gray-700">口語訳</span>
-                </label>
-                <label className="flex items-center gap-1">
-                  <input
-                    type="radio"
-                    value="kjv"
-                    checked={singleTranslation === 'kjv'}
-                    onChange={(e) => setSingleTranslation('kjv')}
-                    className="w-3 h-3"
-                  />
-                  <span className="text-gray-700">KJV</span>
-                </label>
-                <label className="flex items-center gap-1">
-                  <input
-                    type="radio"
-                    value="web"
-                    checked={singleTranslation === 'web'}
-                    onChange={(e) => setSingleTranslation('web')}
-                    className="w-3 h-3"
-                  />
-                  <span className="text-gray-700">NHEB</span>
-                </label>
-              </div>
-            )}
-
-            {/* 並列表示時の左右翻訳選択 */}
-            {displayMode === 'parallel' && (
-              <>
-                {/* 左側 */}
-                <div className="flex items-center gap-1 sm:gap-2">
-                  <span className="text-gray-600 font-medium"><span className="sm:hidden">上:</span><span className="hidden sm:inline">左:</span></span>
-                  <label className="flex items-center gap-1">
-                    <input
-                      type="radio"
-                      value="kougo"
-                      checked={leftTranslation === 'kougo'}
-                      onChange={(e) => setLeftTranslation('kougo')}
-                      className="w-3 h-3"
-                    />
-                    <span className="text-gray-700">口語</span>
-                  </label>
-                  <label className="flex items-center gap-1">
-                    <input
-                      type="radio"
-                      value="kjv"
-                      checked={leftTranslation === 'kjv'}
-                      onChange={(e) => setLeftTranslation('kjv')}
-                      className="w-3 h-3"
-                    />
-                    <span className="text-gray-700">KJV</span>
-                  </label>
-                  <label className="flex items-center gap-1">
-                    <input
-                      type="radio"
-                      value="web"
-                      checked={leftTranslation === 'web'}
-                      onChange={(e) => setLeftTranslation('web')}
-                      className="w-3 h-3"
-                    />
-                    <span className="text-gray-700">NHEB</span>
-                  </label>
-                </div>
-
-                <div className="hidden sm:block w-px h-4 bg-gray-300"></div>
-
-                {/* 右側 */}
-                <div className="flex items-center gap-1 sm:gap-2">
-                  <span className="text-gray-600 font-medium"><span className="sm:hidden">下:</span><span className="hidden sm:inline">右:</span></span>
-                  <label className="flex items-center gap-1">
-                    <input
-                      type="radio"
-                      value="kougo"
-                      checked={rightTranslation === 'kougo'}
-                      onChange={(e) => setRightTranslation('kougo')}
-                      className="w-3 h-3"
-                    />
-                    <span className="text-gray-700">口語</span>
-                  </label>
-                  <label className="flex items-center gap-1">
-                    <input
-                      type="radio"
-                      value="kjv"
-                      checked={rightTranslation === 'kjv'}
-                      onChange={(e) => setRightTranslation('kjv')}
-                      className="w-3 h-3"
-                    />
-                    <span className="text-gray-700">KJV</span>
-                  </label>
-                  <label className="flex items-center gap-1">
-                    <input
-                      type="radio"
-                      value="web"
-                      checked={rightTranslation === 'web'}
-                      onChange={(e) => setRightTranslation('web')}
-                      className="w-3 h-3"
-                    />
-                    <span className="text-gray-700">NHEB</span>
-                  </label>
-                </div>
-              </>
-            )}
+            {/* 設定アイコン */}
+            <button
+              onClick={() => setIsSettingsOpen(true)}
+              className="flex-shrink-0 p-2 hover:bg-gray-100 rounded-full transition-colors"
+              aria-label="設定"
+            >
+              <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </button>
           </div>
         </div>
       </header>
+
+      {/* 設定モーダル */}
+      <SettingsModal
+        isOpen={isSettingsOpen}
+        onClose={() => setIsSettingsOpen(false)}
+        displayMode={displayMode}
+        onDisplayModeChange={setDisplayMode}
+        singleTranslation={singleTranslation}
+        leftTranslation={leftTranslation}
+        rightTranslation={rightTranslation}
+        onSingleTranslationChange={setSingleTranslation}
+        onLeftTranslationChange={setLeftTranslation}
+        onRightTranslationChange={setRightTranslation}
+        fontSize={fontSize}
+        onFontSizeChange={setFontSize}
+      />
 
       <main className="max-w-7xl mx-auto px-4 py-6">
         {isSearching && searchResults.length > 0 ? (
