@@ -1,0 +1,332 @@
+[
+  {
+    "id": "genesis",
+    "name": "創世記",
+    "testament": "old"
+  },
+  {
+    "id": "exodus",
+    "name": "出エジプト記",
+    "testament": "old"
+  },
+  {
+    "id": "leviticus",
+    "name": "レビ記",
+    "testament": "old"
+  },
+  {
+    "id": "numbers",
+    "name": "民数記",
+    "testament": "old"
+  },
+  {
+    "id": "deuteronomy",
+    "name": "申命記",
+    "testament": "old"
+  },
+  {
+    "id": "joshua",
+    "name": "ヨシュア記",
+    "testament": "old"
+  },
+  {
+    "id": "judges",
+    "name": "士師記",
+    "testament": "old"
+  },
+  {
+    "id": "ruth",
+    "name": "ルツ記",
+    "testament": "old"
+  },
+  {
+    "id": "1samuel",
+    "name": "サムエル記上",
+    "testament": "old"
+  },
+  {
+    "id": "2samuel",
+    "name": "サムエル記下",
+    "testament": "old"
+  },
+  {
+    "id": "1kings",
+    "name": "列王紀上",
+    "testament": "old"
+  },
+  {
+    "id": "2kings",
+    "name": "列王紀下",
+    "testament": "old"
+  },
+  {
+    "id": "1chronicles",
+    "name": "歴代志上",
+    "testament": "old"
+  },
+  {
+    "id": "2chronicles",
+    "name": "歴代志下",
+    "testament": "old"
+  },
+  {
+    "id": "ezra",
+    "name": "エズラ記",
+    "testament": "old"
+  },
+  {
+    "id": "nehemiah",
+    "name": "ネヘミヤ記",
+    "testament": "old"
+  },
+  {
+    "id": "esther",
+    "name": "エステル記",
+    "testament": "old"
+  },
+  {
+    "id": "job",
+    "name": "ヨブ記",
+    "testament": "old"
+  },
+  {
+    "id": "psalms",
+    "name": "詩篇",
+    "testament": "old"
+  },
+  {
+    "id": "proverbs",
+    "name": "箴言",
+    "testament": "old"
+  },
+  {
+    "id": "ecclesiastes",
+    "name": "伝道の書",
+    "testament": "old"
+  },
+  {
+    "id": "songofsolomon",
+    "name": "雅歌",
+    "testament": "old"
+  },
+  {
+    "id": "isaiah",
+    "name": "イザヤ書",
+    "testament": "old"
+  },
+  {
+    "id": "jeremiah",
+    "name": "エレミヤ書",
+    "testament": "old"
+  },
+  {
+    "id": "lamentations",
+    "name": "哀歌",
+    "testament": "old"
+  },
+  {
+    "id": "ezekiel",
+    "name": "エゼキエル書",
+    "testament": "old"
+  },
+  {
+    "id": "daniel",
+    "name": "ダニエル書",
+    "testament": "old"
+  },
+  {
+    "id": "hosea",
+    "name": "ホセア書",
+    "testament": "old"
+  },
+  {
+    "id": "joel",
+    "name": "ヨエル書",
+    "testament": "old"
+  },
+  {
+    "id": "amos",
+    "name": "アモス書",
+    "testament": "old"
+  },
+  {
+    "id": "obadiah",
+    "name": "オバデヤ書",
+    "testament": "old"
+  },
+  {
+    "id": "jonah",
+    "name": "ヨナ書",
+    "testament": "old"
+  },
+  {
+    "id": "micah",
+    "name": "ミカ書",
+    "testament": "old"
+  },
+  {
+    "id": "nahum",
+    "name": "ナホム書",
+    "testament": "old"
+  },
+  {
+    "id": "habakkuk",
+    "name": "ハバクク書",
+    "testament": "old"
+  },
+  {
+    "id": "zephaniah",
+    "name": "ゼパニヤ書",
+    "testament": "old"
+  },
+  {
+    "id": "haggai",
+    "name": "ハガイ書",
+    "testament": "old"
+  },
+  {
+    "id": "zechariah",
+    "name": "ゼカリヤ書",
+    "testament": "old"
+  },
+  {
+    "id": "malachi",
+    "name": "マラキ書",
+    "testament": "old"
+  },
+  {
+    "id": "matthew",
+    "name": "マタイによる福音書",
+    "testament": "new"
+  },
+  {
+    "id": "mark",
+    "name": "マルコによる福音書",
+    "testament": "new"
+  },
+  {
+    "id": "luke",
+    "name": "ルカによる福音書",
+    "testament": "new"
+  },
+  {
+    "id": "john",
+    "name": "ヨハネによる福音書",
+    "testament": "new"
+  },
+  {
+    "id": "acts",
+    "name": "使徒行伝",
+    "testament": "new"
+  },
+  {
+    "id": "romans",
+    "name": "ローマ人への手紙",
+    "testament": "new"
+  },
+  {
+    "id": "1corinthians",
+    "name": "コリント人への第一の手紙",
+    "testament": "new"
+  },
+  {
+    "id": "2corinthians",
+    "name": "コリント人への第二の手紙",
+    "testament": "new"
+  },
+  {
+    "id": "galatians",
+    "name": "ガラテヤ人への手紙",
+    "testament": "new"
+  },
+  {
+    "id": "ephesians",
+    "name": "エペソ人への手紙",
+    "testament": "new"
+  },
+  {
+    "id": "philippians",
+    "name": "ピリピ人への手紙",
+    "testament": "new"
+  },
+  {
+    "id": "colossians",
+    "name": "コロサイ人への手紙",
+    "testament": "new"
+  },
+  {
+    "id": "1thessalonians",
+    "name": "テサロニケ人への第一の手紙",
+    "testament": "new"
+  },
+  {
+    "id": "2thessalonians",
+    "name": "テサロニケ人への第二の手紙",
+    "testament": "new"
+  },
+  {
+    "id": "1timothy",
+    "name": "テモテヘの第一の手紙",
+    "testament": "new"
+  },
+  {
+    "id": "2timothy",
+    "name": "テモテヘの第二の手紙",
+    "testament": "new"
+  },
+  {
+    "id": "titus",
+    "name": "テトスヘの手紙",
+    "testament": "new"
+  },
+  {
+    "id": "philemon",
+    "name": "ピレモンヘの手紙",
+    "testament": "new"
+  },
+  {
+    "id": "hebrews",
+    "name": "ヘブル人への手紙",
+    "testament": "new"
+  },
+  {
+    "id": "james",
+    "name": "ヤコブの手紙",
+    "testament": "new"
+  },
+  {
+    "id": "1peter",
+    "name": "ペテロの第一の手紙",
+    "testament": "new"
+  },
+  {
+    "id": "2peter",
+    "name": "ペテロの第二の手紙",
+    "testament": "new"
+  },
+  {
+    "id": "1john",
+    "name": "ヨハネの第一の手紙",
+    "testament": "new"
+  },
+  {
+    "id": "2john",
+    "name": "ヨハネの第二の手紙",
+    "testament": "new"
+  },
+  {
+    "id": "3john",
+    "name": "ヨハネの第三の手紙",
+    "testament": "new"
+  },
+  {
+    "id": "jude",
+    "name": "ユダの手紙",
+    "testament": "new"
+  },
+  {
+    "id": "revelation",
+    "name": "ヨハネの黙示録",
+    "testament": "new"
+  }
+]
