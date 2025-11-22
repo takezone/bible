@@ -40,17 +40,17 @@ export default function Home() {
 
   // URLパラメーターから初期値を設定
   useEffect(() => {
-    const bookId = searchParams.get('bookId');
+    const book = searchParams.get('book');
     const chapterNum = searchParams.get('chapter');
     const verseNum = searchParams.get('verse');
 
-    if (bookId && chapterNum) {
+    if (book && chapterNum) {
       const translation = displayMode === 'single' ? singleTranslation : leftTranslation;
-      const book = getBook(translation, bookId);
-      const chapter = book ? getChapter(translation, bookId, parseInt(chapterNum)) : null;
+      const bookData = getBook(translation, book);
+      const chapter = bookData ? getChapter(translation, book, parseInt(chapterNum)) : null;
 
-      if (book && chapter) {
-        setSelectedBook(book);
+      if (bookData && chapter) {
+        setSelectedBook(bookData);
         setSelectedChapter(chapter);
         if (verseNum) {
           setSelectedVerse(parseInt(verseNum));
@@ -107,9 +107,14 @@ export default function Home() {
     }
   };
 
-  const updateURL = (bookId: string, chapter: number, verse: number | null) => {
-    const url = verse ? `/${bookId}/${chapter}/${verse}` : `/${bookId}/${chapter}`;
-    router.replace(url, { scroll: false });
+  const updateURL = (book: string, chapter: number, verse: number | null) => {
+    const params = new URLSearchParams();
+    params.set('book', book);
+    params.set('chapter', chapter.toString());
+    if (verse) {
+      params.set('verse', verse.toString());
+    }
+    router.replace(`/?${params.toString()}`, { scroll: false });
   };
 
   return (
