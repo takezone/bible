@@ -18,6 +18,17 @@ export function Credits() {
 
         {isOpen && (
           <div className="mt-6 space-y-6 text-sm text-gray-700">
+            {/* 謝辞 */}
+            <div className="bg-green-50 rounded-lg p-5 border border-green-200">
+              <h3 className="font-bold text-base text-gray-900 mb-3">謝辞</h3>
+              <p className="leading-relaxed">
+                このアプリで使用している聖書テキストは、いずれもパブリックドメインとして公開されているものです。
+                これらの聖書翻訳に関わられたすべての翻訳者、学者、宣教師の方々、
+                そしてデータを整備・公開してくださった方々に深く感謝いたします。
+                また、長い年月をかけて聖書を読み継ぎ、守り伝えてこられたすべての信仰者の方々に敬意を表します。
+              </p>
+            </div>
+
             {/* 口語訳聖書 */}
             <div className="bg-white rounded-lg p-5 shadow-sm">
               <h3 className="font-bold text-base text-gray-900 mb-3">口語訳聖書</h3>
@@ -109,19 +120,13 @@ export function Credits() {
                 </li>
               </ul>
             </div>
-
-            {/* 謝辞 */}
-            <div className="bg-green-50 rounded-lg p-5 border border-green-200">
-              <h3 className="font-bold text-base text-gray-900 mb-3">謝辞</h3>
-              <p className="leading-relaxed">
-                このアプリで使用している聖書テキストは、いずれもパブリックドメインとして公開されているものです。
-                これらの聖書翻訳に関わられたすべての翻訳者、学者、宣教師の方々、
-                そしてデータを整備・公開してくださった方々に深く感謝いたします。
-                また、長い年月をかけて聖書を読み継ぎ、守り伝えてこられたすべての信仰者の方々に敬意を表します。
-              </p>
-            </div>
           </div>
         )}
+
+        {/* 制作者表記 */}
+        <div className="mt-6 text-center text-xs text-gray-500">
+          Provided by <a href="https://friendsofone.com/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Friends of ONE</a>
+        </div>
       </div>
     </div>
   );

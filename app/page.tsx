@@ -66,6 +66,15 @@ export default function Home() {
     setSelectedChapter(genesis.chapters[0]);
   }, [searchParams, displayMode, singleTranslation, leftTranslation]);
 
+  // ページタイトルを更新
+  useEffect(() => {
+    if (selectedBook && selectedChapter) {
+      document.title = `Bible-ONE - ${selectedBook.name} 第${selectedChapter.chapter}章`;
+    } else {
+      document.title = 'Bible-ONE';
+    }
+  }, [selectedBook, selectedChapter]);
+
   const handleSearch = (query: string) => {
     setSearchQuery(query);
     if (query.trim().length < 2) {
@@ -239,7 +248,7 @@ export default function Home() {
               <>
                 {/* 左側 */}
                 <div className="flex items-center gap-1 sm:gap-2">
-                  <span className="text-gray-600 font-medium">左:</span>
+                  <span className="text-gray-600 font-medium"><span className="sm:hidden">上:</span><span className="hidden sm:inline">左:</span></span>
                   <label className="flex items-center gap-1">
                     <input
                       type="radio"
@@ -276,7 +285,7 @@ export default function Home() {
 
                 {/* 右側 */}
                 <div className="flex items-center gap-1 sm:gap-2">
-                  <span className="text-gray-600 font-medium">右:</span>
+                  <span className="text-gray-600 font-medium"><span className="sm:hidden">下:</span><span className="hidden sm:inline">右:</span></span>
                   <label className="flex items-center gap-1">
                     <input
                       type="radio"

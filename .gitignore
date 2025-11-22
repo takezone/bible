@@ -48,3 +48,4 @@ scrape-log.txt
 # Temporary directories
 temp-web/
 temp-scrollmapper/
+temp-bibleapi/
