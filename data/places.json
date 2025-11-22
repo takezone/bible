@@ -1,0 +1,460 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-01-24",
+  "places": [
+    {
+      "id": "jerusalem",
+      "names": {
+        "en": "Jerusalem",
+        "ja": "エルサレム",
+        "transliteration": "Yerushalayim",
+        "hebrew": "יְרוּשָׁלַיִם"
+      },
+      "alternativeNames": {
+        "en": ["Zion", "City of David", "Holy City"],
+        "ja": ["シオン", "ダビデの町", "聖なる都"]
+      },
+      "type": "city",
+      "periods": ["ot_kingdom", "ot_divided", "ot_exile", "ot_return", "nt"],
+      "description": {
+        "en": "The capital city of ancient Israel and Judah, center of Jewish worship and location of the Temple",
+        "ja": "古代イスラエルとユダの首都、ユダヤ教の礼拝の中心地であり神殿の所在地"
+      },
+      "biblicalReferences": [
+        { "book": "2samuel", "chapter": 5, "verse": 6, "context": "David conquered Jerusalem" },
+        { "book": "1kings", "chapter": 8, "verse": 1, "context": "Solomon built the Temple" },
+        { "book": "matthew", "chapter": 21, "verse": 1, "context": "Jesus entered Jerusalem" }
+      ],
+      "relatedPlaces": ["temple-mount", "mount-of-olives", "gethsemane"],
+      "importance": 5
+    },
+    {
+      "id": "bethlehem",
+      "names": {
+        "en": "Bethlehem",
+        "ja": "ベツレヘム",
+        "transliteration": "Beit Lechem",
+        "hebrew": "בֵּית לֶחֶם"
+      },
+      "alternativeNames": {
+        "en": ["Ephrath", "City of David"],
+        "ja": ["エフラタ", "ダビデの町"]
+      },
+      "type": "city",
+      "periods": ["ot_patriarchs", "ot_judges", "ot_kingdom", "nt"],
+      "description": {
+        "en": "Birthplace of King David and Jesus Christ, located south of Jerusalem",
+        "ja": "ダビデ王とイエス・キリストの生誕地、エルサレムの南に位置"
+      },
+      "biblicalReferences": [
+        { "book": "ruth", "chapter": 1, "verse": 1, "context": "Ruth's story" },
+        { "book": "1samuel", "chapter": 16, "verse": 1, "context": "David anointed" },
+        { "book": "matthew", "chapter": 2, "verse": 1, "context": "Jesus' birth" },
+        { "book": "luke", "chapter": 2, "verse": 4, "context": "Jesus' birth" }
+      ],
+      "relatedPlaces": ["jerusalem"],
+      "importance": 5
+    },
+    {
+      "id": "nazareth",
+      "names": {
+        "en": "Nazareth",
+        "ja": "ナザレ",
+        "transliteration": "Natzrat",
+        "greek": "Ναζαρέτ"
+      },
+      "type": "city",
+      "periods": ["nt"],
+      "description": {
+        "en": "The hometown of Jesus in Galilee, where He grew up",
+        "ja": "ガリラヤにあるイエスの故郷、イエスが育った町"
+      },
+      "biblicalReferences": [
+        { "book": "luke", "chapter": 1, "verse": 26, "context": "Angel's announcement to Mary" },
+        { "book": "luke", "chapter": 2, "verse": 39, "context": "Jesus grew up here" },
+        { "book": "mark", "chapter": 6, "verse": 1, "context": "Jesus rejected in hometown" }
+      ],
+      "relatedPlaces": ["galilee", "capernaum"],
+      "importance": 5
+    },
+    {
+      "id": "galilee",
+      "names": {
+        "en": "Galilee",
+        "ja": "ガリラヤ",
+        "transliteration": "Galil",
+        "hebrew": "גָּלִיל"
+      },
+      "type": "region",
+      "periods": ["ot_kingdom", "ot_divided", "nt"],
+      "description": {
+        "en": "Northern region of Israel where Jesus conducted much of His ministry",
+        "ja": "イスラエルの北部地域、イエスが宣教の多くを行った場所"
+      },
+      "biblicalReferences": [
+        { "book": "matthew", "chapter": 4, "verse": 12, "context": "Jesus began ministry" },
+        { "book": "john", "chapter": 7, "verse": 41, "context": "Reference to Galilee" }
+      ],
+      "relatedPlaces": ["nazareth", "capernaum", "sea-of-galilee"],
+      "importance": 5
+    },
+    {
+      "id": "sea-of-galilee",
+      "names": {
+        "en": "Sea of Galilee",
+        "ja": "ガリラヤ湖",
+        "transliteration": "Yam Kinneret"
+      },
+      "alternativeNames": {
+        "en": ["Lake of Gennesaret", "Sea of Tiberias"],
+        "ja": ["ゲネサレ湖", "テベリヤ湖"]
+      },
+      "type": "sea",
+      "periods": ["ot_kingdom", "nt"],
+      "description": {
+        "en": "Freshwater lake in northern Israel where Jesus called His first disciples and performed miracles",
+        "ja": "イスラエル北部の淡水湖、イエスが最初の弟子を召し、奇跡を行った場所"
+      },
+      "biblicalReferences": [
+        { "book": "matthew", "chapter": 4, "verse": 18, "context": "Calling of disciples" },
+        { "book": "mark", "chapter": 4, "verse": 39, "context": "Calming the storm" },
+        { "book": "john", "chapter": 21, "verse": 1, "context": "Resurrection appearance" }
+      ],
+      "relatedPlaces": ["capernaum", "bethsaida", "galilee"],
+      "importance": 5
+    },
+    {
+      "id": "capernaum",
+      "names": {
+        "en": "Capernaum",
+        "ja": "カペナウム",
+        "transliteration": "Kfar Nachum",
+        "greek": "Καφαρναούμ"
+      },
+      "type": "city",
+      "periods": ["nt"],
+      "description": {
+        "en": "A town on the northern shore of the Sea of Galilee, base of Jesus' Galilean ministry",
+        "ja": "ガリラヤ湖の北岸にある町、イエスのガリラヤ宣教の拠点"
+      },
+      "biblicalReferences": [
+        { "book": "matthew", "chapter": 4, "verse": 13, "context": "Jesus moved here" },
+        { "book": "mark", "chapter": 2, "verse": 1, "context": "Healing of paralytic" },
+        { "book": "john", "chapter": 6, "verse": 24, "context": "Bread of Life discourse" }
+      ],
+      "relatedPlaces": ["sea-of-galilee", "nazareth"],
+      "importance": 4
+    },
+    {
+      "id": "jordan-river",
+      "names": {
+        "en": "Jordan River",
+        "ja": "ヨルダン川",
+        "transliteration": "Yarden",
+        "hebrew": "יַרְדֵּן"
+      },
+      "type": "river",
+      "periods": ["ot_patriarchs", "ot_exodus", "ot_judges", "ot_kingdom", "nt"],
+      "description": {
+        "en": "Major river flowing through Israel, site of Jesus' baptism",
+        "ja": "イスラエルを流れる主要な川、イエスのバプテスマの場所"
+      },
+      "biblicalReferences": [
+        { "book": "joshua", "chapter": 3, "verse": 17, "context": "Israelites crossed" },
+        { "book": "2kings", "chapter": 5, "verse": 14, "context": "Naaman healed" },
+        { "book": "matthew", "chapter": 3, "verse": 13, "context": "Jesus' baptism" }
+      ],
+      "relatedPlaces": ["dead-sea", "jericho"],
+      "importance": 5
+    },
+    {
+      "id": "dead-sea",
+      "names": {
+        "en": "Dead Sea",
+        "ja": "死海",
+        "transliteration": "Yam HaMelach"
+      },
+      "alternativeNames": {
+        "en": ["Salt Sea"],
+        "ja": ["塩の海"]
+      },
+      "type": "sea",
+      "periods": ["ot_patriarchs", "ot_kingdom", "ot_divided", "nt"],
+      "description": {
+        "en": "Salt lake at the lowest point on Earth, east of Judea",
+        "ja": "地球上で最も低い場所にある塩湖、ユダヤの東に位置"
+      },
+      "biblicalReferences": [
+        { "book": "genesis", "chapter": 14, "verse": 3, "context": "Valley of Siddim" },
+        { "book": "ezekiel", "chapter": 47, "verse": 8, "context": "Prophetic vision" }
+      ],
+      "relatedPlaces": ["jordan-river", "sodom", "gomorrah"],
+      "importance": 4
+    },
+    {
+      "id": "mount-sinai",
+      "names": {
+        "en": "Mount Sinai",
+        "ja": "シナイ山",
+        "transliteration": "Har Sinai",
+        "hebrew": "הַר סִינַי"
+      },
+      "alternativeNames": {
+        "en": ["Mount Horeb"],
+        "ja": ["ホレブ山"]
+      },
+      "type": "mountain",
+      "periods": ["ot_exodus"],
+      "description": {
+        "en": "Mountain where Moses received the Ten Commandments from God",
+        "ja": "モーセが神から十戒を受け取った山"
+      },
+      "biblicalReferences": [
+        { "book": "exodus", "chapter": 19, "verse": 20, "context": "God called Moses" },
+        { "book": "exodus", "chapter": 20, "verse": 1, "context": "Ten Commandments given" }
+      ],
+      "relatedPlaces": ["egypt", "wilderness-of-sinai"],
+      "importance": 5
+    },
+    {
+      "id": "egypt",
+      "names": {
+        "en": "Egypt",
+        "ja": "エジプト",
+        "transliteration": "Mitzrayim",
+        "hebrew": "מִצְרַיִם"
+      },
+      "type": "region",
+      "periods": ["ot_patriarchs", "ot_exodus", "ot_kingdom", "ot_divided", "nt"],
+      "description": {
+        "en": "Ancient kingdom where Israelites were enslaved before the Exodus",
+        "ja": "出エジプト以前にイスラエル人が奴隷であった古代王国"
+      },
+      "biblicalReferences": [
+        { "book": "genesis", "chapter": 37, "verse": 28, "context": "Joseph sold to Egypt" },
+        { "book": "exodus", "chapter": 12, "verse": 41, "context": "Exodus from Egypt" },
+        { "book": "matthew", "chapter": 2, "verse": 13, "context": "Flight to Egypt" }
+      },
+      "relatedPlaces": ["nile-river", "goshen", "mount-sinai"],
+      "importance": 5
+    },
+    {
+      "id": "jericho",
+      "names": {
+        "en": "Jericho",
+        "ja": "エリコ",
+        "transliteration": "Yericho",
+        "hebrew": "יְרִיחוֹ"
+      },
+      "type": "city",
+      "periods": ["ot_exodus", "ot_judges", "ot_kingdom", "nt"],
+      "description": {
+        "en": "Ancient city whose walls fell when Israel entered Canaan",
+        "ja": "イスラエルがカナンに入った時に城壁が崩れた古代都市"
+      },
+      "biblicalReferences": [
+        { "book": "joshua", "chapter": 6, "verse": 20, "context": "Walls fell down" },
+        { "book": "luke", "chapter": 10, "verse": 30, "context": "Good Samaritan parable" },
+        { "book": "luke", "chapter": 19, "verse": 1, "context": "Zacchaeus" }
+      ],
+      "relatedPlaces": ["jordan-river", "jerusalem"],
+      "importance": 4
+    },
+    {
+      "id": "mount-of-olives",
+      "names": {
+        "en": "Mount of Olives",
+        "ja": "オリーブ山",
+        "transliteration": "Har HaZeitim",
+        "greek": "Ὄρος τῶν Ἐλαιῶν"
+      },
+      "type": "mountain",
+      "periods": ["ot_kingdom", "nt"],
+      "description": {
+        "en": "Mountain ridge east of Jerusalem, site of Jesus' ascension",
+        "ja": "エルサレムの東にある山並み、イエスの昇天の場所"
+      },
+      "biblicalReferences": [
+        { "book": "2samuel", "chapter": 15, "verse": 30, "context": "David fled" },
+        { "book": "zechariah", "chapter": 14, "verse": 4, "context": "Prophecy" },
+        { "book": "luke", "chapter": 24, "verse": 50, "context": "Jesus' ascension" },
+        { "book": "acts", "chapter": 1, "verse": 12, "context": "After ascension" }
+      ],
+      "relatedPlaces": ["jerusalem", "gethsemane", "bethany"],
+      "importance": 4
+    },
+    {
+      "id": "gethsemane",
+      "names": {
+        "en": "Gethsemane",
+        "ja": "ゲツセマネ",
+        "transliteration": "Gat Shmanim",
+        "greek": "Γεθσημανῆ"
+      },
+      "type": "valley",
+      "periods": ["nt"],
+      "description": {
+        "en": "Garden at the foot of the Mount of Olives where Jesus prayed before His arrest",
+        "ja": "オリーブ山のふもとにある園、イエスが逮捕前に祈った場所"
+      },
+      "biblicalReferences": [
+        { "book": "matthew", "chapter": 26, "verse": 36, "context": "Jesus' prayer" },
+        { "book": "mark", "chapter": 14, "verse": 32, "context": "Jesus' prayer" }
+      ],
+      "relatedPlaces": ["mount-of-olives", "jerusalem"],
+      "importance": 4
+    },
+    {
+      "id": "bethany",
+      "names": {
+        "en": "Bethany",
+        "ja": "ベタニヤ",
+        "transliteration": "Beit Anyah",
+        "greek": "Βηθανία"
+      },
+      "type": "city",
+      "periods": ["nt"],
+      "description": {
+        "en": "Village near Jerusalem, home of Mary, Martha, and Lazarus",
+        "ja": "エルサレム近郊の村、マリヤ、マルタ、ラザロの家がある場所"
+      },
+      "biblicalReferences": [
+        { "book": "john", "chapter": 11, "verse": 1, "context": "Lazarus raised" },
+        { "book": "mark", "chapter": 14, "verse": 3, "context": "Jesus anointed" }
+      ],
+      "relatedPlaces": ["jerusalem", "mount-of-olives"],
+      "importance": 3
+    },
+    {
+      "id": "samaria",
+      "names": {
+        "en": "Samaria",
+        "ja": "サマリヤ",
+        "transliteration": "Shomron",
+        "hebrew": "שֹׁמְרוֹן"
+      },
+      "type": "region",
+      "periods": ["ot_kingdom", "ot_divided", "nt"],
+      "description": {
+        "en": "Central region of Israel, capital of the northern kingdom",
+        "ja": "イスラエルの中部地域、北王国の首都"
+      },
+      "biblicalReferences": [
+        { "book": "1kings", "chapter": 16, "verse": 24, "context": "Capital built" },
+        { "book": "john", "chapter": 4, "verse": 4, "context": "Jesus and Samaritan woman" }
+      ],
+      "relatedPlaces": ["judea", "galilee"],
+      "importance": 4
+    },
+    {
+      "id": "judea",
+      "names": {
+        "en": "Judea",
+        "ja": "ユダヤ",
+        "transliteration": "Yehudah",
+        "hebrew": "יְהוּדָה"
+      },
+      "type": "region",
+      "periods": ["ot_kingdom", "ot_divided", "ot_return", "nt"],
+      "description": {
+        "en": "Southern region of Israel, territory of the tribe of Judah",
+        "ja": "イスラエルの南部地域、ユダ族の領土"
+      },
+      "biblicalReferences": [
+        { "book": "matthew", "chapter": 2, "verse": 1, "context": "Jesus born in Judea" },
+        { "book": "luke", "chapter": 1, "verse": 39, "context": "Mary visited Elizabeth" }
+      ],
+      "relatedPlaces": ["jerusalem", "bethlehem", "samaria"],
+      "importance": 5
+    },
+    {
+      "id": "babylon",
+      "names": {
+        "en": "Babylon",
+        "ja": "バビロン",
+        "transliteration": "Bavel",
+        "hebrew": "בָּבֶל"
+      },
+      "type": "city",
+      "periods": ["ot_patriarchs", "ot_kingdom", "ot_divided", "ot_exile"],
+      "description": {
+        "en": "Ancient city in Mesopotamia where Jews were exiled",
+        "ja": "メソポタミアの古代都市、ユダヤ人が捕囚された場所"
+      },
+      "biblicalReferences": [
+        { "book": "genesis", "chapter": 11, "verse": 9, "context": "Tower of Babel" },
+        { "book": "2kings", "chapter": 24, "verse": 10, "context": "Exile began" },
+        { "book": "daniel", "chapter": 1, "verse": 1, "context": "Daniel in Babylon" }
+      },
+      "relatedPlaces": ["mesopotamia"],
+      "importance": 4
+    },
+    {
+      "id": "damascus",
+      "names": {
+        "en": "Damascus",
+        "ja": "ダマスコ",
+        "transliteration": "Damesek",
+        "hebrew": "דַּמֶּשֶׂק"
+      },
+      "type": "city",
+      "periods": ["ot_patriarchs", "ot_kingdom", "ot_divided", "nt"],
+      "description": {
+        "en": "Ancient city in Syria, where Paul was converted",
+        "ja": "シリアの古代都市、パウロが回心した場所"
+      },
+      "biblicalReferences": [
+        { "book": "genesis", "chapter": 14, "verse": 15, "context": "Abraham pursued enemies" },
+        { "book": "acts", "chapter": 9, "verse": 3, "context": "Paul's conversion" }
+      ],
+      "relatedPlaces": ["syria"],
+      "importance": 4
+    },
+    {
+      "id": "caesarea",
+      "names": {
+        "en": "Caesarea",
+        "ja": "カイザリヤ",
+        "transliteration": "Kesariya",
+        "greek": "Καισάρεια"
+      },
+      "alternativeNames": {
+        "en": ["Caesarea Maritima"],
+        "ja": ["カイザリヤ・マリティマ"]
+      },
+      "type": "city",
+      "periods": ["nt"],
+      "description": {
+        "en": "Roman capital of Judea on the Mediterranean coast",
+        "ja": "地中海沿岸のユダヤのローマ首都"
+      },
+      "biblicalReferences": [
+        { "book": "acts", "chapter": 10, "verse": 1, "context": "Cornelius lived here" },
+        { "book": "acts", "chapter": 23, "verse": 23, "context": "Paul imprisoned" }
+      ],
+      "relatedPlaces": ["mediterranean-sea"],
+      "importance": 3
+    },
+    {
+      "id": "rome",
+      "names": {
+        "en": "Rome",
+        "ja": "ローマ",
+        "transliteration": "Roma",
+        "greek": "Ῥώμη"
+      },
+      "type": "city",
+      "periods": ["nt"],
+      "description": {
+        "en": "Capital of the Roman Empire, destination of Paul's journey",
+        "ja": "ローマ帝国の首都、パウロの旅の目的地"
+      },
+      "biblicalReferences": [
+        { "book": "acts", "chapter": 28, "verse": 14, "context": "Paul arrived" },
+        { "book": "romans", "chapter": 1, "verse": 7, "context": "Letter to Romans" }
+      ],
+      "relatedPlaces": ["italy"],
+      "importance": 4
+    }
+  ]
+}
