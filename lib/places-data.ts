@@ -1,5 +1,5 @@
 import placesData from '@/data/places.json';
-import type { Place, PlacesData, PlaceType, Period } from '@/types/places';
+import type { Place, PlacesData, PlaceType, Period, PeriodMap } from '@/types/places';
 
 /**
  * 全地名データを取得
@@ -119,4 +119,27 @@ export function getAllPeriods(): Period[] {
     'ot_return',
     'nt'
   ];
+}
+
+/**
+ * 全地図データを取得
+ */
+export function getAllMaps(): PeriodMap[] {
+  return (placesData as PlacesData).maps || [];
+}
+
+/**
+ * 時代別の地図を取得
+ */
+export function getMapByPeriod(period: Period): PeriodMap | undefined {
+  return getAllMaps().find(map => map.period === period);
+}
+
+/**
+ * 地名に関連する地図を取得（地名の時代から最も関連する地図を選択）
+ */
+export function getMapsForPlace(place: Place): PeriodMap[] {
+  return place.periods
+    .map(period => getMapByPeriod(period))
+    .filter((map): map is PeriodMap => map !== undefined);
 }

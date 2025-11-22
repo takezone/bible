@@ -10,6 +10,10 @@ import { SearchBar } from '@/components/SearchBar';
 import { SearchResults } from '@/components/SearchResults';
 import { Credits } from '@/components/Credits';
 import { SettingsModal } from '@/components/SettingsModal';
+import { PlacesList } from '@/components/PlacesList';
+import { PlaceDetail } from '@/components/PlaceDetail';
+import { getAllPlaces } from '@/lib/places-data';
+import type { Place } from '@/types/places';
 
 function BibleApp() {
   const searchParams = useSearchParams();
@@ -42,6 +46,12 @@ function BibleApp() {
   // 設定モーダルの開閉
   const [isSettingsOpen, setIsSettingsOpen] = useState(false);
 
+  // 表示モード: 'bible' (聖書) or 'places' (地図)
+  const [viewMode, setViewMode] = useState<'bible' | 'places'>('bible');
+
+  // 地名モード用の状態
+  const [selectedPlace, setSelectedPlace] = useState<Place | null>(null);
+
   // URLパラメーターから初期値を設定
   useEffect(() => {
     const book = searchParams.get('book');
@@ -72,12 +82,24 @@ function BibleApp() {
 
   // ページタイトルを更新
   useEffect(() => {
-    if (selectedBook && selectedChapter) {
+    if (viewMode === 'bible' && selectedBook && selectedChapter) {
       document.title = `Bible-ONE - ${selectedBook.name} 第${selectedChapter.chapter}章`;
+    } else if (viewMode === 'places' && selectedPlace) {
+      document.title = `Bible-ONE - ${selectedPlace.names.ja}`;
     } else {
       document.title = 'Bible-ONE';
     }
-  }, [selectedBook, selectedChapter]);
+  }, [viewMode, selectedBook, selectedChapter, selectedPlace]);
+
+  // 地名モードに切り替えた時に最初の地名を選択
+  useEffect(() => {
+    if (viewMode === 'places' && !selectedPlace) {
+      const places = getAllPlaces();
+      if (places.length > 0) {
+        setSelectedPlace(places[0]);
+      }
+    }
+  }, [viewMode, selectedPlace]);
 
   const handleSearch = (query: string) => {
     setSearchQuery(query);
@@ -186,6 +208,20 @@ function BibleApp() {
     router.replace(`/?${params.toString()}`, { scroll: false });
   };
 
+  const handleNavigateToBible = (bookId: string, chapterNum: number, verseNum: number) => {
+    const translation = displayMode === 'single' ? singleTranslation : leftTranslation;
+    const book = getBook(translation, bookId);
+    const chapter = book ? getChapter(translation, bookId, chapterNum) : null;
+
+    if (book && chapter) {
+      setSelectedBook(book);
+      setSelectedChapter(chapter);
+      setSelectedVerse(verseNum);
+      setViewMode('bible');
+      updateURL(bookId, chapterNum, verseNum);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-gray-50">
       <header className="bg-white border-b border-gray-200 sticky top-0 z-10">
@@ -203,6 +239,32 @@ function BibleApp() {
             </button>
 
             <h1 className="text-lg sm:text-xl font-bold text-gray-900 flex-shrink-0">Bible-ONE</h1>
+
+            {/* 聖書/地図 切り替えタブ */}
+            <div className="hidden sm:flex items-center gap-1 bg-gray-100 rounded-lg p-1">
+              <button
+                onClick={() => setViewMode('bible')}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-medium transition-all ${
+                  viewMode === 'bible'
+                    ? 'bg-white text-blue-600 shadow-sm'
+                    : 'text-gray-600 hover:text-gray-900'
+                }`}
+              >
+                <span className="text-base">📖</span>
+                <span>聖書</span>
+              </button>
+              <button
+                onClick={() => setViewMode('places')}
+                className={`flex items-center gap-1.5 px-3 py-1.5 rounded-md text-sm font-medium transition-all ${
+                  viewMode === 'places'
+                    ? 'bg-white text-purple-600 shadow-sm'
+                    : 'text-gray-600 hover:text-gray-900'
+                }`}
+              >
+                <span className="text-base">🗺️</span>
+                <span>地図</span>
+              </button>
+            </div>
 
             <div className="flex-1"></div>
 
@@ -255,7 +317,7 @@ function BibleApp() {
           <div className="text-center py-12 text-gray-500">
             「{searchQuery}」の検索結果が見つかりませんでした
           </div>
-        ) : (
+        ) : viewMode === 'bible' ? (
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
             {/* モバイルメニューオーバーレイ */}
             {isMobileMenuOpen && (
@@ -300,6 +362,49 @@ function BibleApp() {
                   onChapterChange={handleChapterChange}
                   onPreviousChapter={handlePreviousChapter}
                   onNextChapter={handleNextChapter}
+                />
+              )}
+            </div>
+          </div>
+        ) : (
+          <div className="grid grid-cols-1 lg:grid-cols-4 gap-6">
+            {/* モバイルメニューオーバーレイ */}
+            {isMobileMenuOpen && (
+              <div
+                className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
+                onClick={() => setIsMobileMenuOpen(false)}
+              />
+            )}
+
+            {/* サイドバー - 地名リスト */}
+            <aside className={`
+              lg:col-span-1
+              fixed lg:relative
+              inset-y-0 left-0
+              w-80 lg:w-auto
+              bg-white lg:bg-transparent
+              z-50 lg:z-auto
+              transform lg:transform-none
+              transition-transform duration-300
+              ${isMobileMenuOpen ? 'translate-x-0' : '-translate-x-full lg:translate-x-0'}
+              overflow-y-auto lg:overflow-visible
+              pt-16 lg:pt-0
+            `}>
+              <PlacesList
+                selectedPlace={selectedPlace}
+                onSelectPlace={(place) => {
+                  setSelectedPlace(place);
+                  setIsMobileMenuOpen(false);
+                }}
+              />
+            </aside>
+
+            {/* メインコンテンツ - 地名詳細 */}
+            <div className="lg:col-span-3 relative">
+              {selectedPlace && (
+                <PlaceDetail
+                  place={selectedPlace}
+                  onNavigateToBible={handleNavigateToBible}
                 />
               )}
             </div>

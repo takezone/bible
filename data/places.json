@@ -1,6 +1,120 @@
 {
   "version": "1.0.0",
   "lastUpdated": "2025-01-24",
+  "maps": [
+    {
+      "period": "ot_patriarchs",
+      "title": {
+        "en": "Near East - Abraham's Journey",
+        "ja": "族長時代 - アブラハムの旅路"
+      },
+      "description": {
+        "en": "Migration of Abram from Ur (2085 BC)",
+        "ja": "ウルからのアブラムの移住 (紀元前2085年)"
+      },
+      "imageUrl": "https://www.bible.ca/maps/maps-near-east-abrahams-journey.jpg",
+      "source": "Bible.ca",
+      "license": "Public Domain"
+    },
+    {
+      "period": "ot_exodus",
+      "title": {
+        "en": "The Exodus from Egypt",
+        "ja": "出エジプト"
+      },
+      "description": {
+        "en": "The route of the Israelites from Egypt to Canaan (1446 BC)",
+        "ja": "イスラエル人のエジプトからカナンへの道のり (紀元前1446年)"
+      },
+      "imageUrl": "https://www.bible.ca/archeology/maps-bible-archeology-exodus-route.jpg",
+      "source": "Bible.ca",
+      "license": "Public Domain"
+    },
+    {
+      "period": "ot_judges",
+      "title": {
+        "en": "Israel During the Period of Judges",
+        "ja": "士師時代のイスラエル"
+      },
+      "description": {
+        "en": "Tribal territories during the period of Judges",
+        "ja": "士師時代の部族領土"
+      },
+      "imageUrl": "https://www.bible.ca/maps/maps-master-archeological-bible-study-map-israel-promised-land.jpg",
+      "source": "Bible.ca",
+      "license": "Public Domain"
+    },
+    {
+      "period": "ot_kingdom",
+      "title": {
+        "en": "United Kingdom of David and Solomon",
+        "ja": "ダビデとソロモンの統一王国"
+      },
+      "description": {
+        "en": "The united kingdom under David and Solomon (1000 BC)",
+        "ja": "ダビデとソロモンのもとでの統一王国 (紀元前1000年)"
+      },
+      "imageUrl": "https://www.bible.ca/maps/maps-united-kingdom.jpg",
+      "source": "Bible.ca",
+      "license": "Public Domain"
+    },
+    {
+      "period": "ot_divided",
+      "title": {
+        "en": "The Divided Kingdoms",
+        "ja": "分裂王国時代"
+      },
+      "description": {
+        "en": "Israel and Judah after the division (900-722 BC)",
+        "ja": "分裂後のイスラエルとユダ (紀元前900-722年)"
+      },
+      "imageUrl": "https://www.bible.ca/maps/maps-divided-kingdom.jpg",
+      "source": "Bible.ca",
+      "license": "Public Domain"
+    },
+    {
+      "period": "ot_exile",
+      "title": {
+        "en": "Babylonian Exile",
+        "ja": "バビロン捕囚"
+      },
+      "description": {
+        "en": "The exile to Babylon and surrounding empires",
+        "ja": "バビロンへの捕囚と周辺帝国"
+      },
+      "imageUrl": "https://www.bible.ca/maps/maps-master-archeological-bible-study-map-israel-promised-land.jpg",
+      "source": "Bible.ca",
+      "license": "Public Domain"
+    },
+    {
+      "period": "ot_return",
+      "title": {
+        "en": "Return from Exile",
+        "ja": "捕囚からの帰還"
+      },
+      "description": {
+        "en": "The return of the Jews to Jerusalem",
+        "ja": "ユダヤ人のエルサレムへの帰還"
+      },
+      "imageUrl": "https://www.bible.ca/maps/maps-master-archeological-bible-study-map-israel-promised-land.jpg",
+      "source": "Bible.ca",
+      "license": "Public Domain"
+    },
+    {
+      "period": "nt",
+      "title": {
+        "en": "Palestine at the Time of Jesus",
+        "ja": "イエス時代のパレスチナ"
+      },
+      "description": {
+        "en": "The Holy Land during Jesus' ministry (33 AD)",
+        "ja": "イエスの宣教時代の聖地 (西暦33年)"
+      },
+      "imageUrl": "https://www.bible.ca/maps/maps-palestine-33AD.jpg",
+      "source": "Bible.ca",
+      "license": "Public Domain"
+    }
+  ],
   "places": [
     {
       "id": "jerusalem",
@@ -455,6 +569,1483 @@
       ],
       "relatedPlaces": ["italy"],
       "importance": 4
+    },
+    {
+      "id": "ur",
+      "names": {
+        "en": "Ur",
+        "ja": "ウル",
+        "transliteration": "Ur",
+        "hebrew": "אוּר"
+      },
+      "alternativeNames": {
+        "en": ["Ur of the Chaldees"],
+        "ja": ["カルデヤのウル"]
+      },
+      "type": "city",
+      "periods": ["ot_patriarchs"],
+      "description": {
+        "en": "Ancient city in Mesopotamia, birthplace of Abraham",
+        "ja": "メソポタミアの古代都市、アブラハムの出身地"
+      },
+      "biblicalReferences": [
+        { "book": "genesis", "chapter": 11, "verse": 28, "context": {"ja": "テラとアブラムの故郷", "en": "Terah and Abram's homeland"} },
+        { "book": "genesis", "chapter": 15, "verse": 7, "context": {"ja": "神がアブラムをウルから連れ出した", "en": "God brought Abram from Ur"} }
+      ],
+      "relatedPlaces": ["haran", "babylon"],
+      "importance": 4
+    },
+    {
+      "id": "haran",
+      "names": {
+        "en": "Haran",
+        "ja": "ハラン",
+        "transliteration": "Charan",
+        "hebrew": "חָרָן"
+      },
+      "type": "city",
+      "periods": ["ot_patriarchs"],
+      "description": {
+        "en": "City in northern Mesopotamia where Abraham stayed before entering Canaan",
+        "ja": "メソポタミア北部の都市、アブラハムがカナンに入る前に滞在した場所"
+      },
+      "biblicalReferences": [
+        { "book": "genesis", "chapter": 11, "verse": 31, "context": {"ja": "テラの家族がハランに移住", "en": "Terah's family moved to Haran"} },
+        { "book": "genesis", "chapter": 12, "verse": 4, "context": {"ja": "アブラムがハランを出発", "en": "Abram departed from Haran"} }
+      ],
+      "relatedPlaces": ["ur", "canaan"],
+      "importance": 3
+    },
+    {
+      "id": "sodom",
+      "names": {
+        "en": "Sodom",
+        "ja": "ソドム",
+        "transliteration": "Sedom",
+        "hebrew": "סְדֹם"
+      },
+      "type": "city",
+      "periods": ["ot_patriarchs"],
+      "description": {
+        "en": "Ancient city destroyed by God for its wickedness",
+        "ja": "悪のために神によって滅ぼされた古代都市"
+      },
+      "biblicalReferences": [
+        { "book": "genesis", "chapter": 13, "verse": 10, "context": {"ja": "ロトがソドムを選んだ", "en": "Lot chose Sodom"} },
+        { "book": "genesis", "chapter": 19, "verse": 24, "context": {"ja": "ソドムの滅亡", "en": "Destruction of Sodom"} }
+      ],
+      "relatedPlaces": ["gomorrah", "dead-sea"],
+      "importance": 4
+    },
+    {
+      "id": "gomorrah",
+      "names": {
+        "en": "Gomorrah",
+        "ja": "ゴモラ",
+        "transliteration": "Amorah",
+        "hebrew": "עֲמֹרָה"
+      },
+      "type": "city",
+      "periods": ["ot_patriarchs"],
+      "description": {
+        "en": "Ancient city destroyed along with Sodom",
+        "ja": "ソドムと共に滅ぼされた古代都市"
+      },
+      "biblicalReferences": [
+        { "book": "genesis", "chapter": 18, "verse": 20, "context": {"ja": "ソドムとゴモラの罪", "en": "Sin of Sodom and Gomorrah"} },
+        { "book": "genesis", "chapter": 19, "verse": 24, "context": {"ja": "ゴモラの滅亡", "en": "Destruction of Gomorrah"} }
+      ],
+      "relatedPlaces": ["sodom", "dead-sea"],
+      "importance": 3
+    },
+    {
+      "id": "sidon",
+      "names": {
+        "en": "Sidon",
+        "ja": "シドン",
+        "transliteration": "Tzidon",
+        "hebrew": "צִידוֹן"
+      },
+      "type": "city",
+      "periods": ["ot_patriarchs", "ot_judges", "ot_kingdom", "nt"],
+      "description": {
+        "en": "Ancient Phoenician port city on the Mediterranean coast",
+        "ja": "地中海沿岸の古代フェニキアの港湾都市"
+      },
+      "biblicalReferences": [
+        { "book": "genesis", "chapter": 10, "verse": 19, "context": {"ja": "カナンの境界", "en": "Border of Canaan"} },
+        { "book": "matthew", "chapter": 15, "verse": 21, "context": {"ja": "イエスがツロ・シドンの地方へ", "en": "Jesus went to Tyre and Sidon"} }
+      ],
+      "relatedPlaces": ["tyre", "phoenicia"],
+      "importance": 3
+    },
+    {
+      "id": "tyre",
+      "names": {
+        "en": "Tyre",
+        "ja": "ティルス",
+        "transliteration": "Tzor",
+        "hebrew": "צֹר"
+      },
+      "alternativeNames": {
+        "en": ["Tyrus"],
+        "ja": ["ツロ"]
+      },
+      "type": "city",
+      "periods": ["ot_kingdom", "ot_divided", "nt"],
+      "description": {
+        "en": "Major Phoenician port city, supplied materials for Solomon's temple",
+        "ja": "主要なフェニキアの港湾都市、ソロモンの神殿に材料を供給"
+      },
+      "biblicalReferences": [
+        { "book": "2samuel", "chapter": 5, "verse": 11, "context": {"ja": "ツロの王がダビデに使者を送った", "en": "King of Tyre sent messengers to David"} },
+        { "book": "mark", "chapter": 7, "verse": 24, "context": {"ja": "イエスがツロの地方へ", "en": "Jesus went to Tyre"} }
+      ],
+      "relatedPlaces": ["sidon", "phoenicia"],
+      "importance": 3
+    },
+    {
+      "id": "nineveh",
+      "names": {
+        "en": "Nineveh",
+        "ja": "ニネベ",
+        "transliteration": "Ninveh",
+        "hebrew": "נִינְוֵה"
+      },
+      "type": "city",
+      "periods": ["ot_kingdom", "ot_divided"],
+      "description": {
+        "en": "Capital of the Assyrian Empire, where Jonah preached",
+        "ja": "アッシリア帝国の首都、ヨナが説教した場所"
+      },
+      "biblicalReferences": [
+        { "book": "jonah", "chapter": 1, "verse": 2, "context": {"ja": "ヨナがニネベへ遣わされた", "en": "Jonah sent to Nineveh"} },
+        { "book": "jonah", "chapter": 3, "verse": 3, "context": {"ja": "ニネベは非常に大きな町", "en": "Nineveh was a very large city"} }
+      ],
+      "relatedPlaces": ["assyria"],
+      "importance": 4
+    },
+    {
+      "id": "susa",
+      "names": {
+        "en": "Susa",
+        "ja": "スサ",
+        "transliteration": "Shushan",
+        "hebrew": "שׁוּשַׁן"
+      },
+      "alternativeNames": {
+        "en": ["Shushan"],
+        "ja": ["シュシャン"]
+      },
+      "type": "city",
+      "periods": ["ot_exile", "ot_return"],
+      "description": {
+        "en": "Capital of the Persian Empire, setting of the Book of Esther",
+        "ja": "ペルシャ帝国の首都、エステル記の舞台"
+      },
+      "biblicalReferences": [
+        { "book": "nehemiah", "chapter": 1, "verse": 1, "context": {"ja": "ネヘミヤがシュシャンにいた", "en": "Nehemiah was in Susa"} },
+        { "book": "esther", "chapter": 1, "verse": 2, "context": {"ja": "アハシュエロス王がシュシャンで統治", "en": "King Ahasuerus reigned in Susa"} }
+      ],
+      "relatedPlaces": ["persia"],
+      "importance": 3
+    },
+    {
+      "id": "cana",
+      "names": {
+        "en": "Cana",
+        "ja": "カナ",
+        "transliteration": "Kana",
+        "greek": "Κανᾶ"
+      },
+      "alternativeNames": {
+        "en": ["Cana of Galilee"],
+        "ja": ["ガリラヤのカナ"]
+      },
+      "type": "city",
+      "periods": ["nt"],
+      "description": {
+        "en": "Village in Galilee where Jesus performed His first miracle",
+        "ja": "ガリラヤの村、イエスが最初の奇跡を行った場所"
+      },
+      "biblicalReferences": [
+        { "book": "john", "chapter": 2, "verse": 1, "context": {"ja": "カナの婚礼で水をぶどう酒に変えた", "en": "Wedding at Cana, water to wine"} },
+        { "book": "john", "chapter": 4, "verse": 46, "context": {"ja": "カナで王室の役人の息子を癒した", "en": "Healed official's son at Cana"} }
+      ],
+      "relatedPlaces": ["galilee", "nazareth"],
+      "importance": 3
+    },
+    {
+      "id": "joppa",
+      "names": {
+        "en": "Joppa",
+        "ja": "ヨッパ",
+        "transliteration": "Yafo",
+        "hebrew": "יָפוֹ"
+      },
+      "alternativeNames": {
+        "en": ["Jaffa"],
+        "ja": ["ヤッファ"]
+      },
+      "type": "city",
+      "periods": ["ot_kingdom", "ot_return", "nt"],
+      "description": {
+        "en": "Ancient port city on the Mediterranean coast",
+        "ja": "地中海沿岸の古代港湾都市"
+      },
+      "biblicalReferences": [
+        { "book": "jonah", "chapter": 1, "verse": 3, "context": {"ja": "ヨナがヨッパから船に乗った", "en": "Jonah boarded a ship at Joppa"} },
+        { "book": "acts", "chapter": 10, "verse": 5, "context": {"ja": "ペテロがヨッパにいた", "en": "Peter was in Joppa"} }
+      ],
+      "relatedPlaces": ["mediterranean-sea"],
+      "importance": 3
+    },
+    {
+      "id": "antioch",
+      "names": {
+        "en": "Antioch",
+        "ja": "アンテオケ",
+        "transliteration": "Antiochia",
+        "greek": "Ἀντιόχεια"
+      },
+      "type": "city",
+      "periods": ["nt"],
+      "description": {
+        "en": "Major city in Syria, center of early Christianity",
+        "ja": "シリアの主要都市、初代教会の中心地"
+      },
+      "biblicalReferences": [
+        { "book": "acts", "chapter": 11, "verse": 26, "context": {"ja": "弟子たちが初めてクリスチャンと呼ばれた", "en": "Disciples first called Christians"} },
+        { "book": "acts", "chapter": 13, "verse": 1, "context": {"ja": "パウロとバルナバの宣教が始まった", "en": "Paul and Barnabas' mission began"} }
+      ],
+      "relatedPlaces": ["syria"],
+      "importance": 4
+    },
+    {
+      "id": "ephesus",
+      "names": {
+        "en": "Ephesus",
+        "ja": "エペソ",
+        "transliteration": "Ephesos",
+        "greek": "Ἔφεσος"
+      },
+      "type": "city",
+      "periods": ["nt"],
+      "description": {
+        "en": "Major city in Asia Minor, site of one of the seven churches",
+        "ja": "小アジアの主要都市、七つの教会の一つがあった場所"
+      },
+      "biblicalReferences": [
+        { "book": "acts", "chapter": 19, "verse": 1, "context": {"ja": "パウロがエペソで宣教", "en": "Paul ministered in Ephesus"} },
+        { "book": "ephesians", "chapter": 1, "verse": 1, "context": {"ja": "エペソ人への手紙", "en": "Letter to Ephesians"} },
+        { "book": "revelation", "chapter": 2, "verse": 1, "context": {"ja": "エペソの教会への手紙", "en": "Letter to church in Ephesus"} }
+      ],
+      "relatedPlaces": ["asia-minor"],
+      "importance": 4
+    },
+    {
+      "id": "corinth",
+      "names": {
+        "en": "Corinth",
+        "ja": "コリント",
+        "transliteration": "Korinthos",
+        "greek": "Κόρινθος"
+      },
+      "type": "city",
+      "periods": ["nt"],
+      "description": {
+        "en": "Major city in Greece where Paul established a church",
+        "ja": "ギリシャの主要都市、パウロが教会を設立した場所"
+      },
+      "biblicalReferences": [
+        { "book": "acts", "chapter": 18, "verse": 1, "context": {"ja": "パウロがコリントへ来た", "en": "Paul came to Corinth"} },
+        { "book": "1corinthians", "chapter": 1, "verse": 2, "context": {"ja": "コリント人への第一の手紙", "en": "First letter to Corinthians"} }
+      ],
+      "relatedPlaces": ["greece"],
+      "importance": 4
+    },
+    {
+      "id": "athens",
+      "names": {
+        "en": "Athens",
+        "ja": "アテネ",
+        "transliteration": "Athenai",
+        "greek": "Ἀθῆναι"
+      },
+      "type": "city",
+      "periods": ["nt"],
+      "description": {
+        "en": "Cultural center of Greece where Paul preached at the Areopagus",
+        "ja": "ギリシャの文化の中心地、パウロがアレオパゴスで説教した場所"
+      },
+      "biblicalReferences": [
+        { "book": "acts", "chapter": 17, "verse": 16, "context": {"ja": "パウロがアテネで説教", "en": "Paul preached in Athens"} },
+        { "book": "acts", "chapter": 17, "verse": 22, "context": {"ja": "アレオパゴスでの説教", "en": "Sermon at Areopagus"} }
+      ],
+      "relatedPlaces": ["greece"],
+      "importance": 3
+    },
+    {
+      "id": "beersheba",
+      "names": {
+        "en": "Beersheba",
+        "ja": "ベエルシェバ",
+        "transliteration": "Be'er Sheva",
+        "hebrew": "בְּאֵר שֶׁבַע"
+      },
+      "type": "city",
+      "periods": ["ot_patriarchs", "ot_judges", "ot_kingdom"],
+      "description": {
+        "en": "Southern city in Israel, associated with Abraham and Isaac",
+        "ja": "イスラエル南部の都市、アブラハムとイサクに関連"
+      },
+      "biblicalReferences": [
+        { "book": "genesis", "chapter": 21, "verse": 31, "context": {"ja": "アブラハムが井戸を掘った", "en": "Abraham dug a well"} },
+        { "book": "genesis", "chapter": 26, "verse": 23, "context": {"ja": "イサクがベエルシェバに住んだ", "en": "Isaac lived in Beersheba"} }
+      ],
+      "relatedPlaces": ["hebron"],
+      "importance": 3
+    },
+    {
+      "id": "hebron",
+      "names": {
+        "en": "Hebron",
+        "ja": "ヘブロン",
+        "transliteration": "Chevron",
+        "hebrew": "חֶבְרוֹן"
+      },
+      "type": "city",
+      "periods": ["ot_patriarchs", "ot_judges", "ot_kingdom"],
+      "description": {
+        "en": "Ancient city where Abraham settled and David first reigned",
+        "ja": "アブラハムが住み、ダビデが最初に統治した古代都市"
+      },
+      "biblicalReferences": [
+        { "book": "genesis", "chapter": 13, "verse": 18, "context": {"ja": "アブラハムがヘブロンに住んだ", "en": "Abraham lived in Hebron"} },
+        { "book": "2samuel", "chapter": 2, "verse": 11, "context": {"ja": "ダビデがヘブロンで7年間統治", "en": "David reigned in Hebron 7 years"} }
+      ],
+      "relatedPlaces": ["beersheba", "judea"],
+      "importance": 4
+    },
+    {
+      "id": "bethel",
+      "names": {
+        "en": "Bethel",
+        "ja": "ベテル",
+        "transliteration": "Beit El",
+        "hebrew": "בֵּית אֵל"
+      },
+      "alternativeNames": {
+        "en": ["House of God"],
+        "ja": ["神の家"]
+      },
+      "type": "city",
+      "periods": ["ot_patriarchs", "ot_judges", "ot_kingdom", "ot_divided"],
+      "description": {
+        "en": "Sacred site where Jacob had his dream of a ladder to heaven",
+        "ja": "ヤコブが天に至る梯子の夢を見た聖地"
+      },
+      "biblicalReferences": [
+        { "book": "genesis", "chapter": 28, "verse": 19, "context": {"ja": "ヤコブがベテルと名付けた", "en": "Jacob named it Bethel"} },
+        { "book": "1kings", "chapter": 12, "verse": 29, "context": {"ja": "ヤロブアムが金の子牛を置いた", "en": "Jeroboam set up golden calf"} }
+      ],
+      "relatedPlaces": ["shechem"],
+      "importance": 4
+    },
+    {
+      "id": "shechem",
+      "names": {
+        "en": "Shechem",
+        "ja": "シケム",
+        "transliteration": "Shekhem",
+        "hebrew": "שְׁכֶם"
+      },
+      "type": "city",
+      "periods": ["ot_patriarchs", "ot_judges", "ot_kingdom"],
+      "description": {
+        "en": "Ancient city where Abraham first arrived in Canaan",
+        "ja": "アブラハムが最初にカナンに到着した古代都市"
+      },
+      "biblicalReferences": [
+        { "book": "genesis", "chapter": 12, "verse": 6, "context": {"ja": "アブラムがシケムに来た", "en": "Abram came to Shechem"} },
+        { "book": "joshua", "chapter": 24, "verse": 1, "context": {"ja": "ヨシュアがイスラエルをシケムに集めた", "en": "Joshua gathered Israel at Shechem"} }
+      ],
+      "relatedPlaces": ["bethel", "samaria"],
+      "importance": 3
+    },
+    {
+      "id": "dan",
+      "names": {
+        "en": "Dan",
+        "ja": "ダン",
+        "transliteration": "Dan",
+        "hebrew": "דָּן"
+      },
+      "type": "city",
+      "periods": ["ot_judges", "ot_kingdom", "ot_divided"],
+      "description": {
+        "en": "Northernmost city of Israel, marking the northern boundary",
+        "ja": "イスラエルの最北端の都市、北の境界を示す"
+      },
+      "biblicalReferences": [
+        { "book": "judges", "chapter": 18, "verse": 29, "context": {"ja": "町の名をダンと呼んだ", "en": "Named the city Dan"} },
+        { "book": "1kings", "chapter": 12, "verse": 29, "context": {"ja": "ヤロブアムが金の子牛を置いた", "en": "Jeroboam set up golden calf"} }
+      ],
+      "relatedPlaces": ["beersheba"],
+      "importance": 3
+    },
+    {
+      "id": "thessalonica",
+      "names": {
+        "en": "Thessalonica",
+        "ja": "テサロニケ",
+        "transliteration": "Thessalonike",
+        "greek": "Θεσσαλονίκη"
+      },
+      "type": "city",
+      "periods": ["nt"],
+      "description": {
+        "en": "Major city in Macedonia where Paul established a church",
+        "ja": "マケドニアの主要都市、パウロが教会を設立した場所"
+      },
+      "biblicalReferences": [
+        { "book": "acts", "chapter": 17, "verse": 1, "context": {"ja": "パウロがテサロニケへ来た", "en": "Paul came to Thessalonica"} },
+        { "book": "1thessalonians", "chapter": 1, "verse": 1, "context": {"ja": "テサロニケ人への第一の手紙", "en": "First letter to Thessalonians"} }
+      ],
+      "relatedPlaces": ["macedonia"],
+      "importance": 3
+    },
+    {
+      "id": "philippi",
+      "names": {
+        "en": "Philippi",
+        "ja": "ピリピ",
+        "transliteration": "Philippoi",
+        "greek": "Φίλιπποι"
+      },
+      "type": "city",
+      "periods": ["nt"],
+      "description": {
+        "en": "City in Macedonia where Paul established the first European church",
+        "ja": "マケドニアの都市、パウロがヨーロッパ最初の教会を設立した場所"
+      },
+      "biblicalReferences": [
+        { "book": "acts", "chapter": 16, "verse": 12, "context": {"ja": "パウロがピリピへ来た", "en": "Paul came to Philippi"} },
+        { "book": "philippians", "chapter": 1, "verse": 1, "context": {"ja": "ピリピ人への手紙", "en": "Letter to Philippians"} }
+      ],
+      "relatedPlaces": ["macedonia"],
+      "importance": 3
+    },
+    {
+      "id": "bethsaida",
+      "names": {
+        "en": "Bethsaida",
+        "ja": "ベツサイダ",
+        "transliteration": "Beit Tzaida",
+        "greek": "Βηθσαϊδά"
+      },
+      "type": "city",
+      "periods": ["nt"],
+      "description": {
+        "en": "Hometown of Peter, Andrew, and Philip on the Sea of Galilee",
+        "ja": "ガリラヤ湖畔のペテロ、アンデレ、ピリポの故郷"
+      },
+      "biblicalReferences": [
+        { "book": "john", "chapter": 1, "verse": 44, "context": {"ja": "ピリポ、ペテロ、アンデレの町", "en": "City of Philip, Peter, and Andrew"} },
+        { "book": "mark", "chapter": 8, "verse": 22, "context": {"ja": "イエスが盲人を癒した", "en": "Jesus healed a blind man"} }
+      ],
+      "relatedPlaces": ["sea-of-galilee", "capernaum"],
+      "importance": 3
+    },
+    {
+      "id": "emmaus",
+      "names": {
+        "en": "Emmaus",
+        "ja": "エマオ",
+        "transliteration": "Emmaus",
+        "greek": "Ἐμμαοῦς"
+      },
+      "type": "city",
+      "periods": ["nt"],
+      "description": {
+        "en": "Village where the risen Jesus appeared to two disciples",
+        "ja": "復活したイエスが二人の弟子に現れた村"
+      },
+      "biblicalReferences": [
+        { "book": "luke", "chapter": 24, "verse": 13, "context": {"ja": "復活のイエスが現れた", "en": "Risen Jesus appeared"} }
+      ],
+      "relatedPlaces": ["jerusalem"],
+      "importance": 2
+    },
+    {
+      "id": "mount-carmel",
+      "names": {
+        "en": "Mount Carmel",
+        "ja": "カルメル山",
+        "transliteration": "Har Karmel",
+        "hebrew": "הַר הַכַּרְמֶל"
+      },
+      "type": "mountain",
+      "periods": ["ot_kingdom", "ot_divided"],
+      "description": {
+        "en": "Mountain where Elijah challenged the prophets of Baal",
+        "ja": "エリヤがバアルの預言者たちに挑戦した山"
+      },
+      "biblicalReferences": [
+        { "book": "1kings", "chapter": 18, "verse": 19, "context": {"ja": "エリヤとバアルの預言者の対決", "en": "Elijah vs prophets of Baal"} }
+      ],
+      "relatedPlaces": ["israel"],
+      "importance": 4
+    },
+    {
+      "id": "mount-hermon",
+      "names": {
+        "en": "Mount Hermon",
+        "ja": "ヘルモン山",
+        "transliteration": "Har Chermon",
+        "hebrew": "הַר חֶרְמוֹן"
+      },
+      "type": "mountain",
+      "periods": ["ot_judges", "ot_kingdom", "nt"],
+      "description": {
+        "en": "Highest mountain in the region, northern border of Israel",
+        "ja": "地域で最も高い山、イスラエルの北の境界"
+      },
+      "biblicalReferences": [
+        { "book": "deuteronomy", "chapter": 3, "verse": 8, "context": {"ja": "イスラエルの北の境界", "en": "Northern border of Israel"} },
+        { "book": "psalms", "chapter": 133, "verse": 3, "context": {"ja": "ヘルモンの露", "en": "Dew of Hermon"} }
+      ],
+      "relatedPlaces": ["galilee"],
+      "importance": 2
+    },
+    {
+      "id": "shiloh",
+      "names": {
+        "en": "Shiloh",
+        "ja": "シロ",
+        "transliteration": "Shilo",
+        "hebrew": "שִׁלֹה"
+      },
+      "type": "city",
+      "periods": ["ot_judges"],
+      "description": {
+        "en": "Site of the tabernacle during the period of the judges",
+        "ja": "士師の時代に幕屋があった場所"
+      },
+      "biblicalReferences": [
+        { "book": "joshua", "chapter": 18, "verse": 1, "context": {"ja": "幕屋がシロに建てられた", "en": "Tabernacle set up at Shiloh"} },
+        { "book": "1samuel", "chapter": 1, "verse": 3, "context": {"ja": "エルカナの家族がシロへ", "en": "Elkanah's family went to Shiloh"} }
+      ],
+      "relatedPlaces": ["bethel"],
+      "importance": 3
+    },
+    {
+      "id": "gilgal",
+      "names": {
+        "en": "Gilgal",
+        "ja": "ギルガル",
+        "transliteration": "Gilgal",
+        "hebrew": "גִּלְגָּל"
+      },
+      "type": "city",
+      "periods": ["ot_exodus", "ot_judges", "ot_kingdom"],
+      "description": {
+        "en": "First campsite of Israel after crossing the Jordan River",
+        "ja": "ヨルダン川を渡った後のイスラエルの最初の野営地"
+      },
+      "biblicalReferences": [
+        { "book": "joshua", "chapter": 4, "verse": 19, "context": {"ja": "イスラエルがギルガルに宿営", "en": "Israel camped at Gilgal"} },
+        { "book": "1samuel", "chapter": 11, "verse": 15, "context": {"ja": "サウルが王として立てられた", "en": "Saul made king"} }
+      ],
+      "relatedPlaces": ["jericho", "jordan-river"],
+      "importance": 3
+    },
+    {
+      "id": "smyrna",
+      "names": {
+        "en": "Smyrna",
+        "ja": "スミルナ",
+        "transliteration": "Smyrna",
+        "greek": "Σμύρνα"
+      },
+      "type": "city",
+      "periods": ["nt"],
+      "description": {
+        "en": "One of the seven churches of Asia, suffered persecution",
+        "ja": "アジアの七つの教会の一つ、迫害を受けた教会"
+      },
+      "biblicalReferences": [
+        { "book": "revelation", "chapter": 2, "verse": 8, "context": {"ja": "スミルナの教会への手紙", "en": "Letter to church in Smyrna"} }
+      ],
+      "relatedPlaces": ["ephesus", "pergamum"],
+      "importance": 3
+    },
+    {
+      "id": "pergamum",
+      "names": {
+        "en": "Pergamum",
+        "ja": "ペルガモ",
+        "transliteration": "Pergamon",
+        "greek": "Πέργαμος"
+      },
+      "type": "city",
+      "periods": ["nt"],
+      "description": {
+        "en": "One of the seven churches of Asia, where Satan's throne was",
+        "ja": "アジアの七つの教会の一つ、サタンの王座があると言われた場所"
+      },
+      "biblicalReferences": [
+        { "book": "revelation", "chapter": 2, "verse": 12, "context": {"ja": "ペルガモの教会への手紙", "en": "Letter to church in Pergamum"} }
+      ],
+      "relatedPlaces": ["smyrna", "thyatira"],
+      "importance": 3
+    },
+    {
+      "id": "thyatira",
+      "names": {
+        "en": "Thyatira",
+        "ja": "ティアテラ",
+        "transliteration": "Thyateira",
+        "greek": "Θυάτειρα"
+      },
+      "type": "city",
+      "periods": ["nt"],
+      "description": {
+        "en": "One of the seven churches of Asia, home of Lydia",
+        "ja": "アジアの七つの教会の一つ、リディアの故郷"
+      },
+      "biblicalReferences": [
+        { "book": "acts", "chapter": 16, "verse": 14, "context": {"ja": "リディアはティアテラの出身", "en": "Lydia was from Thyatira"} },
+        { "book": "revelation", "chapter": 2, "verse": 18, "context": {"ja": "ティアテラの教会への手紙", "en": "Letter to church in Thyatira"} }
+      ],
+      "relatedPlaces": ["pergamum", "sardis"],
+      "importance": 3
+    },
+    {
+      "id": "sardis",
+      "names": {
+        "en": "Sardis",
+        "ja": "サルデス",
+        "transliteration": "Sardeis",
+        "greek": "Σάρδεις"
+      },
+      "type": "city",
+      "periods": ["nt"],
+      "description": {
+        "en": "One of the seven churches of Asia, spiritually dead church",
+        "ja": "アジアの七つの教会の一つ、霊的に死んでいると言われた教会"
+      },
+      "biblicalReferences": [
+        { "book": "revelation", "chapter": 3, "verse": 1, "context": {"ja": "サルデスの教会への手紙", "en": "Letter to church in Sardis"} }
+      ],
+      "relatedPlaces": ["thyatira", "philadelphia"],
+      "importance": 3
+    },
+    {
+      "id": "philadelphia",
+      "names": {
+        "en": "Philadelphia",
+        "ja": "フィラデルフィア",
+        "transliteration": "Philadelphia",
+        "greek": "Φιλαδέλφεια"
+      },
+      "type": "city",
+      "periods": ["nt"],
+      "description": {
+        "en": "One of the seven churches of Asia, faithful church",
+        "ja": "アジアの七つの教会の一つ、忠実な教会"
+      },
+      "biblicalReferences": [
+        { "book": "revelation", "chapter": 3, "verse": 7, "context": {"ja": "フィラデルフィアの教会への手紙", "en": "Letter to church in Philadelphia"} }
+      ],
+      "relatedPlaces": ["sardis", "laodicea"],
+      "importance": 3
+    },
+    {
+      "id": "laodicea",
+      "names": {
+        "en": "Laodicea",
+        "ja": "ラオデキヤ",
+        "transliteration": "Laodikeia",
+        "greek": "Λαοδίκεια"
+      },
+      "type": "city",
+      "periods": ["nt"],
+      "description": {
+        "en": "One of the seven churches of Asia, lukewarm church",
+        "ja": "アジアの七つの教会の一つ、生ぬるいと言われた教会"
+      },
+      "biblicalReferences": [
+        { "book": "revelation", "chapter": 3, "verse": 14, "context": {"ja": "ラオデキヤの教会への手紙", "en": "Letter to church in Laodicea"} },
+        { "book": "colossians", "chapter": 4, "verse": 16, "context": {"ja": "ラオデキヤへの手紙", "en": "Letter to Laodicea"} }
+      ],
+      "relatedPlaces": ["philadelphia", "colossae"],
+      "importance": 3
+    },
+    {
+      "id": "colossae",
+      "names": {
+        "en": "Colossae",
+        "ja": "コロサイ",
+        "transliteration": "Kolossai",
+        "greek": "Κολοσσαί"
+      },
+      "type": "city",
+      "periods": ["nt"],
+      "description": {
+        "en": "City in Asia Minor where Paul wrote a letter",
+        "ja": "小アジアの都市、パウロが手紙を書いた場所"
+      },
+      "biblicalReferences": [
+        { "book": "colossians", "chapter": 1, "verse": 2, "context": {"ja": "コロサイ人への手紙", "en": "Letter to Colossians"} }
+      ],
+      "relatedPlaces": ["laodicea", "ephesus"],
+      "importance": 3
+    },
+    {
+      "id": "berea",
+      "names": {
+        "en": "Berea",
+        "ja": "ベレア",
+        "transliteration": "Beroia",
+        "greek": "Βέροια"
+      },
+      "type": "city",
+      "periods": ["nt"],
+      "description": {
+        "en": "City in Macedonia known for examining the Scriptures",
+        "ja": "マケドニアの都市、聖書を熱心に調べたことで知られる"
+      },
+      "biblicalReferences": [
+        { "book": "acts", "chapter": 17, "verse": 10, "context": {"ja": "ベレアの人々は聖書を調べた", "en": "Bereans examined Scriptures"} }
+      ],
+      "relatedPlaces": ["thessalonica", "macedonia"],
+      "importance": 3
+    },
+    {
+      "id": "gaza",
+      "names": {
+        "en": "Gaza",
+        "ja": "ガザ",
+        "transliteration": "Aza",
+        "hebrew": "עַזָּה"
+      },
+      "type": "city",
+      "periods": ["ot_judges", "ot_kingdom", "ot_divided", "nt"],
+      "description": {
+        "en": "Philistine city where Samson was imprisoned",
+        "ja": "ペリシテの都市、サムソンが捕らわれた場所"
+      },
+      "biblicalReferences": [
+        { "book": "judges", "chapter": 16, "verse": 21, "context": {"ja": "サムソンがガザで捕らわれた", "en": "Samson imprisoned in Gaza"} },
+        { "book": "acts", "chapter": 8, "verse": 26, "context": {"ja": "ピリポがガザへの道で宦官に会った", "en": "Philip met eunuch on Gaza road"} }
+      ],
+      "relatedPlaces": ["ashdod", "ashkelon"],
+      "importance": 3
+    },
+    {
+      "id": "ashdod",
+      "names": {
+        "en": "Ashdod",
+        "ja": "アシュドド",
+        "transliteration": "Ashdod",
+        "hebrew": "אַשְׁדּוֹד"
+      },
+      "type": "city",
+      "periods": ["ot_judges", "ot_kingdom", "ot_divided"],
+      "description": {
+        "en": "Philistine city where the ark was taken",
+        "ja": "ペリシテの都市、契約の箱が運ばれた場所"
+      },
+      "biblicalReferences": [
+        { "book": "1samuel", "chapter": 5, "verse": 1, "context": {"ja": "契約の箱がアシュドドに運ばれた", "en": "Ark taken to Ashdod"} }
+      ],
+      "relatedPlaces": ["gaza", "ekron"],
+      "importance": 3
+    },
+    {
+      "id": "moab",
+      "names": {
+        "en": "Moab",
+        "ja": "モアブ",
+        "transliteration": "Moav",
+        "hebrew": "מוֹאָב"
+      },
+      "type": "region",
+      "periods": ["ot_patriarchs", "ot_exodus", "ot_judges", "ot_kingdom"],
+      "description": {
+        "en": "Land east of the Dead Sea, Ruth's homeland",
+        "ja": "死海の東にある地、ルツの故郷"
+      },
+      "biblicalReferences": [
+        { "book": "ruth", "chapter": 1, "verse": 1, "context": {"ja": "ルツはモアブの女", "en": "Ruth was from Moab"} },
+        { "book": "numbers", "chapter": 22, "verse": 1, "context": {"ja": "イスラエルがモアブの平地に宿営", "en": "Israel camped in plains of Moab"} }
+      ],
+      "relatedPlaces": ["dead-sea", "edom"],
+      "importance": 3
+    },
+    {
+      "id": "edom",
+      "names": {
+        "en": "Edom",
+        "ja": "エドム",
+        "transliteration": "Edom",
+        "hebrew": "אֱדוֹם"
+      },
+      "type": "region",
+      "periods": ["ot_patriarchs", "ot_exodus", "ot_kingdom"],
+      "description": {
+        "en": "Land south of the Dead Sea, descendants of Esau",
+        "ja": "死海の南にある地、エサウの子孫の土地"
+      },
+      "biblicalReferences": [
+        { "book": "genesis", "chapter": 36, "verse": 8, "context": {"ja": "エサウはエドムに住んだ", "en": "Esau lived in Edom"} },
+        { "book": "numbers", "chapter": 20, "verse": 14, "context": {"ja": "モーセがエドムの王に使者を送った", "en": "Moses sent messengers to king of Edom"} }
+      ],
+      "relatedPlaces": ["moab", "dead-sea"],
+      "importance": 3
+    },
+    {
+      "id": "megiddo",
+      "names": {
+        "en": "Megiddo",
+        "ja": "メギド",
+        "transliteration": "Megiddo",
+        "hebrew": "מְגִדּוֹ"
+      },
+      "alternativeNames": {
+        "en": ["Armageddon"],
+        "ja": ["ハルマゲドン"]
+      },
+      "type": "city",
+      "periods": ["ot_judges", "ot_kingdom", "ot_divided"],
+      "description": {
+        "en": "Strategic fortress city, site of many battles",
+        "ja": "戦略的な要塞都市、多くの戦いがあった場所"
+      },
+      "biblicalReferences": [
+        { "book": "judges", "chapter": 5, "verse": 19, "context": {"ja": "タアナクの水のほとりのメギドで戦い", "en": "Battle at Megiddo"} },
+        { "book": "2kings", "chapter": 23, "verse": 29, "context": {"ja": "ヨシヤがメギドで戦死", "en": "Josiah killed at Megiddo"} },
+        { "book": "revelation", "chapter": 16, "verse": 16, "context": {"ja": "ハルマゲドン", "en": "Armageddon"} }
+      ],
+      "relatedPlaces": ["jezreel"],
+      "importance": 4
+    },
+    {
+      "id": "ramah",
+      "names": {
+        "en": "Ramah",
+        "ja": "ラマ",
+        "transliteration": "Ramah",
+        "hebrew": "רָמָה"
+      },
+      "type": "city",
+      "periods": ["ot_judges", "ot_kingdom"],
+      "description": {
+        "en": "City where Samuel lived and judged Israel",
+        "ja": "サムエルが住み、イスラエルを裁いた都市"
+      },
+      "biblicalReferences": [
+        { "book": "1samuel", "chapter": 7, "verse": 17, "context": {"ja": "サムエルはラマに住んだ", "en": "Samuel lived in Ramah"} },
+        { "book": "1samuel", "chapter": 19, "verse": 18, "context": {"ja": "ダビデがラマのサムエルのもとに逃げた", "en": "David fled to Samuel at Ramah"} }
+      ],
+      "relatedPlaces": ["bethel", "mizpah"],
+      "importance": 3
+    },
+    {
+      "id": "mizpah",
+      "names": {
+        "en": "Mizpah",
+        "ja": "ミツパ",
+        "transliteration": "Mitzpah",
+        "hebrew": "מִצְפָּה"
+      },
+      "type": "city",
+      "periods": ["ot_judges", "ot_kingdom"],
+      "description": {
+        "en": "City where Israel gathered for important assemblies",
+        "ja": "イスラエルが重要な集会のために集まった都市"
+      },
+      "biblicalReferences": [
+        { "book": "1samuel", "chapter": 7, "verse": 5, "context": {"ja": "サムエルがイスラエルをミツパに集めた", "en": "Samuel gathered Israel at Mizpah"} },
+        { "book": "1samuel", "chapter": 10, "verse": 17, "context": {"ja": "サウルがミツパで王に選ばれた", "en": "Saul chosen as king at Mizpah"} }
+      ],
+      "relatedPlaces": ["ramah", "gilgal"],
+      "importance": 3
+    },
+    {
+      "id": "en-gedi",
+      "names": {
+        "en": "En-gedi",
+        "ja": "エンゲディ",
+        "transliteration": "Ein Gedi",
+        "hebrew": "עֵין גֶּדִי"
+      },
+      "type": "city",
+      "periods": ["ot_kingdom"],
+      "description": {
+        "en": "Oasis by the Dead Sea where David hid from Saul",
+        "ja": "死海のほとりのオアシス、ダビデがサウルから隠れた場所"
+      },
+      "biblicalReferences": [
+        { "book": "1samuel", "chapter": 24, "verse": 1, "context": {"ja": "ダビデがエンゲディの要害にいた", "en": "David stayed in En-gedi strongholds"} }
+      ],
+      "relatedPlaces": ["dead-sea", "jerusalem"],
+      "importance": 2
+    },
+    {
+      "id": "dothan",
+      "names": {
+        "en": "Dothan",
+        "ja": "ドタン",
+        "transliteration": "Dotan",
+        "hebrew": "דֹּתָן"
+      },
+      "type": "city",
+      "periods": ["ot_patriarchs", "ot_divided"],
+      "description": {
+        "en": "City where Joseph was sold by his brothers",
+        "ja": "ヨセフが兄弟たちに売られた都市"
+      },
+      "biblicalReferences": [
+        { "book": "genesis", "chapter": 37, "verse": 17, "context": {"ja": "ヨセフの兄弟たちがドタンにいた", "en": "Joseph's brothers were at Dothan"} },
+        { "book": "2kings", "chapter": 6, "verse": 13, "context": {"ja": "エリシャがドタンにいた", "en": "Elisha was in Dothan"} }
+      ],
+      "relatedPlaces": ["shechem"],
+      "importance": 2
+    },
+    {
+      "id": "kadesh-barnea",
+      "names": {
+        "en": "Kadesh-barnea",
+        "ja": "カデシュ・バルネア",
+        "transliteration": "Kadesh Barnea",
+        "hebrew": "קָדֵשׁ בַּרְנֵעַ"
+      },
+      "type": "city",
+      "periods": ["ot_exodus"],
+      "description": {
+        "en": "Oasis in the wilderness where Israel camped for many years",
+        "ja": "荒野のオアシス、イスラエルが長年宿営した場所"
+      },
+      "biblicalReferences": [
+        { "book": "numbers", "chapter": 13, "verse": 26, "context": {"ja": "斥候がカデシュ・バルネアに戻った", "en": "Spies returned to Kadesh-barnea"} },
+        { "book": "numbers", "chapter": 20, "verse": 1, "context": {"ja": "イスラエルがカデシュに到着", "en": "Israel came to Kadesh"} }
+      ],
+      "relatedPlaces": ["mount-sinai", "canaan"],
+      "importance": 4
+    },
+    {
+      "id": "hazor",
+      "names": {
+        "en": "Hazor",
+        "ja": "ハツォル",
+        "transliteration": "Hatzor",
+        "hebrew": "חָצוֹר"
+      },
+      "type": "city",
+      "periods": ["ot_exodus", "ot_judges", "ot_kingdom"],
+      "description": {
+        "en": "Major Canaanite city in northern Israel",
+        "ja": "北イスラエルの主要なカナン人の都市"
+      },
+      "biblicalReferences": [
+        { "book": "joshua", "chapter": 11, "verse": 10, "context": {"ja": "ヨシュアがハツォルを攻略", "en": "Joshua captured Hazor"} },
+        { "book": "1kings", "chapter": 9, "verse": 15, "context": {"ja": "ソロモンがハツォルを再建", "en": "Solomon rebuilt Hazor"} }
+      ],
+      "relatedPlaces": ["galilee"],
+      "importance": 3
+    },
+    {
+      "id": "goshen",
+      "names": {
+        "en": "Goshen",
+        "ja": "ゴセン",
+        "transliteration": "Goshen",
+        "hebrew": "גֹּשֶׁן"
+      },
+      "type": "region",
+      "periods": ["ot_patriarchs", "ot_exodus"],
+      "description": {
+        "en": "Fertile region in Egypt where Israelites lived",
+        "ja": "エジプトの肥沃な地域、イスラエル人が住んだ場所"
+      },
+      "biblicalReferences": [
+        { "book": "genesis", "chapter": 47, "verse": 6, "context": {"ja": "ヨセフが家族をゴセンに住まわせた", "en": "Joseph settled family in Goshen"} },
+        { "book": "exodus", "chapter": 8, "verse": 22, "context": {"ja": "ゴセンには災いが来なかった", "en": "No plague in Goshen"} }
+      ],
+      "relatedPlaces": ["egypt"],
+      "importance": 3
+    },
+    {
+      "id": "midian",
+      "names": {
+        "en": "Midian",
+        "ja": "ミデヤン",
+        "transliteration": "Midyan",
+        "hebrew": "מִדְיָן"
+      },
+      "type": "region",
+      "periods": ["ot_patriarchs", "ot_exodus", "ot_judges"],
+      "description": {
+        "en": "Desert region where Moses fled and lived for 40 years",
+        "ja": "砂漠地域、モーセが逃げて40年間住んだ場所"
+      },
+      "biblicalReferences": [
+        { "book": "exodus", "chapter": 2, "verse": 15, "context": {"ja": "モーセがミデヤンに逃げた", "en": "Moses fled to Midian"} },
+        { "book": "judges", "chapter": 6, "verse": 1, "context": {"ja": "ミデヤン人がイスラエルを苦しめた", "en": "Midianites oppressed Israel"} }
+      ],
+      "relatedPlaces": ["mount-sinai", "egypt"],
+      "importance": 3
+    },
+    {
+      "id": "cyprus",
+      "names": {
+        "en": "Cyprus",
+        "ja": "キプロス",
+        "transliteration": "Kypros",
+        "greek": "Κύπρος"
+      },
+      "type": "island",
+      "periods": ["nt"],
+      "description": {
+        "en": "Island in the Mediterranean, Barnabas' homeland",
+        "ja": "地中海の島、バルナバの故郷"
+      },
+      "biblicalReferences": [
+        { "book": "acts", "chapter": 13, "verse": 4, "context": {"ja": "パウロとバルナバがキプロスへ", "en": "Paul and Barnabas went to Cyprus"} },
+        { "book": "acts", "chapter": 4, "verse": 36, "context": {"ja": "バルナバはキプロスの出身", "en": "Barnabas was from Cyprus"} }
+      ],
+      "relatedPlaces": ["antioch"],
+      "importance": 2
+    },
+    {
+      "id": "crete",
+      "names": {
+        "en": "Crete",
+        "ja": "クレテ",
+        "transliteration": "Krete",
+        "greek": "Κρήτη"
+      },
+      "type": "island",
+      "periods": ["nt"],
+      "description": {
+        "en": "Large island in the Mediterranean where Paul left Titus",
+        "ja": "地中海の大きな島、パウロがテトスを残した場所"
+      },
+      "biblicalReferences": [
+        { "book": "acts", "chapter": 27, "verse": 7, "context": {"ja": "パウロの船がクレテを通過", "en": "Paul's ship passed Crete"} },
+        { "book": "titus", "chapter": 1, "verse": 5, "context": {"ja": "テトスをクレテに残した", "en": "Left Titus in Crete"} }
+      ],
+      "relatedPlaces": ["rome", "malta"],
+      "importance": 2
+    },
+    {
+      "id": "malta",
+      "names": {
+        "en": "Malta",
+        "ja": "マルタ",
+        "transliteration": "Melite",
+        "greek": "Μελίτη"
+      },
+      "type": "island",
+      "periods": ["nt"],
+      "description": {
+        "en": "Island where Paul was shipwrecked on the way to Rome",
+        "ja": "ローマへの途中でパウロが難破した島"
+      },
+      "biblicalReferences": [
+        { "book": "acts", "chapter": 28, "verse": 1, "context": {"ja": "パウロがマルタに漂着", "en": "Paul shipwrecked on Malta"} }
+      ],
+      "relatedPlaces": ["rome", "crete"],
+      "importance": 2
+    },
+    {
+      "id": "gibeon",
+      "names": {
+        "en": "Gibeon",
+        "ja": "ギベオン",
+        "transliteration": "Givon",
+        "hebrew": "גִּבְעוֹן"
+      },
+      "type": "city",
+      "periods": ["ot_exodus", "ot_judges", "ot_kingdom"],
+      "description": {
+        "en": "City where the sun stood still during Joshua's battle",
+        "ja": "ヨシュアの戦いで太陽が止まった都市"
+      },
+      "biblicalReferences": [
+        { "book": "joshua", "chapter": 9, "verse": 3, "context": {"ja": "ギベオン人がヨシュアと和を結んだ", "en": "Gibeonites made peace with Joshua"} },
+        { "book": "joshua", "chapter": 10, "verse": 12, "context": {"ja": "太陽がギベオンの上に止まった", "en": "Sun stood still over Gibeon"} }
+      ],
+      "relatedPlaces": ["jerusalem", "jericho"],
+      "importance": 3
+    },
+    {
+      "id": "gibeah",
+      "names": {
+        "en": "Gibeah",
+        "ja": "ギブア",
+        "transliteration": "Giva",
+        "hebrew": "גִּבְעָה"
+      },
+      "type": "city",
+      "periods": ["ot_judges", "ot_kingdom"],
+      "description": {
+        "en": "Hometown of King Saul",
+        "ja": "サウル王の故郷"
+      },
+      "biblicalReferences": [
+        { "book": "1samuel", "chapter": 10, "verse": 26, "context": {"ja": "サウルがギブアの自分の家に帰った", "en": "Saul went to his home in Gibeah"} },
+        { "book": "1samuel", "chapter": 15, "verse": 34, "context": {"ja": "サウルはギブアに上った", "en": "Saul went up to Gibeah"} }
+      ],
+      "relatedPlaces": ["jerusalem", "ramah"],
+      "importance": 3
+    },
+    {
+      "id": "ai",
+      "names": {
+        "en": "Ai",
+        "ja": "アイ",
+        "transliteration": "Ai",
+        "hebrew": "עַי"
+      },
+      "type": "city",
+      "periods": ["ot_exodus"],
+      "description": {
+        "en": "Canaanite city conquered by Joshua after Jericho",
+        "ja": "エリコの後にヨシュアが征服したカナン人の都市"
+      },
+      "biblicalReferences": [
+        { "book": "joshua", "chapter": 7, "verse": 2, "context": {"ja": "ヨシュアがアイを偵察させた", "en": "Joshua sent spies to Ai"} },
+        { "book": "joshua", "chapter": 8, "verse": 28, "context": {"ja": "ヨシュアがアイを焼いた", "en": "Joshua burned Ai"} }
+      ],
+      "relatedPlaces": ["jericho", "bethel"],
+      "importance": 2
+    },
+    {
+      "id": "tarshish",
+      "names": {
+        "en": "Tarshish",
+        "ja": "タルシシュ",
+        "transliteration": "Tarshish",
+        "hebrew": "תַּרְשִׁישׁ"
+      },
+      "type": "city",
+      "periods": ["ot_kingdom", "ot_divided"],
+      "description": {
+        "en": "Distant port city where Jonah tried to flee",
+        "ja": "遠方の港湾都市、ヨナが逃げようとした場所"
+      },
+      "biblicalReferences": [
+        { "book": "jonah", "chapter": 1, "verse": 3, "context": {"ja": "ヨナがタルシシュへ逃げようとした", "en": "Jonah tried to flee to Tarshish"} },
+        { "book": "1kings", "chapter": 10, "verse": 22, "context": {"ja": "ソロモンのタルシシュの船", "en": "Solomon's ships of Tarshish"} }
+      ],
+      "relatedPlaces": ["joppa"],
+      "importance": 3
+    },
+    {
+      "id": "gath",
+      "names": {
+        "en": "Gath",
+        "ja": "ガテ",
+        "transliteration": "Gat",
+        "hebrew": "גַּת"
+      },
+      "type": "city",
+      "periods": ["ot_judges", "ot_kingdom"],
+      "description": {
+        "en": "Philistine city, home of Goliath",
+        "ja": "ペリシテの都市、ゴリアテの故郷"
+      },
+      "biblicalReferences": [
+        { "book": "1samuel", "chapter": 17, "verse": 4, "context": {"ja": "ゴリアテはガテから出た", "en": "Goliath was from Gath"} },
+        { "book": "1samuel", "chapter": 27, "verse": 2, "context": {"ja": "ダビデがガテへ逃げた", "en": "David fled to Gath"} }
+      ],
+      "relatedPlaces": ["gaza", "ashdod"],
+      "importance": 3
+    },
+    {
+      "id": "ashkelon",
+      "names": {
+        "en": "Ashkelon",
+        "ja": "アシュケロン",
+        "transliteration": "Ashkelon",
+        "hebrew": "אַשְׁקְלוֹן"
+      },
+      "type": "city",
+      "periods": ["ot_judges", "ot_kingdom", "ot_divided"],
+      "description": {
+        "en": "Philistine city on the Mediterranean coast",
+        "ja": "地中海沿岸のペリシテの都市"
+      },
+      "biblicalReferences": [
+        { "book": "judges", "chapter": 14, "verse": 19, "context": {"ja": "サムソンがアシュケロンで30人を討った", "en": "Samson killed 30 men in Ashkelon"} }
+      ],
+      "relatedPlaces": ["gaza", "ashdod"],
+      "importance": 2
+    },
+    {
+      "id": "ekron",
+      "names": {
+        "en": "Ekron",
+        "ja": "エクロン",
+        "transliteration": "Ekron",
+        "hebrew": "עֶקְרוֹן"
+      },
+      "type": "city",
+      "periods": ["ot_judges", "ot_kingdom"],
+      "description": {
+        "en": "Philistine city where the ark was sent",
+        "ja": "ペリシテの都市、契約の箱が送られた場所"
+      },
+      "biblicalReferences": [
+        { "book": "1samuel", "chapter": 5, "verse": 10, "context": {"ja": "契約の箱がエクロンに送られた", "en": "Ark sent to Ekron"} }
+      ],
+      "relatedPlaces": ["ashdod", "gath"],
+      "importance": 2
+    },
+    {
+      "id": "lachish",
+      "names": {
+        "en": "Lachish",
+        "ja": "ラキシュ",
+        "transliteration": "Lachish",
+        "hebrew": "לָכִישׁ"
+      },
+      "type": "city",
+      "periods": ["ot_exodus", "ot_kingdom", "ot_divided"],
+      "description": {
+        "en": "Major fortress city in Judah",
+        "ja": "ユダの主要な要塞都市"
+      },
+      "biblicalReferences": [
+        { "book": "joshua", "chapter": 10, "verse": 31, "context": {"ja": "ヨシュアがラキシュを攻略", "en": "Joshua captured Lachish"} },
+        { "book": "2kings", "chapter": 18, "verse": 14, "context": {"ja": "センナケリブがラキシュにいた", "en": "Sennacherib was at Lachish"} }
+      ],
+      "relatedPlaces": ["jerusalem", "hebron"],
+      "importance": 3
+    },
+    {
+      "id": "zarephath",
+      "names": {
+        "en": "Zarephath",
+        "ja": "サレプタ",
+        "transliteration": "Tzarfat",
+        "hebrew": "צָרְפַת"
+      },
+      "type": "city",
+      "periods": ["ot_divided", "nt"],
+      "description": {
+        "en": "Phoenician town where Elijah stayed with a widow",
+        "ja": "フェニキアの町、エリヤが寡婦と共に滞在した場所"
+      },
+      "biblicalReferences": [
+        { "book": "1kings", "chapter": 17, "verse": 9, "context": {"ja": "エリヤがサレプタの寡婦のもとへ", "en": "Elijah went to widow of Zarephath"} },
+        { "book": "luke", "chapter": 4, "verse": 26, "context": {"ja": "イエスがサレプタについて言及", "en": "Jesus mentioned Zarephath"} }
+      ],
+      "relatedPlaces": ["sidon", "tyre"],
+      "importance": 3
+    },
+    {
+      "id": "jezreel",
+      "names": {
+        "en": "Jezreel",
+        "ja": "イズレエル",
+        "transliteration": "Yizreel",
+        "hebrew": "יִזְרְעֶאל"
+      },
+      "type": "city",
+      "periods": ["ot_judges", "ot_kingdom", "ot_divided"],
+      "description": {
+        "en": "City with royal palace, site of Naboth's vineyard",
+        "ja": "王宮のある都市、ナボテのぶどう畑があった場所"
+      },
+      "biblicalReferences": [
+        { "book": "1kings", "chapter": 21, "verse": 1, "context": {"ja": "ナボテのぶどう畑がイズレエルにあった", "en": "Naboth's vineyard was in Jezreel"} },
+        { "book": "2kings", "chapter": 9, "verse": 30, "context": {"ja": "イゼベルがイズレエルで殺された", "en": "Jezebel killed in Jezreel"} }
+      ],
+      "relatedPlaces": ["samaria", "megiddo"],
+      "importance": 3
+    },
+    {
+      "id": "gerar",
+      "names": {
+        "en": "Gerar",
+        "ja": "ゲラル",
+        "transliteration": "Gerar",
+        "hebrew": "גְּרָר"
+      },
+      "type": "city",
+      "periods": ["ot_patriarchs"],
+      "description": {
+        "en": "City where Abraham and Isaac stayed",
+        "ja": "アブラハムとイサクが滞在した都市"
+      },
+      "biblicalReferences": [
+        { "book": "genesis", "chapter": 20, "verse": 1, "context": {"ja": "アブラハムがゲラルに寄留", "en": "Abraham stayed in Gerar"} },
+        { "book": "genesis", "chapter": 26, "verse": 1, "context": {"ja": "イサクがゲラルへ行った", "en": "Isaac went to Gerar"} }
+      ],
+      "relatedPlaces": ["beersheba", "hebron"],
+      "importance": 2
+    },
+    {
+      "id": "mount-tabor",
+      "names": {
+        "en": "Mount Tabor",
+        "ja": "タボル山",
+        "transliteration": "Har Tavor",
+        "hebrew": "הַר תָּבוֹר"
+      },
+      "type": "mountain",
+      "periods": ["ot_judges"],
+      "description": {
+        "en": "Mountain where Deborah and Barak defeated Sisera",
+        "ja": "デボラとバラクがシセラを打ち破った山"
+      },
+      "biblicalReferences": [
+        { "book": "judges", "chapter": 4, "verse": 6, "context": {"ja": "バラクがタボル山へ行った", "en": "Barak went to Mount Tabor"} },
+        { "book": "judges", "chapter": 4, "verse": 14, "context": {"ja": "デボラとバラクがタボル山から下った", "en": "Deborah and Barak went down from Tabor"} }
+      ],
+      "relatedPlaces": ["galilee", "megiddo"],
+      "importance": 3
+    },
+    {
+      "id": "penuel",
+      "names": {
+        "en": "Penuel",
+        "ja": "ペヌエル",
+        "transliteration": "Peniel",
+        "hebrew": "פְּנוּאֵל"
+      },
+      "alternativeNames": {
+        "en": ["Peniel"],
+        "ja": ["ペニエル"]
+      },
+      "type": "city",
+      "periods": ["ot_patriarchs", "ot_judges", "ot_kingdom"],
+      "description": {
+        "en": "Place where Jacob wrestled with God",
+        "ja": "ヤコブが神と格闘した場所"
+      },
+      "biblicalReferences": [
+        { "book": "genesis", "chapter": 32, "verse": 30, "context": {"ja": "ヤコブがその場所をペヌエルと名付けた", "en": "Jacob named the place Penuel"} }
+      ],
+      "relatedPlaces": ["jordan-river"],
+      "importance": 3
+    },
+    {
+      "id": "mahanaim",
+      "names": {
+        "en": "Mahanaim",
+        "ja": "マハナイム",
+        "transliteration": "Machanayim",
+        "hebrew": "מַחֲנָיִם"
+      },
+      "type": "city",
+      "periods": ["ot_patriarchs", "ot_kingdom"],
+      "description": {
+        "en": "Place where Jacob met angels, later a refuge for David",
+        "ja": "ヤコブが天使に会った場所、後にダビデの避難所"
+      },
+      "biblicalReferences": [
+        { "book": "genesis", "chapter": 32, "verse": 2, "context": {"ja": "ヤコブがその場所をマハナイムと名付けた", "en": "Jacob named the place Mahanaim"} },
+        { "book": "2samuel", "chapter": 17, "verse": 24, "context": {"ja": "ダビデがマハナイムに来た", "en": "David came to Mahanaim"} }
+      ],
+      "relatedPlaces": ["jordan-river"],
+      "importance": 2
+    },
+    {
+      "id": "paddan-aram",
+      "names": {
+        "en": "Paddan-aram",
+        "ja": "パダン・アラム",
+        "transliteration": "Paddan Aram",
+        "hebrew": "פַּדַּן אֲרָם"
+      },
+      "alternativeNames": {
+        "en": ["Aram-naharaim"],
+        "ja": ["アラム・ナハライム"]
+      },
+      "type": "region",
+      "periods": ["ot_patriarchs"],
+      "description": {
+        "en": "Region in Mesopotamia, homeland of Rebekah and Rachel",
+        "ja": "メソポタミアの地域、リベカとラケルの故郷"
+      },
+      "biblicalReferences": [
+        { "book": "genesis", "chapter": 25, "verse": 20, "context": {"ja": "リベカはパダン・アラムの出身", "en": "Rebekah was from Paddan-aram"} },
+        { "book": "genesis", "chapter": 28, "verse": 2, "context": {"ja": "ヤコブがパダン・アラムへ行った", "en": "Jacob went to Paddan-aram"} }
+      ],
+      "relatedPlaces": ["haran", "mesopotamia"],
+      "importance": 3
+    },
+    {
+      "id": "mount-nebo",
+      "names": {
+        "en": "Mount Nebo",
+        "ja": "ネボ山",
+        "transliteration": "Har Nevo",
+        "hebrew": "הַר נְבוֹ"
+      },
+      "type": "mountain",
+      "periods": ["ot_exodus"],
+      "description": {
+        "en": "Mountain where Moses viewed the Promised Land before his death",
+        "ja": "モーセが死ぬ前に約束の地を見た山"
+      },
+      "biblicalReferences": [
+        { "book": "deuteronomy", "chapter": 32, "verse": 49, "context": {"ja": "モーセがネボ山に登った", "en": "Moses went up Mount Nebo"} },
+        { "book": "deuteronomy", "chapter": 34, "verse": 1, "context": {"ja": "モーセがネボ山で約束の地を見た", "en": "Moses saw Promised Land from Nebo"} }
+      ],
+      "relatedPlaces": ["moab", "jordan-river"],
+      "importance": 4
+    },
+    {
+      "id": "golgotha",
+      "names": {
+        "en": "Golgotha",
+        "ja": "ゴルゴタ",
+        "transliteration": "Gulgolta",
+        "greek": "Γολγοθᾶ"
+      },
+      "alternativeNames": {
+        "en": ["Calvary", "Place of the Skull"],
+        "ja": ["カルバリー", "されこうべの場所"]
+      },
+      "type": "mountain",
+      "periods": ["nt"],
+      "description": {
+        "en": "Place where Jesus was crucified",
+        "ja": "イエスが十字架につけられた場所"
+      },
+      "biblicalReferences": [
+        { "book": "matthew", "chapter": 27, "verse": 33, "context": {"ja": "ゴルゴタと呼ばれる所に来た", "en": "They came to place called Golgotha"} },
+        { "book": "john", "chapter": 19, "verse": 17, "context": {"ja": "されこうべという場所へ出て行った", "en": "Went to place of the Skull"} }
+      ],
+      "relatedPlaces": ["jerusalem"],
+      "importance": 5
+    },
+    {
+      "id": "garden-tomb",
+      "names": {
+        "en": "Garden Tomb",
+        "ja": "園の墓",
+        "transliteration": "Garden Tomb",
+        "greek": "Κῆπος"
+      },
+      "type": "valley",
+      "periods": ["nt"],
+      "description": {
+        "en": "Place where Jesus was buried and resurrected",
+        "ja": "イエスが葬られ、復活した場所"
+      },
+      "biblicalReferences": [
+        { "book": "john", "chapter": 19, "verse": 41, "context": {"ja": "十字架の場所に園があった", "en": "Garden near place of crucifixion"} },
+        { "book": "john", "chapter": 20, "verse": 15, "context": {"ja": "マリヤは園の番人だと思った", "en": "Mary thought he was gardener"} }
+      ],
+      "relatedPlaces": ["golgotha", "jerusalem"],
+      "importance": 5
     }
   ]
 }

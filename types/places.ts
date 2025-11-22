@@ -67,10 +67,32 @@ export interface Place {
 
   // 重要度 (1-5, 5が最重要)
   importance: 1 | 2 | 3 | 4 | 5;
+
+  // 座標 (将来のLeaflet用)
+  coordinates?: {
+    lat: number;
+    lng: number;
+  };
+}
+
+export interface PeriodMap {
+  period: Period;
+  title: {
+    en: string;
+    ja: string;
+  };
+  description?: {
+    en: string;
+    ja: string;
+  };
+  imageUrl: string;
+  source: string;
+  license: string;
 }
 
 export interface PlacesData {
   version: string;
   lastUpdated: string;
   places: Place[];
+  maps?: PeriodMap[];
 }
