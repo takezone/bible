@@ -20,7 +20,7 @@
 - **フレームワーク**: Next.js 16 (App Router)
 - **言語**: TypeScript
 - **スタイリング**: Tailwind CSS
-- **データ**: JSON 静的ファイル (SQLite からの変換)
+- **データ**: JSON 静的ファイル
 - **検索**: クライアントサイド全文検索
 - **デプロイ**: Vercel (推奨)
 

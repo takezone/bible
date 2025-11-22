@@ -49,7 +49,7 @@ export function Credits() {
                   ※ 日本語の口語訳聖書としては、1952年にキリスト新聞社から賀川豊彦の影響を受けた渡瀬主一郎・武藤富男訳『新約聖書口語訳』が先行して刊行されています。
                 </p>
                 <p className="text-xs text-gray-600 mt-3">
-                  データソース: <a href="https://github.com/yuki-kimoto/biblesearch" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">yuki-kimoto/biblesearch (SQLiteデータベース)</a>
+                  データソース: <a href="https://github.com/yuki-kimoto/biblesearch" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">yuki-kimoto/biblesearch</a>
                 </p>
               </div>
             </div>
@@ -71,7 +71,7 @@ export function Credits() {
                   <strong>特徴:</strong> 英語圏で最も影響力のある聖書翻訳の一つとして、400年以上にわたり読み継がれています。格調高い英語表現で知られています。
                 </p>
                 <p className="text-xs text-gray-600 mt-3">
-                  データソース: <a href="https://github.com/aruljohn/Bible-kjv" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">aruljohn/Bible-kjv (JSONデータ)</a>
+                  データソース: <a href="https://github.com/aruljohn/Bible-kjv" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">aruljohn/Bible-kjv</a>
                 </p>
               </div>
             </div>
@@ -93,7 +93,7 @@ export function Credits() {
                   <strong>ライセンス:</strong> パブリックドメイン（著作権なし）- 著作権料や許可なしで自由に使用可能
                 </p>
                 <p className="text-xs text-gray-600 mt-3">
-                  データソース: <a href="https://github.com/scrollmapper/bible_databases" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">scrollmapper/bible_databases (JSONデータ)</a><br />
+                  データソース: <a href="https://github.com/scrollmapper/bible_databases" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">scrollmapper/bible_databases</a><br />
                   NHEB公式サイト: <a href="https://nheb.net/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">nheb.net</a>
                 </p>
               </div>
