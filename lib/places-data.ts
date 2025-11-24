@@ -1,5 +1,6 @@
 import placesData from '@/data/places.json';
 import type { Place, PlacesData, PlaceType, Period, PeriodMap } from '@/types/places';
+import { generateSearchVariants } from './katakana-normalizer';
 
 /**
  * 全地名データを取得
@@ -37,17 +38,34 @@ export function getPlacesByImportance(importance: number): Place[] {
 }
 
 /**
- * 地名を検索（日本語・英語両対応）
+ * 地名を検索（日本語・英語両対応、表記揺れ対応）
  */
 export function searchPlaces(query: string, language: 'ja' | 'en' | 'both' = 'both'): Place[] {
   const lowerQuery = query.toLowerCase();
 
+  // 検索クエリのバリエーションを生成（カタカナ表記揺れ対応）
+  const queryVariants = generateSearchVariants(query);
+
   return getAllPlaces().filter(place => {
     if (language === 'ja' || language === 'both') {
+      // 地名のバリエーションを生成
+      const nameVariants = generateSearchVariants(place.names.ja);
+
+      // クエリのいずれかのバリエーションが地名のいずれかのバリエーションに含まれるか
+      if (queryVariants.some(qv => nameVariants.some(nv => nv.includes(qv)))) {
+        return true;
+      }
+
+      // 通常の検索（バックアップ）
       if (place.names.ja.toLowerCase().includes(lowerQuery)) return true;
-      if (place.alternativeNames?.ja?.some(name =>
-        name.toLowerCase().includes(lowerQuery)
-      )) return true;
+
+      // 別名でも検索
+      if (place.alternativeNames?.ja?.some(name => {
+        const altVariants = generateSearchVariants(name);
+        return queryVariants.some(qv => altVariants.some(av => av.includes(qv)));
+      })) {
+        return true;
+      }
     }
 
     if (language === 'en' || language === 'both') {

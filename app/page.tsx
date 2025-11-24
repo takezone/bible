@@ -168,6 +168,9 @@ function BibleApp() {
         }
       }
     }
+
+    // ページトップにスクロール
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const handleNextChapter = () => {
@@ -196,6 +199,9 @@ function BibleApp() {
         }
       }
     }
+
+    // ページトップにスクロール
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
   const updateURL = (book: string, chapter: number, verse: number | null) => {
@@ -239,6 +245,15 @@ function BibleApp() {
             </button>
 
             <h1 className="text-lg sm:text-xl font-bold text-gray-900 flex-shrink-0">Bible-ONE</h1>
+
+            {/* 現在の書物と章の表示 */}
+            {viewMode === 'bible' && selectedBook && selectedChapter && (
+              <div className="hidden md:flex items-center gap-2 px-3 py-1 bg-blue-50 rounded-lg border border-blue-200">
+                <span className="text-sm font-semibold text-blue-900">
+                  {selectedBook.name}：{selectedChapter.chapter}章
+                </span>
+              </div>
+            )}
 
             {/* 聖書/地図 切り替えタブ */}
             <div className="hidden sm:flex items-center gap-1 bg-gray-100 rounded-lg p-1">

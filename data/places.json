@@ -426,6 +426,9 @@
         "transliteration": "Beit Anyah",
         "greek": "Βηθανία"
       },
+      "alternativeNames": {
+        "ja": ["ベタニア"]
+      },
       "type": "city",
       "periods": ["nt"],
       "description": {
@@ -446,6 +449,9 @@
         "ja": "サマリヤ",
         "transliteration": "Shomron",
         "hebrew": "שֹׁמְרוֹן"
+      },
+      "alternativeNames": {
+        "ja": ["サマリア"]
       },
       "type": "region",
       "periods": ["ot_kingdom", "ot_divided", "nt"],
@@ -1043,6 +1049,9 @@
         "ja": "ベツサイダ",
         "transliteration": "Beit Tzaida",
         "greek": "Βηθσαϊδά"
+      },
+      "alternativeNames": {
+        "ja": ["ベッサイダ", "ベトサイダ"]
       },
       "type": "city",
       "periods": ["nt"],
