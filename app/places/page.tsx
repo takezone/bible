@@ -337,7 +337,9 @@ export default function PlacesPage() {
                           {ref.book} {ref.chapter}:{ref.verse}
                         </Link>
                         {ref.context && (
-                          <span className="text-sm text-gray-600">- {ref.context}</span>
+                          <span className="text-sm text-gray-600">
+                            - {typeof ref.context === 'string' ? ref.context : ref.context.ja}
+                          </span>
                         )}
                       </div>
                     ))}
