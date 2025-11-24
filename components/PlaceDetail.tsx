@@ -157,7 +157,9 @@ export function PlaceDetail({ place, onNavigateToBible }: PlaceDetailProps) {
                       {ref.endVerse && ref.endVerse !== ref.verse && `-${ref.endVerse}節`}
                     </button>
                     {ref.context && (
-                      <p className="text-gray-600 text-sm mt-2">{ref.context.ja}</p>
+                      <p className="text-gray-600 text-sm mt-2">
+                        {typeof ref.context === 'string' ? ref.context : ref.context.ja}
+                      </p>
                     )}
                   </div>
                   <svg

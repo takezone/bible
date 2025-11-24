@@ -25,8 +25,12 @@ export type Period =
 export interface BibleReference {
   book: string;      // 書名ID (例: 'genesis', 'matthew')
   chapter: number;
-  verse: number;
-  context?: string;  // 文脈の説明 (例: 'アブラハムがここに住んだ')
+  verse?: number;
+  endVerse?: number; // 終了節（範囲指定の場合）
+  context?: {
+    ja: string;
+    en: string;
+  } | string;  // 文脈の説明（多言語対応 or 文字列）
 }
 
 export interface Place {
