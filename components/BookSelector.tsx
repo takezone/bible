@@ -13,8 +13,26 @@ interface BookSelectorProps {
 export function BookSelector({ translation, selectedBook, onSelectBook }: BookSelectorProps) {
   const bible = getBibleData(translation);
 
+  // 選択中の書物のインデックスを取得（旧約/新約の判定用）
+  const selectedBookIndex = selectedBook
+    ? bible.books.findIndex(b => b.id === selectedBook.id)
+    : -1;
+
   return (
     <div className="bg-white rounded-lg shadow p-4 lg:sticky lg:top-24 max-h-[calc(100vh-8rem)] flex flex-col">
+      {/* 選択中の書物を上部に固定表示 */}
+      {selectedBook && (
+        <div className="mb-3 pb-3 border-b border-gray-200">
+          <div className="text-xs text-gray-500 mb-1 px-1">現在の書物</div>
+          <div className="bg-blue-500 text-white px-3 py-2 rounded text-sm font-medium">
+            {selectedBook.name}
+            <span className="ml-2 text-xs opacity-75">
+              ({selectedBookIndex < 39 ? '旧約' : '新約'})
+            </span>
+          </div>
+        </div>
+      )}
+
       <div className="space-y-0.5 overflow-y-auto flex-1">
         {bible.books.map((book, index) => (
           <div key={book.id}>
