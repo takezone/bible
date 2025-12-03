@@ -6,32 +6,34 @@ const path = require('path');
 // 書物の定義（book-order.jsonから読み込み）
 const bookOrder = require('./book-order.json');
 
-// 書名から英語IDへのマッピング
+// 書名からWikisource名へのマッピング（文語訳での書名）
+// book-order.jsonの書名 → Wikisourceでの文語訳書名
 const bookNameToWikisourceName = {
+  // 旧約聖書
   '創世記': '創世記',
   '出エジプト記': '出エジプト記',
   'レビ記': 'レビ記',
-  '民数記': '民数記',
+  '民数記': '民數紀略',
   '申命記': '申命記',
   'ヨシュア記': 'ヨシュア記',
   '士師記': '士師記',
   'ルツ記': 'ルツ記',
-  'サムエル記上': 'サムエル記上',
-  'サムエル記下': 'サムエル記下',
-  '列王紀上': '列王紀上',
-  '列王紀下': '列王紀下',
-  '歴代志上': '歴代志上',
-  '歴代志下': '歴代志下',
-  'エズラ記': 'エズラ記',
+  'サムエル記上': 'サムエル前書',
+  'サムエル記下': 'サムエル後書',
+  '列王紀上': '列王紀略上',
+  '列王紀下': '列王紀略下',
+  '歴代志上': '歴代志略上',
+  '歴代志下': '歴代志略下',
+  'エズラ記': 'エズラ書',
   'ネヘミヤ記': 'ネヘミヤ記',
   'エステル記': 'エステル記',
   'ヨブ記': 'ヨブ記',
   '詩篇': '詩篇',
   '箴言': '箴言',
-  '伝道の書': '伝道の書',
+  '伝道の書': '傳道之書',
   '雅歌': '雅歌',
   'イザヤ書': 'イザヤ書',
-  'エレミヤ書': 'エレミヤ書',
+  'エレミヤ書': 'ヱレミヤ記',
   '哀歌': '哀歌',
   'エゼキエル書': 'エゼキエル書',
   'ダニエル書': 'ダニエル書',
@@ -47,37 +49,39 @@ const bookNameToWikisourceName = {
   'ハガイ書': 'ハガイ書',
   'ゼカリヤ書': 'ゼカリヤ書',
   'マラキ書': 'マラキ書',
-  'マタイによる福音書': 'マタイによる福音書',
-  'マルコによる福音書': 'マルコによる福音書',
-  'ルカによる福音書': 'ルカによる福音書',
-  'ヨハネによる福音書': 'ヨハネによる福音書',
-  '使徒行伝': '使徒行伝',
-  'ローマ人への手紙': 'ローマ人への手紙',
-  'コリント人への第一の手紙': 'コリント人への第一の手紙',
-  'コリント人への第二の手紙': 'コリント人への第二の手紙',
-  'ガラテヤ人への手紙': 'ガラテヤ人への手紙',
-  'エペソ人への手紙': 'エペソ人への手紙',
-  'ピリピ人への手紙': 'ピリピ人への手紙',
-  'コロサイ人への手紙': 'コロサイ人への手紙',
-  'テサロニケ人への第一の手紙': 'テサロニケ人への第一の手紙',
-  'テサロニケ人への第二の手紙': 'テサロニケ人への第二の手紙',
-  'テモテヘの第一の手紙': 'テモテへの第一の手紙',
-  'テモテヘの第二の手紙': 'テモテへの第二の手紙',
-  'テトスヘの手紙': 'テトスへの手紙',
-  'ピレモンヘの手紙': 'ピレモンへの手紙',
-  'ヘブル人への手紙': 'ヘブル人への手紙',
-  'ヤコブの手紙': 'ヤコブの手紙',
-  'ペテロの第一の手紙': 'ペテロの第一の手紙',
-  'ペテロの第二の手紙': 'ペテロの第二の手紙',
-  'ヨハネの第一の手紙': 'ヨハネの第一の手紙',
-  'ヨハネの第二の手紙': 'ヨハネの第二の手紙',
-  'ヨハネの第三の手紙': 'ヨハネの第三の手紙',
-  'ユダの手紙': 'ユダの手紙',
-  'ヨハネの黙示録': 'ヨハネの黙示録'
+  // 新約聖書
+  'マタイによる福音書': 'マタイ傳福音書',
+  'マルコによる福音書': 'マルコ傳福音書',
+  'ルカによる福音書': 'ルカ傳福音書',
+  'ヨハネによる福音書': 'ヨハネ傳福音書',
+  '使徒行伝': '使徒行傳',
+  'ローマ人への手紙': 'ロマ書',
+  'コリント人への第一の手紙': 'コリント前書',
+  'コリント人への第二の手紙': 'コリント後書',
+  'ガラテヤ人への手紙': 'ガラテヤ書',
+  'エペソ人への手紙': 'エペソ書',
+  'ピリピ人への手紙': 'ピリピ書',
+  'コロサイ人への手紙': 'コロサイ書',
+  'テサロニケ人への第一の手紙': 'テサロニケ前書',
+  'テサロニケ人への第二の手紙': 'テサロニケ後書',
+  'テモテヘの第一の手紙': 'テモテ前書',
+  'テモテヘの第二の手紙': 'テモテ後書',
+  'テトスヘの手紙': 'テトス書',
+  'ピレモンヘの手紙': 'ピレモン書',
+  'ヘブル人への手紙': 'ヘブル書',
+  'ヤコブの手紙': 'ヤコブ書',
+  'ペテロの第一の手紙': 'ペテロ前書',
+  'ペテロの第二の手紙': 'ペテロ後書',
+  'ヨハネの第一の手紙': 'ヨハネ第一書',
+  'ヨハネの第二の手紙': 'ヨハネ第二書',
+  'ヨハネの第三の手紙': 'ヨハネ第三書',
+  'ユダの手紙': 'ユダ書',
+  'ヨハネの黙示録': 'ヨハネ黙示録'
 };
 
-// 各書の章数
+// 各書の章数（book-order.jsonの書名に対応）
 const chapterCounts = {
+  // 旧約聖書
   '創世記': 50,
   '出エジプト記': 40,
   'レビ記': 27,
@@ -117,6 +121,7 @@ const chapterCounts = {
   'ハガイ書': 2,
   'ゼカリヤ書': 14,
   'マラキ書': 4,
+  // 新約聖書
   'マタイによる福音書': 28,
   'マルコによる福音書': 16,
   'ルカによる福音書': 24,
@@ -131,10 +136,10 @@ const chapterCounts = {
   'コロサイ人への手紙': 4,
   'テサロニケ人への第一の手紙': 5,
   'テサロニケ人への第二の手紙': 3,
-  'テモテへの第一の手紙': 6,
-  'テモテへの第二の手紙': 4,
-  'テトスへの手紙': 3,
-  'ピレモンへの手紙': 1,
+  'テモテヘの第一の手紙': 6,
+  'テモテヘの第二の手紙': 4,
+  'テトスヘの手紙': 3,
+  'ピレモンヘの手紙': 1,
   'ヘブル人への手紙': 13,
   'ヤコブの手紙': 5,
   'ペテロの第一の手紙': 5,
@@ -146,81 +151,101 @@ const chapterCounts = {
   'ヨハネの黙示録': 22
 };
 
-// テキストのクリーンアップ（ルビを保持したまま）
-function cleanText(html) {
-  // rubyタグをそのまま保持し、他のHTMLタグを削除
-  return html
-    .replace(/<br\s*\/?>/gi, '')
-    .replace(/<!--.*?-->/g, '')
-    .trim();
-}
+// HTMLからルビタグを含むテキストを抽出
+function extractTextWithRuby($, elem) {
+  let result = '';
 
-// ルビを抽出してプレーンテキストとルビ情報に分ける
-function extractRuby(html) {
-  const $ = cheerio.load(`<div>${html}</div>`);
-  const text = $.root().text().replace(/\s+/g, '');
-
-  // ルビ情報を配列で保存
-  const rubies = [];
-  $('ruby').each((i, elem) => {
-    const base = $(elem).find('rb, :not(rt)').first().text();
-    const rt = $(elem).find('rt').text();
-    if (base && rt) {
-      rubies.push({ base, ruby: rt });
+  $(elem).contents().each((i, node) => {
+    if (node.type === 'text') {
+      result += $(node).text();
+    } else if (node.type === 'tag') {
+      if (node.name === 'ruby') {
+        // rubyタグをそのまま保持
+        const base = $(node).clone().children('rt, rp').remove().end().text();
+        const rt = $(node).find('rt').text();
+        if (base && rt) {
+          result += `<ruby>${base}<rt>${rt}</rt></ruby>`;
+        } else {
+          result += $(node).text();
+        }
+      } else if (node.name === 'sup') {
+        // 節番号のsupタグはスキップ
+        return;
+      } else if (node.name === 'br') {
+        // brタグは無視
+        return;
+      } else {
+        // 他のタグは再帰的に処理
+        result += extractTextWithRuby($, node);
+      }
     }
   });
 
-  return { text, rubies };
+  return result.trim();
 }
 
 // 1章をスクレイピング
-async function scrapeChapter(bookName, chapterNum, withRuby = true) {
-  const suffix = withRuby ? '_(文語訳ルビ付)' : '_(文語訳)';
-  const url = `https://ja.wikisource.org/wiki/${encodeURIComponent(bookName + chapterNum + suffix)}`;
+async function scrapeChapter(bookName, chapterNum) {
+  // ルビ付きURLを試す
+  const urlWithRuby = `https://ja.wikisource.org/wiki/${encodeURIComponent(bookName)}(文語訳)第${chapterNum}章`;
+  const urlAlt = `https://ja.wikisource.org/wiki/${encodeURIComponent(bookName)}_第${chapterNum}章_(文語訳)`;
+  const urlSimple = `https://ja.wikisource.org/wiki/${encodeURIComponent(bookName)}${chapterNum}章_(文語訳)`;
 
-  try {
-    const response = await axios.get(url, {
-      headers: {
-        'User-Agent': 'Mozilla/5.0 (compatible; BibleApp/1.0; +https://github.com)'
+  const urls = [urlWithRuby, urlAlt, urlSimple];
+
+  for (const url of urls) {
+    try {
+      const response = await axios.get(url, {
+        headers: {
+          'User-Agent': 'Mozilla/5.0 (compatible; BibleApp/1.0; educational purpose)'
+        },
+        timeout: 30000
+      });
+
+      const $ = cheerio.load(response.data);
+      const verses = [];
+
+      // Wikisourceの構造に基づいて節を抽出
+      // 各節は <p> タグ内または <div class="poem"> 内にある
+      let verseNum = 0;
+
+      $('.mw-parser-output').find('p, div.poem p, span.verse').each((i, elem) => {
+        const html = $(elem).html();
+        if (!html) return;
+
+        // 節番号を検出（先頭の数字）
+        const text = $(elem).text().trim();
+        const verseMatch = text.match(/^(\d+)[^\d]/);
+
+        if (verseMatch) {
+          verseNum = parseInt(verseMatch[1]);
+
+          // 節番号を除いたテキストを取得（ルビ保持）
+          const cleanedHtml = html.replace(/^<sup[^>]*>\d+<\/sup>\s*/, '').replace(/^\d+\s*/, '');
+          const $temp = cheerio.load(`<div>${cleanedHtml}</div>`);
+          const textWithRuby = extractTextWithRuby($temp, $temp('div'));
+
+          if (textWithRuby) {
+            verses.push({
+              verse: verseNum,
+              text: textWithRuby
+            });
+          }
+        }
+      });
+
+      if (verses.length > 0) {
+        // 節番号順にソート
+        verses.sort((a, b) => a.verse - b.verse);
+        return verses;
       }
-    });
-
-    const $ = cheerio.load(response.data);
-    const verses = [];
-
-    // Wikisourceの構造に基づいて節を抽出
-    // 各節は <p> タグ内にあり、節番号は <sup> や特定のクラスで示されている
-    $('.mw-parser-output > p').each((i, elem) => {
-      const html = $(elem).html();
-      if (!html) return;
-
-      // 節番号を検出
-      const verseMatch = html.match(/^(\d+)/);
-      if (!verseMatch) return;
-
-      const verseNum = parseInt(verseMatch[1]);
-      const verseHtml = html.replace(/^\d+\s*/, '');
-
-      if (withRuby) {
-        const { text, rubies } = extractRuby(verseHtml);
-        verses.push({
-          verse: verseNum,
-          text: text,
-          rubies: rubies.length > 0 ? rubies : undefined
-        });
-      } else {
-        verses.push({
-          verse: verseNum,
-          text: cleanText(verseHtml)
-        });
-      }
-    });
-
-    return verses;
-  } catch (error) {
-    console.error(`  ✗ Error scraping ${bookName} ${chapterNum}: ${error.message}`);
-    return null;
+    } catch (error) {
+      // このURLでは見つからなかった、次を試す
+      continue;
+    }
   }
+
+  return null;
 }
 
 // 1つの書をスクレイピング
@@ -240,13 +265,7 @@ async function scrapeBook(bookData) {
   for (let chNum = 1; chNum <= totalChapters; chNum++) {
     process.stdout.write(`  Chapter ${chNum}/${totalChapters}...`);
 
-    // まずルビ付きを試す
-    let verses = await scrapeChapter(wikisourceName, chNum, true);
-
-    // ルビ付きがない場合は通常版を試す
-    if (!verses || verses.length === 0) {
-      verses = await scrapeChapter(wikisourceName, chNum, false);
-    }
+    const verses = await scrapeChapter(wikisourceName, chNum);
 
     if (verses && verses.length > 0) {
       chapters.push({
@@ -259,7 +278,11 @@ async function scrapeBook(bookData) {
     }
 
     // レート制限のため待機
-    await new Promise(resolve => setTimeout(resolve, 1000));
+    await new Promise(resolve => setTimeout(resolve, 1500));
+  }
+
+  if (chapters.length === 0) {
+    return null;
   }
 
   return {
@@ -270,41 +293,74 @@ async function scrapeBook(bookData) {
   };
 }
 
-// メイン処理
-async function main() {
-  console.log('========================================');
-  console.log('Wikisource 文語訳聖書 Scraper (ルビ付き)');
-  console.log('========================================\n');
-
-  const books = [];
-  let totalVerses = 0;
-
-  // 最初の3書のみテスト（全書をスクレイピングする場合はこの制限を削除）
-  const testBooks = bookOrder.slice(0, 3);
-
-  for (const bookData of testBooks) {
-    const book = await scrapeBook(bookData);
-    if (book) {
-      books.push(book);
-      const verseCount = book.chapters.reduce((sum, ch) => sum + ch.verses.length, 0);
-      totalVerses += verseCount;
-    }
-  }
-
-  // 結果を保存
+// 進捗を保存（中断時に再開可能にするため）
+function saveProgress(books, outputPath) {
   const output = {
     books: books,
     metadata: {
-      translation: '文語訳聖書',
+      translation: 'bungo',
+      name: '文語訳聖書',
       language: 'ja',
       year: '1887-1917',
       source: 'Wikisource',
       hasRuby: true
     }
   };
+  fs.writeFileSync(outputPath, JSON.stringify(output, null, 2), 'utf8');
+}
+
+// メイン処理
+async function main() {
+  console.log('========================================');
+  console.log('Wikisource 文語訳聖書 Scraper (ルビ付き)');
+  console.log('========================================\n');
 
   const outputPath = path.join(__dirname, '../data/bible-bungo.json');
-  fs.writeFileSync(outputPath, JSON.stringify(output, null, 2), 'utf8');
+
+  // 既存のデータがあれば読み込み
+  let existingBooks = [];
+  let existingBookIds = new Set();
+
+  if (fs.existsSync(outputPath)) {
+    try {
+      const existing = JSON.parse(fs.readFileSync(outputPath, 'utf8'));
+      existingBooks = existing.books || [];
+      existingBookIds = new Set(existingBooks.map(b => b.id));
+      console.log(`Found existing data with ${existingBooks.length} books\n`);
+    } catch (e) {
+      console.log('Could not load existing data, starting fresh\n');
+    }
+  }
+
+  const books = [...existingBooks];
+  let totalVerses = existingBooks.reduce((sum, b) =>
+    sum + b.chapters.reduce((s, ch) => s + ch.verses.length, 0), 0);
+
+  // コマンドライン引数で処理範囲を指定可能
+  const startIndex = parseInt(process.argv[2]) || 0;
+  const endIndex = parseInt(process.argv[3]) || bookOrder.length;
+
+  console.log(`Processing books ${startIndex + 1} to ${endIndex} of ${bookOrder.length}\n`);
+
+  for (let i = startIndex; i < endIndex && i < bookOrder.length; i++) {
+    const bookData = bookOrder[i];
+
+    // 既にスクレイピング済みならスキップ
+    if (existingBookIds.has(bookData.id)) {
+      console.log(`Skipping ${bookData.name} - already scraped`);
+      continue;
+    }
+
+    const book = await scrapeBook(bookData);
+    if (book) {
+      books.push(book);
+      const verseCount = book.chapters.reduce((sum, ch) => sum + ch.verses.length, 0);
+      totalVerses += verseCount;
+
+      // 各書の後に進捗を保存
+      saveProgress(books, outputPath);
+    }
+  }
 
   console.log('\n========================================');
   console.log('✅ Scraping completed!');
