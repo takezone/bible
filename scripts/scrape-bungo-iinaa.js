@@ -6,6 +6,32 @@ const path = require('path');
 // 書物の定義
 const bookOrder = require('./book-order.json');
 
+// rubyタグを括弧表記に変換する関数
+function convertRubyToParentheses($, $elem) {
+  // クローンを作成して元のDOMを変更しないようにする
+  const $clone = $elem.clone();
+
+  // <a>タグを削除
+  $clone.find('a').remove();
+
+  // rubyタグを括弧表記に変換
+  $clone.find('ruby').each((i, ruby) => {
+    const $ruby = $(ruby);
+    const rt = $ruby.find('rt').text();
+    $ruby.find('rt').remove();
+    $ruby.find('rp').remove();
+    const base = $ruby.text().trim();
+
+    if (base && rt) {
+      $ruby.replaceWith(`${base}（${rt}）`);
+    } else if (base) {
+      $ruby.replaceWith(base);
+    }
+  });
+
+  return $clone.text().trim();
+}
+
 // 1つの書をスクレイピング
 async function scrapeBook(bookIndex, bookData) {
   const bookNum = String(bookIndex + 1).padStart(2, '0');
@@ -39,14 +65,9 @@ async function scrapeBook(bookIndex, bookData) {
       // 節0はスキップ（章の見出しなど）
       if (verseNum === 0) return;
 
-      // spanの内容を取得（<a>タグを除く）
+      // spanの内容を取得し、rubyタグを括弧表記に変換
       const $span = $(elem);
-
-      // <a>タグを削除してからテキストを取得
-      $span.find('a').remove();
-
-      // rubyタグはそのままテキストとして抽出
-      let verseText = $span.text().trim();
+      let verseText = convertRubyToParentheses($, $span);
 
       if (!verseText) return;
 

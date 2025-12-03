@@ -279,10 +279,8 @@ async function main() {
   const books = [];
   let totalVerses = 0;
 
-  // 最初の3書のみテスト（全書をスクレイピングする場合はこの制限を削除）
-  const testBooks = bookOrder.slice(0, 3);
-
-  for (const bookData of testBooks) {
+  // 全ての書物をスクレイピング
+  for (const bookData of bookOrder) {
     const book = await scrapeBook(bookData);
     if (book) {
       books.push(book);

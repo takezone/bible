@@ -29,6 +29,28 @@ export function Credits() {
               </p>
             </div>
 
+            {/* 文語訳聖書 */}
+            <div className="bg-white rounded-lg p-5 shadow-sm">
+              <h3 className="font-bold text-base text-gray-900 mb-3">文語訳聖書</h3>
+              <div className="space-y-2">
+                <p>
+                  <strong>出版:</strong> 日本聖書協会（旧訳）/ 聖書翻訳委員社（新約改訳）
+                </p>
+                <p>
+                  <strong>刊行年:</strong> 旧約聖書 1887年（明治元訳）、新約聖書 1880年、新約改訳 1917年（大正改訳）
+                </p>
+                <p>
+                  <strong>翻訳:</strong> ヘボン、ブラウン、グリーンらの宣教師と日本人の協力により翻訳。旧約聖書は明治元訳として完成し、新約聖書は1917年に大正改訳として改訂されました。
+                </p>
+                <p>
+                  <strong>特徴:</strong> 格調高い文語体による翻訳で、日本語聖書翻訳史上重要な位置を占めます。「大正改訳」として知られる新約聖書は、新共同訳以前の約70年間にわたり広く使用されました。
+                </p>
+                <p className="text-xs text-gray-600 mt-3">
+                  データソース: <a href="https://ja.wikisource.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Wikisource</a>、<a href="https://bungo.iinaa.net/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">bungo.iinaa.net</a>
+                </p>
+              </div>
+            </div>
+
             {/* 口語訳聖書 */}
             <div className="bg-white rounded-lg p-5 shadow-sm">
               <h3 className="font-bold text-base text-gray-900 mb-3">口語訳聖書</h3>
