@@ -42,6 +42,7 @@ export function SettingsModal({
 
   const translations: { value: Translation; label: string }[] = [
     { value: 'kougo', label: '口語訳' },
+    { value: 'bungo', label: '文語訳' },
     { value: 'kjv', label: 'King James Version (KJV)' },
     { value: 'web', label: 'New Heart English Bible (WEB)' }
   ];

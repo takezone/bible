@@ -36,6 +36,7 @@ export function ChapterViewer({
   // 翻訳名のマッピング
   const translationNames: Record<Translation, string> = {
     kougo: '口語訳',
+    bungo: '文語訳',
     kjv: 'King James Version',
     web: 'New Heart English Bible'
   };

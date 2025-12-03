@@ -2,12 +2,14 @@ import type { BibleData, Book, Chapter, Verse, Translation } from '@/types/bible
 import kougoData from '@/data/bible-kougo.json';
 import kjvData from '@/data/bible-kjv.json';
 import webData from '@/data/bible-web.json';
+import bungoData from '@/data/bible-bungo.json';
 import bookOrderData from '@/data/book-order.json';
 
 const bibleCache: Record<Translation, BibleData> = {
   kougo: kougoData as BibleData,
   kjv: kjvData as BibleData,
   web: webData as BibleData,
+  bungo: bungoData as BibleData,
 };
 
 // 書物の順序データ

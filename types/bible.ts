@@ -24,7 +24,7 @@ export interface BibleData {
   };
 }
 
-export type Translation = 'kougo' | 'kjv' | 'web';
+export type Translation = 'kougo' | 'kjv' | 'web' | 'bungo';
 
 export interface BibleReference {
   bookId: string;
