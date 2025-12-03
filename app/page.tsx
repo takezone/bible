@@ -52,16 +52,39 @@ function BibleApp() {
   // 地名モード用の状態
   const [selectedPlace, setSelectedPlace] = useState<Place | null>(null);
 
-  // URLパラメーターから初期値を設定
+  // URLパラメーターから初期値を設定（初回のみ）
+  const [initialized, setInitialized] = useState(false);
+
   useEffect(() => {
+    if (initialized) return;
+
     const book = searchParams.get('book');
     const chapterNum = searchParams.get('chapter');
     const verseNum = searchParams.get('verse');
+    const mode = searchParams.get('mode') as 'single' | 'parallel' | null;
+    const translationParam = searchParams.get('translation') as Translation | null;
+    const leftParam = searchParams.get('left') as Translation | null;
+    const rightParam = searchParams.get('right') as Translation | null;
+
+    // 翻訳設定をURLから復元
+    if (mode) {
+      setDisplayMode(mode);
+      if (mode === 'single' && translationParam) {
+        setSingleTranslation(translationParam);
+      } else if (mode === 'parallel') {
+        if (leftParam) setLeftTranslation(leftParam);
+        if (rightParam) setRightTranslation(rightParam);
+      }
+    }
+
+    // 使用する翻訳を決定
+    const effectiveTranslation = mode === 'single'
+      ? (translationParam || singleTranslation)
+      : (leftParam || leftTranslation);
 
     if (book && chapterNum) {
-      const translation = displayMode === 'single' ? singleTranslation : leftTranslation;
-      const bookData = getBook(translation, book);
-      const chapter = bookData ? getChapter(translation, book, parseInt(chapterNum)) : null;
+      const bookData = getBook(effectiveTranslation, book);
+      const chapter = bookData ? getChapter(effectiveTranslation, book, parseInt(chapterNum)) : null;
 
       if (bookData && chapter) {
         setSelectedBook(bookData);
@@ -69,6 +92,7 @@ function BibleApp() {
         if (verseNum) {
           setSelectedVerse(parseInt(verseNum));
         }
+        setInitialized(true);
         return;
       }
     }
@@ -78,7 +102,8 @@ function BibleApp() {
     const genesis = bible.books[0];
     setSelectedBook(genesis);
     setSelectedChapter(genesis.chapters[0]);
-  }, [searchParams, displayMode, singleTranslation, leftTranslation]);
+    setInitialized(true);
+  }, [searchParams, initialized, singleTranslation, leftTranslation]);
 
   // ページタイトルを更新
   useEffect(() => {
@@ -100,6 +125,12 @@ function BibleApp() {
       }
     }
   }, [viewMode, selectedPlace]);
+
+  // 翻訳設定が変更されたらURLを更新
+  useEffect(() => {
+    if (!initialized || !selectedBook || !selectedChapter) return;
+    updateURL(selectedBook.id, selectedChapter.chapter, selectedVerse);
+  }, [displayMode, singleTranslation, leftTranslation, rightTranslation]);
 
   const handleSearch = (query: string) => {
     setSearchQuery(query);
@@ -204,12 +235,31 @@ function BibleApp() {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const updateURL = (book: string, chapter: number, verse: number | null) => {
+  const updateURL = (
+    book: string,
+    chapter: number,
+    verse: number | null,
+    options?: {
+      mode?: 'single' | 'parallel';
+      single?: Translation;
+      left?: Translation;
+      right?: Translation;
+    }
+  ) => {
     const params = new URLSearchParams();
     params.set('book', book);
     params.set('chapter', chapter.toString());
     if (verse) {
       params.set('verse', verse.toString());
+    }
+    // 翻訳設定をURLに追加
+    const mode = options?.mode ?? displayMode;
+    params.set('mode', mode);
+    if (mode === 'single') {
+      params.set('translation', options?.single ?? singleTranslation);
+    } else {
+      params.set('left', options?.left ?? leftTranslation);
+      params.set('right', options?.right ?? rightTranslation);
     }
     router.replace(`/?${params.toString()}`, { scroll: false });
   };

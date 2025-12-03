@@ -331,12 +331,12 @@ export function ChapterViewer({
         <p className="text-sm text-gray-700">
           <strong>共有用URL:</strong>{' '}
           <code className="bg-white px-2 py-1 rounded text-blue-600 text-xs sm:text-sm break-all">
-            {typeof window !== 'undefined' && `${window.location.origin}/?book=${book.id}&chapter=${chapter.chapter}`}
+            {typeof window !== 'undefined' && window.location.href.split('&verse=')[0]}
           </code>
         </p>
         <p className="text-xs text-gray-500 mt-2">
-          特定の節を共有する場合は、URLの最後に「&verse=節番号」を追加してください。<br />
-          例: {typeof window !== 'undefined' && `${window.location.origin}/?book=${book.id}&chapter=${chapter.chapter}&verse=3`}
+          このURLには現在の翻訳設定も含まれています。<br />
+          特定の節を共有する場合は、URLの最後に「&verse=節番号」を追加してください。
         </p>
       </div>
       </div>
