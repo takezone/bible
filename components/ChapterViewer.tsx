@@ -37,8 +37,24 @@ export function ChapterViewer({
   const translationNames: Record<Translation, string> = {
     kougo: '口語訳',
     bungo: '文語訳',
+    greek: 'ギリシャ語（原典）',
+    luther: 'ルター訳 1912',
     kjv: 'King James Version',
     web: 'New Heart English Bible'
+  };
+
+  // ルビ付きテキストを表示するコンポーネント
+  const RubyText = ({ text, ruby }: { text: string; ruby?: string }) => {
+    if (!ruby) {
+      return <>{text}</>;
+    }
+    // ルビを小さく下に表示
+    return (
+      <span className="inline-block">
+        <span className="block">{text}</span>
+        <span className="block text-xs text-gray-500 -mt-1">{ruby}</span>
+      </span>
+    );
   };
 
   // 節へのスクロール
@@ -198,13 +214,22 @@ export function ChapterViewer({
                   <span className="text-gray-400 text-sm font-medium min-w-[2rem] flex-shrink-0">
                     {verse.verse}
                   </span>
-                  <p className={`text-gray-800 leading-relaxed ${
+                  <div className={`text-gray-800 leading-relaxed ${
                     fontSize === 'sm' ? 'text-base' :
                     fontSize === 'lg' ? 'text-xl' :
                     'text-2xl'
                   }`}>
-                    {verse.text}
-                  </p>
+                    <p>{verse.text}</p>
+                    {verse.ruby && (
+                      <p className={`text-gray-500 mt-1 ${
+                        fontSize === 'sm' ? 'text-xs' :
+                        fontSize === 'lg' ? 'text-sm' :
+                        'text-base'
+                      }`}>
+                        {verse.ruby}
+                      </p>
+                    )}
+                  </div>
                 </div>
               ))}
             </div>
@@ -243,13 +268,22 @@ export function ChapterViewer({
                         <span className="text-gray-400 text-sm font-medium min-w-[2rem] flex-shrink-0">
                           {leftVerse.verse}
                         </span>
-                        <p className={`text-gray-800 leading-relaxed ${
+                        <div className={`text-gray-800 leading-relaxed ${
                           fontSize === 'sm' ? 'text-base' :
                           fontSize === 'lg' ? 'text-xl' :
                           'text-2xl'
                         }`}>
-                          {leftVerse.text}
-                        </p>
+                          <p>{leftVerse.text}</p>
+                          {leftVerse.ruby && (
+                            <p className={`text-gray-500 mt-1 ${
+                              fontSize === 'sm' ? 'text-xs' :
+                              fontSize === 'lg' ? 'text-sm' :
+                              'text-base'
+                            }`}>
+                              {leftVerse.ruby}
+                            </p>
+                          )}
+                        </div>
                       </div>
 
                       {/* 右側 */}
@@ -257,13 +291,22 @@ export function ChapterViewer({
                         <span className="text-gray-400 text-sm font-medium min-w-[2rem] flex-shrink-0">
                           {rightVerse?.verse}
                         </span>
-                        <p className={`text-gray-800 leading-relaxed ${
+                        <div className={`text-gray-800 leading-relaxed ${
                           fontSize === 'sm' ? 'text-base' :
                           fontSize === 'lg' ? 'text-xl' :
                           'text-2xl'
                         }`}>
-                          {rightVerse?.text}
-                        </p>
+                          <p>{rightVerse?.text}</p>
+                          {rightVerse?.ruby && (
+                            <p className={`text-gray-500 mt-1 ${
+                              fontSize === 'sm' ? 'text-xs' :
+                              fontSize === 'lg' ? 'text-sm' :
+                              'text-base'
+                            }`}>
+                              {rightVerse.ruby}
+                            </p>
+                          )}
+                        </div>
                       </div>
                     </div>
                   );
@@ -291,13 +334,22 @@ export function ChapterViewer({
                           {translationNames[leftTranslation]}
                         </span>
                       </div>
-                      <p className={`text-gray-800 leading-relaxed ${
+                      <div className={`text-gray-800 leading-relaxed ${
                         fontSize === 'sm' ? 'text-base' :
                         fontSize === 'lg' ? 'text-xl' :
                         'text-2xl'
                       }`}>
-                        {leftVerse.text}
-                      </p>
+                        <p>{leftVerse.text}</p>
+                        {leftVerse.ruby && (
+                          <p className={`text-gray-500 mt-1 ${
+                            fontSize === 'sm' ? 'text-xs' :
+                            fontSize === 'lg' ? 'text-sm' :
+                            'text-base'
+                          }`}>
+                            {leftVerse.ruby}
+                          </p>
+                        )}
+                      </div>
                     </div>
 
                     {/* 右側の翻訳 */}
@@ -309,13 +361,22 @@ export function ChapterViewer({
                             {translationNames[rightTranslation]}
                           </span>
                         </div>
-                        <p className={`text-gray-800 leading-relaxed ${
+                        <div className={`text-gray-800 leading-relaxed ${
                           fontSize === 'sm' ? 'text-base' :
                           fontSize === 'lg' ? 'text-xl' :
                           'text-2xl'
                         }`}>
-                          {rightVerse.text}
-                        </p>
+                          <p>{rightVerse.text}</p>
+                          {rightVerse.ruby && (
+                            <p className={`text-gray-500 mt-1 ${
+                              fontSize === 'sm' ? 'text-xs' :
+                              fontSize === 'lg' ? 'text-sm' :
+                              'text-base'
+                            }`}>
+                              {rightVerse.ruby}
+                            </p>
+                          )}
+                        </div>
                       </div>
                     )}
                   </div>

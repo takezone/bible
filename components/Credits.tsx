@@ -76,6 +76,50 @@ export function Credits() {
               </div>
             </div>
 
+            {/* ギリシャ語聖書 */}
+            <div className="bg-white rounded-lg p-5 shadow-sm">
+              <h3 className="font-bold text-base text-gray-900 mb-3">ギリシャ語聖書（原典）</h3>
+              <div className="space-y-2">
+                <p>
+                  <strong>新約聖書:</strong> OpenGNT (Open Greek New Testament)
+                </p>
+                <p>
+                  <strong>旧約聖書:</strong> LXX-Swete（七十人訳/セプトゥアギンタ）- Swete版 (1909-1930)
+                </p>
+                <p>
+                  <strong>特徴:</strong> 新約聖書は原典のコイネー・ギリシャ語テキスト（NA28相当）、旧約聖書は紀元前3〜2世紀に翻訳されたギリシャ語訳（七十人訳）です。発音ガイド（現代ギリシャ語発音/SBLトランスリテレーション）付き。
+                </p>
+                <p>
+                  <strong>ライセンス:</strong> CC BY-SA 4.0
+                </p>
+                <p className="text-xs text-gray-600 mt-3">
+                  データソース: <a href="https://github.com/eliranwong/OpenGNT" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">OpenGNT</a>、<a href="https://github.com/eliranwong/LXX-Swete-1930" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">LXX-Swete-1930</a>
+                </p>
+              </div>
+            </div>
+
+            {/* ルター訳聖書 */}
+            <div className="bg-white rounded-lg p-5 shadow-sm">
+              <h3 className="font-bold text-base text-gray-900 mb-3">ルター訳聖書 1912年版 (Luther Bible)</h3>
+              <div className="space-y-2">
+                <p>
+                  <strong>翻訳:</strong> マルティン・ルター (Martin Luther)
+                </p>
+                <p>
+                  <strong>刊行年:</strong> 原訳 1534年、1912年改訂版
+                </p>
+                <p>
+                  <strong>特徴:</strong> 宗教改革の時代にルターがドイツ語に翻訳した歴史的に重要な聖書。1912年版は近代ドイツ語に適合させた改訂版で、現在もドイツ語圏で広く読まれています。
+                </p>
+                <p>
+                  <strong>ライセンス:</strong> パブリックドメイン
+                </p>
+                <p className="text-xs text-gray-600 mt-3">
+                  データソース: <a href="https://ebible.org/find/details.php?id=deu1912" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">eBible.org</a>
+                </p>
+              </div>
+            </div>
+
             {/* King James Version */}
             <div className="bg-white rounded-lg p-5 shadow-sm">
               <h3 className="font-bold text-base text-gray-900 mb-3">King James Version (KJV)</h3>

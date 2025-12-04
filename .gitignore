@@ -58,3 +58,4 @@ temp-bibleapi/
 /public/*.pdf
 /public/maps/
 /public/*.geojson
+temp-greek/

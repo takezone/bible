@@ -3,13 +3,28 @@ import kougoData from '@/data/bible-kougo.json';
 import kjvData from '@/data/bible-kjv.json';
 import webData from '@/data/bible-web.json';
 import bungoData from '@/data/bible-bungo.json';
+import greekNtData from '@/data/bible-greek-nt.json';
+import greekLxxData from '@/data/bible-greek-lxx.json';
+import lutherData from '@/data/bible-luther.json';
 import bookOrderData from '@/data/book-order.json';
+
+// ギリシャ語データを統合（LXX旧約 + OpenGNT新約）
+const greekData: BibleData = {
+  books: [...(greekLxxData as BibleData).books, ...(greekNtData as BibleData).books],
+  metadata: {
+    translation: 'ギリシャ語聖書',
+    language: 'grc',
+    year: '原典',
+  },
+};
 
 const bibleCache: Record<Translation, BibleData> = {
   kougo: kougoData as BibleData,
   kjv: kjvData as BibleData,
   web: webData as BibleData,
   bungo: bungoData as BibleData,
+  greek: greekData,
+  luther: lutherData as BibleData,
 };
 
 // 書物の順序データ

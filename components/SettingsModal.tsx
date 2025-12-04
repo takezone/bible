@@ -43,8 +43,10 @@ export function SettingsModal({
   const translations: { value: Translation; label: string }[] = [
     { value: 'kougo', label: '口語訳' },
     { value: 'bungo', label: '文語訳' },
+    { value: 'greek', label: 'ギリシャ語（原典）' },
+    { value: 'luther', label: 'ルター訳 1912 (ドイツ語)' },
     { value: 'kjv', label: 'King James Version (KJV)' },
-    { value: 'web', label: 'New Heart English Bible (WEB)' }
+    { value: 'web', label: 'New Heart English Bible (NHEB)' }
   ];
 
   const fontSizes: { value: FontSize; label: string }[] = [
