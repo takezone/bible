@@ -239,6 +239,12 @@ function BibleApp() {
     window.scrollTo(0, 0);
   };
 
+  const handleVerseClick = (verseNum: number) => {
+    if (!selectedBook || !selectedChapter) return;
+    setSelectedVerse(verseNum);
+    updateURL(selectedBook.id, selectedChapter.chapter, verseNum);
+  };
+
   const updateURL = (
     book: string,
     chapter: number,
@@ -431,6 +437,7 @@ function BibleApp() {
                   onChapterChange={handleChapterChange}
                   onPreviousChapter={handlePreviousChapter}
                   onNextChapter={handleNextChapter}
+                  onVerseClick={handleVerseClick}
                 />
               )}
             </div>

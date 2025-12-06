@@ -18,6 +18,7 @@ interface ChapterViewerProps {
   onChapterChange: (chapterNum: number) => void;
   onPreviousChapter: () => void;
   onNextChapter: () => void;
+  onVerseClick?: (verseNum: number) => void;
 }
 
 export function ChapterViewer({
@@ -31,7 +32,8 @@ export function ChapterViewer({
   highlightVerse,
   onChapterChange,
   onPreviousChapter,
-  onNextChapter
+  onNextChapter,
+  onVerseClick
 }: ChapterViewerProps) {
   // 翻訳名のマッピング
   const translationNames: Record<Translation, string> = {
@@ -211,9 +213,13 @@ export function ChapterViewer({
                     highlightVerse === verse.verse ? 'bg-yellow-100' : ''
                   }`}
                 >
-                  <span className="text-gray-400 text-sm font-medium min-w-[2rem] flex-shrink-0">
+                  <button
+                    onClick={() => onVerseClick?.(verse.verse)}
+                    className="text-gray-400 hover:text-blue-500 text-sm font-medium min-w-[2rem] flex-shrink-0 text-left transition-colors"
+                    title="クリックしてURLに反映"
+                  >
                     {verse.verse}
-                  </span>
+                  </button>
                   <div className={`text-gray-800 leading-relaxed ${
                     fontSize === 'sm' ? 'text-base' :
                     fontSize === 'lg' ? 'text-xl' :
@@ -265,9 +271,13 @@ export function ChapterViewer({
                     >
                       {/* 左側 */}
                       <div className="flex gap-3">
-                        <span className="text-gray-400 text-sm font-medium min-w-[2rem] flex-shrink-0">
+                        <button
+                          onClick={() => onVerseClick?.(leftVerse.verse)}
+                          className="text-gray-400 hover:text-blue-500 text-sm font-medium min-w-[2rem] flex-shrink-0 text-left transition-colors"
+                          title="クリックしてURLに反映"
+                        >
                           {leftVerse.verse}
-                        </span>
+                        </button>
                         <div className={`text-gray-800 leading-relaxed ${
                           fontSize === 'sm' ? 'text-base' :
                           fontSize === 'lg' ? 'text-xl' :
@@ -288,9 +298,13 @@ export function ChapterViewer({
 
                       {/* 右側 */}
                       <div className="flex gap-3 border-l border-gray-200 pl-8">
-                        <span className="text-gray-400 text-sm font-medium min-w-[2rem] flex-shrink-0">
+                        <button
+                          onClick={() => rightVerse && onVerseClick?.(rightVerse.verse)}
+                          className="text-gray-400 hover:text-blue-500 text-sm font-medium min-w-[2rem] flex-shrink-0 text-left transition-colors"
+                          title="クリックしてURLに反映"
+                        >
                           {rightVerse?.verse}
-                        </span>
+                        </button>
                         <div className={`text-gray-800 leading-relaxed ${
                           fontSize === 'sm' ? 'text-base' :
                           fontSize === 'lg' ? 'text-xl' :
@@ -329,7 +343,13 @@ export function ChapterViewer({
                     {/* 左側の翻訳 */}
                     <div className="mb-3">
                       <div className="flex items-center gap-2 mb-2">
-                        <span className="text-gray-400 text-sm font-bold">{leftVerse.verse}</span>
+                        <button
+                          onClick={() => onVerseClick?.(leftVerse.verse)}
+                          className="text-gray-400 hover:text-blue-500 text-sm font-bold transition-colors"
+                          title="クリックしてURLに反映"
+                        >
+                          {leftVerse.verse}
+                        </button>
                         <span className="text-xs text-gray-500 font-medium">
                           {translationNames[leftTranslation]}
                         </span>
@@ -356,7 +376,13 @@ export function ChapterViewer({
                     {rightVerse && (
                       <div className="pt-3 border-t border-gray-300">
                         <div className="flex items-center gap-2 mb-2">
-                          <span className="text-gray-400 text-sm font-bold">{rightVerse.verse}</span>
+                          <button
+                            onClick={() => onVerseClick?.(rightVerse.verse)}
+                            className="text-gray-400 hover:text-blue-500 text-sm font-bold transition-colors"
+                            title="クリックしてURLに反映"
+                          >
+                            {rightVerse.verse}
+                          </button>
                           <span className="text-xs text-gray-500 font-medium">
                             {translationNames[rightTranslation]}
                           </span>
@@ -392,12 +418,12 @@ export function ChapterViewer({
         <p className="text-sm text-gray-700">
           <strong>共有用URL:</strong>{' '}
           <code className="bg-white px-2 py-1 rounded text-blue-600 text-xs sm:text-sm break-all">
-            {typeof window !== 'undefined' && window.location.href.split('&verse=')[0]}
+            {typeof window !== 'undefined' && window.location.href}
           </code>
         </p>
         <p className="text-xs text-gray-500 mt-2">
-          このURLには現在の翻訳設定も含まれています。<br />
-          特定の節を共有する場合は、URLの最後に「&verse=節番号」を追加してください。
+          このURLには現在の翻訳設定{highlightVerse ? 'と選択中の節' : ''}が含まれています。<br />
+          特定の節を共有する場合は、節番号をクリックしてURLに反映させてください。
         </p>
       </div>
       </div>
