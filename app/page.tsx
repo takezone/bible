@@ -242,7 +242,34 @@ function BibleApp() {
   const handleVerseClick = (verseNum: number) => {
     if (!selectedBook || !selectedChapter) return;
     setSelectedVerse(verseNum);
-    updateURL(selectedBook.id, selectedChapter.chapter, verseNum);
+
+    // 新しいURLを構築
+    const params = new URLSearchParams();
+    params.set('book', selectedBook.id);
+    params.set('chapter', selectedChapter.chapter.toString());
+    params.set('verse', verseNum.toString());
+    params.set('mode', displayMode);
+    if (displayMode === 'single') {
+      params.set('translation', singleTranslation);
+    } else {
+      params.set('left', leftTranslation);
+      params.set('right', rightTranslation);
+    }
+
+    const newUrl = `${window.location.origin}/?${params.toString()}`;
+
+    // URLを更新
+    router.replace(`/?${params.toString()}`, { scroll: false });
+
+    // クリップボードにコピー
+    navigator.clipboard.writeText(newUrl).then(() => {
+      // コピー成功通知（一時的なalertの代わりにトースト表示）
+      const toast = document.createElement('div');
+      toast.textContent = 'URLをコピーしました';
+      toast.className = 'fixed bottom-20 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white px-4 py-2 rounded-lg shadow-lg z-50 text-sm';
+      document.body.appendChild(toast);
+      setTimeout(() => toast.remove(), 2000);
+    });
   };
 
   const updateURL = (

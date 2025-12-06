@@ -216,7 +216,7 @@ export function ChapterViewer({
                   <button
                     onClick={() => onVerseClick?.(verse.verse)}
                     className="text-gray-400 hover:text-blue-500 text-sm font-medium min-w-[2rem] flex-shrink-0 text-left transition-colors"
-                    title="クリックしてURLに反映"
+                    title="クリックしてURLをコピー"
                   >
                     {verse.verse}
                   </button>
@@ -274,7 +274,7 @@ export function ChapterViewer({
                         <button
                           onClick={() => onVerseClick?.(leftVerse.verse)}
                           className="text-gray-400 hover:text-blue-500 text-sm font-medium min-w-[2rem] flex-shrink-0 text-left transition-colors"
-                          title="クリックしてURLに反映"
+                          title="クリックしてURLをコピー"
                         >
                           {leftVerse.verse}
                         </button>
@@ -301,7 +301,7 @@ export function ChapterViewer({
                         <button
                           onClick={() => rightVerse && onVerseClick?.(rightVerse.verse)}
                           className="text-gray-400 hover:text-blue-500 text-sm font-medium min-w-[2rem] flex-shrink-0 text-left transition-colors"
-                          title="クリックしてURLに反映"
+                          title="クリックしてURLをコピー"
                         >
                           {rightVerse?.verse}
                         </button>
@@ -346,7 +346,7 @@ export function ChapterViewer({
                         <button
                           onClick={() => onVerseClick?.(leftVerse.verse)}
                           className="text-gray-400 hover:text-blue-500 text-sm font-bold transition-colors"
-                          title="クリックしてURLに反映"
+                          title="クリックしてURLをコピー"
                         >
                           {leftVerse.verse}
                         </button>
@@ -379,7 +379,7 @@ export function ChapterViewer({
                           <button
                             onClick={() => onVerseClick?.(rightVerse.verse)}
                             className="text-gray-400 hover:text-blue-500 text-sm font-bold transition-colors"
-                            title="クリックしてURLに反映"
+                            title="クリックしてURLをコピー"
                           >
                             {rightVerse.verse}
                           </button>
@@ -423,7 +423,7 @@ export function ChapterViewer({
         </p>
         <p className="text-xs text-gray-500 mt-2">
           このURLには現在の翻訳設定{highlightVerse ? 'と選択中の節' : ''}が含まれています。<br />
-          特定の節を共有する場合は、節番号をクリックしてURLに反映させてください。
+          特定の節を共有する場合は、節番号をクリックするとURLがコピーされます。
         </p>
       </div>
       </div>
