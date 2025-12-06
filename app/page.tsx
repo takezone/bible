@@ -161,6 +161,8 @@ function BibleApp() {
     setSelectedVerse(null);
     setIsMobileMenuOpen(false); // メニューを閉じる
     updateURL(book.id, 1, null);
+    // ページトップにスクロール
+    window.scrollTo(0, 0);
   };
 
   const handleChapterChange = (chapterNum: number) => {
@@ -170,6 +172,8 @@ function BibleApp() {
       setSelectedChapter(newChapter);
       setSelectedVerse(null);
       updateURL(selectedBook.id, chapterNum, null);
+      // ページトップにスクロール
+      window.scrollTo(0, 0);
     }
   };
 
@@ -201,7 +205,7 @@ function BibleApp() {
     }
 
     // ページトップにスクロール
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo(0, 0);
   };
 
   const handleNextChapter = () => {
@@ -232,7 +236,7 @@ function BibleApp() {
     }
 
     // ページトップにスクロール
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    window.scrollTo(0, 0);
   };
 
   const updateURL = (
