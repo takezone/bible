@@ -147,12 +147,14 @@ function BibleApp() {
     setSearchResults(results);
   };
 
-  const handleSelectVerse = (book: Book, chapter: Chapter) => {
+  const handleSelectVerse = (book: Book, chapter: Chapter, verseNum: number) => {
     setSelectedBook(book);
     setSelectedChapter(chapter);
+    setSelectedVerse(verseNum);
     setIsSearching(false);
     setSearchQuery('');
     setSearchResults([]);
+    updateURL(book.id, chapter.chapter, verseNum);
   };
 
   const handleBookSelect = (book: Book) => {

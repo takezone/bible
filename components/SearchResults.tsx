@@ -5,7 +5,7 @@ import type { Book, Chapter, Verse } from '@/types/bible';
 interface SearchResultsProps {
   results: Array<{ book: Book; chapter: Chapter; verse: Verse }>;
   query: string;
-  onSelectVerse: (book: Book, chapter: Chapter) => void;
+  onSelectVerse: (book: Book, chapter: Chapter, verseNum: number) => void;
 }
 
 export function SearchResults({ results, query, onSelectVerse }: SearchResultsProps) {
@@ -39,7 +39,7 @@ export function SearchResults({ results, query, onSelectVerse }: SearchResultsPr
         {results.map((result, index) => (
           <button
             key={index}
-            onClick={() => onSelectVerse(result.book, result.chapter)}
+            onClick={() => onSelectVerse(result.book, result.chapter, result.verse.verse)}
             className="w-full text-left p-4 hover:bg-gray-50 transition-colors"
           >
             <div className="flex items-start gap-3">
