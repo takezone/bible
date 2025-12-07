@@ -39,6 +39,7 @@ export function ChapterViewer({
   const translationNames: Record<Translation, string> = {
     kougo: '口語訳',
     bungo: '文語訳',
+    hebrew: 'ヘブル語（原典）',
     greek: 'ギリシャ語（原典）',
     luther: 'ルター訳 1912',
     kjv: 'King James Version',

@@ -6,6 +6,7 @@ import bungoData from '@/data/bible-bungo.json';
 import greekNtData from '@/data/bible-greek-nt.json';
 import greekLxxData from '@/data/bible-greek-lxx.json';
 import lutherData from '@/data/bible-luther.json';
+import hebrewData from '@/data/bible-hebrew.json';
 import bookOrderData from '@/data/book-order.json';
 
 // ギリシャ語データを統合（LXX旧約 + OpenGNT新約）
@@ -25,6 +26,7 @@ const bibleCache: Record<Translation, BibleData> = {
   bungo: bungoData as BibleData,
   greek: greekData,
   luther: lutherData as BibleData,
+  hebrew: hebrewData as BibleData,
 };
 
 // 書物の順序データ

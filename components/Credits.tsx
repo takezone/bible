@@ -98,6 +98,25 @@ export function Credits() {
               </div>
             </div>
 
+            {/* ヘブル語聖書 */}
+            <div className="bg-white rounded-lg p-5 shadow-sm">
+              <h3 className="font-bold text-base text-gray-900 mb-3">ヘブル語聖書（旧約原典）</h3>
+              <div className="space-y-2">
+                <p>
+                  <strong>テキスト:</strong> Westminster Leningrad Codex (WLC)
+                </p>
+                <p>
+                  <strong>特徴:</strong> レニングラード写本（1008年頃）に基づく、現存する最古の完全なヘブル語聖書写本のデジタル版です。母音記号（ニクダー）付きで、発音のローマ字転写も表示されます。
+                </p>
+                <p>
+                  <strong>ライセンス:</strong> パブリックドメイン（テキスト）、CC BY 4.0（形態素解析データ）
+                </p>
+                <p className="text-xs text-gray-600 mt-3">
+                  データソース: <a href="https://github.com/openscriptures/morphhb" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Open Scriptures Hebrew Bible</a>
+                </p>
+              </div>
+            </div>
+
             {/* ルター訳聖書 */}
             <div className="bg-white rounded-lg p-5 shadow-sm">
               <h3 className="font-bold text-base text-gray-900 mb-3">ルター訳聖書 1912年版 (Luther Bible)</h3>

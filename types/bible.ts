@@ -30,7 +30,7 @@ export interface BibleData {
   };
 }
 
-export type Translation = 'kougo' | 'kjv' | 'web' | 'bungo' | 'greek' | 'luther';
+export type Translation = 'kougo' | 'kjv' | 'web' | 'bungo' | 'greek' | 'luther' | 'hebrew';
 
 export interface BibleReference {
   bookId: string;
