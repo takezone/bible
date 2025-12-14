@@ -8,14 +8,6 @@ interface GreekWordDetailProps {
 }
 
 export function GreekWordDetail({ word, onClose }: GreekWordDetailProps) {
-  // 文法情報を文字列に変換
-  const morphString = word.morph
-    ? Object.entries(word.morph)
-        .filter(([, v]) => v)
-        .map(([, v]) => v)
-        .join(' / ')
-    : '—';
-
   return (
     <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4" onClick={onClose}>
       <div
@@ -27,7 +19,7 @@ export function GreekWordDetail({ word, onClose }: GreekWordDetailProps) {
           <div className="flex justify-between items-start">
             <div>
               <h2 className="text-3xl font-serif">{word.lemma}</h2>
-              <p className="text-blue-100 text-lg">{word.translit}</p>
+              <p className="text-blue-100 text-lg">{word.katakana}</p>
             </div>
             <button
               onClick={onClose}
@@ -39,18 +31,11 @@ export function GreekWordDetail({ word, onClose }: GreekWordDetailProps) {
         </div>
 
         <div className="p-4 space-y-4">
-          {/* 発音 */}
-          <div className="bg-gray-50 rounded-lg p-3">
-            <div className="text-sm text-gray-500 mb-1">発音（カタカナ）</div>
-            <div className="text-xl">{word.katakana || '—'}</div>
-          </div>
-
           {/* 活用形 */}
           {word.text !== word.lemma && (
             <div className="bg-yellow-50 rounded-lg p-3">
               <div className="text-sm text-gray-500 mb-1">本文での形</div>
               <div className="text-xl font-serif">{word.text}</div>
-              <div className="text-sm text-gray-600">{word.translit}</div>
             </div>
           )}
 
@@ -113,23 +98,6 @@ export function GreekWordDetail({ word, onClose }: GreekWordDetailProps) {
               {word.gloss || '—'}
             </div>
           </div>
-
-          {/* 英語定義 */}
-          {word.definition && (
-            <div>
-              <div className="text-sm text-gray-500 mb-1">定義（英語）</div>
-              <div className="text-sm text-gray-700 leading-relaxed">
-                {word.definition}
-              </div>
-            </div>
-          )}
-
-          {/* Strong's番号 */}
-          {word.strongs && (
-            <div className="text-sm text-gray-400">
-              Strong's: {word.strongs}
-            </div>
-          )}
         </div>
       </div>
     </div>

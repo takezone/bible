@@ -1,4 +1,4 @@
-import type { GreekBook, GreekChapter, GreekVerse } from '@/types/greek';
+import type { GreekWord, GreekVerse } from '@/types/greek';
 
 // 新約聖書の書物リスト（ギリシャ語学習用）
 export const NT_BOOKS = [
@@ -36,45 +36,102 @@ export const NT_BOOKS = [
   { id: 'revelation', name: 'ヨハネの黙示録', shortName: '黙示録', chapters: 22 },
 ];
 
-// データキャッシュ
-const dataCache: Map<string, GreekBook> = new Map();
+// 品詞コード→日本語名のマップ
+const POS_NAMES: Record<string, string> = {
+  adj: '形容詞',
+  conj: '接続詞',
+  adv: '副詞',
+  interj: '間投詞',
+  noun: '名詞',
+  prep: '前置詞',
+  art: '冠詞',
+  dem: '指示代名詞',
+  inter: '疑問代名詞',
+  pers: '人称代名詞',
+  rel: '関係代名詞',
+  verb: '動詞',
+  part: '不変化詞',
+};
 
-// ギリシャ語データを読み込み
-export async function loadGreekBook(bookId: string): Promise<GreekBook | null> {
+// 軽量データ形式から完全形式に変換
+interface CompactWord {
+  t: string;  // text
+  l: string;  // lemma
+  k: string;  // katakana
+  p: string;  // pos
+  m?: Record<string, string>;  // morph
+  g?: string; // gloss
+}
+
+interface CompactVerse {
+  verse: number;
+  words: CompactWord[];
+}
+
+function expandWord(compact: CompactWord): GreekWord {
+  return {
+    text: compact.t,
+    lemma: compact.l,
+    katakana: compact.k,
+    pos: compact.p,
+    posName: POS_NAMES[compact.p] || compact.p,
+    morph: compact.m || null,
+    gloss: compact.g || '',
+  };
+}
+
+function expandVerse(compact: CompactVerse): GreekVerse {
+  return {
+    verse: compact.verse,
+    words: compact.words.map(expandWord),
+  };
+}
+
+// 章データキャッシュ
+const chapterCache: Map<string, GreekVerse[]> = new Map();
+
+// 章データを読み込み（オンデマンド）
+export async function loadGreekChapter(bookId: string, chapterNum: number): Promise<GreekVerse[] | null> {
+  const cacheKey = `${bookId}/${chapterNum}`;
+
   // キャッシュチェック
-  if (dataCache.has(bookId)) {
-    return dataCache.get(bookId)!;
+  if (chapterCache.has(cacheKey)) {
+    return chapterCache.get(cacheKey)!;
   }
 
   try {
     // 動的インポート
-    const data = await import(`@/data/greek/${bookId}.json`);
-    const book = data.default || data;
-    dataCache.set(bookId, book);
-    return book;
+    const data = await import(`@/data/greek/${bookId}/${chapterNum}.json`);
+    const compactVerses: CompactVerse[] = data.default || data;
+    const verses = compactVerses.map(expandVerse);
+    chapterCache.set(cacheKey, verses);
+    return verses;
   } catch (error) {
-    console.error(`Failed to load Greek data for ${bookId}:`, error);
+    console.error(`Failed to load Greek data for ${bookId}/${chapterNum}:`, error);
     return null;
   }
 }
 
-// 章を取得
-export async function getGreekChapter(bookId: string, chapterNum: number): Promise<GreekChapter | null> {
-  const book = await loadGreekBook(bookId);
-  if (!book) return null;
-
-  return book.chapters.find(ch => ch.chapter === chapterNum) || null;
+// 章を取得（互換性のため）
+export async function getGreekChapter(bookId: string, chapterNum: number): Promise<{ chapter: number; verses: GreekVerse[] } | null> {
+  const verses = await loadGreekChapter(bookId, chapterNum);
+  if (!verses) return null;
+  return { chapter: chapterNum, verses };
 }
 
 // 節を取得
 export async function getGreekVerse(bookId: string, chapterNum: number, verseNum: number): Promise<GreekVerse | null> {
-  const chapter = await getGreekChapter(bookId, chapterNum);
-  if (!chapter) return null;
-
-  return chapter.verses.find(v => v.verse === verseNum) || null;
+  const verses = await loadGreekChapter(bookId, chapterNum);
+  if (!verses) return null;
+  return verses.find(v => v.verse === verseNum) || null;
 }
 
 // 書物情報を取得
 export function getBookInfo(bookId: string) {
   return NT_BOOKS.find(b => b.id === bookId);
+}
+
+// キャッシュをクリア（メモリ解放用）
+export function clearGreekCache() {
+  chapterCache.clear();
 }
