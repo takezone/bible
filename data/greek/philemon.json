@@ -13,7 +13,7 @@
               "textWithPunct": "Παῦλος",
               "lemma": "Παῦλος",
               "translit": "Paŷlos",
-              "katakana": "プアウルオス",
+              "katakana": "パウロス",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -23,15 +23,15 @@
               },
               "morphCode": "----NSM-",
               "gloss": "",
-              "strongs": "G3972",
-              "definition": "(little; but remotely from a derivative of ,\n meaning the same); Paulus, the name of a Roman and of an\n apostle"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "δέσμιος",
               "textWithPunct": "δέσμιος",
               "lemma": "δέσμιος",
               "translit": "désmios",
-              "katakana": "ドエスムイオス",
+              "katakana": "デスミオス",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -49,7 +49,7 @@
               "textWithPunct": "Χριστοῦ",
               "lemma": "Χριστός",
               "translit": "Christoŷ",
-              "katakana": "クルイストオウ",
+              "katakana": "クリストウ",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -67,7 +67,7 @@
               "textWithPunct": "Ἰησοῦ",
               "lemma": "Ἰησοῦς",
               "translit": "Iēsoŷ",
-              "katakana": "イエースオウ",
+              "katakana": "イエーソウ",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -77,15 +77,15 @@
               },
               "morphCode": "----GSM-",
               "gloss": "イエス",
-              "strongs": "G2424",
-              "definition": "Jesus (i.e. Jehoshua), the name of our Lord\n and two (three) other Israelites"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "καὶ",
               "textWithPunct": "καὶ",
               "lemma": "καί",
               "translit": "kaí",
-              "katakana": "クアイ",
+              "katakana": "カイ",
               "pos": "conj",
               "posName": "接続詞",
               "morph": null,
@@ -99,7 +99,7 @@
               "textWithPunct": "Τιμόθεος",
               "lemma": "Τιμόθεος",
               "translit": "Timótheos",
-              "katakana": "トイムオスエオス",
+              "katakana": "ティモセオス",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -127,15 +127,15 @@
               },
               "morphCode": "----NSM-",
               "gloss": "その",
-              "strongs": "G3588",
-              "definition": "the (sometimes to be\n supplied, at others omitted, in English idiom)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "ἀδελφὸς",
               "textWithPunct": "ἀδελφὸς",
               "lemma": "ἀδελφός",
               "translit": "adelphós",
-              "katakana": "アドエルフオス",
+              "katakana": "アデルフォス",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -153,7 +153,7 @@
               "textWithPunct": "Φιλήμονι",
               "lemma": "Φιλήμων",
               "translit": "Philḗmoni",
-              "katakana": "フイルエームオンイ",
+              "katakana": "フィレーモニ",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -171,7 +171,7 @@
               "textWithPunct": "τῷ",
               "lemma": "ὁ",
               "translit": "tôi",
-              "katakana": "トῷ",
+              "katakana": "トー",
               "pos": "art",
               "posName": "冠詞",
               "morph": {
@@ -181,15 +181,15 @@
               },
               "morphCode": "----DSM-",
               "gloss": "その",
-              "strongs": "G3588",
-              "definition": "the (sometimes to be\n supplied, at others omitted, in English idiom)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "ἀγαπητῷ",
               "textWithPunct": "ἀγαπητῷ",
               "lemma": "ἀγαπητός",
               "translit": "agapētôi",
-              "katakana": "アグアプエートῷ",
+              "katakana": "アガペートー",
               "pos": "adj",
               "posName": "形容詞",
               "morph": {
@@ -207,7 +207,7 @@
               "textWithPunct": "καὶ",
               "lemma": "καί",
               "translit": "kaí",
-              "katakana": "クアイ",
+              "katakana": "カイ",
               "pos": "conj",
               "posName": "接続詞",
               "morph": null,
@@ -221,7 +221,7 @@
               "textWithPunct": "συνεργῷ",
               "lemma": "συνεργός",
               "translit": "synergôi",
-              "katakana": "スウンエルグῷ",
+              "katakana": "シュネルゴー",
               "pos": "adj",
               "posName": "形容詞",
               "morph": {
@@ -239,7 +239,7 @@
               "textWithPunct": "ἡμῶν",
               "lemma": "ἐγώ",
               "translit": "hēmôn",
-              "katakana": "ヘームオーン",
+              "katakana": "ヘーモーン",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -261,7 +261,7 @@
               "textWithPunct": "καὶ",
               "lemma": "καί",
               "translit": "kaí",
-              "katakana": "クアイ",
+              "katakana": "カイ",
               "pos": "conj",
               "posName": "接続詞",
               "morph": null,
@@ -275,7 +275,7 @@
               "textWithPunct": "Ἀπφίᾳ",
               "lemma": "Ἀπφία",
               "translit": "Apphíai",
-              "katakana": "アプフイᾳ",
+              "katakana": "アプフィア",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -293,7 +293,7 @@
               "textWithPunct": "τῇ",
               "lemma": "ὁ",
               "translit": "têi",
-              "katakana": "トῇ",
+              "katakana": "テー",
               "pos": "art",
               "posName": "冠詞",
               "morph": {
@@ -303,15 +303,15 @@
               },
               "morphCode": "----DSF-",
               "gloss": "その",
-              "strongs": "G3588",
-              "definition": "the (sometimes to be\n supplied, at others omitted, in English idiom)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "⸀ἀδελφῇ",
               "textWithPunct": "⸀ἀδελφῇ",
               "lemma": "ἀδελφή",
               "translit": "adelphêi",
-              "katakana": "アドエルフῇ",
+              "katakana": "アデルフェー",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -329,7 +329,7 @@
               "textWithPunct": "καὶ",
               "lemma": "καί",
               "translit": "kaí",
-              "katakana": "クアイ",
+              "katakana": "カイ",
               "pos": "conj",
               "posName": "接続詞",
               "morph": null,
@@ -343,7 +343,7 @@
               "textWithPunct": "Ἀρχίππῳ",
               "lemma": "Ἄρχιππος",
               "translit": "Archíppōi",
-              "katakana": "アルクイププῳ",
+              "katakana": "アルキプポー",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -353,15 +353,15 @@
               },
               "morphCode": "----DSM-",
               "gloss": "",
-              "strongs": "G751",
-              "definition": "horse-ruler; Archippus, a Christian"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "τῷ",
               "textWithPunct": "τῷ",
               "lemma": "ὁ",
               "translit": "tôi",
-              "katakana": "トῷ",
+              "katakana": "トー",
               "pos": "art",
               "posName": "冠詞",
               "morph": {
@@ -371,15 +371,15 @@
               },
               "morphCode": "----DSM-",
               "gloss": "その",
-              "strongs": "G3588",
-              "definition": "the (sometimes to be\n supplied, at others omitted, in English idiom)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "συστρατιώτῃ",
               "textWithPunct": "συστρατιώτῃ",
               "lemma": "συστρατιώτης",
               "translit": "systratiṓtēi",
-              "katakana": "スウストルアトイオートῃ",
+              "katakana": "シュストラティオーテー",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -397,7 +397,7 @@
               "textWithPunct": "ἡμῶν",
               "lemma": "ἐγώ",
               "translit": "hēmôn",
-              "katakana": "ヘームオーン",
+              "katakana": "ヘーモーン",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -414,7 +414,7 @@
               "textWithPunct": "καὶ",
               "lemma": "καί",
               "translit": "kaí",
-              "katakana": "クアイ",
+              "katakana": "カイ",
               "pos": "conj",
               "posName": "接続詞",
               "morph": null,
@@ -428,7 +428,7 @@
               "textWithPunct": "τῇ",
               "lemma": "ὁ",
               "translit": "têi",
-              "katakana": "トῇ",
+              "katakana": "テー",
               "pos": "art",
               "posName": "冠詞",
               "morph": {
@@ -438,15 +438,15 @@
               },
               "morphCode": "----DSF-",
               "gloss": "その",
-              "strongs": "G3588",
-              "definition": "the (sometimes to be\n supplied, at others omitted, in English idiom)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "κατ’",
               "textWithPunct": "κατ’",
               "lemma": "κατά",
               "translit": "katá",
-              "katakana": "クアトア",
+              "katakana": "カタ",
               "pos": "prep",
               "posName": "前置詞",
               "morph": null,
@@ -460,7 +460,7 @@
               "textWithPunct": "οἶκόν",
               "lemma": "οἶκος",
               "translit": "oἶkon",
-              "katakana": "オἶクオン",
+              "katakana": "オイコン",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -470,15 +470,15 @@
               },
               "morphCode": "----ASM-",
               "gloss": "",
-              "strongs": "G3624",
-              "definition": "a dwelling (more or less extensive, literal or\n figurative); by implication, a family (more or less related, literally\n or figuratively)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "σου",
               "textWithPunct": "σου",
               "lemma": "σύ",
               "translit": "soy",
-              "katakana": "スオウ",
+              "katakana": "ソウ",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -495,7 +495,7 @@
               "textWithPunct": "ἐκκλησίᾳ·",
               "lemma": "ἐκκλησία",
               "translit": "ekklēsíai",
-              "katakana": "エククルエースイᾳ",
+              "katakana": "エククレーシア",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -518,7 +518,7 @@
               "textWithPunct": "χάρις",
               "lemma": "χάρις",
               "translit": "cháris",
-              "katakana": "クアルイス",
+              "katakana": "カリス",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -536,7 +536,7 @@
               "textWithPunct": "ὑμῖν",
               "lemma": "σύ",
               "translit": "hymîn",
-              "katakana": "フムイン",
+              "katakana": "フミン",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -553,7 +553,7 @@
               "textWithPunct": "καὶ",
               "lemma": "καί",
               "translit": "kaí",
-              "katakana": "クアイ",
+              "katakana": "カイ",
               "pos": "conj",
               "posName": "接続詞",
               "morph": null,
@@ -567,7 +567,7 @@
               "textWithPunct": "εἰρήνη",
               "lemma": "εἰρήνη",
               "translit": "eirḗnē",
-              "katakana": "エイルエーンエー",
+              "katakana": "エイレーネー",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -585,7 +585,7 @@
               "textWithPunct": "ἀπὸ",
               "lemma": "ἀπό",
               "translit": "apó",
-              "katakana": "アプオ",
+              "katakana": "アポ",
               "pos": "prep",
               "posName": "前置詞",
               "morph": null,
@@ -599,7 +599,7 @@
               "textWithPunct": "θεοῦ",
               "lemma": "θεός",
               "translit": "theoŷ",
-              "katakana": "スエオウ",
+              "katakana": "セウー",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -617,7 +617,7 @@
               "textWithPunct": "πατρὸς",
               "lemma": "πατήρ",
               "translit": "patrós",
-              "katakana": "プアトルオス",
+              "katakana": "パトロス",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -635,7 +635,7 @@
               "textWithPunct": "ἡμῶν",
               "lemma": "ἐγώ",
               "translit": "hēmôn",
-              "katakana": "ヘームオーン",
+              "katakana": "ヘーモーン",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -652,7 +652,7 @@
               "textWithPunct": "καὶ",
               "lemma": "καί",
               "translit": "kaí",
-              "katakana": "クアイ",
+              "katakana": "カイ",
               "pos": "conj",
               "posName": "接続詞",
               "morph": null,
@@ -666,7 +666,7 @@
               "textWithPunct": "κυρίου",
               "lemma": "κύριος",
               "translit": "kyríoy",
-              "katakana": "クウルイオウ",
+              "katakana": "キュリウー",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -684,7 +684,7 @@
               "textWithPunct": "Ἰησοῦ",
               "lemma": "Ἰησοῦς",
               "translit": "Iēsoŷ",
-              "katakana": "イエースオウ",
+              "katakana": "イエーソウ",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -694,15 +694,15 @@
               },
               "morphCode": "----GSM-",
               "gloss": "イエス",
-              "strongs": "G2424",
-              "definition": "Jesus (i.e. Jehoshua), the name of our Lord\n and two (three) other Israelites"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "Χριστοῦ",
               "textWithPunct": "Χριστοῦ.",
               "lemma": "Χριστός",
               "translit": "Christoŷ",
-              "katakana": "クルイストオウ",
+              "katakana": "クリストウ",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -725,7 +725,7 @@
               "textWithPunct": "Εὐχαριστῶ",
               "lemma": "εὐχαριστέω",
               "translit": "eycharistô",
-              "katakana": "エウクアルイストオー",
+              "katakana": "エウカリストー",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -744,7 +744,7 @@
               "textWithPunct": "τῷ",
               "lemma": "ὁ",
               "translit": "tôi",
-              "katakana": "トῷ",
+              "katakana": "トー",
               "pos": "art",
               "posName": "冠詞",
               "morph": {
@@ -754,15 +754,15 @@
               },
               "morphCode": "----DSM-",
               "gloss": "その",
-              "strongs": "G3588",
-              "definition": "the (sometimes to be\n supplied, at others omitted, in English idiom)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "θεῷ",
               "textWithPunct": "θεῷ",
               "lemma": "θεός",
               "translit": "theôi",
-              "katakana": "スエῷ",
+              "katakana": "セオー",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -780,7 +780,7 @@
               "textWithPunct": "μου",
               "lemma": "ἐγώ",
               "translit": "moy",
-              "katakana": "ムオウ",
+              "katakana": "モウ",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -797,7 +797,7 @@
               "textWithPunct": "πάντοτε",
               "lemma": "πάντοτε",
               "translit": "pántote",
-              "katakana": "プアントオトエ",
+              "katakana": "パントテ",
               "pos": "adv",
               "posName": "副詞",
               "morph": null,
@@ -811,7 +811,7 @@
               "textWithPunct": "μνείαν",
               "lemma": "μνεία",
               "translit": "mneían",
-              "katakana": "ムンエイアン",
+              "katakana": "ムネイアン",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -829,7 +829,7 @@
               "textWithPunct": "σου",
               "lemma": "σύ",
               "translit": "soy",
-              "katakana": "スオウ",
+              "katakana": "ソウ",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -846,7 +846,7 @@
               "textWithPunct": "ποιούμενος",
               "lemma": "ποιέω",
               "translit": "poioýmenos",
-              "katakana": "プオイオウムエンオス",
+              "katakana": "ポイウーメノス",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -867,7 +867,7 @@
               "textWithPunct": "ἐπὶ",
               "lemma": "ἐπί",
               "translit": "epí",
-              "katakana": "エプイ",
+              "katakana": "エピ",
               "pos": "prep",
               "posName": "前置詞",
               "morph": null,
@@ -881,7 +881,7 @@
               "textWithPunct": "τῶν",
               "lemma": "ὁ",
               "translit": "tôn",
-              "katakana": "トオーン",
+              "katakana": "トーン",
               "pos": "art",
               "posName": "冠詞",
               "morph": {
@@ -891,15 +891,15 @@
               },
               "morphCode": "----GPF-",
               "gloss": "その",
-              "strongs": "G3588",
-              "definition": "the (sometimes to be\n supplied, at others omitted, in English idiom)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "προσευχῶν",
               "textWithPunct": "προσευχῶν",
               "lemma": "προσευχή",
               "translit": "proseychôn",
-              "katakana": "プルオスエウクオーン",
+              "katakana": "プロセウコーン",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -917,7 +917,7 @@
               "textWithPunct": "μου,",
               "lemma": "ἐγώ",
               "translit": "moy",
-              "katakana": "ムオウ",
+              "katakana": "モウ",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -939,7 +939,7 @@
               "textWithPunct": "ἀκούων",
               "lemma": "ἀκούω",
               "translit": "akoýōn",
-              "katakana": "アクオウオーン",
+              "katakana": "アコウオーン",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -960,7 +960,7 @@
               "textWithPunct": "σου",
               "lemma": "σύ",
               "translit": "soy",
-              "katakana": "スオウ",
+              "katakana": "ソウ",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -977,7 +977,7 @@
               "textWithPunct": "τὴν",
               "lemma": "ὁ",
               "translit": "tḗn",
-              "katakana": "トエーン",
+              "katakana": "テーン",
               "pos": "art",
               "posName": "冠詞",
               "morph": {
@@ -987,15 +987,15 @@
               },
               "morphCode": "----ASF-",
               "gloss": "その",
-              "strongs": "G3588",
-              "definition": "the (sometimes to be\n supplied, at others omitted, in English idiom)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "ἀγάπην",
               "textWithPunct": "ἀγάπην",
               "lemma": "ἀγάπη",
               "translit": "agápēn",
-              "katakana": "アグアプエーン",
+              "katakana": "アガペーン",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -1013,7 +1013,7 @@
               "textWithPunct": "καὶ",
               "lemma": "καί",
               "translit": "kaí",
-              "katakana": "クアイ",
+              "katakana": "カイ",
               "pos": "conj",
               "posName": "接続詞",
               "morph": null,
@@ -1027,7 +1027,7 @@
               "textWithPunct": "τὴν",
               "lemma": "ὁ",
               "translit": "tḗn",
-              "katakana": "トエーン",
+              "katakana": "テーン",
               "pos": "art",
               "posName": "冠詞",
               "morph": {
@@ -1037,15 +1037,15 @@
               },
               "morphCode": "----ASF-",
               "gloss": "その",
-              "strongs": "G3588",
-              "definition": "the (sometimes to be\n supplied, at others omitted, in English idiom)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "πίστιν",
               "textWithPunct": "πίστιν",
               "lemma": "πίστις",
               "translit": "pístin",
-              "katakana": "プイストイン",
+              "katakana": "ピスティン",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -1063,7 +1063,7 @@
               "textWithPunct": "ἣν",
               "lemma": "ὅς",
               "translit": "hḗn",
-              "katakana": "ἥン",
+              "katakana": "ヘーン",
               "pos": "rel",
               "posName": "関係代名詞",
               "morph": {
@@ -1073,15 +1073,15 @@
               },
               "morphCode": "----ASF-",
               "gloss": "〜ところの",
-              "strongs": "G3739",
-              "definition": "the\n relatively (sometimes demonstrative) pronoun, who, which, what,\n that"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "ἔχεις",
               "textWithPunct": "ἔχεις",
               "lemma": "ἔχω",
               "translit": "écheis",
-              "katakana": "エクエイス",
+              "katakana": "エケイス",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -1092,15 +1092,15 @@
               },
               "morphCode": "2PAI-S--",
               "gloss": "持つ",
-              "strongs": "G2192",
-              "definition": "to hold (used in very various applications, literally\n or figuratively, direct or remote; such as possession; ability,\n contiuity, relation, or condition)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "⸀πρὸς",
               "textWithPunct": "⸀πρὸς",
               "lemma": "πρός",
               "translit": "prós",
-              "katakana": "プルオス",
+              "katakana": "プロス",
               "pos": "prep",
               "posName": "前置詞",
               "morph": null,
@@ -1114,7 +1114,7 @@
               "textWithPunct": "τὸν",
               "lemma": "ὁ",
               "translit": "tón",
-              "katakana": "トオン",
+              "katakana": "トン",
               "pos": "art",
               "posName": "冠詞",
               "morph": {
@@ -1124,15 +1124,15 @@
               },
               "morphCode": "----ASM-",
               "gloss": "その",
-              "strongs": "G3588",
-              "definition": "the (sometimes to be\n supplied, at others omitted, in English idiom)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "κύριον",
               "textWithPunct": "κύριον",
               "lemma": "κύριος",
               "translit": "kýrion",
-              "katakana": "クウルイオン",
+              "katakana": "キュリオン",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -1150,7 +1150,7 @@
               "textWithPunct": "Ἰησοῦν",
               "lemma": "Ἰησοῦς",
               "translit": "Iēsoŷn",
-              "katakana": "イエースオウン",
+              "katakana": "イエーソウン",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -1160,15 +1160,15 @@
               },
               "morphCode": "----ASM-",
               "gloss": "イエス",
-              "strongs": "G2424",
-              "definition": "Jesus (i.e. Jehoshua), the name of our Lord\n and two (three) other Israelites"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "καὶ",
               "textWithPunct": "καὶ",
               "lemma": "καί",
               "translit": "kaí",
-              "katakana": "クアイ",
+              "katakana": "カイ",
               "pos": "conj",
               "posName": "接続詞",
               "morph": null,
@@ -1188,15 +1188,15 @@
               "morph": null,
               "morphCode": "--------",
               "gloss": "〜の中へ",
-              "strongs": "G1519",
-              "definition": "to or into (indicating the point reached or\n entered), of place, time, or (figuratively) purpose (result, etc.);\n also in adverbial phrases"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "πάντας",
               "textWithPunct": "πάντας",
               "lemma": "πᾶς",
               "translit": "pántas",
-              "katakana": "プアントアス",
+              "katakana": "パンタス",
               "pos": "adj",
               "posName": "形容詞",
               "morph": {
@@ -1206,15 +1206,15 @@
               },
               "morphCode": "----APM-",
               "gloss": "すべての",
-              "strongs": "G3956",
-              "definition": "all,\n any, every, the whole"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "τοὺς",
               "textWithPunct": "τοὺς",
               "lemma": "ὁ",
               "translit": "toýs",
-              "katakana": "トオウス",
+              "katakana": "トウス",
               "pos": "art",
               "posName": "冠詞",
               "morph": {
@@ -1224,15 +1224,15 @@
               },
               "morphCode": "----APM-",
               "gloss": "その",
-              "strongs": "G3588",
-              "definition": "the (sometimes to be\n supplied, at others omitted, in English idiom)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "ἁγίους",
               "textWithPunct": "ἁγίους,",
               "lemma": "ἅγιος",
               "translit": "hagíoys",
-              "katakana": "ハグイオウス",
+              "katakana": "ハギウース",
               "pos": "adj",
               "posName": "形容詞",
               "morph": {
@@ -1242,8 +1242,8 @@
               },
               "morphCode": "----APM-",
               "gloss": "",
-              "strongs": "G40",
-              "definition": "sacred (physically,\n pure, morally blameless or religious, ceremonially,\n consecrated)"
+              "strongs": "",
+              "definition": ""
             }
           ]
         },
@@ -1255,14 +1255,14 @@
               "textWithPunct": "ὅπως",
               "lemma": "ὅπως",
               "translit": "hópōs",
-              "katakana": "ὅプオース",
+              "katakana": "ホポース",
               "pos": "conj",
               "posName": "接続詞",
               "morph": null,
               "morphCode": "--------",
               "gloss": "",
-              "strongs": "G3704",
-              "definition": "what(-ever) how, i.e. in the manner that (as\n adverb or conjunction of coincidence, intentional or\n actual)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "ἡ",
@@ -1279,15 +1279,15 @@
               },
               "morphCode": "----NSF-",
               "gloss": "その",
-              "strongs": "G3588",
-              "definition": "the (sometimes to be\n supplied, at others omitted, in English idiom)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "κοινωνία",
               "textWithPunct": "κοινωνία",
               "lemma": "κοινωνία",
               "translit": "koinōnía",
-              "katakana": "クオインオーンイア",
+              "katakana": "コイノーニア",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -1305,7 +1305,7 @@
               "textWithPunct": "τῆς",
               "lemma": "ὁ",
               "translit": "tês",
-              "katakana": "トエース",
+              "katakana": "テース",
               "pos": "art",
               "posName": "冠詞",
               "morph": {
@@ -1315,15 +1315,15 @@
               },
               "morphCode": "----GSF-",
               "gloss": "その",
-              "strongs": "G3588",
-              "definition": "the (sometimes to be\n supplied, at others omitted, in English idiom)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "πίστεώς",
               "textWithPunct": "πίστεώς",
               "lemma": "πίστις",
               "translit": "písteōs",
-              "katakana": "プイストエオース",
+              "katakana": "ピステオース",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -1341,7 +1341,7 @@
               "textWithPunct": "σου",
               "lemma": "σύ",
               "translit": "soy",
-              "katakana": "スオウ",
+              "katakana": "ソウ",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -1358,7 +1358,7 @@
               "textWithPunct": "ἐνεργὴς",
               "lemma": "ἐνεργής",
               "translit": "energḗs",
-              "katakana": "エンエルグエース",
+              "katakana": "エネルゲース",
               "pos": "adj",
               "posName": "形容詞",
               "morph": {
@@ -1376,7 +1376,7 @@
               "textWithPunct": "γένηται",
               "lemma": "γίνομαι",
               "translit": "génētai",
-              "katakana": "グエンエートアイ",
+              "katakana": "ゲネータイ",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -1401,15 +1401,15 @@
               "morph": null,
               "morphCode": "--------",
               "gloss": "〜の中に",
-              "strongs": "G1722",
-              "definition": "\"in,\" at, (up-)on, by, etc."
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "ἐπιγνώσει",
               "textWithPunct": "ἐπιγνώσει",
               "lemma": "ἐπίγνωσις",
               "translit": "epignṓsei",
-              "katakana": "エプイグンオースエイ",
+              "katakana": "エピグノーセイ",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -1427,7 +1427,7 @@
               "textWithPunct": "παντὸς",
               "lemma": "πᾶς",
               "translit": "pantós",
-              "katakana": "プアントオス",
+              "katakana": "パントス",
               "pos": "adj",
               "posName": "形容詞",
               "morph": {
@@ -1437,15 +1437,15 @@
               },
               "morphCode": "----GSN-",
               "gloss": "すべての",
-              "strongs": "G3956",
-              "definition": "all,\n any, every, the whole"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "ἀγαθοῦ",
               "textWithPunct": "ἀγαθοῦ",
               "lemma": "ἀγαθός",
               "translit": "agathoŷ",
-              "katakana": "アグアスオウ",
+              "katakana": "アガソウ",
               "pos": "adj",
               "posName": "形容詞",
               "morph": {
@@ -1463,7 +1463,7 @@
               "textWithPunct": "⸀τοῦ",
               "lemma": "ὁ",
               "translit": "toŷ",
-              "katakana": "トオウ",
+              "katakana": "トウ",
               "pos": "art",
               "posName": "冠詞",
               "morph": {
@@ -1473,8 +1473,8 @@
               },
               "morphCode": "----GSN-",
               "gloss": "その",
-              "strongs": "G3588",
-              "definition": "the (sometimes to be\n supplied, at others omitted, in English idiom)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "ἐν",
@@ -1487,15 +1487,15 @@
               "morph": null,
               "morphCode": "--------",
               "gloss": "〜の中に",
-              "strongs": "G1722",
-              "definition": "\"in,\" at, (up-)on, by, etc."
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "ἡμῖν",
               "textWithPunct": "ἡμῖν",
               "lemma": "ἐγώ",
               "translit": "hēmîn",
-              "katakana": "ヘームイン",
+              "katakana": "ヘーミン",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -1518,15 +1518,15 @@
               "morph": null,
               "morphCode": "--------",
               "gloss": "〜の中へ",
-              "strongs": "G1519",
-              "definition": "to or into (indicating the point reached or\n entered), of place, time, or (figuratively) purpose (result, etc.);\n also in adverbial phrases"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "⸀Χριστόν",
               "textWithPunct": "⸀Χριστόν·",
               "lemma": "Χριστός",
               "translit": "Christón",
-              "katakana": "クルイストオン",
+              "katakana": "クリストン",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -1549,7 +1549,7 @@
               "textWithPunct": "⸀χαρὰν",
               "lemma": "χαρά",
               "translit": "charán",
-              "katakana": "クアルアン",
+              "katakana": "カラン",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -1567,7 +1567,7 @@
               "textWithPunct": "γὰρ",
               "lemma": "γάρ",
               "translit": "gár",
-              "katakana": "グアル",
+              "katakana": "ガル",
               "pos": "conj",
               "posName": "接続詞",
               "morph": null,
@@ -1581,7 +1581,7 @@
               "textWithPunct": "⸂πολλὴν",
               "lemma": "πολύς",
               "translit": "pollḗn",
-              "katakana": "プオルルエーン",
+              "katakana": "ポルレーン",
               "pos": "adj",
               "posName": "形容詞",
               "morph": {
@@ -1599,7 +1599,7 @@
               "textWithPunct": "ἔσχον⸃",
               "lemma": "ἔχω",
               "translit": "éschon",
-              "katakana": "エスクオン",
+              "katakana": "エスコン",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -1610,15 +1610,15 @@
               },
               "morphCode": "1AAI-S--",
               "gloss": "持つ",
-              "strongs": "G2192",
-              "definition": "to hold (used in very various applications, literally\n or figuratively, direct or remote; such as possession; ability,\n contiuity, relation, or condition)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "καὶ",
               "textWithPunct": "καὶ",
               "lemma": "καί",
               "translit": "kaí",
-              "katakana": "クアイ",
+              "katakana": "カイ",
               "pos": "conj",
               "posName": "接続詞",
               "morph": null,
@@ -1632,7 +1632,7 @@
               "textWithPunct": "παράκλησιν",
               "lemma": "παράκλησις",
               "translit": "paráklēsin",
-              "katakana": "プアルアクルエースイン",
+              "katakana": "パラクレーシン",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -1650,7 +1650,7 @@
               "textWithPunct": "ἐπὶ",
               "lemma": "ἐπί",
               "translit": "epí",
-              "katakana": "エプイ",
+              "katakana": "エピ",
               "pos": "prep",
               "posName": "前置詞",
               "morph": null,
@@ -1664,7 +1664,7 @@
               "textWithPunct": "τῇ",
               "lemma": "ὁ",
               "translit": "têi",
-              "katakana": "トῇ",
+              "katakana": "テー",
               "pos": "art",
               "posName": "冠詞",
               "morph": {
@@ -1674,15 +1674,15 @@
               },
               "morphCode": "----DSF-",
               "gloss": "その",
-              "strongs": "G3588",
-              "definition": "the (sometimes to be\n supplied, at others omitted, in English idiom)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "ἀγάπῃ",
               "textWithPunct": "ἀγάπῃ",
               "lemma": "ἀγάπη",
               "translit": "agápēi",
-              "katakana": "アグアプῃ",
+              "katakana": "アガペー",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -1700,7 +1700,7 @@
               "textWithPunct": "σου,",
               "lemma": "σύ",
               "translit": "soy",
-              "katakana": "スオウ",
+              "katakana": "ソウ",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -1717,21 +1717,21 @@
               "textWithPunct": "ὅτι",
               "lemma": "ὅτι",
               "translit": "hóti",
-              "katakana": "ὅトイ",
+              "katakana": "ホティ",
               "pos": "conj",
               "posName": "接続詞",
               "morph": null,
               "morphCode": "--------",
               "gloss": "〜ということ",
-              "strongs": "G3754",
-              "definition": "demonstrative, that (sometimes\n redundant); causative, because"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "τὰ",
               "textWithPunct": "τὰ",
               "lemma": "ὁ",
               "translit": "tá",
-              "katakana": "トア",
+              "katakana": "タ",
               "pos": "art",
               "posName": "冠詞",
               "morph": {
@@ -1741,15 +1741,15 @@
               },
               "morphCode": "----NPN-",
               "gloss": "その",
-              "strongs": "G3588",
-              "definition": "the (sometimes to be\n supplied, at others omitted, in English idiom)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "σπλάγχνα",
               "textWithPunct": "σπλάγχνα",
               "lemma": "σπλάγχνον",
               "translit": "splágchna",
-              "katakana": "スプルアンクンア",
+              "katakana": "スプランクナ",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -1767,7 +1767,7 @@
               "textWithPunct": "τῶν",
               "lemma": "ὁ",
               "translit": "tôn",
-              "katakana": "トオーン",
+              "katakana": "トーン",
               "pos": "art",
               "posName": "冠詞",
               "morph": {
@@ -1777,15 +1777,15 @@
               },
               "morphCode": "----GPM-",
               "gloss": "その",
-              "strongs": "G3588",
-              "definition": "the (sometimes to be\n supplied, at others omitted, in English idiom)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "ἁγίων",
               "textWithPunct": "ἁγίων",
               "lemma": "ἅγιος",
               "translit": "hagíōn",
-              "katakana": "ハグイオーン",
+              "katakana": "ハギオーン",
               "pos": "adj",
               "posName": "形容詞",
               "morph": {
@@ -1795,15 +1795,15 @@
               },
               "morphCode": "----GPM-",
               "gloss": "",
-              "strongs": "G40",
-              "definition": "sacred (physically,\n pure, morally blameless or religious, ceremonially,\n consecrated)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "ἀναπέπαυται",
               "textWithPunct": "ἀναπέπαυται",
               "lemma": "ἀναπαύω",
               "translit": "anapépaytai",
-              "katakana": "アンアプエプアウトアイ",
+              "katakana": "アナペパウタイ",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -1821,7 +1821,7 @@
               "textWithPunct": "διὰ",
               "lemma": "διά",
               "translit": "diá",
-              "katakana": "ドイア",
+              "katakana": "ディア",
               "pos": "prep",
               "posName": "前置詞",
               "morph": null,
@@ -1835,7 +1835,7 @@
               "textWithPunct": "σοῦ,",
               "lemma": "σύ",
               "translit": "soŷ",
-              "katakana": "スオウ",
+              "katakana": "ソウ",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -1852,7 +1852,7 @@
               "textWithPunct": "ἀδελφέ.",
               "lemma": "ἀδελφός",
               "translit": "adelphé",
-              "katakana": "アドエルフエ",
+              "katakana": "アデルフェ",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -1875,7 +1875,7 @@
               "textWithPunct": "Διό,",
               "lemma": "διό",
               "translit": "dió",
-              "katakana": "ドイオ",
+              "katakana": "ディオ",
               "pos": "conj",
               "posName": "接続詞",
               "morph": null,
@@ -1889,7 +1889,7 @@
               "textWithPunct": "πολλὴν",
               "lemma": "πολύς",
               "translit": "pollḗn",
-              "katakana": "プオルルエーン",
+              "katakana": "ポルレーン",
               "pos": "adj",
               "posName": "形容詞",
               "morph": {
@@ -1913,15 +1913,15 @@
               "morph": null,
               "morphCode": "--------",
               "gloss": "〜の中に",
-              "strongs": "G1722",
-              "definition": "\"in,\" at, (up-)on, by, etc."
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "Χριστῷ",
               "textWithPunct": "Χριστῷ",
               "lemma": "Χριστός",
               "translit": "Christôi",
-              "katakana": "クルイストῷ",
+              "katakana": "クリストー",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -1939,7 +1939,7 @@
               "textWithPunct": "παρρησίαν",
               "lemma": "παρρησία",
               "translit": "parrēsían",
-              "katakana": "プアルルエースイアン",
+              "katakana": "パルレーシアン",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -1957,7 +1957,7 @@
               "textWithPunct": "ἔχων",
               "lemma": "ἔχω",
               "translit": "échōn",
-              "katakana": "エクオーン",
+              "katakana": "エコーン",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -1970,15 +1970,15 @@
               },
               "morphCode": "-PAPNSM-",
               "gloss": "持つ",
-              "strongs": "G2192",
-              "definition": "to hold (used in very various applications, literally\n or figuratively, direct or remote; such as possession; ability,\n contiuity, relation, or condition)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "ἐπιτάσσειν",
               "textWithPunct": "ἐπιτάσσειν",
               "lemma": "ἐπιτάσσω",
               "translit": "epitássein",
-              "katakana": "エプイトアススエイン",
+              "katakana": "エピタスセイン",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -1996,7 +1996,7 @@
               "textWithPunct": "σοι",
               "lemma": "σύ",
               "translit": "soi",
-              "katakana": "スオイ",
+              "katakana": "ソイ",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -2013,7 +2013,7 @@
               "textWithPunct": "τὸ",
               "lemma": "ὁ",
               "translit": "tó",
-              "katakana": "トオ",
+              "katakana": "ト",
               "pos": "art",
               "posName": "冠詞",
               "morph": {
@@ -2023,15 +2023,15 @@
               },
               "morphCode": "----ASN-",
               "gloss": "その",
-              "strongs": "G3588",
-              "definition": "the (sometimes to be\n supplied, at others omitted, in English idiom)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "ἀνῆκον",
               "textWithPunct": "ἀνῆκον,",
               "lemma": "ἀνήκω",
               "translit": "anêkon",
-              "katakana": "アンエークオン",
+              "katakana": "アネーコン",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -2057,7 +2057,7 @@
               "textWithPunct": "διὰ",
               "lemma": "διά",
               "translit": "diá",
-              "katakana": "ドイア",
+              "katakana": "ディア",
               "pos": "prep",
               "posName": "前置詞",
               "morph": null,
@@ -2071,7 +2071,7 @@
               "textWithPunct": "τὴν",
               "lemma": "ὁ",
               "translit": "tḗn",
-              "katakana": "トエーン",
+              "katakana": "テーン",
               "pos": "art",
               "posName": "冠詞",
               "morph": {
@@ -2081,15 +2081,15 @@
               },
               "morphCode": "----ASF-",
               "gloss": "その",
-              "strongs": "G3588",
-              "definition": "the (sometimes to be\n supplied, at others omitted, in English idiom)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "ἀγάπην",
               "textWithPunct": "ἀγάπην",
               "lemma": "ἀγάπη",
               "translit": "agápēn",
-              "katakana": "アグアプエーン",
+              "katakana": "アガペーン",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -2107,21 +2107,21 @@
               "textWithPunct": "μᾶλλον",
               "lemma": "μᾶλλον",
               "translit": "mâllon",
-              "katakana": "ムアルルオン",
+              "katakana": "マルロン",
               "pos": "adv",
               "posName": "副詞",
               "morph": null,
               "morphCode": "--------",
               "gloss": "",
-              "strongs": "G3123",
-              "definition": "(adverbially) more (in\n a greater degree) or rather"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "παρακαλῶ",
               "textWithPunct": "παρακαλῶ,",
               "lemma": "παρακαλέω",
               "translit": "parakalô",
-              "katakana": "プアルアクアルオー",
+              "katakana": "パラカロー",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -2140,7 +2140,7 @@
               "textWithPunct": "τοιοῦτος",
               "lemma": "τοιοῦτος",
               "translit": "toioŷtos",
-              "katakana": "トオイオウトオス",
+              "katakana": "トイウートス",
               "pos": "dem",
               "posName": "指示代名詞",
               "morph": {
@@ -2150,15 +2150,15 @@
               },
               "morphCode": "----NSM-",
               "gloss": "",
-              "strongs": "G5108",
-              "definition": "truly this,\n i.e. of this sort (to denote character or individuality)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "ὢν",
               "textWithPunct": "ὢν",
               "lemma": "εἰμί",
               "translit": "ṓn",
-              "katakana": "ὤン",
+              "katakana": "オーン",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -2185,15 +2185,15 @@
               "morph": null,
               "morphCode": "--------",
               "gloss": "〜のように",
-              "strongs": "G5613",
-              "definition": "which how, i.e. in that\n manner (very variously used, as follows)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "Παῦλος",
               "textWithPunct": "Παῦλος",
               "lemma": "Παῦλος",
               "translit": "Paŷlos",
-              "katakana": "プアウルオス",
+              "katakana": "パウロス",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -2203,15 +2203,15 @@
               },
               "morphCode": "----NSM-",
               "gloss": "",
-              "strongs": "G3972",
-              "definition": "(little; but remotely from a derivative of ,\n meaning the same); Paulus, the name of a Roman and of an\n apostle"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "πρεσβύτης",
               "textWithPunct": "πρεσβύτης",
               "lemma": "πρεσβύτης",
               "translit": "presbýtēs",
-              "katakana": "プルエスブウトエース",
+              "katakana": "プレスビュテース",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -2229,7 +2229,7 @@
               "textWithPunct": "νυνὶ",
               "lemma": "νυνί",
               "translit": "nyní",
-              "katakana": "ンウンイ",
+              "katakana": "ニュニ",
               "pos": "adv",
               "posName": "副詞",
               "morph": null,
@@ -2243,7 +2243,7 @@
               "textWithPunct": "δὲ",
               "lemma": "δέ",
               "translit": "dé",
-              "katakana": "ドエ",
+              "katakana": "デ",
               "pos": "conj",
               "posName": "接続詞",
               "morph": null,
@@ -2257,7 +2257,7 @@
               "textWithPunct": "καὶ",
               "lemma": "καί",
               "translit": "kaí",
-              "katakana": "クアイ",
+              "katakana": "カイ",
               "pos": "adv",
               "posName": "副詞",
               "morph": null,
@@ -2271,7 +2271,7 @@
               "textWithPunct": "δέσμιος",
               "lemma": "δέσμιος",
               "translit": "désmios",
-              "katakana": "ドエスムイオス",
+              "katakana": "デスミオス",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -2289,7 +2289,7 @@
               "textWithPunct": "⸂Χριστοῦ",
               "lemma": "Χριστός",
               "translit": "Christoŷ",
-              "katakana": "クルイストオウ",
+              "katakana": "クリストウ",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -2307,7 +2307,7 @@
               "textWithPunct": "Ἰησοῦ⸃—",
               "lemma": "Ἰησοῦς",
               "translit": "Iēsoŷ",
-              "katakana": "イエースオウ",
+              "katakana": "イエーソウ",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -2317,8 +2317,8 @@
               },
               "morphCode": "----GSM-",
               "gloss": "イエス",
-              "strongs": "G2424",
-              "definition": "Jesus (i.e. Jehoshua), the name of our Lord\n and two (three) other Israelites"
+              "strongs": "",
+              "definition": ""
             }
           ]
         },
@@ -2330,7 +2330,7 @@
               "textWithPunct": "παρακαλῶ",
               "lemma": "παρακαλέω",
               "translit": "parakalô",
-              "katakana": "プアルアクアルオー",
+              "katakana": "パラカロー",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -2349,7 +2349,7 @@
               "textWithPunct": "σε",
               "lemma": "σύ",
               "translit": "se",
-              "katakana": "スエ",
+              "katakana": "セ",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -2366,7 +2366,7 @@
               "textWithPunct": "περὶ",
               "lemma": "περί",
               "translit": "perí",
-              "katakana": "プエルイ",
+              "katakana": "ペリ",
               "pos": "prep",
               "posName": "前置詞",
               "morph": null,
@@ -2380,7 +2380,7 @@
               "textWithPunct": "τοῦ",
               "lemma": "ὁ",
               "translit": "toŷ",
-              "katakana": "トオウ",
+              "katakana": "トウ",
               "pos": "art",
               "posName": "冠詞",
               "morph": {
@@ -2390,15 +2390,15 @@
               },
               "morphCode": "----GSN-",
               "gloss": "その",
-              "strongs": "G3588",
-              "definition": "the (sometimes to be\n supplied, at others omitted, in English idiom)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "ἐμοῦ",
               "textWithPunct": "ἐμοῦ",
               "lemma": "ἐμός",
               "translit": "emoŷ",
-              "katakana": "エムオウ",
+              "katakana": "エモウ",
               "pos": "adj",
               "posName": "形容詞",
               "morph": {
@@ -2416,7 +2416,7 @@
               "textWithPunct": "τέκνου,",
               "lemma": "τέκνον",
               "translit": "téknoy",
-              "katakana": "トエクンオウ",
+              "katakana": "テクノウ",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -2434,7 +2434,7 @@
               "textWithPunct": "ὃν",
               "lemma": "ὅς",
               "translit": "hón",
-              "katakana": "ὅン",
+              "katakana": "ホン",
               "pos": "rel",
               "posName": "関係代名詞",
               "morph": {
@@ -2444,15 +2444,15 @@
               },
               "morphCode": "----ASM-",
               "gloss": "〜ところの",
-              "strongs": "G3739",
-              "definition": "the\n relatively (sometimes demonstrative) pronoun, who, which, what,\n that"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "ἐγέννησα",
               "textWithPunct": "ἐγέννησα",
               "lemma": "γεννάω",
               "translit": "egénnēsa",
-              "katakana": "エグエンンエースア",
+              "katakana": "エゲンネーサ",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -2477,15 +2477,15 @@
               "morph": null,
               "morphCode": "--------",
               "gloss": "〜の中に",
-              "strongs": "G1722",
-              "definition": "\"in,\" at, (up-)on, by, etc."
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "τοῖς",
               "textWithPunct": "τοῖς",
               "lemma": "ὁ",
               "translit": "toîs",
-              "katakana": "トオイス",
+              "katakana": "トイス",
               "pos": "art",
               "posName": "冠詞",
               "morph": {
@@ -2495,15 +2495,15 @@
               },
               "morphCode": "----DPM-",
               "gloss": "その",
-              "strongs": "G3588",
-              "definition": "the (sometimes to be\n supplied, at others omitted, in English idiom)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "⸀δεσμοῖς",
               "textWithPunct": "⸀δεσμοῖς",
               "lemma": "δεσμός",
               "translit": "desmoîs",
-              "katakana": "ドエスムオイス",
+              "katakana": "デスモイス",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -2521,7 +2521,7 @@
               "textWithPunct": "Ὀνήσιμον,",
               "lemma": "Ὀνήσιμος",
               "translit": "Onḗsimon",
-              "katakana": "オンエースイムオン",
+              "katakana": "オネーシモン",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -2544,7 +2544,7 @@
               "textWithPunct": "τόν",
               "lemma": "ὁ",
               "translit": "tón",
-              "katakana": "トオン",
+              "katakana": "トン",
               "pos": "art",
               "posName": "冠詞",
               "morph": {
@@ -2554,15 +2554,15 @@
               },
               "morphCode": "----ASM-",
               "gloss": "その",
-              "strongs": "G3588",
-              "definition": "the (sometimes to be\n supplied, at others omitted, in English idiom)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "ποτέ",
               "textWithPunct": "ποτέ",
               "lemma": "ποτέ",
               "translit": "poté",
-              "katakana": "プオトエ",
+              "katakana": "ポテ",
               "pos": "part",
               "posName": "不変化詞",
               "morph": null,
@@ -2576,7 +2576,7 @@
               "textWithPunct": "σοι",
               "lemma": "σύ",
               "translit": "soi",
-              "katakana": "スオイ",
+              "katakana": "ソイ",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -2593,7 +2593,7 @@
               "textWithPunct": "ἄχρηστον",
               "lemma": "ἄχρηστος",
               "translit": "áchrēston",
-              "katakana": "アクルエーストオン",
+              "katakana": "アクレーストン",
               "pos": "adj",
               "posName": "形容詞",
               "morph": {
@@ -2603,15 +2603,15 @@
               },
               "morphCode": "----ASM-",
               "gloss": "",
-              "strongs": "G890",
-              "definition": "inefficient, i.e. (by\n implication) detrimental"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "νυνὶ",
               "textWithPunct": "νυνὶ",
               "lemma": "νυνί",
               "translit": "nyní",
-              "katakana": "ンウンイ",
+              "katakana": "ニュニ",
               "pos": "adv",
               "posName": "副詞",
               "morph": null,
@@ -2625,7 +2625,7 @@
               "textWithPunct": "⸀δὲ",
               "lemma": "δέ",
               "translit": "dé",
-              "katakana": "ドエ",
+              "katakana": "デ",
               "pos": "conj",
               "posName": "接続詞",
               "morph": null,
@@ -2639,7 +2639,7 @@
               "textWithPunct": "σοὶ",
               "lemma": "σύ",
               "translit": "soí",
-              "katakana": "スオイ",
+              "katakana": "ソイ",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -2656,7 +2656,7 @@
               "textWithPunct": "καὶ",
               "lemma": "καί",
               "translit": "kaí",
-              "katakana": "クアイ",
+              "katakana": "カイ",
               "pos": "conj",
               "posName": "接続詞",
               "morph": null,
@@ -2670,7 +2670,7 @@
               "textWithPunct": "ἐμοὶ",
               "lemma": "ἐγώ",
               "translit": "emoí",
-              "katakana": "エムオイ",
+              "katakana": "エモイ",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -2687,7 +2687,7 @@
               "textWithPunct": "εὔχρηστον,",
               "lemma": "εὔχρηστος",
               "translit": "eýchrēston",
-              "katakana": "エὔクルエーストオン",
+              "katakana": "エウクレーストン",
               "pos": "adj",
               "posName": "形容詞",
               "morph": {
@@ -2697,8 +2697,8 @@
               },
               "morphCode": "----ASM-",
               "gloss": "",
-              "strongs": "G2173",
-              "definition": "easily used, i.e. useful"
+              "strongs": "",
+              "definition": ""
             }
           ]
         },
@@ -2710,7 +2710,7 @@
               "textWithPunct": "ὃν",
               "lemma": "ὅς",
               "translit": "hón",
-              "katakana": "ὅン",
+              "katakana": "ホン",
               "pos": "rel",
               "posName": "関係代名詞",
               "morph": {
@@ -2720,15 +2720,15 @@
               },
               "morphCode": "----ASM-",
               "gloss": "〜ところの",
-              "strongs": "G3739",
-              "definition": "the\n relatively (sometimes demonstrative) pronoun, who, which, what,\n that"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "ἀνέπεμψά",
               "textWithPunct": "ἀνέπεμψά",
               "lemma": "ἀναπέμπω",
               "translit": "anépempsa",
-              "katakana": "アンエプエムプスア",
+              "katakana": "アネペムプサ",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -2747,7 +2747,7 @@
               "textWithPunct": "⸂σοι",
               "lemma": "σύ",
               "translit": "soi",
-              "katakana": "スオイ",
+              "katakana": "ソイ",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -2764,7 +2764,7 @@
               "textWithPunct": "αὐτόν,",
               "lemma": "αὐτός",
               "translit": "aytón",
-              "katakana": "アウトオン",
+              "katakana": "アウトン",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -2782,7 +2782,7 @@
               "textWithPunct": "τοῦτ’",
               "lemma": "οὗτος",
               "translit": "toŷto",
-              "katakana": "トオウトオ",
+              "katakana": "トウト",
               "pos": "dem",
               "posName": "指示代名詞",
               "morph": {
@@ -2792,15 +2792,15 @@
               },
               "morphCode": "----NSN-",
               "gloss": "この",
-              "strongs": "G3778",
-              "definition": "the he (she or it), i.e. this or that\n (often with article repeated)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "ἔστιν",
               "textWithPunct": "ἔστιν",
               "lemma": "εἰμί",
               "translit": "estí(n)",
-              "katakana": "エストイ(ン)",
+              "katakana": "エスティン",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -2819,7 +2819,7 @@
               "textWithPunct": "τὰ",
               "lemma": "ὁ",
               "translit": "tá",
-              "katakana": "トア",
+              "katakana": "タ",
               "pos": "art",
               "posName": "冠詞",
               "morph": {
@@ -2829,15 +2829,15 @@
               },
               "morphCode": "----APN-",
               "gloss": "その",
-              "strongs": "G3588",
-              "definition": "the (sometimes to be\n supplied, at others omitted, in English idiom)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "ἐμὰ",
               "textWithPunct": "ἐμὰ",
               "lemma": "ἐμός",
               "translit": "emá",
-              "katakana": "エムア",
+              "katakana": "エマ",
               "pos": "adj",
               "posName": "形容詞",
               "morph": {
@@ -2855,7 +2855,7 @@
               "textWithPunct": "σπλάγχνα⸃·",
               "lemma": "σπλάγχνον",
               "translit": "splágchna",
-              "katakana": "スプルアンクンア",
+              "katakana": "スプランクナ",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -2878,7 +2878,7 @@
               "textWithPunct": "ὃν",
               "lemma": "ὅς",
               "translit": "hón",
-              "katakana": "ὅン",
+              "katakana": "ホン",
               "pos": "rel",
               "posName": "関係代名詞",
               "morph": {
@@ -2888,15 +2888,15 @@
               },
               "morphCode": "----ASM-",
               "gloss": "〜ところの",
-              "strongs": "G3739",
-              "definition": "the\n relatively (sometimes demonstrative) pronoun, who, which, what,\n that"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "ἐγὼ",
               "textWithPunct": "ἐγὼ",
               "lemma": "ἐγώ",
               "translit": "egṓ",
-              "katakana": "エグオー",
+              "katakana": "エゴー",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -2913,7 +2913,7 @@
               "textWithPunct": "ἐβουλόμην",
               "lemma": "βούλομαι",
               "translit": "eboylómēn",
-              "katakana": "エブオウルオムエーン",
+              "katakana": "エボウロメーン",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -2932,7 +2932,7 @@
               "textWithPunct": "πρὸς",
               "lemma": "πρός",
               "translit": "prós",
-              "katakana": "プルオス",
+              "katakana": "プロス",
               "pos": "prep",
               "posName": "前置詞",
               "morph": null,
@@ -2946,7 +2946,7 @@
               "textWithPunct": "ἐμαυτὸν",
               "lemma": "ἐμαυτοῦ",
               "translit": "emaytón",
-              "katakana": "エムアウトオン",
+              "katakana": "エマウトン",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -2956,15 +2956,15 @@
               },
               "morphCode": "----ASM-",
               "gloss": "",
-              "strongs": "G1683",
-              "definition": "of myself\n\n so likewise the dative case\n        ,\n\n and accusative case"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "κατέχειν",
               "textWithPunct": "κατέχειν,",
               "lemma": "κατέχω",
               "translit": "katéchein",
-              "katakana": "クアトエクエイン",
+              "katakana": "カテケイン",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -2982,21 +2982,21 @@
               "textWithPunct": "ἵνα",
               "lemma": "ἵνα",
               "translit": "hína",
-              "katakana": "ἵンア",
+              "katakana": "ヒナ",
               "pos": "conj",
               "posName": "接続詞",
               "morph": null,
               "morphCode": "--------",
               "gloss": "〜するために",
-              "strongs": "G2443",
-              "definition": "in order that (denoting the purpose\n or the result)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "ὑπὲρ",
               "textWithPunct": "ὑπὲρ",
               "lemma": "ὑπέρ",
               "translit": "hypér",
-              "katakana": "フプエル",
+              "katakana": "フペル",
               "pos": "prep",
               "posName": "前置詞",
               "morph": null,
@@ -3010,7 +3010,7 @@
               "textWithPunct": "σοῦ",
               "lemma": "σύ",
               "translit": "soŷ",
-              "katakana": "スオウ",
+              "katakana": "ソウ",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -3027,7 +3027,7 @@
               "textWithPunct": "⸂μοι",
               "lemma": "ἐγώ",
               "translit": "moi",
-              "katakana": "ムオイ",
+              "katakana": "モイ",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -3044,7 +3044,7 @@
               "textWithPunct": "διακονῇ⸃",
               "lemma": "διακονέω",
               "translit": "diakonêi",
-              "katakana": "ドイアクオンῇ",
+              "katakana": "ディアコネー",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -3069,15 +3069,15 @@
               "morph": null,
               "morphCode": "--------",
               "gloss": "〜の中に",
-              "strongs": "G1722",
-              "definition": "\"in,\" at, (up-)on, by, etc."
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "τοῖς",
               "textWithPunct": "τοῖς",
               "lemma": "ὁ",
               "translit": "toîs",
-              "katakana": "トオイス",
+              "katakana": "トイス",
               "pos": "art",
               "posName": "冠詞",
               "morph": {
@@ -3087,15 +3087,15 @@
               },
               "morphCode": "----DPM-",
               "gloss": "その",
-              "strongs": "G3588",
-              "definition": "the (sometimes to be\n supplied, at others omitted, in English idiom)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "δεσμοῖς",
               "textWithPunct": "δεσμοῖς",
               "lemma": "δεσμός",
               "translit": "desmoîs",
-              "katakana": "ドエスムオイス",
+              "katakana": "デスモイス",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -3113,7 +3113,7 @@
               "textWithPunct": "τοῦ",
               "lemma": "ὁ",
               "translit": "toŷ",
-              "katakana": "トオウ",
+              "katakana": "トウ",
               "pos": "art",
               "posName": "冠詞",
               "morph": {
@@ -3123,15 +3123,15 @@
               },
               "morphCode": "----GSN-",
               "gloss": "その",
-              "strongs": "G3588",
-              "definition": "the (sometimes to be\n supplied, at others omitted, in English idiom)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "εὐαγγελίου",
               "textWithPunct": "εὐαγγελίου,",
               "lemma": "εὐαγγέλιον",
               "translit": "eyaggelíoy",
-              "katakana": "エウアングエルイオウ",
+              "katakana": "エウアンゲリウー",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -3154,7 +3154,7 @@
               "textWithPunct": "χωρὶς",
               "lemma": "χωρίς",
               "translit": "chōrís",
-              "katakana": "クオールイス",
+              "katakana": "コーリス",
               "pos": "prep",
               "posName": "前置詞",
               "morph": null,
@@ -3168,7 +3168,7 @@
               "textWithPunct": "δὲ",
               "lemma": "δέ",
               "translit": "dé",
-              "katakana": "ドエ",
+              "katakana": "デ",
               "pos": "conj",
               "posName": "接続詞",
               "morph": null,
@@ -3182,7 +3182,7 @@
               "textWithPunct": "τῆς",
               "lemma": "ὁ",
               "translit": "tês",
-              "katakana": "トエース",
+              "katakana": "テース",
               "pos": "art",
               "posName": "冠詞",
               "morph": {
@@ -3192,15 +3192,15 @@
               },
               "morphCode": "----GSF-",
               "gloss": "その",
-              "strongs": "G3588",
-              "definition": "the (sometimes to be\n supplied, at others omitted, in English idiom)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "σῆς",
               "textWithPunct": "σῆς",
               "lemma": "σός",
               "translit": "sês",
-              "katakana": "スエース",
+              "katakana": "セース",
               "pos": "adj",
               "posName": "形容詞",
               "morph": {
@@ -3218,7 +3218,7 @@
               "textWithPunct": "γνώμης",
               "lemma": "γνώμη",
               "translit": "gnṓmēs",
-              "katakana": "グンオームエース",
+              "katakana": "グノーメース",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -3236,7 +3236,7 @@
               "textWithPunct": "οὐδὲν",
               "lemma": "οὐδείς",
               "translit": "oydén",
-              "katakana": "オウドエン",
+              "katakana": "ウーデン",
               "pos": "adj",
               "posName": "形容詞",
               "morph": {
@@ -3254,7 +3254,7 @@
               "textWithPunct": "ἠθέλησα",
               "lemma": "θέλω",
               "translit": "ēthélēsa",
-              "katakana": "エースエルエースア",
+              "katakana": "エーセレーサ",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -3273,7 +3273,7 @@
               "textWithPunct": "ποιῆσαι,",
               "lemma": "ποιέω",
               "translit": "poiêsai",
-              "katakana": "プオイエースアイ",
+              "katakana": "ポイエーサイ",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -3291,21 +3291,21 @@
               "textWithPunct": "ἵνα",
               "lemma": "ἵνα",
               "translit": "hína",
-              "katakana": "ἵンア",
+              "katakana": "ヒナ",
               "pos": "conj",
               "posName": "接続詞",
               "morph": null,
               "morphCode": "--------",
               "gloss": "〜するために",
-              "strongs": "G2443",
-              "definition": "in order that (denoting the purpose\n or the result)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "μὴ",
               "textWithPunct": "μὴ",
               "lemma": "μή",
               "translit": "mḗ",
-              "katakana": "ムエー",
+              "katakana": "メー",
               "pos": "adv",
               "posName": "副詞",
               "morph": null,
@@ -3325,15 +3325,15 @@
               "morph": null,
               "morphCode": "--------",
               "gloss": "〜のように",
-              "strongs": "G5613",
-              "definition": "which how, i.e. in that\n manner (very variously used, as follows)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "κατὰ",
               "textWithPunct": "κατὰ",
               "lemma": "κατά",
               "translit": "katá",
-              "katakana": "クアトア",
+              "katakana": "カタ",
               "pos": "prep",
               "posName": "前置詞",
               "morph": null,
@@ -3347,7 +3347,7 @@
               "textWithPunct": "ἀνάγκην",
               "lemma": "ἀνάγκη",
               "translit": "anágkēn",
-              "katakana": "アンアンクエーン",
+              "katakana": "アナンケーン",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -3365,7 +3365,7 @@
               "textWithPunct": "τὸ",
               "lemma": "ὁ",
               "translit": "tó",
-              "katakana": "トオ",
+              "katakana": "ト",
               "pos": "art",
               "posName": "冠詞",
               "morph": {
@@ -3375,15 +3375,15 @@
               },
               "morphCode": "----NSN-",
               "gloss": "その",
-              "strongs": "G3588",
-              "definition": "the (sometimes to be\n supplied, at others omitted, in English idiom)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "ἀγαθόν",
               "textWithPunct": "ἀγαθόν",
               "lemma": "ἀγαθός",
               "translit": "agathón",
-              "katakana": "アグアスオン",
+              "katakana": "アガソン",
               "pos": "adj",
               "posName": "形容詞",
               "morph": {
@@ -3401,7 +3401,7 @@
               "textWithPunct": "σου",
               "lemma": "σύ",
               "translit": "soy",
-              "katakana": "スオウ",
+              "katakana": "ソウ",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -3418,7 +3418,7 @@
               "textWithPunct": "ᾖ",
               "lemma": "εἰμί",
               "translit": "ᾖ",
-              "katakana": "ᾖ",
+              "katakana": "エー",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -3437,7 +3437,7 @@
               "textWithPunct": "ἀλλὰ",
               "lemma": "ἀλλά",
               "translit": "allá",
-              "katakana": "アルルア",
+              "katakana": "アルラ",
               "pos": "conj",
               "posName": "接続詞",
               "morph": null,
@@ -3451,7 +3451,7 @@
               "textWithPunct": "κατὰ",
               "lemma": "κατά",
               "translit": "katá",
-              "katakana": "クアトア",
+              "katakana": "カタ",
               "pos": "prep",
               "posName": "前置詞",
               "morph": null,
@@ -3465,7 +3465,7 @@
               "textWithPunct": "ἑκούσιον·",
               "lemma": "ἑκούσιος",
               "translit": "hekoýsion",
-              "katakana": "ヘクオウスイオン",
+              "katakana": "ヘコウシオン",
               "pos": "adj",
               "posName": "形容詞",
               "morph": {
@@ -3488,7 +3488,7 @@
               "textWithPunct": "τάχα",
               "lemma": "τάχα",
               "translit": "tácha",
-              "katakana": "トアクア",
+              "katakana": "タカ",
               "pos": "adv",
               "posName": "副詞",
               "morph": null,
@@ -3502,7 +3502,7 @@
               "textWithPunct": "γὰρ",
               "lemma": "γάρ",
               "translit": "gár",
-              "katakana": "グアル",
+              "katakana": "ガル",
               "pos": "conj",
               "posName": "接続詞",
               "morph": null,
@@ -3516,7 +3516,7 @@
               "textWithPunct": "διὰ",
               "lemma": "διά",
               "translit": "diá",
-              "katakana": "ドイア",
+              "katakana": "ディア",
               "pos": "prep",
               "posName": "前置詞",
               "morph": null,
@@ -3530,7 +3530,7 @@
               "textWithPunct": "τοῦτο",
               "lemma": "οὗτος",
               "translit": "toŷto",
-              "katakana": "トオウトオ",
+              "katakana": "トウト",
               "pos": "dem",
               "posName": "指示代名詞",
               "morph": {
@@ -3540,15 +3540,15 @@
               },
               "morphCode": "----ASN-",
               "gloss": "この",
-              "strongs": "G3778",
-              "definition": "the he (she or it), i.e. this or that\n (often with article repeated)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "ἐχωρίσθη",
               "textWithPunct": "ἐχωρίσθη",
               "lemma": "χωρίζω",
               "translit": "echōrísthē",
-              "katakana": "エクオールイススエー",
+              "katakana": "エコーリスセー",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -3567,7 +3567,7 @@
               "textWithPunct": "πρὸς",
               "lemma": "πρός",
               "translit": "prós",
-              "katakana": "プルオス",
+              "katakana": "プロス",
               "pos": "prep",
               "posName": "前置詞",
               "morph": null,
@@ -3581,7 +3581,7 @@
               "textWithPunct": "ὥραν",
               "lemma": "ὥρα",
               "translit": "hṓran",
-              "katakana": "ὥルアン",
+              "katakana": "ホーラン",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -3591,29 +3591,29 @@
               },
               "morphCode": "----ASF-",
               "gloss": "",
-              "strongs": "G5610",
-              "definition": "an \"hour\" (literally or\n figuratively)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "ἵνα",
               "textWithPunct": "ἵνα",
               "lemma": "ἵνα",
               "translit": "hína",
-              "katakana": "ἵンア",
+              "katakana": "ヒナ",
               "pos": "conj",
               "posName": "接続詞",
               "morph": null,
               "morphCode": "--------",
               "gloss": "〜するために",
-              "strongs": "G2443",
-              "definition": "in order that (denoting the purpose\n or the result)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "αἰώνιον",
               "textWithPunct": "αἰώνιον",
               "lemma": "αἰώνιος",
               "translit": "aiṓnion",
-              "katakana": "アイオーンイオン",
+              "katakana": "アイオーニオン",
               "pos": "adj",
               "posName": "形容詞",
               "morph": {
@@ -3631,7 +3631,7 @@
               "textWithPunct": "αὐτὸν",
               "lemma": "αὐτός",
               "translit": "aytón",
-              "katakana": "アウトオン",
+              "katakana": "アウトン",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -3649,7 +3649,7 @@
               "textWithPunct": "ἀπέχῃς,",
               "lemma": "ἀπέχω",
               "translit": "apéchēis",
-              "katakana": "アプエクῃス",
+              "katakana": "アペケース",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -3673,7 +3673,7 @@
               "textWithPunct": "οὐκέτι",
               "lemma": "οὐκέτι",
               "translit": "oykéti",
-              "katakana": "オウクエトイ",
+              "katakana": "ウーケティ",
               "pos": "adv",
               "posName": "副詞",
               "morph": null,
@@ -3693,15 +3693,15 @@
               "morph": null,
               "morphCode": "--------",
               "gloss": "〜のように",
-              "strongs": "G5613",
-              "definition": "which how, i.e. in that\n manner (very variously used, as follows)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "δοῦλον",
               "textWithPunct": "δοῦλον",
               "lemma": "δοῦλος",
               "translit": "doŷlon",
-              "katakana": "ドオウルオン",
+              "katakana": "ドウロン",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -3711,15 +3711,15 @@
               },
               "morphCode": "----ASM-",
               "gloss": "",
-              "strongs": "G1401",
-              "definition": "a slave (literal or figurative, involuntary or voluntary;\n frequently, therefore in a qualified sense of subjection or\n subserviency)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "ἀλλὰ",
               "textWithPunct": "ἀλλὰ",
               "lemma": "ἀλλά",
               "translit": "allá",
-              "katakana": "アルルア",
+              "katakana": "アルラ",
               "pos": "conj",
               "posName": "接続詞",
               "morph": null,
@@ -3733,7 +3733,7 @@
               "textWithPunct": "ὑπὲρ",
               "lemma": "ὑπέρ",
               "translit": "hypér",
-              "katakana": "フプエル",
+              "katakana": "フペル",
               "pos": "prep",
               "posName": "前置詞",
               "morph": null,
@@ -3747,7 +3747,7 @@
               "textWithPunct": "δοῦλον,",
               "lemma": "δοῦλος",
               "translit": "doŷlon",
-              "katakana": "ドオウルオン",
+              "katakana": "ドウロン",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -3757,15 +3757,15 @@
               },
               "morphCode": "----ASM-",
               "gloss": "",
-              "strongs": "G1401",
-              "definition": "a slave (literal or figurative, involuntary or voluntary;\n frequently, therefore in a qualified sense of subjection or\n subserviency)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "ἀδελφὸν",
               "textWithPunct": "ἀδελφὸν",
               "lemma": "ἀδελφός",
               "translit": "adelphón",
-              "katakana": "アドエルフオン",
+              "katakana": "アデルフォン",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -3783,7 +3783,7 @@
               "textWithPunct": "ἀγαπητόν,",
               "lemma": "ἀγαπητός",
               "translit": "agapētón",
-              "katakana": "アグアプエートオン",
+              "katakana": "アガペートン",
               "pos": "adj",
               "posName": "形容詞",
               "morph": {
@@ -3801,7 +3801,7 @@
               "textWithPunct": "μάλιστα",
               "lemma": "μάλιστα",
               "translit": "málista",
-              "katakana": "ムアルイストア",
+              "katakana": "マリスタ",
               "pos": "adv",
               "posName": "副詞",
               "morph": null,
@@ -3815,7 +3815,7 @@
               "textWithPunct": "ἐμοί,",
               "lemma": "ἐγώ",
               "translit": "emoí",
-              "katakana": "エムオイ",
+              "katakana": "エモイ",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -3832,7 +3832,7 @@
               "textWithPunct": "πόσῳ",
               "lemma": "πόσος",
               "translit": "pósōi",
-              "katakana": "プオスῳ",
+              "katakana": "ポソー",
               "pos": "inter",
               "posName": "疑問代名詞",
               "morph": {
@@ -3850,7 +3850,7 @@
               "textWithPunct": "δὲ",
               "lemma": "δέ",
               "translit": "dé",
-              "katakana": "ドエ",
+              "katakana": "デ",
               "pos": "conj",
               "posName": "接続詞",
               "morph": null,
@@ -3864,21 +3864,21 @@
               "textWithPunct": "μᾶλλον",
               "lemma": "μᾶλλον",
               "translit": "mâllon",
-              "katakana": "ムアルルオン",
+              "katakana": "マルロン",
               "pos": "adv",
               "posName": "副詞",
               "morph": null,
               "morphCode": "--------",
               "gloss": "",
-              "strongs": "G3123",
-              "definition": "(adverbially) more (in\n a greater degree) or rather"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "σοὶ",
               "textWithPunct": "σοὶ",
               "lemma": "σύ",
               "translit": "soí",
-              "katakana": "スオイ",
+              "katakana": "ソイ",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -3895,7 +3895,7 @@
               "textWithPunct": "καὶ",
               "lemma": "καί",
               "translit": "kaí",
-              "katakana": "クアイ",
+              "katakana": "カイ",
               "pos": "conj",
               "posName": "接続詞",
               "morph": null,
@@ -3915,15 +3915,15 @@
               "morph": null,
               "morphCode": "--------",
               "gloss": "〜の中に",
-              "strongs": "G1722",
-              "definition": "\"in,\" at, (up-)on, by, etc."
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "σαρκὶ",
               "textWithPunct": "σαρκὶ",
               "lemma": "σάρξ",
               "translit": "sarkí",
-              "katakana": "スアルクイ",
+              "katakana": "サルキ",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -3941,7 +3941,7 @@
               "textWithPunct": "καὶ",
               "lemma": "καί",
               "translit": "kaí",
-              "katakana": "クアイ",
+              "katakana": "カイ",
               "pos": "conj",
               "posName": "接続詞",
               "morph": null,
@@ -3961,15 +3961,15 @@
               "morph": null,
               "morphCode": "--------",
               "gloss": "〜の中に",
-              "strongs": "G1722",
-              "definition": "\"in,\" at, (up-)on, by, etc."
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "κυρίῳ",
               "textWithPunct": "κυρίῳ.",
               "lemma": "κύριος",
               "translit": "kyríōi",
-              "katakana": "クウルイῳ",
+              "katakana": "キュリオー",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -3998,29 +3998,29 @@
               "morph": null,
               "morphCode": "--------",
               "gloss": "もし",
-              "strongs": "G1487",
-              "definition": "if, whether, that,\n etc."
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "οὖν",
               "textWithPunct": "οὖν",
               "lemma": "οὖν",
               "translit": "oὖn",
-              "katakana": "オὖン",
+              "katakana": "ウーン",
               "pos": "conj",
               "posName": "接続詞",
               "morph": null,
               "morphCode": "--------",
               "gloss": "それゆえ",
-              "strongs": "G3767",
-              "definition": "(adverbially) certainly, or\n (conjunctionally) accordingly"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "με",
               "textWithPunct": "με",
               "lemma": "ἐγώ",
               "translit": "me",
-              "katakana": "ムエ",
+              "katakana": "メ",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -4037,7 +4037,7 @@
               "textWithPunct": "ἔχεις",
               "lemma": "ἔχω",
               "translit": "écheis",
-              "katakana": "エクエイス",
+              "katakana": "エケイス",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -4048,15 +4048,15 @@
               },
               "morphCode": "2PAI-S--",
               "gloss": "持つ",
-              "strongs": "G2192",
-              "definition": "to hold (used in very various applications, literally\n or figuratively, direct or remote; such as possession; ability,\n contiuity, relation, or condition)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "κοινωνόν",
               "textWithPunct": "κοινωνόν,",
               "lemma": "κοινωνός",
               "translit": "koinōnón",
-              "katakana": "クオインオーンオン",
+              "katakana": "コイノーノン",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -4074,7 +4074,7 @@
               "textWithPunct": "προσλαβοῦ",
               "lemma": "προσλαμβάνομαι",
               "translit": "proslaboŷ",
-              "katakana": "プルオスルアブオウ",
+              "katakana": "プロスラボウ",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -4092,7 +4092,7 @@
               "textWithPunct": "αὐτὸν",
               "lemma": "αὐτός",
               "translit": "aytón",
-              "katakana": "アウトオン",
+              "katakana": "アウトン",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -4116,15 +4116,15 @@
               "morph": null,
               "morphCode": "--------",
               "gloss": "〜のように",
-              "strongs": "G5613",
-              "definition": "which how, i.e. in that\n manner (very variously used, as follows)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "ἐμέ",
               "textWithPunct": "ἐμέ.",
               "lemma": "ἐγώ",
               "translit": "emé",
-              "katakana": "エムエ",
+              "katakana": "エメ",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -4152,15 +4152,15 @@
               "morph": null,
               "morphCode": "--------",
               "gloss": "もし",
-              "strongs": "G1487",
-              "definition": "if, whether, that,\n etc."
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "δέ",
               "textWithPunct": "δέ",
               "lemma": "δέ",
               "translit": "dé",
-              "katakana": "ドエ",
+              "katakana": "デ",
               "pos": "conj",
               "posName": "接続詞",
               "morph": null,
@@ -4174,7 +4174,7 @@
               "textWithPunct": "τι",
               "lemma": "τις",
               "translit": "tì",
-              "katakana": "トイ",
+              "katakana": "ティ",
               "pos": "inter",
               "posName": "疑問代名詞",
               "morph": {
@@ -4192,7 +4192,7 @@
               "textWithPunct": "ἠδίκησέν",
               "lemma": "ἀδικέω",
               "translit": "ēdíkēse(n)",
-              "katakana": "エードイクエースエ(ン)",
+              "katakana": "エーディケーセン",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -4211,7 +4211,7 @@
               "textWithPunct": "σε",
               "lemma": "σύ",
               "translit": "se",
-              "katakana": "スエ",
+              "katakana": "セ",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -4228,21 +4228,21 @@
               "textWithPunct": "ἢ",
               "lemma": "ἤ",
               "translit": "ḗ",
-              "katakana": "ἤ",
+              "katakana": "エー",
               "pos": "conj",
               "posName": "接続詞",
               "morph": null,
               "morphCode": "--------",
               "gloss": "",
-              "strongs": "G2228",
-              "definition": "disjunctive, or; comparative, than"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "ὀφείλει",
               "textWithPunct": "ὀφείλει,",
               "lemma": "ὀφείλω",
               "translit": "opheílei",
-              "katakana": "オフエイルエイ",
+              "katakana": "オフェイレイ",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -4261,7 +4261,7 @@
               "textWithPunct": "τοῦτο",
               "lemma": "οὗτος",
               "translit": "toŷto",
-              "katakana": "トオウトオ",
+              "katakana": "トウト",
               "pos": "dem",
               "posName": "指示代名詞",
               "morph": {
@@ -4271,15 +4271,15 @@
               },
               "morphCode": "----ASN-",
               "gloss": "この",
-              "strongs": "G3778",
-              "definition": "the he (she or it), i.e. this or that\n (often with article repeated)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "ἐμοὶ",
               "textWithPunct": "ἐμοὶ",
               "lemma": "ἐγώ",
               "translit": "emoí",
-              "katakana": "エムオイ",
+              "katakana": "エモイ",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -4296,7 +4296,7 @@
               "textWithPunct": "⸀ἐλλόγα·",
               "lemma": "ἐλλογέω",
               "translit": "ellóga",
-              "katakana": "エルルオグア",
+              "katakana": "エルロガ",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -4319,7 +4319,7 @@
               "textWithPunct": "ἐγὼ",
               "lemma": "ἐγώ",
               "translit": "egṓ",
-              "katakana": "エグオー",
+              "katakana": "エゴー",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -4336,7 +4336,7 @@
               "textWithPunct": "Παῦλος",
               "lemma": "Παῦλος",
               "translit": "Paŷlos",
-              "katakana": "プアウルオス",
+              "katakana": "パウロス",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -4346,15 +4346,15 @@
               },
               "morphCode": "----NSM-",
               "gloss": "",
-              "strongs": "G3972",
-              "definition": "(little; but remotely from a derivative of ,\n meaning the same); Paulus, the name of a Roman and of an\n apostle"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "ἔγραψα",
               "textWithPunct": "ἔγραψα",
               "lemma": "γράφω",
               "translit": "égrapsa",
-              "katakana": "エグルアプスア",
+              "katakana": "エグラプサ",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -4373,7 +4373,7 @@
               "textWithPunct": "τῇ",
               "lemma": "ὁ",
               "translit": "têi",
-              "katakana": "トῇ",
+              "katakana": "テー",
               "pos": "art",
               "posName": "冠詞",
               "morph": {
@@ -4383,15 +4383,15 @@
               },
               "morphCode": "----DSF-",
               "gloss": "その",
-              "strongs": "G3588",
-              "definition": "the (sometimes to be\n supplied, at others omitted, in English idiom)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "ἐμῇ",
               "textWithPunct": "ἐμῇ",
               "lemma": "ἐμός",
               "translit": "emêi",
-              "katakana": "エムῇ",
+              "katakana": "エメー",
               "pos": "adj",
               "posName": "形容詞",
               "morph": {
@@ -4409,7 +4409,7 @@
               "textWithPunct": "χειρί,",
               "lemma": "χείρ",
               "translit": "cheirí",
-              "katakana": "クエイルイ",
+              "katakana": "ケイリ",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -4427,7 +4427,7 @@
               "textWithPunct": "ἐγὼ",
               "lemma": "ἐγώ",
               "translit": "egṓ",
-              "katakana": "エグオー",
+              "katakana": "エゴー",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -4444,7 +4444,7 @@
               "textWithPunct": "ἀποτίσω·",
               "lemma": "ἀποτίνω",
               "translit": "apotísō",
-              "katakana": "アプオトイスオー",
+              "katakana": "アポティソー",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -4463,21 +4463,21 @@
               "textWithPunct": "ἵνα",
               "lemma": "ἵνα",
               "translit": "hína",
-              "katakana": "ἵンア",
+              "katakana": "ヒナ",
               "pos": "conj",
               "posName": "接続詞",
               "morph": null,
               "morphCode": "--------",
               "gloss": "〜するために",
-              "strongs": "G2443",
-              "definition": "in order that (denoting the purpose\n or the result)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "μὴ",
               "textWithPunct": "μὴ",
               "lemma": "μή",
               "translit": "mḗ",
-              "katakana": "ムエー",
+              "katakana": "メー",
               "pos": "adv",
               "posName": "副詞",
               "morph": null,
@@ -4491,7 +4491,7 @@
               "textWithPunct": "λέγω",
               "lemma": "λέγω",
               "translit": "légō",
-              "katakana": "ルエグオー",
+              "katakana": "レゴー",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -4510,7 +4510,7 @@
               "textWithPunct": "σοι",
               "lemma": "σύ",
               "translit": "soi",
-              "katakana": "スオイ",
+              "katakana": "ソイ",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -4527,21 +4527,21 @@
               "textWithPunct": "ὅτι",
               "lemma": "ὅτι",
               "translit": "hóti",
-              "katakana": "ὅトイ",
+              "katakana": "ホティ",
               "pos": "conj",
               "posName": "接続詞",
               "morph": null,
               "morphCode": "--------",
               "gloss": "〜ということ",
-              "strongs": "G3754",
-              "definition": "demonstrative, that (sometimes\n redundant); causative, because"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "καὶ",
               "textWithPunct": "καὶ",
               "lemma": "καί",
               "translit": "kaí",
-              "katakana": "クアイ",
+              "katakana": "カイ",
               "pos": "adv",
               "posName": "副詞",
               "morph": null,
@@ -4555,7 +4555,7 @@
               "textWithPunct": "σεαυτόν",
               "lemma": "σεαυτοῦ",
               "translit": "seaytón",
-              "katakana": "スエアウトオン",
+              "katakana": "セアウトン",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -4565,15 +4565,15 @@
               },
               "morphCode": "----ASM-",
               "gloss": "",
-              "strongs": "G4572",
-              "definition": "of (with, to) thyself"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "μοι",
               "textWithPunct": "μοι",
               "lemma": "ἐγώ",
               "translit": "moi",
-              "katakana": "ムオイ",
+              "katakana": "モイ",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -4590,7 +4590,7 @@
               "textWithPunct": "προσοφείλεις.",
               "lemma": "προσοφείλω",
               "translit": "prosopheíleis",
-              "katakana": "プルオスオフエイルエイス",
+              "katakana": "プロソフェイレイス",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -4614,7 +4614,7 @@
               "textWithPunct": "ναί,",
               "lemma": "ναί",
               "translit": "naí",
-              "katakana": "ンアイ",
+              "katakana": "ナイ",
               "pos": "part",
               "posName": "不変化詞",
               "morph": null,
@@ -4628,7 +4628,7 @@
               "textWithPunct": "ἀδελφέ,",
               "lemma": "ἀδελφός",
               "translit": "adelphé",
-              "katakana": "アドエルフエ",
+              "katakana": "アデルフェ",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -4646,7 +4646,7 @@
               "textWithPunct": "ἐγώ",
               "lemma": "ἐγώ",
               "translit": "egṓ",
-              "katakana": "エグオー",
+              "katakana": "エゴー",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -4663,7 +4663,7 @@
               "textWithPunct": "σου",
               "lemma": "σύ",
               "translit": "soy",
-              "katakana": "スオウ",
+              "katakana": "ソウ",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -4680,7 +4680,7 @@
               "textWithPunct": "ὀναίμην",
               "lemma": "ὀνίνημι",
               "translit": "onaímēn",
-              "katakana": "オンアイムエーン",
+              "katakana": "オナイメーン",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -4705,15 +4705,15 @@
               "morph": null,
               "morphCode": "--------",
               "gloss": "〜の中に",
-              "strongs": "G1722",
-              "definition": "\"in,\" at, (up-)on, by, etc."
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "κυρίῳ",
               "textWithPunct": "κυρίῳ·",
               "lemma": "κύριος",
               "translit": "kyríōi",
-              "katakana": "クウルイῳ",
+              "katakana": "キュリオー",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -4731,7 +4731,7 @@
               "textWithPunct": "ἀνάπαυσόν",
               "lemma": "ἀναπαύω",
               "translit": "anápayson",
-              "katakana": "アンアプアウスオン",
+              "katakana": "アナパウソン",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -4749,7 +4749,7 @@
               "textWithPunct": "μου",
               "lemma": "ἐγώ",
               "translit": "moy",
-              "katakana": "ムオウ",
+              "katakana": "モウ",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -4766,7 +4766,7 @@
               "textWithPunct": "τὰ",
               "lemma": "ὁ",
               "translit": "tá",
-              "katakana": "トア",
+              "katakana": "タ",
               "pos": "art",
               "posName": "冠詞",
               "morph": {
@@ -4776,15 +4776,15 @@
               },
               "morphCode": "----APN-",
               "gloss": "その",
-              "strongs": "G3588",
-              "definition": "the (sometimes to be\n supplied, at others omitted, in English idiom)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "σπλάγχνα",
               "textWithPunct": "σπλάγχνα",
               "lemma": "σπλάγχνον",
               "translit": "splágchna",
-              "katakana": "スプルアンクンア",
+              "katakana": "スプランクナ",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -4808,15 +4808,15 @@
               "morph": null,
               "morphCode": "--------",
               "gloss": "〜の中に",
-              "strongs": "G1722",
-              "definition": "\"in,\" at, (up-)on, by, etc."
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "⸀Χριστῷ",
               "textWithPunct": "⸀Χριστῷ.",
               "lemma": "Χριστός",
               "translit": "Christôi",
-              "katakana": "クルイストῷ",
+              "katakana": "クリストー",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -4839,7 +4839,7 @@
               "textWithPunct": "πεποιθὼς",
               "lemma": "πείθω",
               "translit": "pepoithṓs",
-              "katakana": "プエプオイスオース",
+              "katakana": "ペポイソース",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -4859,7 +4859,7 @@
               "textWithPunct": "τῇ",
               "lemma": "ὁ",
               "translit": "têi",
-              "katakana": "トῇ",
+              "katakana": "テー",
               "pos": "art",
               "posName": "冠詞",
               "morph": {
@@ -4869,15 +4869,15 @@
               },
               "morphCode": "----DSF-",
               "gloss": "その",
-              "strongs": "G3588",
-              "definition": "the (sometimes to be\n supplied, at others omitted, in English idiom)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "ὑπακοῇ",
               "textWithPunct": "ὑπακοῇ",
               "lemma": "ὑπακοή",
               "translit": "hypakoêi",
-              "katakana": "フプアクオῇ",
+              "katakana": "フパコエー",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -4895,7 +4895,7 @@
               "textWithPunct": "σου",
               "lemma": "σύ",
               "translit": "soy",
-              "katakana": "スオウ",
+              "katakana": "ソウ",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -4912,7 +4912,7 @@
               "textWithPunct": "ἔγραψά",
               "lemma": "γράφω",
               "translit": "égrapsa",
-              "katakana": "エグルアプスア",
+              "katakana": "エグラプサ",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -4931,7 +4931,7 @@
               "textWithPunct": "σοι,",
               "lemma": "σύ",
               "translit": "soi",
-              "katakana": "スオイ",
+              "katakana": "ソイ",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -4948,7 +4948,7 @@
               "textWithPunct": "εἰδὼς",
               "lemma": "ὁράω",
               "translit": "eidṓs",
-              "katakana": "エイドオース",
+              "katakana": "エイドース",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -4968,21 +4968,21 @@
               "textWithPunct": "ὅτι",
               "lemma": "ὅτι",
               "translit": "hóti",
-              "katakana": "ὅトイ",
+              "katakana": "ホティ",
               "pos": "conj",
               "posName": "接続詞",
               "morph": null,
               "morphCode": "--------",
               "gloss": "〜ということ",
-              "strongs": "G3754",
-              "definition": "demonstrative, that (sometimes\n redundant); causative, because"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "καὶ",
               "textWithPunct": "καὶ",
               "lemma": "καί",
               "translit": "kaí",
-              "katakana": "クアイ",
+              "katakana": "カイ",
               "pos": "adv",
               "posName": "副詞",
               "morph": null,
@@ -4996,7 +4996,7 @@
               "textWithPunct": "ὑπὲρ",
               "lemma": "ὑπέρ",
               "translit": "hypér",
-              "katakana": "フプエル",
+              "katakana": "フペル",
               "pos": "prep",
               "posName": "前置詞",
               "morph": null,
@@ -5020,15 +5020,15 @@
               },
               "morphCode": "----APN-",
               "gloss": "〜ところの",
-              "strongs": "G3739",
-              "definition": "the\n relatively (sometimes demonstrative) pronoun, who, which, what,\n that"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "λέγω",
               "textWithPunct": "λέγω",
               "lemma": "λέγω",
               "translit": "légō",
-              "katakana": "ルエグオー",
+              "katakana": "レゴー",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -5047,7 +5047,7 @@
               "textWithPunct": "ποιήσεις.",
               "lemma": "ποιέω",
               "translit": "poiḗseis",
-              "katakana": "プオイエースエイス",
+              "katakana": "ポイエーセイス",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -5071,21 +5071,21 @@
               "textWithPunct": "ἅμα",
               "lemma": "ἅμα",
               "translit": "háma",
-              "katakana": "ハムア",
+              "katakana": "ハマ",
               "pos": "adv",
               "posName": "副詞",
               "morph": null,
               "morphCode": "--------",
               "gloss": "",
-              "strongs": "G260",
-              "definition": "properly, at the \"same\" time, but freely used as a\n preposition or adverb denoting close association"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "δὲ",
               "textWithPunct": "δὲ",
               "lemma": "δέ",
               "translit": "dé",
-              "katakana": "ドエ",
+              "katakana": "デ",
               "pos": "conj",
               "posName": "接続詞",
               "morph": null,
@@ -5099,7 +5099,7 @@
               "textWithPunct": "καὶ",
               "lemma": "καί",
               "translit": "kaí",
-              "katakana": "クアイ",
+              "katakana": "カイ",
               "pos": "adv",
               "posName": "副詞",
               "morph": null,
@@ -5113,7 +5113,7 @@
               "textWithPunct": "ἑτοίμαζέ",
               "lemma": "ἑτοιμάζω",
               "translit": "hetoímaze",
-              "katakana": "ヘトオイムアズエ",
+              "katakana": "ヘトイマゼ",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -5131,7 +5131,7 @@
               "textWithPunct": "μοι",
               "lemma": "ἐγώ",
               "translit": "moi",
-              "katakana": "ムオイ",
+              "katakana": "モイ",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -5148,7 +5148,7 @@
               "textWithPunct": "ξενίαν,",
               "lemma": "ξενία",
               "translit": "xenían",
-              "katakana": "クスエンイアン",
+              "katakana": "クセニアン",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -5166,7 +5166,7 @@
               "textWithPunct": "ἐλπίζω",
               "lemma": "ἐλπίζω",
               "translit": "elpízō",
-              "katakana": "エルプイズオー",
+              "katakana": "エルピゾー",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -5185,7 +5185,7 @@
               "textWithPunct": "γὰρ",
               "lemma": "γάρ",
               "translit": "gár",
-              "katakana": "グアル",
+              "katakana": "ガル",
               "pos": "conj",
               "posName": "接続詞",
               "morph": null,
@@ -5199,21 +5199,21 @@
               "textWithPunct": "ὅτι",
               "lemma": "ὅτι",
               "translit": "hóti",
-              "katakana": "ὅトイ",
+              "katakana": "ホティ",
               "pos": "conj",
               "posName": "接続詞",
               "morph": null,
               "morphCode": "--------",
               "gloss": "〜ということ",
-              "strongs": "G3754",
-              "definition": "demonstrative, that (sometimes\n redundant); causative, because"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "διὰ",
               "textWithPunct": "διὰ",
               "lemma": "διά",
               "translit": "diá",
-              "katakana": "ドイア",
+              "katakana": "ディア",
               "pos": "prep",
               "posName": "前置詞",
               "morph": null,
@@ -5227,7 +5227,7 @@
               "textWithPunct": "τῶν",
               "lemma": "ὁ",
               "translit": "tôn",
-              "katakana": "トオーン",
+              "katakana": "トーン",
               "pos": "art",
               "posName": "冠詞",
               "morph": {
@@ -5237,15 +5237,15 @@
               },
               "morphCode": "----GPF-",
               "gloss": "その",
-              "strongs": "G3588",
-              "definition": "the (sometimes to be\n supplied, at others omitted, in English idiom)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "προσευχῶν",
               "textWithPunct": "προσευχῶν",
               "lemma": "προσευχή",
               "translit": "proseychôn",
-              "katakana": "プルオスエウクオーン",
+              "katakana": "プロセウコーン",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -5263,7 +5263,7 @@
               "textWithPunct": "ὑμῶν",
               "lemma": "σύ",
               "translit": "hymôn",
-              "katakana": "フムオーン",
+              "katakana": "フモーン",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -5280,7 +5280,7 @@
               "textWithPunct": "χαρισθήσομαι",
               "lemma": "χαρίζομαι",
               "translit": "charisthḗsomai",
-              "katakana": "クアルイススエースオムアイ",
+              "katakana": "カリスセーソマイ",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -5299,7 +5299,7 @@
               "textWithPunct": "ὑμῖν.",
               "lemma": "σύ",
               "translit": "hymîn",
-              "katakana": "フムイン",
+              "katakana": "フミン",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -5321,7 +5321,7 @@
               "textWithPunct": "⸀Ἀσπάζεταί",
               "lemma": "ἀσπάζομαι",
               "translit": "aspázetai",
-              "katakana": "アスプアズエトアイ",
+              "katakana": "アスパゼタイ",
               "pos": "verb",
               "posName": "動詞",
               "morph": {
@@ -5340,7 +5340,7 @@
               "textWithPunct": "σε",
               "lemma": "σύ",
               "translit": "se",
-              "katakana": "スエ",
+              "katakana": "セ",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -5357,7 +5357,7 @@
               "textWithPunct": "Ἐπαφρᾶς",
               "lemma": "Ἐπαφρᾶς",
               "translit": "Epaphrâs",
-              "katakana": "エプアフルアス",
+              "katakana": "エパフラス",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -5367,8 +5367,8 @@
               },
               "morphCode": "----NSM-",
               "gloss": "",
-              "strongs": "G1889",
-              "definition": "Epaphras, a Christian"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "ὁ",
@@ -5385,15 +5385,15 @@
               },
               "morphCode": "----NSM-",
               "gloss": "その",
-              "strongs": "G3588",
-              "definition": "the (sometimes to be\n supplied, at others omitted, in English idiom)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "συναιχμάλωτός",
               "textWithPunct": "συναιχμάλωτός",
               "lemma": "συναιχμάλωτος",
               "translit": "synaichmálōtos",
-              "katakana": "スウンアイクムアルオートオス",
+              "katakana": "シュナイクマロートス",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -5411,7 +5411,7 @@
               "textWithPunct": "μου",
               "lemma": "ἐγώ",
               "translit": "moy",
-              "katakana": "ムオウ",
+              "katakana": "モウ",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -5434,15 +5434,15 @@
               "morph": null,
               "morphCode": "--------",
               "gloss": "〜の中に",
-              "strongs": "G1722",
-              "definition": "\"in,\" at, (up-)on, by, etc."
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "Χριστῷ",
               "textWithPunct": "Χριστῷ",
               "lemma": "Χριστός",
               "translit": "Christôi",
-              "katakana": "クルイストῷ",
+              "katakana": "クリストー",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -5460,7 +5460,7 @@
               "textWithPunct": "Ἰησοῦ,",
               "lemma": "Ἰησοῦς",
               "translit": "Iēsoŷ",
-              "katakana": "イエースオウ",
+              "katakana": "イエーソウ",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -5470,8 +5470,8 @@
               },
               "morphCode": "----DSM-",
               "gloss": "イエス",
-              "strongs": "G2424",
-              "definition": "Jesus (i.e. Jehoshua), the name of our Lord\n and two (three) other Israelites"
+              "strongs": "",
+              "definition": ""
             }
           ]
         },
@@ -5483,7 +5483,7 @@
               "textWithPunct": "Μᾶρκος,",
               "lemma": "Μᾶρκος",
               "translit": "Mârkos",
-              "katakana": "ムアルクオス",
+              "katakana": "マルコス",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -5501,7 +5501,7 @@
               "textWithPunct": "Ἀρίσταρχος,",
               "lemma": "Ἀρίσταρχος",
               "translit": "Arístarchos",
-              "katakana": "アルイストアルクオス",
+              "katakana": "アリスタルコス",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -5519,7 +5519,7 @@
               "textWithPunct": "Δημᾶς,",
               "lemma": "Δημᾶς",
               "translit": "Dēmâs",
-              "katakana": "ドエームアス",
+              "katakana": "デーマス",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -5529,15 +5529,15 @@
               },
               "morphCode": "----NSM-",
               "gloss": "",
-              "strongs": "G1214",
-              "definition": "Demas, a Christian"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "Λουκᾶς",
               "textWithPunct": "Λουκᾶς,",
               "lemma": "Λουκᾶς",
               "translit": "Loykâs",
-              "katakana": "ルオウクアス",
+              "katakana": "ロウカス",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -5547,15 +5547,15 @@
               },
               "morphCode": "----NSM-",
               "gloss": "",
-              "strongs": "G3065",
-              "definition": "Lucas, a Christian"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "οἱ",
               "textWithPunct": "οἱ",
               "lemma": "ὁ",
               "translit": "ohi",
-              "katakana": "オヒ",
+              "katakana": "オイ",
               "pos": "art",
               "posName": "冠詞",
               "morph": {
@@ -5565,15 +5565,15 @@
               },
               "morphCode": "----NPM-",
               "gloss": "その",
-              "strongs": "G3588",
-              "definition": "the (sometimes to be\n supplied, at others omitted, in English idiom)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "συνεργοί",
               "textWithPunct": "συνεργοί",
               "lemma": "συνεργός",
               "translit": "synergoí",
-              "katakana": "スウンエルグオイ",
+              "katakana": "シュネルゴイ",
               "pos": "adj",
               "posName": "形容詞",
               "morph": {
@@ -5591,7 +5591,7 @@
               "textWithPunct": "μου.",
               "lemma": "ἐγώ",
               "translit": "moy",
-              "katakana": "ムオウ",
+              "katakana": "モウ",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
@@ -5623,15 +5623,15 @@
               },
               "morphCode": "----NSF-",
               "gloss": "その",
-              "strongs": "G3588",
-              "definition": "the (sometimes to be\n supplied, at others omitted, in English idiom)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "χάρις",
               "textWithPunct": "χάρις",
               "lemma": "χάρις",
               "translit": "cháris",
-              "katakana": "クアルイス",
+              "katakana": "カリス",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -5649,7 +5649,7 @@
               "textWithPunct": "τοῦ",
               "lemma": "ὁ",
               "translit": "toŷ",
-              "katakana": "トオウ",
+              "katakana": "トウ",
               "pos": "art",
               "posName": "冠詞",
               "morph": {
@@ -5659,15 +5659,15 @@
               },
               "morphCode": "----GSM-",
               "gloss": "その",
-              "strongs": "G3588",
-              "definition": "the (sometimes to be\n supplied, at others omitted, in English idiom)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "⸀κυρίου",
               "textWithPunct": "⸀κυρίου",
               "lemma": "κύριος",
               "translit": "kyríoy",
-              "katakana": "クウルイオウ",
+              "katakana": "キュリウー",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -5685,7 +5685,7 @@
               "textWithPunct": "Ἰησοῦ",
               "lemma": "Ἰησοῦς",
               "translit": "Iēsoŷ",
-              "katakana": "イエースオウ",
+              "katakana": "イエーソウ",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -5695,15 +5695,15 @@
               },
               "morphCode": "----GSM-",
               "gloss": "イエス",
-              "strongs": "G2424",
-              "definition": "Jesus (i.e. Jehoshua), the name of our Lord\n and two (three) other Israelites"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "Χριστοῦ",
               "textWithPunct": "Χριστοῦ",
               "lemma": "Χριστός",
               "translit": "Christoŷ",
-              "katakana": "クルイストオウ",
+              "katakana": "クリストウ",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -5721,7 +5721,7 @@
               "textWithPunct": "μετὰ",
               "lemma": "μετά",
               "translit": "metá",
-              "katakana": "ムエトア",
+              "katakana": "メタ",
               "pos": "prep",
               "posName": "前置詞",
               "morph": null,
@@ -5735,7 +5735,7 @@
               "textWithPunct": "τοῦ",
               "lemma": "ὁ",
               "translit": "toŷ",
-              "katakana": "トオウ",
+              "katakana": "トウ",
               "pos": "art",
               "posName": "冠詞",
               "morph": {
@@ -5745,15 +5745,15 @@
               },
               "morphCode": "----GSN-",
               "gloss": "その",
-              "strongs": "G3588",
-              "definition": "the (sometimes to be\n supplied, at others omitted, in English idiom)"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "πνεύματος",
               "textWithPunct": "πνεύματος",
               "lemma": "πνεῦμα",
               "translit": "pneýmatos",
-              "katakana": "プンエウムアトオス",
+              "katakana": "プネウマトス",
               "pos": "noun",
               "posName": "名詞",
               "morph": {
@@ -5763,15 +5763,15 @@
               },
               "morphCode": "----GSN-",
               "gloss": "霊",
-              "strongs": "G4151",
-              "definition": "a current of air, i.e. breath (blast) or a breeze; by\n analogy or figuratively, a spirit, i.e. (human) the rational soul, (by\n implication) vital principle, mental disposition, etc., or\n (superhuman) an angel, demon, or (divine) God, Christ's spirit, the\n Holy Spirit"
+              "strongs": "",
+              "definition": ""
             },
             {
               "text": "⸀ὑμῶν",
               "textWithPunct": "⸀ὑμῶν.",
               "lemma": "σύ",
               "translit": "hymôn",
-              "katakana": "フムオーン",
+              "katakana": "フモーン",
               "pos": "pers",
               "posName": "人称代名詞",
               "morph": {
