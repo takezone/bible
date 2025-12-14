@@ -72,7 +72,7 @@
                 "gender": "男性"
               },
               "morphCode": "----GSM-",
-              "gloss": "主",
+              "gloss": "主人",
               "strongs": "",
               "definition": ""
             },
@@ -126,7 +126,7 @@
                 "gender": "男性"
               },
               "morphCode": "----NSM-",
-              "gloss": "",
+              "gloss": "奴隷",
               "strongs": "",
               "definition": ""
             },
@@ -162,7 +162,7 @@
                 "gender": "女性"
               },
               "morphCode": "----DPF-",
-              "gloss": "",
+              "gloss": "十二",
               "strongs": "",
               "definition": ""
             },
@@ -266,7 +266,7 @@
                 "mood": "不定詞"
               },
               "morphCode": "-PAN----",
-              "gloss": "",
+              "gloss": "喜ぶ",
               "strongs": "",
               "definition": ""
             }
@@ -307,7 +307,7 @@
                 "gender": "女性"
               },
               "morphCode": "----ASF-",
-              "gloss": "",
+              "gloss": "喜び",
               "strongs": "",
               "definition": ""
             },
@@ -343,7 +343,7 @@
                 "gender": "男性"
               },
               "morphCode": "----VPM-",
-              "gloss": "",
+              "gloss": "兄弟",
               "strongs": "",
               "definition": ""
             },
@@ -374,7 +374,7 @@
               "posName": "接続詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "〜する時はいつでも",
               "strongs": "",
               "definition": ""
             },
@@ -595,7 +595,7 @@
                 "gender": "女性"
               },
               "morphCode": "----ASF-",
-              "gloss": "",
+              "gloss": "忍耐",
               "strongs": "",
               "definition": ""
             }
@@ -650,7 +650,7 @@
                 "gender": "女性"
               },
               "morphCode": "----NSF-",
-              "gloss": "",
+              "gloss": "忍耐",
               "strongs": "",
               "definition": ""
             },
@@ -819,7 +819,7 @@
                 "gender": "中性"
               },
               "morphCode": "----DSN-",
-              "gloss": "",
+              "gloss": "誰も〜ない",
               "strongs": "",
               "definition": ""
             },
@@ -945,7 +945,7 @@
                 "gender": "女性"
               },
               "morphCode": "----GSF-",
-              "gloss": "",
+              "gloss": "知恵",
               "strongs": "",
               "definition": ""
             },
@@ -963,7 +963,7 @@
                 "voice": "能動態"
               },
               "morphCode": "3PAD-S--",
-              "gloss": "",
+              "gloss": "求める",
               "strongs": "",
               "definition": ""
             },
@@ -977,7 +977,7 @@
               "posName": "前置詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "〜のそばに",
               "strongs": "",
               "definition": ""
             },
@@ -1189,7 +1189,7 @@
                 "voice": "能動態"
               },
               "morphCode": "3PAD-S--",
-              "gloss": "",
+              "gloss": "求める",
               "strongs": "",
               "definition": ""
             },
@@ -1253,7 +1253,7 @@
                 "gender": "中性"
               },
               "morphCode": "----ASN-",
-              "gloss": "",
+              "gloss": "誰も〜ない",
               "strongs": "",
               "definition": ""
             },
@@ -1381,7 +1381,7 @@
                 "gender": "女性"
               },
               "morphCode": "----GSF-",
-              "gloss": "",
+              "gloss": "海",
               "strongs": "",
               "definition": ""
             },
@@ -1542,7 +1542,7 @@
                 "gender": "男性"
               },
               "morphCode": "----NSM-",
-              "gloss": "",
+              "gloss": "あの",
               "strongs": "",
               "definition": ""
             },
@@ -1607,7 +1607,7 @@
               "posName": "前置詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "〜のそばに",
               "strongs": "",
               "definition": ""
             },
@@ -1643,7 +1643,7 @@
                 "gender": "男性"
               },
               "morphCode": "----GSM-",
-              "gloss": "主",
+              "gloss": "主人",
               "strongs": "",
               "definition": ""
             }
@@ -1666,7 +1666,7 @@
                 "gender": "男性"
               },
               "morphCode": "----NSM-",
-              "gloss": "",
+              "gloss": "男",
               "strongs": "",
               "definition": ""
             },
@@ -1770,7 +1770,7 @@
                 "gender": "女性"
               },
               "morphCode": "----DPF-",
-              "gloss": "",
+              "gloss": "道",
               "strongs": "",
               "definition": ""
             },
@@ -1861,7 +1861,7 @@
                 "gender": "男性"
               },
               "morphCode": "----NSM-",
-              "gloss": "",
+              "gloss": "兄弟",
               "strongs": "",
               "definition": ""
             },
@@ -2245,7 +2245,7 @@
                 "gender": "男性"
               },
               "morphCode": "----NSM-",
-              "gloss": "",
+              "gloss": "太陽",
               "strongs": "",
               "definition": ""
             },
@@ -2259,7 +2259,7 @@
               "posName": "前置詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "〜と共に",
               "strongs": "",
               "definition": ""
             },
@@ -2451,7 +2451,7 @@
                 "mood": "直説法"
               },
               "morphCode": "3AAI-S--",
-              "gloss": "",
+              "gloss": "落ちる",
               "strongs": "",
               "definition": ""
             },
@@ -2537,7 +2537,7 @@
                 "gender": "中性"
               },
               "morphCode": "----GSN-",
-              "gloss": "",
+              "gloss": "顔",
               "strongs": "",
               "definition": ""
             },
@@ -2574,7 +2574,7 @@
                 "mood": "直説法"
               },
               "morphCode": "3AMI-S--",
-              "gloss": "",
+              "gloss": "滅ぼす",
               "strongs": "",
               "definition": ""
             },
@@ -2766,7 +2766,7 @@
                 "gender": "男性"
               },
               "morphCode": "----NSM-",
-              "gloss": "",
+              "gloss": "男",
               "strongs": "",
               "definition": ""
             },
@@ -3082,7 +3082,7 @@
                 "gender": "男性"
               },
               "morphCode": "----NSM-",
-              "gloss": "",
+              "gloss": "誰も〜ない",
               "strongs": "",
               "definition": ""
             },
@@ -3103,7 +3103,7 @@
                 "gender": "男性"
               },
               "morphCode": "-PPPNSM-",
-              "gloss": "",
+              "gloss": "試みる",
               "strongs": "",
               "definition": ""
             },
@@ -3186,7 +3186,7 @@
                 "mood": "直説法"
               },
               "morphCode": "1PPI-S--",
-              "gloss": "",
+              "gloss": "試みる",
               "strongs": "",
               "definition": ""
             },
@@ -3291,7 +3291,7 @@
                 "gender": "中性"
               },
               "morphCode": "----GPN-",
-              "gloss": "",
+              "gloss": "悪い",
               "strongs": "",
               "definition": ""
             },
@@ -3310,7 +3310,7 @@
                 "mood": "直説法"
               },
               "morphCode": "3PAI-S--",
-              "gloss": "",
+              "gloss": "試みる",
               "strongs": "",
               "definition": ""
             },
@@ -3383,7 +3383,7 @@
                 "gender": "男性"
               },
               "morphCode": "----NSM-",
-              "gloss": "",
+              "gloss": "それぞれの",
               "strongs": "",
               "definition": ""
             },
@@ -3416,7 +3416,7 @@
                 "mood": "直説法"
               },
               "morphCode": "3PPI-S--",
-              "gloss": "",
+              "gloss": "試みる",
               "strongs": "",
               "definition": ""
             },
@@ -3653,7 +3653,7 @@
                 "gender": "女性"
               },
               "morphCode": "----ASF-",
-              "gloss": "",
+              "gloss": "罪",
               "strongs": "",
               "definition": ""
             },
@@ -3703,7 +3703,7 @@
                 "gender": "女性"
               },
               "morphCode": "----NSF-",
-              "gloss": "",
+              "gloss": "罪",
               "strongs": "",
               "definition": ""
             },
@@ -3761,7 +3761,7 @@
                 "gender": "男性"
               },
               "morphCode": "----ASM-",
-              "gloss": "",
+              "gloss": "死",
               "strongs": "",
               "definition": ""
             }
@@ -3816,7 +3816,7 @@
                 "gender": "男性"
               },
               "morphCode": "----VPM-",
-              "gloss": "",
+              "gloss": "兄弟",
               "strongs": "",
               "definition": ""
             },
@@ -3910,7 +3910,7 @@
                 "gender": "女性"
               },
               "morphCode": "----NSF-",
-              "gloss": "",
+              "gloss": "善い",
               "strongs": "",
               "definition": ""
             },
@@ -4032,7 +4032,7 @@
                 "gender": "中性"
               },
               "morphCode": "-PAPNSN-",
-              "gloss": "",
+              "gloss": "下る",
               "strongs": "",
               "definition": ""
             },
@@ -4132,7 +4132,7 @@
               "posName": "前置詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "〜のそばに",
               "strongs": "",
               "definition": ""
             },
@@ -4215,7 +4215,7 @@
               "posName": "接続詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "または",
               "strongs": "",
               "definition": ""
             },
@@ -4546,7 +4546,7 @@
                 "gender": "男性"
               },
               "morphCode": "----VPM-",
-              "gloss": "",
+              "gloss": "兄弟",
               "strongs": "",
               "definition": ""
             },
@@ -4835,7 +4835,7 @@
                 "gender": "女性"
               },
               "morphCode": "----ASF-",
-              "gloss": "",
+              "gloss": "怒り",
               "strongs": "",
               "definition": ""
             }
@@ -4858,7 +4858,7 @@
                 "gender": "女性"
               },
               "morphCode": "----NSF-",
-              "gloss": "",
+              "gloss": "怒り",
               "strongs": "",
               "definition": ""
             },
@@ -4890,7 +4890,7 @@
                 "gender": "男性"
               },
               "morphCode": "----GSM-",
-              "gloss": "",
+              "gloss": "男",
               "strongs": "",
               "definition": ""
             },
@@ -4908,7 +4908,7 @@
                 "gender": "女性"
               },
               "morphCode": "----ASF-",
-              "gloss": "",
+              "gloss": "義",
               "strongs": "",
               "definition": ""
             },
@@ -4959,7 +4959,7 @@
                 "mood": "直説法"
               },
               "morphCode": "3PMI-S--",
-              "gloss": "",
+              "gloss": "働く",
               "strongs": "",
               "definition": ""
             }
@@ -5228,7 +5228,7 @@
                 "gender": "男性"
               },
               "morphCode": "-PMPASM-",
-              "gloss": "",
+              "gloss": "〜できる",
               "strongs": "",
               "definition": ""
             },
@@ -5246,7 +5246,7 @@
                 "mood": "不定詞"
               },
               "morphCode": "-AAN----",
-              "gloss": "",
+              "gloss": "救う",
               "strongs": "",
               "definition": ""
             },
@@ -5282,7 +5282,7 @@
                 "gender": "女性"
               },
               "morphCode": "----APF-",
-              "gloss": "",
+              "gloss": "魂",
               "strongs": "",
               "definition": ""
             },
@@ -5475,7 +5475,7 @@
                 "gender": "男性"
               },
               "morphCode": "----APM-",
-              "gloss": "",
+              "gloss": "自分自身",
               "strongs": "",
               "definition": ""
             }
@@ -5681,7 +5681,7 @@
                 "gender": "男性"
               },
               "morphCode": "----DSM-",
-              "gloss": "",
+              "gloss": "男",
               "strongs": "",
               "definition": ""
             },
@@ -5738,7 +5738,7 @@
                 "gender": "中性"
               },
               "morphCode": "----ASN-",
-              "gloss": "",
+              "gloss": "顔",
               "strongs": "",
               "definition": ""
             },
@@ -5880,7 +5880,7 @@
                 "gender": "男性"
               },
               "morphCode": "----ASM-",
-              "gloss": "",
+              "gloss": "自分自身",
               "strongs": "",
               "definition": ""
             },
@@ -5912,7 +5912,7 @@
                 "mood": "直説法"
               },
               "morphCode": "3XAI-S--",
-              "gloss": "",
+              "gloss": "去る",
               "strongs": "",
               "definition": ""
             },
@@ -5940,7 +5940,7 @@
               "posName": "副詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "すぐに",
               "strongs": "",
               "definition": ""
             },
@@ -6653,7 +6653,7 @@
                 "gender": "女性"
               },
               "morphCode": "----ASF-",
-              "gloss": "",
+              "gloss": "心",
               "strongs": "",
               "definition": ""
             },
@@ -6830,7 +6830,7 @@
               "posName": "前置詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "〜のそばに",
               "strongs": "",
               "definition": ""
             },
@@ -7107,7 +7107,7 @@
                 "gender": "男性"
               },
               "morphCode": "----ASM-",
-              "gloss": "",
+              "gloss": "自分自身",
               "strongs": "",
               "definition": ""
             },
@@ -7125,7 +7125,7 @@
                 "mood": "不定詞"
               },
               "morphCode": "-PAN----",
-              "gloss": "",
+              "gloss": "守る",
               "strongs": "",
               "definition": ""
             },
@@ -7203,7 +7203,7 @@
                 "gender": "男性"
               },
               "morphCode": "----VPM-",
-              "gloss": "",
+              "gloss": "兄弟",
               "strongs": "",
               "definition": ""
             },
@@ -7356,7 +7356,7 @@
                 "gender": "男性"
               },
               "morphCode": "----GSM-",
-              "gloss": "主",
+              "gloss": "主人",
               "strongs": "",
               "definition": ""
             },
@@ -7464,7 +7464,7 @@
               "posName": "接続詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "もし〜なら",
               "strongs": "",
               "definition": ""
             },
@@ -7497,7 +7497,7 @@
                 "mood": "接続法"
               },
               "morphCode": "3AAS-S--",
-              "gloss": "",
+              "gloss": "入る",
               "strongs": "",
               "definition": ""
             },
@@ -7529,7 +7529,7 @@
                 "gender": "女性"
               },
               "morphCode": "----ASF-",
-              "gloss": "",
+              "gloss": "会堂",
               "strongs": "",
               "definition": ""
             },
@@ -7564,7 +7564,7 @@
                 "gender": "男性"
               },
               "morphCode": "----NSM-",
-              "gloss": "",
+              "gloss": "男",
               "strongs": "",
               "definition": ""
             },
@@ -7651,7 +7651,7 @@
                 "mood": "接続法"
               },
               "morphCode": "3AAS-S--",
-              "gloss": "",
+              "gloss": "入る",
               "strongs": "",
               "definition": ""
             },
@@ -8110,7 +8110,7 @@
                 "voice": "能動態"
               },
               "morphCode": "2AAD-S--",
-              "gloss": "",
+              "gloss": "立つ",
               "strongs": "",
               "definition": ""
             },
@@ -8124,7 +8124,7 @@
               "posName": "接続詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "または",
               "strongs": "",
               "definition": ""
             },
@@ -8293,7 +8293,7 @@
                 "gender": "男性"
               },
               "morphCode": "----DPM-",
-              "gloss": "",
+              "gloss": "自分自身",
               "strongs": "",
               "definition": ""
             },
@@ -8380,7 +8380,7 @@
                 "gender": "男性"
               },
               "morphCode": "----GPM-",
-              "gloss": "",
+              "gloss": "悪い",
               "strongs": "",
               "definition": ""
             }
@@ -8421,7 +8421,7 @@
                 "gender": "男性"
               },
               "morphCode": "----VPM-",
-              "gloss": "",
+              "gloss": "兄弟",
               "strongs": "",
               "definition": ""
             },
@@ -8715,7 +8715,7 @@
                 "gender": "女性"
               },
               "morphCode": "----GSF-",
-              "gloss": "",
+              "gloss": "王国",
               "strongs": "",
               "definition": ""
             },
@@ -9196,7 +9196,7 @@
                 "gender": "中性"
               },
               "morphCode": "----ASN-",
-              "gloss": "",
+              "gloss": "名",
               "strongs": "",
               "definition": ""
             },
@@ -9368,7 +9368,7 @@
               "posName": "前置詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "〜に従って",
               "strongs": "",
               "definition": ""
             },
@@ -9404,7 +9404,7 @@
                 "gender": "女性"
               },
               "morphCode": "----ASF-",
-              "gloss": "",
+              "gloss": "聖書",
               "strongs": "",
               "definition": ""
             },
@@ -9607,7 +9607,7 @@
                 "gender": "女性"
               },
               "morphCode": "----ASF-",
-              "gloss": "",
+              "gloss": "罪",
               "strongs": "",
               "definition": ""
             },
@@ -9626,7 +9626,7 @@
                 "mood": "直説法"
               },
               "morphCode": "2PMI-P--",
-              "gloss": "",
+              "gloss": "働く",
               "strongs": "",
               "definition": ""
             },
@@ -9647,7 +9647,7 @@
                 "gender": "男性"
               },
               "morphCode": "-PPPNPM-",
-              "gloss": "",
+              "gloss": "責める",
               "strongs": "",
               "definition": ""
             },
@@ -9752,7 +9752,7 @@
                 "gender": "男性"
               },
               "morphCode": "----NSM-",
-              "gloss": "",
+              "gloss": "〜ところの者",
               "strongs": "",
               "definition": ""
             },
@@ -9784,7 +9784,7 @@
                 "gender": "男性"
               },
               "morphCode": "----ASM-",
-              "gloss": "",
+              "gloss": "全体の",
               "strongs": "",
               "definition": ""
             },
@@ -9839,7 +9839,7 @@
                 "mood": "接続法"
               },
               "morphCode": "3AAS-S--",
-              "gloss": "",
+              "gloss": "守る",
               "strongs": "",
               "definition": ""
             },
@@ -9904,7 +9904,7 @@
                 "gender": "中性"
               },
               "morphCode": "----DSN-",
-              "gloss": "",
+              "gloss": "一つ",
               "strongs": "",
               "definition": ""
             },
@@ -10431,7 +10431,7 @@
                 "gender": "男性"
               },
               "morphCode": "-PAPNPM-",
-              "gloss": "",
+              "gloss": "〜しようとする",
               "strongs": "",
               "definition": ""
             },
@@ -10449,7 +10449,7 @@
                 "mood": "不定詞"
               },
               "morphCode": "-PPN----",
-              "gloss": "",
+              "gloss": "裁く",
               "strongs": "",
               "definition": ""
             }
@@ -10504,7 +10504,7 @@
                 "gender": "女性"
               },
               "morphCode": "----NSF-",
-              "gloss": "",
+              "gloss": "裁き",
               "strongs": "",
               "definition": ""
             },
@@ -10648,7 +10648,7 @@
                 "gender": "女性"
               },
               "morphCode": "----GSF-",
-              "gloss": "",
+              "gloss": "裁き",
               "strongs": "",
               "definition": ""
             }
@@ -10707,7 +10707,7 @@
                 "gender": "男性"
               },
               "morphCode": "----VPM-",
-              "gloss": "",
+              "gloss": "兄弟",
               "strongs": "",
               "definition": ""
             },
@@ -10738,7 +10738,7 @@
               "posName": "接続詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "もし〜なら",
               "strongs": "",
               "definition": ""
             },
@@ -10909,7 +10909,7 @@
                 "mood": "直説法"
               },
               "morphCode": "3PMI-S--",
-              "gloss": "",
+              "gloss": "〜できる",
               "strongs": "",
               "definition": ""
             },
@@ -10963,7 +10963,7 @@
                 "mood": "不定詞"
               },
               "morphCode": "-AAN----",
-              "gloss": "",
+              "gloss": "救う",
               "strongs": "",
               "definition": ""
             },
@@ -11000,7 +11000,7 @@
               "posName": "接続詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "もし〜なら",
               "strongs": "",
               "definition": ""
             },
@@ -11018,7 +11018,7 @@
                 "gender": "男性"
               },
               "morphCode": "----NSM-",
-              "gloss": "",
+              "gloss": "兄弟",
               "strongs": "",
               "definition": ""
             },
@@ -11032,7 +11032,7 @@
               "posName": "接続詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "または",
               "strongs": "",
               "definition": ""
             },
@@ -11050,7 +11050,7 @@
                 "gender": "女性"
               },
               "morphCode": "----NSF-",
-              "gloss": "",
+              "gloss": "姉妹",
               "strongs": "",
               "definition": ""
             },
@@ -11299,7 +11299,7 @@
                 "voice": "能動態"
               },
               "morphCode": "2PAD-P--",
-              "gloss": "",
+              "gloss": "行く",
               "strongs": "",
               "definition": ""
             },
@@ -11331,7 +11331,7 @@
                 "gender": "女性"
               },
               "morphCode": "----DSF-",
-              "gloss": "",
+              "gloss": "平和",
               "strongs": "",
               "definition": ""
             },
@@ -11518,7 +11518,7 @@
                 "gender": "中性"
               },
               "morphCode": "----GSN-",
-              "gloss": "",
+              "gloss": "体",
               "strongs": "",
               "definition": ""
             },
@@ -11637,7 +11637,7 @@
               "posName": "接続詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "もし〜なら",
               "strongs": "",
               "definition": ""
             },
@@ -11739,7 +11739,7 @@
               "posName": "前置詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "〜に従って",
               "strongs": "",
               "definition": ""
             },
@@ -11757,7 +11757,7 @@
                 "gender": "女性"
               },
               "morphCode": "----ASF-",
-              "gloss": "",
+              "gloss": "自分自身",
               "strongs": "",
               "definition": ""
             }
@@ -12023,7 +12023,7 @@
               "posName": "前置詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "〜なしに",
               "strongs": "",
               "definition": ""
             },
@@ -12288,7 +12288,7 @@
                 "gender": "男性"
               },
               "morphCode": "----NSM-",
-              "gloss": "",
+              "gloss": "一つ",
               "strongs": "",
               "definition": ""
             },
@@ -12426,7 +12426,7 @@
                 "gender": "中性"
               },
               "morphCode": "----NPN-",
-              "gloss": "",
+              "gloss": "悪霊",
               "strongs": "",
               "definition": ""
             },
@@ -12648,7 +12648,7 @@
               "posName": "前置詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "〜なしに",
               "strongs": "",
               "definition": ""
             },
@@ -13309,7 +13309,7 @@
                 "mood": "直説法"
               },
               "morphCode": "3API-S--",
-              "gloss": "",
+              "gloss": "満たす",
               "strongs": "",
               "definition": ""
             },
@@ -13345,7 +13345,7 @@
                 "gender": "女性"
               },
               "morphCode": "----NSF-",
-              "gloss": "",
+              "gloss": "聖書",
               "strongs": "",
               "definition": ""
             },
@@ -13554,7 +13554,7 @@
                 "gender": "女性"
               },
               "morphCode": "----ASF-",
-              "gloss": "",
+              "gloss": "義",
               "strongs": "",
               "definition": ""
             },
@@ -13623,7 +13623,7 @@
                 "mood": "直説法"
               },
               "morphCode": "3API-S--",
-              "gloss": "",
+              "gloss": "呼ぶ",
               "strongs": "",
               "definition": ""
             }
@@ -13647,7 +13647,7 @@
                 "mood": "直説法"
               },
               "morphCode": "2PAI-P--",
-              "gloss": "",
+              "gloss": "見る",
               "strongs": "",
               "definition": ""
             },
@@ -14031,7 +14031,7 @@
                 "gender": "男性"
               },
               "morphCode": "----APM-",
-              "gloss": "",
+              "gloss": "天使",
               "strongs": "",
               "definition": ""
             },
@@ -14063,7 +14063,7 @@
                 "gender": "女性"
               },
               "morphCode": "----DSF-",
-              "gloss": "",
+              "gloss": "他の",
               "strongs": "",
               "definition": ""
             },
@@ -14081,7 +14081,7 @@
                 "gender": "女性"
               },
               "morphCode": "----DSF-",
-              "gloss": "",
+              "gloss": "道",
               "strongs": "",
               "definition": ""
             },
@@ -14102,7 +14102,7 @@
                 "gender": "女性"
               },
               "morphCode": "-AAPNSF-",
-              "gloss": "",
+              "gloss": "追い出す",
               "strongs": "",
               "definition": ""
             }
@@ -14171,7 +14171,7 @@
                 "gender": "中性"
               },
               "morphCode": "----NSN-",
-              "gloss": "",
+              "gloss": "体",
               "strongs": "",
               "definition": ""
             },
@@ -14185,7 +14185,7 @@
               "posName": "前置詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "〜なしに",
               "strongs": "",
               "definition": ""
             },
@@ -14318,7 +14318,7 @@
               "posName": "前置詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "〜なしに",
               "strongs": "",
               "definition": ""
             },
@@ -14433,7 +14433,7 @@
                 "gender": "男性"
               },
               "morphCode": "----NPM-",
-              "gloss": "",
+              "gloss": "教師",
               "strongs": "",
               "definition": ""
             },
@@ -14469,7 +14469,7 @@
                 "gender": "男性"
               },
               "morphCode": "----VPM-",
-              "gloss": "",
+              "gloss": "兄弟",
               "strongs": "",
               "definition": ""
             },
@@ -14557,7 +14557,7 @@
                 "gender": "中性"
               },
               "morphCode": "----ASN-",
-              "gloss": "",
+              "gloss": "裁き",
               "strongs": "",
               "definition": ""
             },
@@ -14801,7 +14801,7 @@
                 "gender": "男性"
               },
               "morphCode": "----NSM-",
-              "gloss": "",
+              "gloss": "男",
               "strongs": "",
               "definition": ""
             },
@@ -14819,7 +14819,7 @@
                 "gender": "男性"
               },
               "morphCode": "----NSM-",
-              "gloss": "",
+              "gloss": "力強い",
               "strongs": "",
               "definition": ""
             },
@@ -14869,7 +14869,7 @@
                 "gender": "中性"
               },
               "morphCode": "----ASN-",
-              "gloss": "",
+              "gloss": "全体の",
               "strongs": "",
               "definition": ""
             },
@@ -14905,7 +14905,7 @@
                 "gender": "中性"
               },
               "morphCode": "----ASN-",
-              "gloss": "",
+              "gloss": "体",
               "strongs": "",
               "definition": ""
             }
@@ -15060,7 +15060,7 @@
                 "gender": "中性"
               },
               "morphCode": "----APN-",
-              "gloss": "",
+              "gloss": "口",
               "strongs": "",
               "definition": ""
             },
@@ -15079,7 +15079,7 @@
                 "mood": "直説法"
               },
               "morphCode": "1PAI-P--",
-              "gloss": "",
+              "gloss": "投げる",
               "strongs": "",
               "definition": ""
             },
@@ -15129,7 +15129,7 @@
                 "mood": "不定詞"
               },
               "morphCode": "-PPN----",
-              "gloss": "",
+              "gloss": "説得する",
               "strongs": "",
               "definition": ""
             },
@@ -15196,7 +15196,7 @@
                 "gender": "中性"
               },
               "morphCode": "----ASN-",
-              "gloss": "",
+              "gloss": "全体の",
               "strongs": "",
               "definition": ""
             },
@@ -15232,7 +15232,7 @@
                 "gender": "中性"
               },
               "morphCode": "----ASN-",
-              "gloss": "",
+              "gloss": "体",
               "strongs": "",
               "definition": ""
             },
@@ -15288,7 +15288,7 @@
               "posName": "不変化詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "見よ",
               "strongs": "",
               "definition": ""
             },
@@ -15423,7 +15423,7 @@
                 "gender": "男性"
               },
               "morphCode": "----GPM-",
-              "gloss": "",
+              "gloss": "風",
               "strongs": "",
               "definition": ""
             },
@@ -15546,7 +15546,7 @@
               "posName": "接続詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "〜する所",
               "strongs": "",
               "definition": ""
             },
@@ -15727,7 +15727,7 @@
                 "gender": "中性"
               },
               "morphCode": "----NSN-",
-              "gloss": "",
+              "gloss": "小さい",
               "strongs": "",
               "definition": ""
             },
@@ -15829,7 +15829,7 @@
               "posName": "不変化詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "見よ",
               "strongs": "",
               "definition": ""
             },
@@ -15865,7 +15865,7 @@
                 "gender": "中性"
               },
               "morphCode": "----NSN-",
-              "gloss": "",
+              "gloss": "火",
               "strongs": "",
               "definition": ""
             },
@@ -15993,7 +15993,7 @@
                 "gender": "中性"
               },
               "morphCode": "----NSN-",
-              "gloss": "",
+              "gloss": "火",
               "strongs": "",
               "definition": ""
             },
@@ -16065,7 +16065,7 @@
                 "gender": "女性"
               },
               "morphCode": "----GSF-",
-              "gloss": "",
+              "gloss": "不義",
               "strongs": "",
               "definition": ""
             },
@@ -16244,7 +16244,7 @@
                 "gender": "中性"
               },
               "morphCode": "----ASN-",
-              "gloss": "",
+              "gloss": "全体の",
               "strongs": "",
               "definition": ""
             },
@@ -16280,7 +16280,7 @@
                 "gender": "中性"
               },
               "morphCode": "----ASN-",
-              "gloss": "",
+              "gloss": "体",
               "strongs": "",
               "definition": ""
             },
@@ -16888,7 +16888,7 @@
                 "mood": "直説法"
               },
               "morphCode": "3PMI-S--",
-              "gloss": "",
+              "gloss": "〜できる",
               "strongs": "",
               "definition": ""
             },
@@ -16942,7 +16942,7 @@
                 "gender": "中性"
               },
               "morphCode": "----NSN-",
-              "gloss": "",
+              "gloss": "悪い",
               "strongs": "",
               "definition": ""
             },
@@ -17088,7 +17088,7 @@
                 "gender": "男性"
               },
               "morphCode": "----ASM-",
-              "gloss": "主",
+              "gloss": "主人",
               "strongs": "",
               "definition": ""
             },
@@ -17253,7 +17253,7 @@
               "posName": "前置詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "〜に従って",
               "strongs": "",
               "definition": ""
             },
@@ -17382,7 +17382,7 @@
                 "gender": "中性"
               },
               "morphCode": "----GSN-",
-              "gloss": "",
+              "gloss": "口",
               "strongs": "",
               "definition": ""
             },
@@ -17401,7 +17401,7 @@
                 "mood": "直説法"
               },
               "morphCode": "3PMI-S--",
-              "gloss": "",
+              "gloss": "出る",
               "strongs": "",
               "definition": ""
             },
@@ -17502,7 +17502,7 @@
                 "gender": "男性"
               },
               "morphCode": "----VPM-",
-              "gloss": "",
+              "gloss": "兄弟",
               "strongs": "",
               "definition": ""
             },
@@ -17835,7 +17835,7 @@
                 "mood": "直説法"
               },
               "morphCode": "3PMI-S--",
-              "gloss": "",
+              "gloss": "〜できる",
               "strongs": "",
               "definition": ""
             },
@@ -17853,7 +17853,7 @@
                 "gender": "男性"
               },
               "morphCode": "----VPM-",
-              "gloss": "",
+              "gloss": "兄弟",
               "strongs": "",
               "definition": ""
             },
@@ -17938,7 +17938,7 @@
               "posName": "接続詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "または",
               "strongs": "",
               "definition": ""
             },
@@ -17988,7 +17988,7 @@
               "posName": "接続詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "〜もない",
               "strongs": "",
               "definition": ""
             },
@@ -18060,7 +18060,7 @@
                 "gender": "中性"
               },
               "morphCode": "----ASN-",
-              "gloss": "",
+              "gloss": "水",
               "strongs": "",
               "definition": ""
             }
@@ -18354,7 +18354,7 @@
                 "gender": "女性"
               },
               "morphCode": "----GSF-",
-              "gloss": "",
+              "gloss": "知恵",
               "strongs": "",
               "definition": ""
             }
@@ -18524,7 +18524,7 @@
                 "gender": "女性"
               },
               "morphCode": "----DSF-",
-              "gloss": "",
+              "gloss": "心",
               "strongs": "",
               "definition": ""
             },
@@ -18619,7 +18619,7 @@
               "posName": "前置詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "〜に従って",
               "strongs": "",
               "definition": ""
             },
@@ -18747,7 +18747,7 @@
                 "gender": "女性"
               },
               "morphCode": "----NSF-",
-              "gloss": "",
+              "gloss": "知恵",
               "strongs": "",
               "definition": ""
             },
@@ -18869,7 +18869,7 @@
               "posName": "接続詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "〜する所",
               "strongs": "",
               "definition": ""
             },
@@ -19102,7 +19102,7 @@
                 "gender": "女性"
               },
               "morphCode": "----NSF-",
-              "gloss": "",
+              "gloss": "知恵",
               "strongs": "",
               "definition": ""
             },
@@ -19120,7 +19120,7 @@
                 "gender": "中性"
               },
               "morphCode": "----ASN-",
-              "gloss": "",
+              "gloss": "第一の",
               "strongs": "",
               "definition": ""
             },
@@ -19134,7 +19134,7 @@
               "posName": "接続詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "一方では",
               "strongs": "",
               "definition": ""
             },
@@ -19325,7 +19325,7 @@
                 "gender": "男性"
               },
               "morphCode": "----GPM-",
-              "gloss": "",
+              "gloss": "善い",
               "strongs": "",
               "definition": ""
             },
@@ -19416,7 +19416,7 @@
                 "gender": "女性"
               },
               "morphCode": "----GSF-",
-              "gloss": "",
+              "gloss": "義",
               "strongs": "",
               "definition": ""
             },
@@ -19448,7 +19448,7 @@
                 "gender": "女性"
               },
               "morphCode": "----DSF-",
-              "gloss": "",
+              "gloss": "平和",
               "strongs": "",
               "definition": ""
             },
@@ -19524,7 +19524,7 @@
                 "gender": "女性"
               },
               "morphCode": "----ASF-",
-              "gloss": "",
+              "gloss": "平和",
               "strongs": "",
               "definition": ""
             }
@@ -19548,7 +19548,7 @@
               "posName": "副詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "どこから",
               "strongs": "",
               "definition": ""
             },
@@ -19594,7 +19594,7 @@
               "posName": "副詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "どこから",
               "strongs": "",
               "definition": ""
             },
@@ -20014,7 +20014,7 @@
                 "mood": "直説法"
               },
               "morphCode": "2PMI-P--",
-              "gloss": "",
+              "gloss": "〜できる",
               "strongs": "",
               "definition": ""
             },
@@ -20181,7 +20181,7 @@
                 "mood": "不定詞"
               },
               "morphCode": "-PMN----",
-              "gloss": "",
+              "gloss": "求める",
               "strongs": "",
               "definition": ""
             },
@@ -20222,7 +20222,7 @@
                 "mood": "直説法"
               },
               "morphCode": "2PAI-P--",
-              "gloss": "",
+              "gloss": "求める",
               "strongs": "",
               "definition": ""
             },
@@ -20283,7 +20283,7 @@
               "posName": "接続詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "なぜなら",
               "strongs": "",
               "definition": ""
             },
@@ -20316,7 +20316,7 @@
                 "mood": "直説法"
               },
               "morphCode": "2PMI-P--",
-              "gloss": "",
+              "gloss": "求める",
               "strongs": "",
               "definition": ""
             },
@@ -20662,7 +20662,7 @@
               "posName": "不変化詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "もし〜なら",
               "strongs": "",
               "definition": ""
             },
@@ -20859,7 +20859,7 @@
               "posName": "接続詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "または",
               "strongs": "",
               "definition": ""
             },
@@ -20942,7 +20942,7 @@
                 "gender": "女性"
               },
               "morphCode": "----NSF-",
-              "gloss": "",
+              "gloss": "聖書",
               "strongs": "",
               "definition": ""
             },
@@ -21507,7 +21507,7 @@
                 "gender": "男性"
               },
               "morphCode": "----DSM-",
-              "gloss": "",
+              "gloss": "悪魔",
               "strongs": "",
               "definition": ""
             },
@@ -21716,7 +21716,7 @@
                 "gender": "女性"
               },
               "morphCode": "----APF-",
-              "gloss": "",
+              "gloss": "手",
               "strongs": "",
               "definition": ""
             },
@@ -21784,7 +21784,7 @@
                 "gender": "女性"
               },
               "morphCode": "----APF-",
-              "gloss": "",
+              "gloss": "心",
               "strongs": "",
               "definition": ""
             },
@@ -21889,7 +21889,7 @@
                 "voice": "能動態"
               },
               "morphCode": "2AAD-P--",
-              "gloss": "",
+              "gloss": "泣く",
               "strongs": "",
               "definition": ""
             },
@@ -22042,7 +22042,7 @@
                 "gender": "女性"
               },
               "morphCode": "----NSF-",
-              "gloss": "",
+              "gloss": "喜び",
               "strongs": "",
               "definition": ""
             },
@@ -22129,7 +22129,7 @@
                 "gender": "男性"
               },
               "morphCode": "----GSM-",
-              "gloss": "主",
+              "gloss": "主人",
               "strongs": "",
               "definition": ""
             },
@@ -22234,7 +22234,7 @@
                 "gender": "男性"
               },
               "morphCode": "----GPM-",
-              "gloss": "",
+              "gloss": "互いに",
               "strongs": "",
               "definition": ""
             },
@@ -22252,7 +22252,7 @@
                 "gender": "男性"
               },
               "morphCode": "----VPM-",
-              "gloss": "",
+              "gloss": "兄弟",
               "strongs": "",
               "definition": ""
             },
@@ -22309,7 +22309,7 @@
                 "gender": "男性"
               },
               "morphCode": "----GSM-",
-              "gloss": "",
+              "gloss": "兄弟",
               "strongs": "",
               "definition": ""
             },
@@ -22323,7 +22323,7 @@
               "posName": "接続詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "または",
               "strongs": "",
               "definition": ""
             },
@@ -22344,7 +22344,7 @@
                 "gender": "男性"
               },
               "morphCode": "-PAPNSM-",
-              "gloss": "",
+              "gloss": "裁く",
               "strongs": "",
               "definition": ""
             },
@@ -22380,7 +22380,7 @@
                 "gender": "男性"
               },
               "morphCode": "----ASM-",
-              "gloss": "",
+              "gloss": "兄弟",
               "strongs": "",
               "definition": ""
             },
@@ -22468,7 +22468,7 @@
                 "mood": "直説法"
               },
               "morphCode": "3PAI-S--",
-              "gloss": "",
+              "gloss": "裁く",
               "strongs": "",
               "definition": ""
             },
@@ -22551,7 +22551,7 @@
                 "mood": "直説法"
               },
               "morphCode": "2PAI-S--",
-              "gloss": "",
+              "gloss": "裁く",
               "strongs": "",
               "definition": ""
             },
@@ -22675,7 +22675,7 @@
                 "gender": "男性"
               },
               "morphCode": "----NSM-",
-              "gloss": "",
+              "gloss": "一つ",
               "strongs": "",
               "definition": ""
             },
@@ -22783,7 +22783,7 @@
                 "gender": "男性"
               },
               "morphCode": "-PMPNSM-",
-              "gloss": "",
+              "gloss": "〜できる",
               "strongs": "",
               "definition": ""
             },
@@ -22801,7 +22801,7 @@
                 "mood": "不定詞"
               },
               "morphCode": "-AAN----",
-              "gloss": "",
+              "gloss": "救う",
               "strongs": "",
               "definition": ""
             },
@@ -22833,7 +22833,7 @@
                 "mood": "不定詞"
               },
               "morphCode": "-AAN----",
-              "gloss": "",
+              "gloss": "滅ぼす",
               "strongs": "",
               "definition": ""
             },
@@ -22940,7 +22940,7 @@
                 "gender": "男性"
               },
               "morphCode": "-PAPNSM-",
-              "gloss": "",
+              "gloss": "裁く",
               "strongs": "",
               "definition": ""
             },
@@ -22995,7 +22995,7 @@
                 "voice": "能動態"
               },
               "morphCode": "2PAD-S--",
-              "gloss": "",
+              "gloss": "導く",
               "strongs": "",
               "definition": ""
             },
@@ -23076,7 +23076,7 @@
               "posName": "接続詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "または",
               "strongs": "",
               "definition": ""
             },
@@ -23109,7 +23109,7 @@
                 "mood": "直説法"
               },
               "morphCode": "1FMI-P--",
-              "gloss": "",
+              "gloss": "行く",
               "strongs": "",
               "definition": ""
             },
@@ -23177,7 +23177,7 @@
                 "gender": "女性"
               },
               "morphCode": "----ASF-",
-              "gloss": "",
+              "gloss": "町",
               "strongs": "",
               "definition": ""
             },
@@ -23331,7 +23331,7 @@
                 "gender": "男性"
               },
               "morphCode": "----NPM-",
-              "gloss": "",
+              "gloss": "〜ところの者",
               "strongs": "",
               "definition": ""
             },
@@ -23675,7 +23675,7 @@
               "posName": "前置詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "〜の代わりに",
               "strongs": "",
               "definition": ""
             },
@@ -23742,7 +23742,7 @@
               "posName": "接続詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "もし〜なら",
               "strongs": "",
               "definition": ""
             },
@@ -23778,7 +23778,7 @@
                 "gender": "男性"
               },
               "morphCode": "----NSM-",
-              "gloss": "主",
+              "gloss": "主人",
               "strongs": "",
               "definition": ""
             },
@@ -23830,7 +23830,7 @@
                 "mood": "直説法"
               },
               "morphCode": "1FAI-P--",
-              "gloss": "",
+              "gloss": "生きる",
               "strongs": "",
               "definition": ""
             },
@@ -23895,7 +23895,7 @@
               "posName": "接続詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "または",
               "strongs": "",
               "definition": ""
             },
@@ -23913,7 +23913,7 @@
                 "gender": "中性"
               },
               "morphCode": "----ASN-",
-              "gloss": "",
+              "gloss": "あの",
               "strongs": "",
               "definition": ""
             }
@@ -24104,7 +24104,7 @@
                 "gender": "女性"
               },
               "morphCode": "----NSF-",
-              "gloss": "",
+              "gloss": "悪い",
               "strongs": "",
               "definition": ""
             },
@@ -24265,7 +24265,7 @@
                 "gender": "女性"
               },
               "morphCode": "----NSF-",
-              "gloss": "",
+              "gloss": "罪",
               "strongs": "",
               "definition": ""
             },
@@ -24330,7 +24330,7 @@
                 "voice": "能動態"
               },
               "morphCode": "2PAD-S--",
-              "gloss": "",
+              "gloss": "導く",
               "strongs": "",
               "definition": ""
             },
@@ -24398,7 +24398,7 @@
                 "voice": "能動態"
               },
               "morphCode": "2AAD-P--",
-              "gloss": "",
+              "gloss": "泣く",
               "strongs": "",
               "definition": ""
             },
@@ -24999,7 +24999,7 @@
                 "mood": "直説法"
               },
               "morphCode": "3FMI-S--",
-              "gloss": "",
+              "gloss": "食べる",
               "strongs": "",
               "definition": ""
             },
@@ -25035,7 +25035,7 @@
                 "gender": "女性"
               },
               "morphCode": "----APF-",
-              "gloss": "",
+              "gloss": "肉",
               "strongs": "",
               "definition": ""
             },
@@ -25084,7 +25084,7 @@
                 "gender": "中性"
               },
               "morphCode": "----NSN-",
-              "gloss": "",
+              "gloss": "火",
               "strongs": "",
               "definition": ""
             },
@@ -25135,7 +25135,7 @@
                 "gender": "女性"
               },
               "morphCode": "----DPF-",
-              "gloss": "",
+              "gloss": "最後の",
               "strongs": "",
               "definition": ""
             },
@@ -25172,7 +25172,7 @@
               "posName": "不変化詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "見よ",
               "strongs": "",
               "definition": ""
             },
@@ -25424,7 +25424,7 @@
                 "mood": "直説法"
               },
               "morphCode": "3PAI-S--",
-              "gloss": "",
+              "gloss": "叫ぶ",
               "strongs": "",
               "definition": ""
             },
@@ -25563,7 +25563,7 @@
                 "gender": "中性"
               },
               "morphCode": "----APN-",
-              "gloss": "",
+              "gloss": "耳",
               "strongs": "",
               "definition": ""
             },
@@ -25581,7 +25581,7 @@
                 "gender": "男性"
               },
               "morphCode": "----GSM-",
-              "gloss": "主",
+              "gloss": "主人",
               "strongs": "",
               "definition": ""
             },
@@ -25617,7 +25617,7 @@
                 "mood": "直説法"
               },
               "morphCode": "3XAI-P--",
-              "gloss": "",
+              "gloss": "入る",
               "strongs": "",
               "definition": ""
             }
@@ -25779,7 +25779,7 @@
                 "gender": "女性"
               },
               "morphCode": "----APF-",
-              "gloss": "",
+              "gloss": "心",
               "strongs": "",
               "definition": ""
             },
@@ -25925,7 +25925,7 @@
                 "gender": "男性"
               },
               "morphCode": "----ASM-",
-              "gloss": "",
+              "gloss": "正しい",
               "strongs": "",
               "definition": ""
             },
@@ -26030,7 +26030,7 @@
                 "gender": "男性"
               },
               "morphCode": "----VPM-",
-              "gloss": "",
+              "gloss": "兄弟",
               "strongs": "",
               "definition": ""
             },
@@ -26044,7 +26044,7 @@
               "posName": "前置詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "〜まで",
               "strongs": "",
               "definition": ""
             },
@@ -26116,7 +26116,7 @@
                 "gender": "男性"
               },
               "morphCode": "----GSM-",
-              "gloss": "主",
+              "gloss": "主人",
               "strongs": "",
               "definition": ""
             },
@@ -26130,7 +26130,7 @@
               "posName": "不変化詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "見よ",
               "strongs": "",
               "definition": ""
             },
@@ -26342,7 +26342,7 @@
               "posName": "接続詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "〜まで",
               "strongs": "",
               "definition": ""
             },
@@ -26519,7 +26519,7 @@
                 "gender": "女性"
               },
               "morphCode": "----APF-",
-              "gloss": "",
+              "gloss": "心",
               "strongs": "",
               "definition": ""
             },
@@ -26622,7 +26622,7 @@
                 "gender": "男性"
               },
               "morphCode": "----GSM-",
-              "gloss": "主",
+              "gloss": "主人",
               "strongs": "",
               "definition": ""
             },
@@ -26695,7 +26695,7 @@
                 "gender": "男性"
               },
               "morphCode": "----VPM-",
-              "gloss": "",
+              "gloss": "兄弟",
               "strongs": "",
               "definition": ""
             },
@@ -26709,7 +26709,7 @@
               "posName": "前置詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "〜に従って",
               "strongs": "",
               "definition": ""
             },
@@ -26727,7 +26727,7 @@
                 "gender": "男性"
               },
               "morphCode": "----GPM-",
-              "gloss": "",
+              "gloss": "互いに",
               "strongs": "",
               "definition": ""
             },
@@ -26774,7 +26774,7 @@
                 "mood": "接続法"
               },
               "morphCode": "2APS-P--",
-              "gloss": "",
+              "gloss": "裁く",
               "strongs": "",
               "definition": ""
             },
@@ -26788,7 +26788,7 @@
               "posName": "不変化詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "見よ",
               "strongs": "",
               "definition": ""
             },
@@ -26838,7 +26838,7 @@
               "posName": "前置詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "〜の前に",
               "strongs": "",
               "definition": ""
             },
@@ -26892,7 +26892,7 @@
                 "mood": "直説法"
               },
               "morphCode": "3XAI-S--",
-              "gloss": "",
+              "gloss": "立つ",
               "strongs": "",
               "definition": ""
             }
@@ -26951,7 +26951,7 @@
                 "gender": "男性"
               },
               "morphCode": "----VPM-",
-              "gloss": "",
+              "gloss": "兄弟",
               "strongs": "",
               "definition": ""
             },
@@ -27073,7 +27073,7 @@
                 "gender": "男性"
               },
               "morphCode": "----APM-",
-              "gloss": "",
+              "gloss": "預言者",
               "strongs": "",
               "definition": ""
             },
@@ -27160,7 +27160,7 @@
                 "gender": "中性"
               },
               "morphCode": "----DSN-",
-              "gloss": "",
+              "gloss": "名",
               "strongs": "",
               "definition": ""
             },
@@ -27178,7 +27178,7 @@
                 "gender": "男性"
               },
               "morphCode": "----GSM-",
-              "gloss": "主",
+              "gloss": "主人",
               "strongs": "",
               "definition": ""
             }
@@ -27197,7 +27197,7 @@
               "posName": "不変化詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "見よ",
               "strongs": "",
               "definition": ""
             },
@@ -27291,7 +27291,7 @@
                 "gender": "女性"
               },
               "morphCode": "----ASF-",
-              "gloss": "",
+              "gloss": "忍耐",
               "strongs": "",
               "definition": ""
             },
@@ -27396,7 +27396,7 @@
                 "gender": "男性"
               },
               "morphCode": "----GSM-",
-              "gloss": "主",
+              "gloss": "主人",
               "strongs": "",
               "definition": ""
             },
@@ -27415,7 +27415,7 @@
                 "mood": "直説法"
               },
               "morphCode": "2AAI-P--",
-              "gloss": "",
+              "gloss": "見る",
               "strongs": "",
               "definition": ""
             },
@@ -27502,7 +27502,7 @@
                 "gender": "男性"
               },
               "morphCode": "----NSM-",
-              "gloss": "主",
+              "gloss": "主人",
               "strongs": "",
               "definition": ""
             },
@@ -27553,7 +27553,7 @@
               "posName": "前置詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "〜の前に",
               "strongs": "",
               "definition": ""
             },
@@ -27603,7 +27603,7 @@
                 "gender": "男性"
               },
               "morphCode": "----VPM-",
-              "gloss": "",
+              "gloss": "兄弟",
               "strongs": "",
               "definition": ""
             },
@@ -27666,7 +27666,7 @@
               "posName": "接続詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "〜もない",
               "strongs": "",
               "definition": ""
             },
@@ -27716,7 +27716,7 @@
               "posName": "接続詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "〜もない",
               "strongs": "",
               "definition": ""
             },
@@ -27766,7 +27766,7 @@
               "posName": "接続詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "〜もない",
               "strongs": "",
               "definition": ""
             },
@@ -27901,7 +27901,7 @@
               "posName": "不変化詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "はい",
               "strongs": "",
               "definition": ""
             },
@@ -27915,7 +27915,7 @@
               "posName": "不変化詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "はい",
               "strongs": "",
               "definition": ""
             },
@@ -28035,7 +28035,7 @@
                 "gender": "女性"
               },
               "morphCode": "----ASF-",
-              "gloss": "",
+              "gloss": "裁き",
               "strongs": "",
               "definition": ""
             },
@@ -28054,7 +28054,7 @@
                 "mood": "接続法"
               },
               "morphCode": "2AAS-P--",
-              "gloss": "",
+              "gloss": "落ちる",
               "strongs": "",
               "definition": ""
             }
@@ -28145,7 +28145,7 @@
                 "voice": "中動態"
               },
               "morphCode": "3PMD-S--",
-              "gloss": "",
+              "gloss": "祈る",
               "strongs": "",
               "definition": ""
             },
@@ -28363,7 +28363,7 @@
                 "gender": "女性"
               },
               "morphCode": "----GSF-",
-              "gloss": "",
+              "gloss": "教会",
               "strongs": "",
               "definition": ""
             },
@@ -28395,7 +28395,7 @@
                 "voice": "中動態"
               },
               "morphCode": "3AMD-P--",
-              "gloss": "",
+              "gloss": "祈る",
               "strongs": "",
               "definition": ""
             },
@@ -28534,7 +28534,7 @@
                 "gender": "中性"
               },
               "morphCode": "----DSN-",
-              "gloss": "",
+              "gloss": "名",
               "strongs": "",
               "definition": ""
             },
@@ -28570,7 +28570,7 @@
                 "gender": "男性"
               },
               "morphCode": "----GSM-",
-              "gloss": "主",
+              "gloss": "主人",
               "strongs": "",
               "definition": ""
             }
@@ -28680,7 +28680,7 @@
                 "mood": "直説法"
               },
               "morphCode": "3FAI-S--",
-              "gloss": "",
+              "gloss": "救う",
               "strongs": "",
               "definition": ""
             },
@@ -28752,7 +28752,7 @@
                 "mood": "直説法"
               },
               "morphCode": "3FAI-S--",
-              "gloss": "",
+              "gloss": "起こす",
               "strongs": "",
               "definition": ""
             },
@@ -28806,7 +28806,7 @@
                 "gender": "男性"
               },
               "morphCode": "----NSM-",
-              "gloss": "主",
+              "gloss": "主人",
               "strongs": "",
               "definition": ""
             },
@@ -28838,7 +28838,7 @@
                 "gender": "女性"
               },
               "morphCode": "----APF-",
-              "gloss": "",
+              "gloss": "罪",
               "strongs": "",
               "definition": ""
             },
@@ -28896,7 +28896,7 @@
                 "mood": "直説法"
               },
               "morphCode": "3FPI-S--",
-              "gloss": "",
+              "gloss": "赦す",
               "strongs": "",
               "definition": ""
             },
@@ -28969,7 +28969,7 @@
                 "gender": "男性"
               },
               "morphCode": "----DPM-",
-              "gloss": "",
+              "gloss": "互いに",
               "strongs": "",
               "definition": ""
             },
@@ -29005,7 +29005,7 @@
                 "gender": "女性"
               },
               "morphCode": "----APF-",
-              "gloss": "",
+              "gloss": "罪",
               "strongs": "",
               "definition": ""
             },
@@ -29051,7 +29051,7 @@
               "posName": "前置詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "〜のために",
               "strongs": "",
               "definition": ""
             },
@@ -29069,7 +29069,7 @@
                 "gender": "男性"
               },
               "morphCode": "----GPM-",
-              "gloss": "",
+              "gloss": "互いに",
               "strongs": "",
               "definition": ""
             },
@@ -29083,7 +29083,7 @@
               "posName": "接続詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "〜するように",
               "strongs": "",
               "definition": ""
             },
@@ -29175,7 +29175,7 @@
                 "gender": "男性"
               },
               "morphCode": "----GSM-",
-              "gloss": "",
+              "gloss": "正しい",
               "strongs": "",
               "definition": ""
             },
@@ -29219,7 +29219,7 @@
                 "gender": "男性"
               },
               "morphCode": "----NSM-",
-              "gloss": "",
+              "gloss": "エリヤ",
               "strongs": "",
               "definition": ""
             },
@@ -29342,7 +29342,7 @@
                 "mood": "直説法"
               },
               "morphCode": "3AMI-S--",
-              "gloss": "",
+              "gloss": "祈る",
               "strongs": "",
               "definition": ""
             },
@@ -29525,7 +29525,7 @@
                 "gender": "男性"
               },
               "morphCode": "----APM-",
-              "gloss": "",
+              "gloss": "三",
               "strongs": "",
               "definition": ""
             },
@@ -29575,7 +29575,7 @@
                 "gender": "男性"
               },
               "morphCode": "----APM-",
-              "gloss": "",
+              "gloss": "六",
               "strongs": "",
               "definition": ""
             }
@@ -29627,7 +29627,7 @@
                 "mood": "直説法"
               },
               "morphCode": "3AMI-S--",
-              "gloss": "",
+              "gloss": "祈る",
               "strongs": "",
               "definition": ""
             },
@@ -29860,7 +29860,7 @@
                 "gender": "男性"
               },
               "morphCode": "----VPM-",
-              "gloss": "",
+              "gloss": "兄弟",
               "strongs": "",
               "definition": ""
             },
@@ -29891,7 +29891,7 @@
               "posName": "接続詞",
               "morph": null,
               "morphCode": "--------",
-              "gloss": "",
+              "gloss": "もし〜なら",
               "strongs": "",
               "definition": ""
             },
@@ -30222,7 +30222,7 @@
                 "gender": "女性"
               },
               "morphCode": "----GSF-",
-              "gloss": "",
+              "gloss": "道",
               "strongs": "",
               "definition": ""
             },
@@ -30259,7 +30259,7 @@
                 "mood": "直説法"
               },
               "morphCode": "3FAI-S--",
-              "gloss": "",
+              "gloss": "救う",
               "strongs": "",
               "definition": ""
             },
@@ -30277,7 +30277,7 @@
                 "gender": "女性"
               },
               "morphCode": "----ASF-",
-              "gloss": "",
+              "gloss": "魂",
               "strongs": "",
               "definition": ""
             },
@@ -30327,7 +30327,7 @@
                 "gender": "男性"
               },
               "morphCode": "----GSM-",
-              "gloss": "",
+              "gloss": "死",
               "strongs": "",
               "definition": ""
             },
@@ -30396,7 +30396,7 @@
                 "gender": "女性"
               },
               "morphCode": "----GPF-",
-              "gloss": "",
+              "gloss": "罪",
               "strongs": "",
               "definition": ""
             }
