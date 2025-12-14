@@ -29,7 +29,7 @@ function GreekWordBlock({ word, level, onClick }: {
       {/* 音写（初級・中級のみ） */}
       {level !== 'advanced' && (
         <span className="text-xs text-gray-500">
-          {level === 'beginner' ? word.katakana : word.translit}
+          {word.katakana}
         </span>
       )}
 

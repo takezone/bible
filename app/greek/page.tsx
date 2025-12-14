@@ -2,39 +2,33 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { NT_BOOKS, loadGreekBook, getGreekChapter } from '@/lib/greek-data';
+import { NT_BOOKS, getGreekChapter } from '@/lib/greek-data';
 import { GreekVerseView } from '@/components/GreekVerseView';
 import { getChapter } from '@/lib/bible-data';
-import type { GreekBook, GreekChapter, LearningLevel } from '@/types/greek';
+import type { GreekChapter, LearningLevel } from '@/types/greek';
 
 export default function GreekStudyPage() {
   const [selectedBookId, setSelectedBookId] = useState('john');
   const [selectedChapterNum, setSelectedChapterNum] = useState(1);
-  const [greekBook, setGreekBook] = useState<GreekBook | null>(null);
   const [greekChapter, setGreekChapter] = useState<GreekChapter | null>(null);
   const [japaneseVerses, setJapaneseVerses] = useState<Map<number, string>>(new Map());
   const [level, setLevel] = useState<LearningLevel>('beginner');
   const [loading, setLoading] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // 書物データを読み込み
+  // 章データを読み込み（オンデマンド）
   useEffect(() => {
     async function loadData() {
       setLoading(true);
-      const book = await loadGreekBook(selectedBookId);
-      setGreekBook(book);
+      const chapter = await getGreekChapter(selectedBookId, selectedChapterNum);
+      setGreekChapter(chapter);
 
-      if (book) {
-        const chapter = book.chapters.find(ch => ch.chapter === selectedChapterNum);
-        setGreekChapter(chapter || null);
-
-        // 日本語訳も読み込み（口語訳）
-        const jpChapter = getChapter('kougo', selectedBookId, selectedChapterNum);
-        if (jpChapter) {
-          const verseMap = new Map<number, string>();
-          jpChapter.verses.forEach(v => verseMap.set(v.verse, v.text));
-          setJapaneseVerses(verseMap);
-        }
+      // 日本語訳も読み込み（口語訳）
+      const jpChapter = getChapter('kougo', selectedBookId, selectedChapterNum);
+      if (jpChapter) {
+        const verseMap = new Map<number, string>();
+        jpChapter.verses.forEach(v => verseMap.set(v.verse, v.text));
+        setJapaneseVerses(verseMap);
       }
       setLoading(false);
     }

@@ -1,4 +1,4 @@
-// ギリシャ語単語の型定義
+// ギリシャ語単語の型定義（軽量版）
 
 export interface GreekMorphology {
   person?: string;    // 人称: "1人称", "2人称", "3人称"
@@ -12,18 +12,13 @@ export interface GreekMorphology {
 }
 
 export interface GreekWord {
-  text: string;           // ギリシャ語テキスト（活用形）
-  textWithPunct: string;  // 句読点付きテキスト
+  text: string;           // ギリシャ語テキスト
   lemma: string;          // 辞書形（原形）
-  translit: string;       // ローマ字音写
   katakana: string;       // カタカナ音写
   pos: string;            // 品詞コード
-  posName: string;        // 品詞名（日本語）
+  posName: string;        // 品詞名（日本語）- クライアントで展開
   morph: GreekMorphology | null;  // 文法情報
-  morphCode: string;      // 文法コード（生）
   gloss: string;          // 日本語グロス（簡潔な意味）
-  strongs: string;        // Strong's番号
-  definition: string;     // 英語定義
 }
 
 export interface GreekVerse {
@@ -34,21 +29,6 @@ export interface GreekVerse {
 export interface GreekChapter {
   chapter: number;
   verses: GreekVerse[];
-}
-
-export interface GreekBook {
-  id: string;
-  name: string;
-  chapters: GreekChapter[];
-}
-
-export interface GreekNT {
-  books: GreekBook[];
-  metadata: {
-    source: string;
-    license: string;
-    generatedAt: string;
-  };
 }
 
 // 学習レベル

@@ -675,7 +675,14 @@ const basicGlosses = {
   'Ἰορδάνης': 'ヨルダン',
 };
 
-// MorphGNTファイルを変換
+// MorphGNTファイルを変換（軽量版）
+// 出力形式:
+// t: text (ギリシャ語)
+// l: lemma (辞書形)
+// k: katakana (カタカナ)
+// p: pos (品詞コード)
+// m: morph (文法情報、nullの場合は省略)
+// g: gloss (日本語訳、空の場合は省略)
 function convertMorphGNT(inputPath, bookId, bookName, strongsDict) {
   const content = fs.readFileSync(inputPath, 'utf8');
   const lines = content.trim().split('\n');
@@ -705,26 +712,26 @@ function convertMorphGNT(inputPath, bookId, bookName, strongsDict) {
     // 文法情報
     const morphInfo = parseMorphology(morph, pos);
 
-    // 辞書情報
-    const dictInfo = strongsDict[lemma] || {};
-
     // 日本語グロス
     const gloss = basicGlosses[lemma] || '';
 
+    // 軽量化: 短いキー名、不要フィールド削除
     const word = {
-      text: textWithPunct.replace(/[,.\u0387;·]/g, ''), // 句読点を除去
-      textWithPunct,
-      lemma,
-      translit: transliterate(normalized),
-      katakana: toKatakana(normalized),
-      pos: posInfo.code,
-      posName: posInfo.name,
-      morph: morphInfo,
-      morphCode: morph,
-      gloss,
-      strongs: dictInfo.strongs || '',
-      definition: dictInfo.definition || '',
+      t: textWithPunct.replace(/[,.\u0387;·]/g, ''), // text
+      l: lemma,                                       // lemma
+      k: toKatakana(normalized),                      // katakana
+      p: posInfo.code,                                // pos
     };
+
+    // 文法情報は存在する場合のみ追加
+    if (morphInfo) {
+      word.m = morphInfo;
+    }
+
+    // グロスは存在する場合のみ追加
+    if (gloss) {
+      word.g = gloss;
+    }
 
     chapters[chapter].verses[verse].words.push(word);
   }
@@ -792,7 +799,7 @@ function main() {
   // 指定された書のみ変換（デフォルトはヨハネ福音書）
   const targetBooks = process.argv[5] ? process.argv[5].split(',') : ['john'];
 
-  const results = [];
+  const bookIndex = [];
 
   for (const book of books) {
     if (targetBooks.includes('all') || targetBooks.includes(book.id)) {
@@ -804,28 +811,35 @@ function main() {
 
       console.log(`Converting ${book.name}...`);
       const data = convertMorphGNT(inputPath, book.id, book.name, strongsDict);
-      results.push(data);
 
-      // 個別ファイルとして保存
-      const outputPath = path.join(outputDir, `${book.id}.json`);
-      fs.writeFileSync(outputPath, JSON.stringify(data, null, 2), 'utf8');
-      console.log(`  -> ${outputPath}`);
+      // 書物ディレクトリ作成
+      const bookDir = path.join(outputDir, book.id);
+      if (!fs.existsSync(bookDir)) {
+        fs.mkdirSync(bookDir, { recursive: true });
+      }
+
+      // 各章を個別ファイルとして保存（minified JSON）
+      for (const chapter of data.chapters) {
+        const chapterPath = path.join(bookDir, `${chapter.chapter}.json`);
+        fs.writeFileSync(chapterPath, JSON.stringify(chapter.verses), 'utf8');
+      }
+
+      // インデックスに追加
+      bookIndex.push({
+        id: book.id,
+        name: book.name,
+        chapters: data.chapters.length,
+      });
+
+      console.log(`  -> ${bookDir}/ (${data.chapters.length} chapters)`);
     }
   }
 
-  // 全書まとめたファイルも作成
-  if (results.length > 0) {
-    const allBooksPath = path.join(outputDir, 'greek-nt.json');
-    const allData = {
-      books: results,
-      metadata: {
-        source: 'MorphGNT SBLGNT',
-        license: 'CC BY-SA 3.0',
-        generatedAt: new Date().toISOString(),
-      },
-    };
-    fs.writeFileSync(allBooksPath, JSON.stringify(allData, null, 2), 'utf8');
-    console.log(`\nAll books saved to ${allBooksPath}`);
+  // 書物インデックスを保存
+  if (bookIndex.length > 0) {
+    const indexPath = path.join(outputDir, 'index.json');
+    fs.writeFileSync(indexPath, JSON.stringify(bookIndex), 'utf8');
+    console.log(`\nIndex saved to ${indexPath}`);
   }
 
   console.log('\nDone!');
