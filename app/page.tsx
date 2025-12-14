@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, useEffect, Suspense } from 'react';
+import Link from 'next/link';
 import { useSearchParams, useRouter } from 'next/navigation';
 import { getBibleData, searchVerses, getBook, getChapter, getPreviousBook, getNextBook } from '@/lib/bible-data';
 import type { Book, Chapter, Verse, Translation } from '@/types/bible';
@@ -280,6 +281,15 @@ function BibleApp() {
                 <span>地図</span>
               </button>
             </div>
+
+            {/* 原語学習リンク */}
+            <Link
+              href="/greek"
+              className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
+            >
+              <span className="text-base">🇬🇷</span>
+              <span>原語学習</span>
+            </Link>
 
             <div className="flex-1"></div>
 
