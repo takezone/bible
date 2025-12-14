@@ -29,6 +29,28 @@ export function Credits() {
               </p>
             </div>
 
+            {/* 文語訳聖書 */}
+            <div className="bg-white rounded-lg p-5 shadow-sm">
+              <h3 className="font-bold text-base text-gray-900 mb-3">文語訳聖書</h3>
+              <div className="space-y-2">
+                <p>
+                  <strong>出版:</strong> 日本聖書協会（旧訳）/ 聖書翻訳委員社（新約改訳）
+                </p>
+                <p>
+                  <strong>刊行年:</strong> 旧約聖書 1887年（明治元訳）、新約聖書 1880年、新約改訳 1917年（大正改訳）
+                </p>
+                <p>
+                  <strong>翻訳:</strong> ヘボン、ブラウン、グリーンらの宣教師と日本人の協力により翻訳。旧約聖書は明治元訳として完成し、新約聖書は1917年に大正改訳として改訂されました。
+                </p>
+                <p>
+                  <strong>特徴:</strong> 格調高い文語体による翻訳で、日本語聖書翻訳史上重要な位置を占めます。「大正改訳」として知られる新約聖書は、新共同訳以前の約70年間にわたり広く使用されました。
+                </p>
+                <p className="text-xs text-gray-600 mt-3">
+                  データソース: <a href="https://ja.wikisource.org/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Wikisource</a>、<a href="https://bungo.iinaa.net/" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">bungo.iinaa.net</a>
+                </p>
+              </div>
+            </div>
+
             {/* 口語訳聖書 */}
             <div className="bg-white rounded-lg p-5 shadow-sm">
               <h3 className="font-bold text-base text-gray-900 mb-3">口語訳聖書</h3>
@@ -50,6 +72,69 @@ export function Credits() {
                 </p>
                 <p className="text-xs text-gray-600 mt-3">
                   データソース: <a href="https://github.com/yuki-kimoto/biblesearch" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">yuki-kimoto/biblesearch</a>
+                </p>
+              </div>
+            </div>
+
+            {/* ギリシャ語聖書 */}
+            <div className="bg-white rounded-lg p-5 shadow-sm">
+              <h3 className="font-bold text-base text-gray-900 mb-3">ギリシャ語聖書（原典）</h3>
+              <div className="space-y-2">
+                <p>
+                  <strong>新約聖書:</strong> OpenGNT (Open Greek New Testament)
+                </p>
+                <p>
+                  <strong>旧約聖書:</strong> LXX-Swete（七十人訳/セプトゥアギンタ）- Swete版 (1909-1930)
+                </p>
+                <p>
+                  <strong>特徴:</strong> 新約聖書は原典のコイネー・ギリシャ語テキスト（NA28相当）、旧約聖書は紀元前3〜2世紀に翻訳されたギリシャ語訳（七十人訳）です。発音ガイド（現代ギリシャ語発音/SBLトランスリテレーション）付き。
+                </p>
+                <p>
+                  <strong>ライセンス:</strong> CC BY-SA 4.0
+                </p>
+                <p className="text-xs text-gray-600 mt-3">
+                  データソース: <a href="https://github.com/eliranwong/OpenGNT" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">OpenGNT</a>、<a href="https://github.com/eliranwong/LXX-Swete-1930" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">LXX-Swete-1930</a>
+                </p>
+              </div>
+            </div>
+
+            {/* ヘブル語聖書 */}
+            <div className="bg-white rounded-lg p-5 shadow-sm">
+              <h3 className="font-bold text-base text-gray-900 mb-3">ヘブル語聖書（旧約原典）</h3>
+              <div className="space-y-2">
+                <p>
+                  <strong>テキスト:</strong> Westminster Leningrad Codex (WLC)
+                </p>
+                <p>
+                  <strong>特徴:</strong> レニングラード写本（1008年頃）に基づく、現存する最古の完全なヘブル語聖書写本のデジタル版です。母音記号（ニクダー）付きで、発音のローマ字転写も表示されます。
+                </p>
+                <p>
+                  <strong>ライセンス:</strong> パブリックドメイン（テキスト）、CC BY 4.0（形態素解析データ）
+                </p>
+                <p className="text-xs text-gray-600 mt-3">
+                  データソース: <a href="https://github.com/openscriptures/morphhb" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Open Scriptures Hebrew Bible</a>
+                </p>
+              </div>
+            </div>
+
+            {/* ルター訳聖書 */}
+            <div className="bg-white rounded-lg p-5 shadow-sm">
+              <h3 className="font-bold text-base text-gray-900 mb-3">ルター訳聖書 1912年版 (Luther Bible)</h3>
+              <div className="space-y-2">
+                <p>
+                  <strong>翻訳:</strong> マルティン・ルター (Martin Luther)
+                </p>
+                <p>
+                  <strong>刊行年:</strong> 原訳 1534年、1912年改訂版
+                </p>
+                <p>
+                  <strong>特徴:</strong> 宗教改革の時代にルターがドイツ語に翻訳した歴史的に重要な聖書。1912年版は近代ドイツ語に適合させた改訂版で、現在もドイツ語圏で広く読まれています。
+                </p>
+                <p>
+                  <strong>ライセンス:</strong> パブリックドメイン
+                </p>
+                <p className="text-xs text-gray-600 mt-3">
+                  データソース: <a href="https://ebible.org/find/details.php?id=deu1912" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">eBible.org</a>
                 </p>
               </div>
             </div>
