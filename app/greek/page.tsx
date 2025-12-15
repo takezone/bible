@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback } from 'react';
+import { useState, useEffect, useCallback, Suspense } from 'react';
 import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { NT_BOOKS, getGreekChapter } from '@/lib/greek-data';
@@ -9,7 +9,20 @@ import { GreekSettingsModal } from '@/components/GreekSettingsModal';
 import { getChapter } from '@/lib/bible-data';
 import type { GreekChapter, LearningLevel } from '@/types/greek';
 
-export default function GreekStudyPage() {
+// ローディング表示コンポーネント
+function LoadingFallback() {
+  return (
+    <div className="min-h-screen bg-gray-100 flex items-center justify-center">
+      <div className="bg-white rounded-lg shadow p-8 text-center">
+        <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-600 mx-auto"></div>
+        <p className="mt-4 text-gray-600">読み込み中...</p>
+      </div>
+    </div>
+  );
+}
+
+// メインコンテンツ（useSearchParamsを使用）
+function GreekStudyContent() {
   const searchParams = useSearchParams();
   const router = useRouter();
 
@@ -315,5 +328,14 @@ export default function GreekStudyPage() {
         onLevelChange={setLevel}
       />
     </div>
+  );
+}
+
+// デフォルトエクスポート（Suspenseでラップ）
+export default function GreekStudyPage() {
+  return (
+    <Suspense fallback={<LoadingFallback />}>
+      <GreekStudyContent />
+    </Suspense>
   );
 }
