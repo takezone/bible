@@ -1,5 +1,6 @@
 'use client';
 
+import Link from 'next/link';
 import type { Translation } from '@/types/bible';
 import type { FontSize } from './ChapterViewer';
 
@@ -191,6 +192,26 @@ export function SettingsModal({
                 </button>
               ))}
             </div>
+          </div>
+
+          {/* ギリシャ語学習モード */}
+          <div>
+            <h3 className="text-lg font-bold text-gray-900 mb-3">学習モード</h3>
+            <Link
+              href="/greek"
+              className="block p-4 rounded-lg border-2 border-blue-200 bg-blue-50 hover:border-blue-400 hover:bg-blue-100 transition-all"
+            >
+              <div className="flex items-center gap-3">
+                <span className="text-3xl">🇬🇷</span>
+                <div>
+                  <div className="font-semibold text-gray-900">ギリシャ語学習モード</div>
+                  <div className="text-sm text-gray-600 mt-1">新約聖書を原語で学習</div>
+                </div>
+                <svg className="w-5 h-5 text-gray-400 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </div>
+            </Link>
           </div>
         </div>
 
