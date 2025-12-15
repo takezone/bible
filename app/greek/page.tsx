@@ -1,20 +1,47 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
+import { useSearchParams, useRouter } from 'next/navigation';
 import Link from 'next/link';
 import { NT_BOOKS, getGreekChapter } from '@/lib/greek-data';
 import { GreekVerseView } from '@/components/GreekVerseView';
+import { GreekSettingsModal } from '@/components/GreekSettingsModal';
 import { getChapter } from '@/lib/bible-data';
 import type { GreekChapter, LearningLevel } from '@/types/greek';
 
 export default function GreekStudyPage() {
-  const [selectedBookId, setSelectedBookId] = useState('john');
-  const [selectedChapterNum, setSelectedChapterNum] = useState(1);
+  const searchParams = useSearchParams();
+  const router = useRouter();
+
+  // URLパラメータから書物と章を取得（URLが真実の源）
+  const selectedBookId = searchParams.get('book') || 'john';
+  const selectedChapterNum = parseInt(searchParams.get('chapter') || '1', 10);
+
   const [greekChapter, setGreekChapter] = useState<GreekChapter | null>(null);
   const [japaneseVerses, setJapaneseVerses] = useState<Map<number, string>>(new Map());
   const [level, setLevel] = useState<LearningLevel>('beginner');
   const [loading, setLoading] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isSettingsOpen, setIsSettingsOpen] = useState(false);
+
+  // URLを更新する関数
+  const updateUrl = useCallback((book: string, chapter: number) => {
+    const params = new URLSearchParams();
+    params.set('book', book);
+    params.set('chapter', chapter.toString());
+    router.push(`/greek?${params.toString()}`, { scroll: false });
+  }, [router]);
+
+  // 書物を変更
+  const handleBookChange = useCallback((bookId: string) => {
+    updateUrl(bookId, 1);
+    setIsMobileMenuOpen(false);
+  }, [updateUrl]);
+
+  // 章を変更
+  const handleChapterChange = useCallback((chapter: number) => {
+    updateUrl(selectedBookId, chapter);
+  }, [selectedBookId, updateUrl]);
 
   // 章データを読み込み（オンデマンド）
   useEffect(() => {
@@ -55,7 +82,7 @@ export default function GreekStudyPage() {
               </div>
             </div>
 
-            {/* 学習レベル選択 */}
+            {/* 学習レベル選択（デスクトップ） */}
             <div className="hidden sm:flex items-center gap-2">
               <span className="text-sm text-blue-200">レベル:</span>
               <select
@@ -69,28 +96,29 @@ export default function GreekStudyPage() {
               </select>
             </div>
 
-            {/* モバイルメニューボタン */}
-            <button
-              onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              className="lg:hidden p-2"
-            >
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-              </svg>
-            </button>
-          </div>
+            {/* 設定ボタン（モバイル用） */}
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => setIsSettingsOpen(true)}
+                className="sm:hidden p-2 text-white/80 hover:text-white"
+                aria-label="設定"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                </svg>
+              </button>
 
-          {/* モバイル: レベル選択 */}
-          <div className="sm:hidden mt-2">
-            <select
-              value={level}
-              onChange={e => setLevel(e.target.value as LearningLevel)}
-              className="w-full bg-blue-600 text-white border border-blue-500 rounded px-2 py-1 text-sm"
-            >
-              <option value="beginner">初級（カタカナ+意味）</option>
-              <option value="intermediate">中級（ローマ字+品詞）</option>
-              <option value="advanced">上級（ギリシャ語のみ）</option>
-            </select>
+              {/* モバイルメニューボタン */}
+              <button
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                className="lg:hidden p-2"
+              >
+                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
       </header>
@@ -118,11 +146,7 @@ export default function GreekStudyPage() {
                 {NT_BOOKS.slice(0, 4).map(book => (
                   <button
                     key={book.id}
-                    onClick={() => {
-                      setSelectedBookId(book.id);
-                      setSelectedChapterNum(1);
-                      setIsMobileMenuOpen(false);
-                    }}
+                    onClick={() => handleBookChange(book.id)}
                     className={`w-full text-left px-3 py-1.5 rounded text-sm transition-colors ${
                       selectedBookId === book.id
                         ? 'bg-blue-500 text-white'
@@ -136,11 +160,7 @@ export default function GreekStudyPage() {
                 {/* 使徒行伝 */}
                 <div className="text-xs font-bold text-green-600 mb-1 mt-3 px-2">━━ 歴史 ━━</div>
                 <button
-                  onClick={() => {
-                    setSelectedBookId('acts');
-                    setSelectedChapterNum(1);
-                    setIsMobileMenuOpen(false);
-                  }}
+                  onClick={() => handleBookChange('acts')}
                   className={`w-full text-left px-3 py-1.5 rounded text-sm transition-colors ${
                     selectedBookId === 'acts'
                       ? 'bg-blue-500 text-white'
@@ -155,11 +175,7 @@ export default function GreekStudyPage() {
                 {NT_BOOKS.slice(5, 18).map(book => (
                   <button
                     key={book.id}
-                    onClick={() => {
-                      setSelectedBookId(book.id);
-                      setSelectedChapterNum(1);
-                      setIsMobileMenuOpen(false);
-                    }}
+                    onClick={() => handleBookChange(book.id)}
                     className={`w-full text-left px-3 py-1.5 rounded text-sm transition-colors ${
                       selectedBookId === book.id
                         ? 'bg-blue-500 text-white'
@@ -175,11 +191,7 @@ export default function GreekStudyPage() {
                 {NT_BOOKS.slice(18, 26).map(book => (
                   <button
                     key={book.id}
-                    onClick={() => {
-                      setSelectedBookId(book.id);
-                      setSelectedChapterNum(1);
-                      setIsMobileMenuOpen(false);
-                    }}
+                    onClick={() => handleBookChange(book.id)}
                     className={`w-full text-left px-3 py-1.5 rounded text-sm transition-colors ${
                       selectedBookId === book.id
                         ? 'bg-blue-500 text-white'
@@ -193,11 +205,7 @@ export default function GreekStudyPage() {
                 {/* 黙示録 */}
                 <div className="text-xs font-bold text-red-600 mb-1 mt-3 px-2">━━ 黙示文学 ━━</div>
                 <button
-                  onClick={() => {
-                    setSelectedBookId('revelation');
-                    setSelectedChapterNum(1);
-                    setIsMobileMenuOpen(false);
-                  }}
+                  onClick={() => handleBookChange('revelation')}
                   className={`w-full text-left px-3 py-1.5 rounded text-sm transition-colors ${
                     selectedBookId === 'revelation'
                       ? 'bg-blue-500 text-white'
@@ -227,14 +235,14 @@ export default function GreekStudyPage() {
                     </h2>
                     <div className="flex gap-2">
                       <button
-                        onClick={() => setSelectedChapterNum(prev => Math.max(1, prev - 1))}
+                        onClick={() => handleChapterChange(Math.max(1, selectedChapterNum - 1))}
                         disabled={selectedChapterNum === 1}
                         className="px-3 py-1 bg-gray-200 rounded disabled:opacity-50 hover:bg-gray-300 transition-colors"
                       >
                         ← 前章
                       </button>
                       <button
-                        onClick={() => setSelectedChapterNum(prev => Math.min(bookInfo?.chapters || 1, prev + 1))}
+                        onClick={() => handleChapterChange(Math.min(bookInfo?.chapters || 1, selectedChapterNum + 1))}
                         disabled={selectedChapterNum === (bookInfo?.chapters || 1)}
                         className="px-3 py-1 bg-gray-200 rounded disabled:opacity-50 hover:bg-gray-300 transition-colors"
                       >
@@ -248,7 +256,7 @@ export default function GreekStudyPage() {
                     {Array.from({ length: bookInfo?.chapters || 0 }, (_, i) => i + 1).map(num => (
                       <button
                         key={num}
-                        onClick={() => setSelectedChapterNum(num)}
+                        onClick={() => handleChapterChange(num)}
                         className={`px-3 py-1 rounded text-sm ${
                           num === selectedChapterNum
                             ? 'bg-blue-500 text-white'
@@ -298,6 +306,14 @@ export default function GreekStudyPage() {
           </main>
         </div>
       </div>
+
+      {/* 設定モーダル */}
+      <GreekSettingsModal
+        isOpen={isSettingsOpen}
+        onClose={() => setIsSettingsOpen(false)}
+        level={level}
+        onLevelChange={setLevel}
+      />
     </div>
   );
 }
