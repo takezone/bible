@@ -371,13 +371,13 @@ function BibleApp() {
               </button>
             </div>
 
-            {/* 原語学習リンク */}
+            {/* 原典学習リンク */}
             <Link
               href="/greek"
               className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
             >
               <span className="text-base">🇬🇷</span>
-              <span>原語学習</span>
+              <span>原典学習</span>
             </Link>
 
             <div className="flex-1"></div>

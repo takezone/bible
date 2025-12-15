@@ -204,8 +204,8 @@ export function SettingsModal({
               <div className="flex items-center gap-3">
                 <span className="text-3xl">🇬🇷</span>
                 <div>
-                  <div className="font-semibold text-gray-900">ギリシャ語学習モード</div>
-                  <div className="text-sm text-gray-600 mt-1">新約聖書を原語で学習</div>
+                  <div className="font-semibold text-gray-900">原典ギリシャ語学習</div>
+                  <div className="text-sm text-gray-600 mt-1">新約聖書を原語で読む</div>
                 </div>
                 <svg className="w-5 h-5 text-gray-400 ml-auto" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
