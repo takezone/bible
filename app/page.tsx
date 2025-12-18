@@ -53,12 +53,10 @@ function BibleApp() {
   // 地名モード用の状態
   const [selectedPlace, setSelectedPlace] = useState<Place | null>(null);
 
-  // URLパラメーターから初期値を設定（初回のみ）
+  // URLパラメーターから状態を同期（ブラウザの戻る/進むボタン対応）
   const [initialized, setInitialized] = useState(false);
 
   useEffect(() => {
-    if (initialized) return;
-
     const book = searchParams.get('book');
     const chapterNum = searchParams.get('chapter');
     const verseNum = searchParams.get('verse');
@@ -92,19 +90,23 @@ function BibleApp() {
         setSelectedChapter(chapter);
         if (verseNum) {
           setSelectedVerse(parseInt(verseNum));
+        } else {
+          setSelectedVerse(null);
         }
         setInitialized(true);
         return;
       }
     }
 
-    // URLパラメーターがない場合は創世記1章を表示
-    const bible = getBibleData('kougo');
-    const genesis = bible.books[0];
-    setSelectedBook(genesis);
-    setSelectedChapter(genesis.chapters[0]);
-    setInitialized(true);
-  }, [searchParams, initialized, singleTranslation, leftTranslation]);
+    // URLパラメーターがない場合は創世記1章を表示（初回のみ）
+    if (!initialized) {
+      const bible = getBibleData('kougo');
+      const genesis = bible.books[0];
+      setSelectedBook(genesis);
+      setSelectedChapter(genesis.chapters[0]);
+      setInitialized(true);
+    }
+  }, [searchParams, singleTranslation, leftTranslation, initialized]);
 
   // ページタイトルを更新
   useEffect(() => {
