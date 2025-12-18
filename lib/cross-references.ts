@@ -275,6 +275,75 @@ const acts: ChapterReferences = {
   ],
 };
 
+// ローマ人への手紙
+const romans: ChapterReferences = {
+  1: [
+    { verse: 17, source: 'ハバクク書 2:4', sourceBook: 'habakkuk', sourceChapter: 2, sourceVerse: 4, type: 'quote', note: '義人は信仰によって生きる' },
+  ],
+  3: [
+    { verse: '10-12', source: '詩篇 14:1-3', sourceBook: 'psalms', sourceChapter: 14, sourceVerse: '1-3', type: 'quote', note: '義人はいない、一人もいない' },
+    { verse: 13, source: '詩篇 5:9', sourceBook: 'psalms', sourceChapter: 5, sourceVerse: 9, type: 'quote', note: '彼らの喉は開いた墓' },
+    { verse: 13, source: '詩篇 140:3', sourceBook: 'psalms', sourceChapter: 140, sourceVerse: 3, type: 'quote', note: '蝮の毒が唇にある' },
+    { verse: 14, source: '詩篇 10:7', sourceBook: 'psalms', sourceChapter: 10, sourceVerse: 7, type: 'quote', note: '呪いと苦味で満ちている' },
+    { verse: '15-17', source: 'イザヤ書 59:7-8', sourceBook: 'isaiah', sourceChapter: 59, sourceVerse: '7-8', type: 'quote', note: '血を流すのに足が速い' },
+    { verse: 18, source: '詩篇 36:1', sourceBook: 'psalms', sourceChapter: 36, sourceVerse: 1, type: 'quote', note: '神への畏れがない' },
+  ],
+  4: [
+    { verse: 3, source: '創世記 15:6', sourceBook: 'genesis', sourceChapter: 15, sourceVerse: 6, type: 'quote', note: 'アブラハムは信じた' },
+    { verse: '7-8', source: '詩篇 32:1-2', sourceBook: 'psalms', sourceChapter: 32, sourceVerse: '1-2', type: 'quote', note: '罪を赦された人は幸い' },
+    { verse: 17, source: '創世記 17:5', sourceBook: 'genesis', sourceChapter: 17, sourceVerse: 5, type: 'quote', note: '多くの国民の父とした' },
+    { verse: 18, source: '創世記 15:5', sourceBook: 'genesis', sourceChapter: 15, sourceVerse: 5, type: 'quote', note: 'あなたの子孫はこのようになる' },
+  ],
+  8: [
+    { verse: 36, source: '詩篇 44:22', sourceBook: 'psalms', sourceChapter: 44, sourceVerse: 22, type: 'quote', note: '屠られる羊と見なされている' },
+  ],
+  9: [
+    { verse: 7, source: '創世記 21:12', sourceBook: 'genesis', sourceChapter: 21, sourceVerse: 12, type: 'quote', note: 'イサクによって子孫が起こる' },
+    { verse: 9, source: '創世記 18:10', sourceBook: 'genesis', sourceChapter: 18, sourceVerse: 10, type: 'quote', note: 'サラに男の子が生まれる' },
+    { verse: 12, source: '創世記 25:23', sourceBook: 'genesis', sourceChapter: 25, sourceVerse: 23, type: 'quote', note: '兄は弟に仕える' },
+    { verse: 13, source: 'マラキ書 1:2-3', sourceBook: 'malachi', sourceChapter: 1, sourceVerse: '2-3', type: 'quote', note: 'ヤコブを愛し、エサウを憎んだ' },
+    { verse: 15, source: '出エジプト記 33:19', sourceBook: 'exodus', sourceChapter: 33, sourceVerse: 19, type: 'quote', note: '憐れもうとする者を憐れむ' },
+    { verse: 17, source: '出エジプト記 9:16', sourceBook: 'exodus', sourceChapter: 9, sourceVerse: 16, type: 'quote', note: 'ファラオを立てた目的' },
+    { verse: 25, source: 'ホセア書 2:23', sourceBook: 'hosea', sourceChapter: 2, sourceVerse: 23, type: 'quote', note: 'わが民でない者をわが民と呼ぶ' },
+    { verse: 26, source: 'ホセア書 1:10', sourceBook: 'hosea', sourceChapter: 1, sourceVerse: 10, type: 'quote', note: '生ける神の子と呼ばれる' },
+    { verse: '27-28', source: 'イザヤ書 10:22-23', sourceBook: 'isaiah', sourceChapter: 10, sourceVerse: '22-23', type: 'quote', note: '残りの者だけが救われる' },
+    { verse: 29, source: 'イザヤ書 1:9', sourceBook: 'isaiah', sourceChapter: 1, sourceVerse: 9, type: 'quote', note: '子孫を残してくださらなければ' },
+    { verse: 33, source: 'イザヤ書 28:16', sourceBook: 'isaiah', sourceChapter: 28, sourceVerse: 16, type: 'quote', note: 'つまずきの石を置く' },
+  ],
+  10: [
+    { verse: 5, source: 'レビ記 18:5', sourceBook: 'leviticus', sourceChapter: 18, sourceVerse: 5, type: 'quote', note: '律法を行う者は生きる' },
+    { verse: '6-8', source: '申命記 30:12-14', sourceBook: 'deuteronomy', sourceChapter: 30, sourceVerse: '12-14', type: 'quote', note: '御言葉はあなたの近くにある' },
+    { verse: 11, source: 'イザヤ書 28:16', sourceBook: 'isaiah', sourceChapter: 28, sourceVerse: 16, type: 'quote', note: '信じる者は失望しない' },
+    { verse: 13, source: 'ヨエル書 2:32', sourceBook: 'joel', sourceChapter: 2, sourceVerse: 32, type: 'quote', note: '主の名を呼ぶ者は救われる' },
+    { verse: 15, source: 'イザヤ書 52:7', sourceBook: 'isaiah', sourceChapter: 52, sourceVerse: 7, type: 'quote', note: '良い知らせを伝える者の足は美しい' },
+    { verse: 16, source: 'イザヤ書 53:1', sourceBook: 'isaiah', sourceChapter: 53, sourceVerse: 1, type: 'quote', note: '誰が信じたか' },
+    { verse: 18, source: '詩篇 19:4', sourceBook: 'psalms', sourceChapter: 19, sourceVerse: 4, type: 'quote', note: '声は全地に響き渡った' },
+    { verse: 19, source: '申命記 32:21', sourceBook: 'deuteronomy', sourceChapter: 32, sourceVerse: 21, type: 'quote', note: '国でない者によって妬みを起こさせる' },
+    { verse: 20, source: 'イザヤ書 65:1', sourceBook: 'isaiah', sourceChapter: 65, sourceVerse: 1, type: 'quote', note: '求めない者に見いだされた' },
+    { verse: 21, source: 'イザヤ書 65:2', sourceBook: 'isaiah', sourceChapter: 65, sourceVerse: 2, type: 'quote', note: '不従順な民に手を差し伸べた' },
+  ],
+  11: [
+    { verse: '3-4', source: '列王記上 19:10,18', sourceBook: '1kings', sourceChapter: 19, sourceVerse: 10, type: 'quote', note: 'エリヤの訴えと神の答え' },
+    { verse: 8, source: 'イザヤ書 29:10', sourceBook: 'isaiah', sourceChapter: 29, sourceVerse: 10, type: 'quote', note: '眠りの霊を与えた' },
+    { verse: '9-10', source: '詩篇 69:22-23', sourceBook: 'psalms', sourceChapter: 69, sourceVerse: '22-23', type: 'quote', note: '食卓が罠となれ' },
+    { verse: 26, source: 'イザヤ書 59:20', sourceBook: 'isaiah', sourceChapter: 59, sourceVerse: 20, type: 'quote', note: '救い主がシオンから来る' },
+    { verse: 27, source: 'イザヤ書 27:9', sourceBook: 'isaiah', sourceChapter: 27, sourceVerse: 9, type: 'quote', note: '罪を取り除く契約' },
+    { verse: '34-35', source: 'イザヤ書 40:13', sourceBook: 'isaiah', sourceChapter: 40, sourceVerse: 13, type: 'quote', note: '主の心を知った者がいるか' },
+  ],
+  12: [
+    { verse: 19, source: '申命記 32:35', sourceBook: 'deuteronomy', sourceChapter: 32, sourceVerse: 35, type: 'quote', note: '復讐はわたしのもの' },
+    { verse: 20, source: '箴言 25:21-22', sourceBook: 'proverbs', sourceChapter: 25, sourceVerse: '21-22', type: 'quote', note: '敵が飢えていたら食べさせよ' },
+  ],
+  15: [
+    { verse: 3, source: '詩篇 69:9', sourceBook: 'psalms', sourceChapter: 69, sourceVerse: 9, type: 'quote', note: 'あなたを侮る者の侮りが降りかかった' },
+    { verse: 9, source: '詩篇 18:49', sourceBook: 'psalms', sourceChapter: 18, sourceVerse: 49, type: 'quote', note: '異邦人の中であなたをほめたたえる' },
+    { verse: 10, source: '申命記 32:43', sourceBook: 'deuteronomy', sourceChapter: 32, sourceVerse: 43, type: 'quote', note: '異邦人よ、主の民と共に喜べ' },
+    { verse: 11, source: '詩篇 117:1', sourceBook: 'psalms', sourceChapter: 117, sourceVerse: 1, type: 'quote', note: 'すべての異邦人よ、主をほめたたえよ' },
+    { verse: 12, source: 'イザヤ書 11:10', sourceBook: 'isaiah', sourceChapter: 11, sourceVerse: 10, type: 'quote', note: 'エッサイの根が立ち上がる' },
+    { verse: 21, source: 'イザヤ書 52:15', sourceBook: 'isaiah', sourceChapter: 52, sourceVerse: 15, type: 'quote', note: '聞いたことのない者が悟る' },
+  ],
+};
+
 // 全データをエクスポート
 export const crossReferences: BookReferences = {
   matthew,
@@ -282,6 +351,7 @@ export const crossReferences: BookReferences = {
   luke,
   john,
   acts,
+  romans,
 };
 
 // 特定の書物・章の引用を取得する関数
