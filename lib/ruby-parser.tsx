@@ -5,11 +5,12 @@ import React from 'react';
  * 例: "元始（はじめ）に神（かみ）" → <ruby>元始<rt>はじめ</rt></ruby>に<ruby>神<rt>かみ</rt></ruby>
  */
 export function parseRubyText(text: string): React.ReactNode {
-  // シンプルなアプローチ: 括弧・空白・ひらがな以外の文字 + （ひらがな/カタカナ）
-  // \u3040-\u309F: ひらがな範囲（これ以外の文字が漢字部分）
+  // シンプルなアプローチ: 括弧・空白・ひらがな・句読点以外の文字 + （ひらがな/カタカナ）
+  // \u3040-\u309F: ひらがな範囲
+  // 。、！？・「」『』：；: 句読点・記号
   // ひらがな: ぁ-ん + 踊り字（ゝゞ）
   // カタカナ: ァ-ヶ + 長音（ー）+ 踊り字（ヽヾ）
-  const rubyPattern = /([^（）\s\u3040-\u309F]+)（([ぁ-んゝゞァ-ヶーヽヾ]+)）/gu;
+  const rubyPattern = /([^（）\s\u3040-\u309F。、！？・「」『』：；]+)（([ぁ-んゝゞァ-ヶーヽヾ]+)）/gu;
 
   const parts: React.ReactNode[] = [];
   let lastIndex = 0;
