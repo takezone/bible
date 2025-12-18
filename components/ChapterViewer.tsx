@@ -110,11 +110,11 @@ export function ChapterViewer({
 
   return (
     <>
-      {/* PC: 画面左右に固定されるナビゲーションボタン */}
+      {/* PC: 画面左右下部に固定されるナビゲーションボタン */}
       <button
         onClick={onPreviousChapter}
         disabled={chapter.chapter === 1}
-        className="fixed left-[calc(25%-1rem)] top-1/2 -translate-y-1/2 z-20 bg-white hover:bg-gray-100 text-gray-700 rounded-full shadow-lg p-3 transition-all hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:scale-100 hidden lg:block xl:left-[calc((100vw-1280px)/2+320px-1rem)]"
+        className="fixed left-[calc(25%-1rem)] bottom-8 z-20 bg-white hover:bg-gray-100 text-gray-700 rounded-full shadow-lg p-3 transition-all hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:scale-100 hidden lg:block xl:left-[calc((100vw-1280px)/2+320px-1rem)]"
         aria-label="前の章へ"
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -125,7 +125,7 @@ export function ChapterViewer({
       <button
         onClick={onNextChapter}
         disabled={chapter.chapter === book.chapters.length}
-        className="fixed right-[-1rem] top-1/2 -translate-y-1/2 z-20 bg-white hover:bg-gray-100 text-gray-700 rounded-full shadow-lg p-3 transition-all hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:scale-100 hidden lg:block xl:right-[calc((100vw-1280px)/2-1rem)]"
+        className="fixed right-[-1rem] bottom-8 z-20 bg-white hover:bg-gray-100 text-gray-700 rounded-full shadow-lg p-3 transition-all hover:scale-110 focus:outline-none focus:ring-2 focus:ring-blue-500 disabled:opacity-30 disabled:cursor-not-allowed disabled:hover:scale-100 hidden lg:block xl:right-[calc((100vw-1280px)/2-1rem)]"
         aria-label="次の章へ"
       >
         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
