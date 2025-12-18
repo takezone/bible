@@ -284,7 +284,7 @@ function BibleApp() {
       single?: Translation;
       left?: Translation;
       right?: Translation;
-      pushHistory?: boolean; // trueの場合はブラウザ履歴に追加
+      replaceHistory?: boolean; // trueの場合は履歴を上書き（デフォルトは履歴追加）
     }
   ) => {
     const params = new URLSearchParams();
@@ -303,10 +303,12 @@ function BibleApp() {
       params.set('right', options?.right ?? rightTranslation);
     }
     const url = `/?${params.toString()}`;
-    if (options?.pushHistory) {
-      router.push(url, { scroll: false });
-    } else {
+    // デフォルトでブラウザ履歴に追加（戻るボタンで戻れるように）
+    // replaceHistoryがtrueの場合のみ履歴を上書き
+    if (options?.replaceHistory) {
       router.replace(url, { scroll: false });
+    } else {
+      router.push(url, { scroll: false });
     }
   };
 
@@ -320,8 +322,7 @@ function BibleApp() {
       setSelectedChapter(chapter);
       setSelectedVerse(verseNum);
       setViewMode('bible');
-      // 引用リンクからのナビゲーションは履歴に追加（戻るボタンで戻れるように）
-      updateURL(bookId, chapterNum, verseNum, { pushHistory: true });
+      updateURL(bookId, chapterNum, verseNum);
     }
   };
 
