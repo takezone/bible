@@ -477,6 +477,7 @@ function BibleApp() {
                   onPreviousChapter={handlePreviousChapter}
                   onNextChapter={handleNextChapter}
                   onVerseClick={handleVerseClick}
+                  onNavigateToReference={handleNavigateToBible}
                 />
               )}
             </div>
