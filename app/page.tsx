@@ -53,17 +53,16 @@ function BibleApp() {
   // 地名モード用の状態
   const [selectedPlace, setSelectedPlace] = useState<Place | null>(null);
 
-  // URLパラメーターから状態を同期（ブラウザの戻る/進むボタン対応）
-  const [initialized, setInitialized] = useState(false);
-
-  useEffect(() => {
-    const book = searchParams.get('book');
-    const chapterNum = searchParams.get('chapter');
-    const verseNum = searchParams.get('verse');
-    const mode = searchParams.get('mode') as 'single' | 'parallel' | null;
-    const translationParam = searchParams.get('translation') as Translation | null;
-    const leftParam = searchParams.get('left') as Translation | null;
-    const rightParam = searchParams.get('right') as Translation | null;
+  // URLパラメーターから状態を同期する関数
+  const syncStateFromURL = (urlSearchParams?: URLSearchParams) => {
+    const params = urlSearchParams || new URLSearchParams(window.location.search);
+    const book = params.get('book');
+    const chapterNum = params.get('chapter');
+    const verseNum = params.get('verse');
+    const mode = params.get('mode') as 'single' | 'parallel' | null;
+    const translationParam = params.get('translation') as Translation | null;
+    const leftParam = params.get('left') as Translation | null;
+    const rightParam = params.get('right') as Translation | null;
 
     // 翻訳設定をURLから復元
     if (mode) {
@@ -93,20 +92,40 @@ function BibleApp() {
         } else {
           setSelectedVerse(null);
         }
-        setInitialized(true);
-        return;
+        return true;
       }
     }
+    return false;
+  };
 
-    // URLパラメーターがない場合は創世記1章を表示（初回のみ）
-    if (!initialized) {
+  // 初回ロード時にURLから状態を復元
+  const [initialized, setInitialized] = useState(false);
+
+  useEffect(() => {
+    if (initialized) return;
+
+    const synced = syncStateFromURL();
+    if (!synced) {
+      // URLパラメーターがない場合は創世記1章を表示
       const bible = getBibleData('kougo');
       const genesis = bible.books[0];
       setSelectedBook(genesis);
       setSelectedChapter(genesis.chapters[0]);
-      setInitialized(true);
     }
-  }, [searchParams, singleTranslation, leftTranslation, initialized]);
+    setInitialized(true);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // ブラウザの戻る/進むボタンに対応
+  useEffect(() => {
+    const handlePopState = () => {
+      syncStateFromURL();
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [singleTranslation, leftTranslation]);
 
   // ページタイトルを更新
   useEffect(() => {
