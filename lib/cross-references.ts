@@ -344,6 +344,75 @@ const romans: ChapterReferences = {
   ],
 };
 
+// ヘブル人への手紙
+const hebrews: ChapterReferences = {
+  1: [
+    { verse: 5, source: '詩篇 2:7', sourceBook: 'psalms', sourceChapter: 2, sourceVerse: 7, type: 'quote', note: 'あなたはわたしの子' },
+    { verse: 5, source: 'サムエル記下 7:14', sourceBook: '2samuel', sourceChapter: 7, sourceVerse: 14, type: 'quote', note: 'わたしは彼の父となり' },
+    { verse: 6, source: '申命記 32:43', sourceBook: 'deuteronomy', sourceChapter: 32, sourceVerse: 43, type: 'quote', note: '神の御使いたちは拝せよ' },
+    { verse: 7, source: '詩篇 104:4', sourceBook: 'psalms', sourceChapter: 104, sourceVerse: 4, type: 'quote', note: '御使いたちを風とし' },
+    { verse: '8-9', source: '詩篇 45:6-7', sourceBook: 'psalms', sourceChapter: 45, sourceVerse: '6-7', type: 'quote', note: '神よ、あなたの王座は永遠' },
+    { verse: '10-12', source: '詩篇 102:25-27', sourceBook: 'psalms', sourceChapter: 102, sourceVerse: '25-27', type: 'quote', note: '主よ、あなたは初めに地の基を据えた' },
+    { verse: 13, source: '詩篇 110:1', sourceBook: 'psalms', sourceChapter: 110, sourceVerse: 1, type: 'quote', note: 'わたしの右に座せ' },
+  ],
+  2: [
+    { verse: '6-8', source: '詩篇 8:4-6', sourceBook: 'psalms', sourceChapter: 8, sourceVerse: '4-6', type: 'quote', note: '人とは何者か' },
+    { verse: 12, source: '詩篇 22:22', sourceBook: 'psalms', sourceChapter: 22, sourceVerse: 22, type: 'quote', note: '御名を兄弟たちに告げ知らせる' },
+    { verse: 13, source: 'イザヤ書 8:17', sourceBook: 'isaiah', sourceChapter: 8, sourceVerse: 17, type: 'quote', note: 'わたしは神に信頼する' },
+    { verse: 13, source: 'イザヤ書 8:18', sourceBook: 'isaiah', sourceChapter: 8, sourceVerse: 18, type: 'quote', note: '神が与えてくださった子どもたち' },
+  ],
+  3: [
+    { verse: '7-11', source: '詩篇 95:7-11', sourceBook: 'psalms', sourceChapter: 95, sourceVerse: '7-11', type: 'quote', note: '今日、御声を聞くなら心を頑なにするな' },
+    { verse: 15, source: '詩篇 95:7-8', sourceBook: 'psalms', sourceChapter: 95, sourceVerse: '7-8', type: 'quote', note: '今日、御声を聞くなら' },
+  ],
+  4: [
+    { verse: 3, source: '詩篇 95:11', sourceBook: 'psalms', sourceChapter: 95, sourceVerse: 11, type: 'quote', note: 'わたしの安息に入らせない' },
+    { verse: 4, source: '創世記 2:2', sourceBook: 'genesis', sourceChapter: 2, sourceVerse: 2, type: 'quote', note: '七日目にすべての業を休まれた' },
+    { verse: 7, source: '詩篇 95:7-8', sourceBook: 'psalms', sourceChapter: 95, sourceVerse: '7-8', type: 'quote', note: '今日、御声を聞くなら' },
+  ],
+  5: [
+    { verse: 5, source: '詩篇 2:7', sourceBook: 'psalms', sourceChapter: 2, sourceVerse: 7, type: 'quote', note: 'あなたはわたしの子' },
+    { verse: 6, source: '詩篇 110:4', sourceBook: 'psalms', sourceChapter: 110, sourceVerse: 4, type: 'quote', note: 'メルキゼデクの位に等しい祭司' },
+  ],
+  6: [
+    { verse: 14, source: '創世記 22:17', sourceBook: 'genesis', sourceChapter: 22, sourceVerse: 17, type: 'quote', note: '大いに祝福し、子孫を増やす' },
+  ],
+  7: [
+    { verse: '1-2', source: '創世記 14:17-20', sourceBook: 'genesis', sourceChapter: 14, sourceVerse: '17-20', type: 'reference', note: 'メルキゼデクがアブラハムを祝福' },
+    { verse: 17, source: '詩篇 110:4', sourceBook: 'psalms', sourceChapter: 110, sourceVerse: 4, type: 'quote', note: 'メルキゼデクの位に等しい祭司' },
+    { verse: 21, source: '詩篇 110:4', sourceBook: 'psalms', sourceChapter: 110, sourceVerse: 4, type: 'quote', note: '主は誓われた、思い直されない' },
+  ],
+  8: [
+    { verse: '8-12', source: 'エレミヤ書 31:31-34', sourceBook: 'jeremiah', sourceChapter: 31, sourceVerse: '31-34', type: 'quote', note: '新しい契約を結ぶ' },
+  ],
+  9: [
+    { verse: 20, source: '出エジプト記 24:8', sourceBook: 'exodus', sourceChapter: 24, sourceVerse: 8, type: 'quote', note: 'これは契約の血である' },
+  ],
+  10: [
+    { verse: '5-7', source: '詩篇 40:6-8', sourceBook: 'psalms', sourceChapter: 40, sourceVerse: '6-8', type: 'quote', note: 'いけにえを望まず、体を備えてくださった' },
+    { verse: '16-17', source: 'エレミヤ書 31:33-34', sourceBook: 'jeremiah', sourceChapter: 31, sourceVerse: '33-34', type: 'quote', note: '律法を心に書きつける' },
+    { verse: 30, source: '申命記 32:35', sourceBook: 'deuteronomy', sourceChapter: 32, sourceVerse: 35, type: 'quote', note: '復讐はわたしのもの' },
+    { verse: 30, source: '申命記 32:36', sourceBook: 'deuteronomy', sourceChapter: 32, sourceVerse: 36, type: 'quote', note: '主はその民を裁かれる' },
+    { verse: 37, source: 'ハバクク書 2:3-4', sourceBook: 'habakkuk', sourceChapter: 2, sourceVerse: '3-4', type: 'quote', note: '来るべき方は来られる' },
+    { verse: 38, source: 'ハバクク書 2:4', sourceBook: 'habakkuk', sourceChapter: 2, sourceVerse: 4, type: 'quote', note: '義人は信仰によって生きる' },
+  ],
+  11: [
+    { verse: 5, source: '創世記 5:24', sourceBook: 'genesis', sourceChapter: 5, sourceVerse: 24, type: 'reference', note: 'エノクは神と共に歩み、神が取られた' },
+    { verse: 18, source: '創世記 21:12', sourceBook: 'genesis', sourceChapter: 21, sourceVerse: 12, type: 'quote', note: 'イサクによって子孫が起こる' },
+    { verse: 21, source: '創世記 47:31', sourceBook: 'genesis', sourceChapter: 47, sourceVerse: 31, type: 'reference', note: 'ヤコブは杖の先に寄りかかって拝した' },
+  ],
+  12: [
+    { verse: '5-6', source: '箴言 3:11-12', sourceBook: 'proverbs', sourceChapter: 3, sourceVerse: '11-12', type: 'quote', note: '主の懲らしめを軽んじるな' },
+    { verse: 21, source: '申命記 9:19', sourceBook: 'deuteronomy', sourceChapter: 9, sourceVerse: 19, type: 'quote', note: 'モーセは恐れおののいた' },
+    { verse: 26, source: 'ハガイ書 2:6', sourceBook: 'haggai', sourceChapter: 2, sourceVerse: 6, type: 'quote', note: 'もう一度、天と地を揺り動かす' },
+    { verse: 29, source: '申命記 4:24', sourceBook: 'deuteronomy', sourceChapter: 4, sourceVerse: 24, type: 'quote', note: '神は焼き尽くす火である' },
+  ],
+  13: [
+    { verse: 5, source: '申命記 31:6', sourceBook: 'deuteronomy', sourceChapter: 31, sourceVerse: 6, type: 'quote', note: '決してあなたを離れず、見捨てない' },
+    { verse: 6, source: '詩篇 118:6', sourceBook: 'psalms', sourceChapter: 118, sourceVerse: 6, type: 'quote', note: '主がわたしの味方、何を恐れよう' },
+  ],
+};
+
 // 全データをエクスポート
 export const crossReferences: BookReferences = {
   matthew,
@@ -352,6 +421,7 @@ export const crossReferences: BookReferences = {
   john,
   acts,
   romans,
+  hebrews,
 };
 
 // 特定の書物・章の引用を取得する関数
