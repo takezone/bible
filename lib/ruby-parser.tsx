@@ -5,17 +5,11 @@ import React from 'react';
  * 例: "元始（はじめ）に神（かみ）" → <ruby>元始<rt>はじめ</rt></ruby>に<ruby>神<rt>かみ</rt></ruby>
  */
 export function parseRubyText(text: string): React.ReactNode {
-  // 「漢字（ふりがな）」のパターンにマッチする正規表現
-  // CJK統合漢字、CJK統合漢字拡張、異体字セレクタを含む漢字の後に全角括弧でひらがな/カタカナ
-  // \u4E00-\u9FFF: CJK統合漢字
-  // \u3400-\u4DBF: CJK統合漢字拡張A
-  // \uF900-\uFAFF: CJK互換漢字
-  // \u{20000}-\u{2A6DF}: CJK統合漢字拡張B
-  // \u{E0100}-\u{E01EF}: 異体字セレクタ
-  // \u3005: 々（漢字繰り返し記号）
+  // シンプルなアプローチ: 括弧・空白・ひらがな以外の文字 + （ひらがな/カタカナ）
+  // \u3040-\u309F: ひらがな範囲（これ以外の文字が漢字部分）
   // ひらがな: ぁ-ん + 踊り字（ゝゞ）
   // カタカナ: ァ-ヶ + 長音（ー）+ 踊り字（ヽヾ）
-  const rubyPattern = /([\u4E00-\u9FFF\u3400-\u4DBF\uF900-\uFAFF\u3005\u{20000}-\u{2A6DF}\u{E0100}-\u{E01EF}]+)（([ぁ-んゝゞァ-ヶーヽヾ]+)）/gu;
+  const rubyPattern = /([^（）\s\u3040-\u309F]+)（([ぁ-んゝゞァ-ヶーヽヾ]+)）/gu;
 
   const parts: React.ReactNode[] = [];
   let lastIndex = 0;
