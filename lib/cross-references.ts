@@ -577,6 +577,66 @@ const james: ChapterReferences = {
   ],
 };
 
+// ペテロの第二の手紙
+const secondPeter: ChapterReferences = {
+  2: [
+    { verse: 4, source: '創世記 6:1-4', sourceBook: 'genesis', sourceChapter: 6, sourceVerse: '1-4', type: 'allusion', note: '罪を犯した御使いたち—ノアの時代の堕天使' },
+    { verse: 5, source: '創世記 6:5-8:22', sourceBook: 'genesis', sourceChapter: 6, sourceVerse: 5, type: 'reference', note: 'ノアと洪水—義の宣教者として8人が救われた' },
+    { verse: '6-8', source: '創世記 19:1-29', sourceBook: 'genesis', sourceChapter: 19, sourceVerse: '1-29', type: 'reference', note: 'ソドムとゴモラの滅び、義人ロトの救出' },
+    { verse: '15-16', source: '民数記 22-24章', sourceBook: 'numbers', sourceChapter: 22, sourceVerse: 1, type: 'reference', note: 'バラムの道—報酬のために不義を愛した預言者' },
+    { verse: 22, source: '箴言 26:11', sourceBook: 'proverbs', sourceChapter: 26, sourceVerse: 11, type: 'quote', note: '犬は自分の吐いた物に戻る' },
+  ],
+  3: [
+    { verse: '5-6', source: '創世記 1:6-10', sourceBook: 'genesis', sourceChapter: 1, sourceVerse: '6-10', type: 'reference', note: '天と地の創造—水による世界の形成' },
+    { verse: '5-6', source: '創世記 7:11-24', sourceBook: 'genesis', sourceChapter: 7, sourceVerse: '11-24', type: 'reference', note: '洪水による世界の滅び' },
+    { verse: 8, source: '詩篇 90:4', sourceBook: 'psalms', sourceChapter: 90, sourceVerse: 4, type: 'quote', note: '主の前では一日は千年のよう' },
+    { verse: 13, source: 'イザヤ書 65:17', sourceBook: 'isaiah', sourceChapter: 65, sourceVerse: 17, type: 'quote', note: '新しい天と新しい地を待ち望む' },
+    { verse: 13, source: 'イザヤ書 66:22', sourceBook: 'isaiah', sourceChapter: 66, sourceVerse: 22, type: 'quote', note: '新しい天と新しい地' },
+  ],
+};
+
+// ユダの手紙（旧約と外典への言及が特徴的）
+const jude: ChapterReferences = {
+  1: [
+    { verse: 5, source: '民数記 14:29-35', sourceBook: 'numbers', sourceChapter: 14, sourceVerse: '29-35', type: 'reference', note: 'エジプトから救い出された民の不信仰と滅び' },
+    { verse: 6, source: '創世記 6:1-4', sourceBook: 'genesis', sourceChapter: 6, sourceVerse: '1-4', type: 'allusion', note: '自分の領域を守らなかった御使いたち' },
+    { verse: 7, source: '創世記 19:1-25', sourceBook: 'genesis', sourceChapter: 19, sourceVerse: '1-25', type: 'reference', note: 'ソドムとゴモラ—永遠の火の刑罰の実例' },
+    { verse: 9, source: '申命記 34:5-6', sourceBook: 'deuteronomy', sourceChapter: 34, sourceVerse: '5-6', type: 'allusion', note: 'モーセの死と埋葬—御使いミカエルとの関連' },
+    { verse: 11, source: '創世記 4:3-8', sourceBook: 'genesis', sourceChapter: 4, sourceVerse: '3-8', type: 'reference', note: 'カインの道—弟を殺した最初の殺人者' },
+    { verse: 11, source: '民数記 22:1-35', sourceBook: 'numbers', sourceChapter: 22, sourceVerse: '1-35', type: 'reference', note: 'バラムの迷い—報酬のための偽預言' },
+    { verse: 11, source: '民数記 16:1-35', sourceBook: 'numbers', sourceChapter: 16, sourceVerse: '1-35', type: 'reference', note: 'コラの反逆—祭司職への反抗と裁き' },
+    { verse: '14-15', source: '創世記 5:18-24', sourceBook: 'genesis', sourceChapter: 5, sourceVerse: '18-24', type: 'reference', note: 'エノクの預言—アダムから七代目の預言者' },
+  ],
+};
+
+// コロサイ人への手紙
+const colossians: ChapterReferences = {
+  1: [
+    { verse: 15, source: '創世記 1:26-27', sourceBook: 'genesis', sourceChapter: 1, sourceVerse: '26-27', type: 'allusion', note: '見えない神のかたち—神の像として創造されたアダムとの対比' },
+  ],
+  2: [
+    { verse: 3, source: '箴言 2:3-5', sourceBook: 'proverbs', sourceChapter: 2, sourceVerse: '3-5', type: 'allusion', note: '知恵と知識の宝—箴言の知恵探求' },
+    { verse: 22, source: 'イザヤ書 29:13', sourceBook: 'isaiah', sourceChapter: 29, sourceVerse: 13, type: 'allusion', note: '人間の戒めと教え' },
+  ],
+  3: [
+    { verse: 10, source: '創世記 1:26-27', sourceBook: 'genesis', sourceChapter: 1, sourceVerse: '26-27', type: 'allusion', note: '造り主のかたちに従って新しくされる' },
+  ],
+};
+
+// テモテへの第二の手紙
+const secondTimothy: ChapterReferences = {
+  2: [
+    { verse: 19, source: '民数記 16:5', sourceBook: 'numbers', sourceChapter: 16, sourceVerse: 5, type: 'quote', note: '主はご自分に属する者を知っておられる—コラの反逆への答え' },
+  ],
+  3: [
+    { verse: 8, source: '出エジプト記 7:11-12', sourceBook: 'exodus', sourceChapter: 7, sourceVerse: '11-12', type: 'reference', note: 'ヤンネとヤンブレ—モーセに逆らったエジプトの魔術師' },
+  ],
+  4: [
+    { verse: 14, source: '詩篇 62:12', sourceBook: 'psalms', sourceChapter: 62, sourceVerse: 12, type: 'allusion', note: '行いに応じて報いる' },
+    { verse: 17, source: 'ダニエル書 6:22', sourceBook: 'daniel', sourceChapter: 6, sourceVerse: 22, type: 'allusion', note: '獅子の口から救い出された—ダニエルの経験' },
+  ],
+};
+
 // ヨハネの黙示録（旧約の暗示が非常に多い書物）
 const revelation: ChapterReferences = {
   1: [
@@ -671,9 +731,13 @@ export const crossReferences: BookReferences = {
   '2corinthians': secondCorinthians,
   galatians,
   ephesians,
+  colossians,
+  '2timothy': secondTimothy,
   hebrews,
   james,
   '1peter': firstPeter,
+  '2peter': secondPeter,
+  jude,
   revelation,
 };
 
