@@ -105,7 +105,8 @@ const matthew: ChapterReferences = {
 // マルコによる福音書
 const mark: ChapterReferences = {
   1: [
-    { verse: '2-3', source: 'マラキ書 3:1 / イザヤ書 40:3', sourceBook: 'isaiah', sourceChapter: 40, sourceVerse: 3, type: 'quote', note: '道を備えよ' },
+    { verse: 2, source: 'マラキ書 3:1', sourceBook: 'malachi', sourceChapter: 3, sourceVerse: 1, type: 'quote', note: '使者を遣わす' },
+    { verse: 3, source: 'イザヤ書 40:3', sourceBook: 'isaiah', sourceChapter: 40, sourceVerse: 3, type: 'quote', note: '荒野で叫ぶ者の声' },
   ],
   4: [
     { verse: 12, source: 'イザヤ書 6:9-10', sourceBook: 'isaiah', sourceChapter: 6, sourceVerse: '9-10', type: 'quote', note: '見ても認めない' },
@@ -115,7 +116,8 @@ const mark: ChapterReferences = {
     { verse: 10, source: '出エジプト記 20:12', sourceBook: 'exodus', sourceChapter: 20, sourceVerse: 12, type: 'quote', note: '父母を敬え' },
   ],
   10: [
-    { verse: '6-8', source: '創世記 1:27; 2:24', sourceBook: 'genesis', sourceChapter: 2, sourceVerse: 24, type: 'quote', note: '一体となる' },
+    { verse: 6, source: '創世記 1:27', sourceBook: 'genesis', sourceChapter: 1, sourceVerse: 27, type: 'quote', note: '男と女に創造された' },
+    { verse: '7-8', source: '創世記 2:24', sourceBook: 'genesis', sourceChapter: 2, sourceVerse: 24, type: 'quote', note: '一体となる' },
     { verse: 19, source: '出エジプト記 20:12-16', sourceBook: 'exodus', sourceChapter: 20, sourceVerse: '12-16', type: 'quote', note: '十戒' },
   ],
   11: [
@@ -165,7 +167,8 @@ const luke: ChapterReferences = {
     { verse: 27, source: 'マラキ書 3:1', sourceBook: 'malachi', sourceChapter: 3, sourceVerse: 1, type: 'quote', note: '使者を遣わす' },
   ],
   10: [
-    { verse: 27, source: '申命記 6:5 / レビ記 19:18', sourceBook: 'deuteronomy', sourceChapter: 6, sourceVerse: 5, type: 'quote', note: '神と隣人を愛せよ' },
+    { verse: 27, source: '申命記 6:5', sourceBook: 'deuteronomy', sourceChapter: 6, sourceVerse: 5, type: 'quote', note: '心を尽くして神を愛せよ' },
+    { verse: 27, source: 'レビ記 19:18', sourceBook: 'leviticus', sourceChapter: 19, sourceVerse: 18, type: 'quote', note: '隣人を愛せよ' },
   ],
   13: [
     { verse: 35, source: '詩篇 118:26', sourceBook: 'psalms', sourceChapter: 118, sourceVerse: 26, type: 'quote', note: '主の名によって来る者' },
@@ -224,12 +227,30 @@ const john: ChapterReferences = {
   ],
 };
 
+// 使徒行伝
+const acts: ChapterReferences = {
+  1: [
+    { verse: 20, source: '詩篇 69:25', sourceBook: 'psalms', sourceChapter: 69, sourceVerse: 25, type: 'quote', note: 'その住まいは荒れ果てよ' },
+    { verse: 20, source: '詩篇 109:8', sourceBook: 'psalms', sourceChapter: 109, sourceVerse: 8, type: 'quote', note: 'その職は他の者に取らせよ' },
+  ],
+  2: [
+    { verse: '17-21', source: 'ヨエル書 2:28-32', sourceBook: 'joel', sourceChapter: 2, sourceVerse: '28-32', type: 'quote', note: '終わりの日に霊を注ぐ' },
+    { verse: 25, source: '詩篇 16:8-11', sourceBook: 'psalms', sourceChapter: 16, sourceVerse: '8-11', type: 'quote', note: 'わたしは絶えず主を目の前に置く' },
+    { verse: 34, source: '詩篇 110:1', sourceBook: 'psalms', sourceChapter: 110, sourceVerse: 1, type: 'quote', note: '主はわが主に言われた' },
+  ],
+  3: [
+    { verse: '22-23', source: '申命記 18:15-19', sourceBook: 'deuteronomy', sourceChapter: 18, sourceVerse: '15-19', type: 'quote', note: 'モーセのような預言者を起こす' },
+    { verse: 25, source: '創世記 22:18', sourceBook: 'genesis', sourceChapter: 22, sourceVerse: 18, type: 'quote', note: '地のすべての民族が祝福される' },
+  ],
+};
+
 // 全データをエクスポート
 export const crossReferences: BookReferences = {
   matthew,
   mark,
   luke,
   john,
+  acts,
 };
 
 // 特定の書物・章の引用を取得する関数
