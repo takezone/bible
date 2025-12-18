@@ -433,6 +433,88 @@ const galatians: ChapterReferences = {
   ],
 };
 
+// ヨハネの黙示録（旧約の暗示が非常に多い書物）
+const revelation: ChapterReferences = {
+  1: [
+    { verse: 7, source: 'ダニエル書 7:13', sourceBook: 'daniel', sourceChapter: 7, sourceVerse: 13, type: 'allusion', note: '雲に乗って来る—ダニエルの「人の子」の幻' },
+    { verse: 7, source: 'ゼカリヤ書 12:10', sourceBook: 'zechariah', sourceChapter: 12, sourceVerse: 10, type: 'allusion', note: '刺し貫いた者を見て嘆く—メシア受難の預言' },
+    { verse: 8, source: 'イザヤ書 44:6', sourceBook: 'isaiah', sourceChapter: 44, sourceVerse: 6, type: 'allusion', note: '「アルファとオメガ」—イザヤの「最初であり最後」' },
+    { verse: '12-16', source: 'ダニエル書 7:9', sourceBook: 'daniel', sourceChapter: 7, sourceVerse: 9, type: 'allusion', note: '白い髪、火の目—ダニエルの「日の老いたる者」の描写と融合' },
+    { verse: '12-16', source: 'ダニエル書 10:5-6', sourceBook: 'daniel', sourceChapter: 10, sourceVerse: '5-6', type: 'allusion', note: '金の帯、輝く姿—ダニエルに現れた天使の姿' },
+  ],
+  2: [
+    { verse: 7, source: '創世記 2:9', sourceBook: 'genesis', sourceChapter: 2, sourceVerse: 9, type: 'allusion', note: '命の木—エデンの園の命の木の回復' },
+    { verse: 17, source: '出エジプト記 16:33-34', sourceBook: 'exodus', sourceChapter: 16, sourceVerse: '33-34', type: 'allusion', note: '隠されたマナ—荒野で与えられた天からのパン' },
+    { verse: 27, source: '詩篇 2:9', sourceBook: 'psalms', sourceChapter: 2, sourceVerse: 9, type: 'allusion', note: '鉄の杖で治める—メシア詩篇の王権' },
+  ],
+  4: [
+    { verse: '2-3', source: 'イザヤ書 6:1', sourceBook: 'isaiah', sourceChapter: 6, sourceVerse: 1, type: 'allusion', note: '天の御座—イザヤの神殿幻に類似' },
+    { verse: '6-8', source: 'エゼキエル書 1:5-10', sourceBook: 'ezekiel', sourceChapter: 1, sourceVerse: '5-10', type: 'allusion', note: '四つの生き物—エゼキエルのケルビムの幻' },
+    { verse: 8, source: 'イザヤ書 6:3', sourceBook: 'isaiah', sourceChapter: 6, sourceVerse: 3, type: 'allusion', note: '「聖なるかな」の賛美—イザヤのセラフィムの賛美' },
+  ],
+  5: [
+    { verse: 5, source: '創世記 49:9', sourceBook: 'genesis', sourceChapter: 49, sourceVerse: 9, type: 'allusion', note: 'ユダの獅子—ヤコブの祝福におけるユダへの預言' },
+    { verse: 5, source: 'イザヤ書 11:1', sourceBook: 'isaiah', sourceChapter: 11, sourceVerse: 1, type: 'allusion', note: 'ダビデの根—エッサイの根から出るメシア' },
+    { verse: 6, source: 'イザヤ書 53:7', sourceBook: 'isaiah', sourceChapter: 53, sourceVerse: 7, type: 'allusion', note: '屠られた小羊—苦難の僕の象徴' },
+  ],
+  6: [
+    { verse: '1-8', source: 'ゼカリヤ書 1:8-11', sourceBook: 'zechariah', sourceChapter: 1, sourceVerse: '8-11', type: 'allusion', note: '四頭の馬—ゼカリヤの色の異なる馬の幻' },
+    { verse: '1-8', source: 'ゼカリヤ書 6:1-8', sourceBook: 'zechariah', sourceChapter: 6, sourceVerse: '1-8', type: 'allusion', note: '四つの戦車—神の裁きを執行する使者' },
+    { verse: '12-14', source: 'イザヤ書 34:4', sourceBook: 'isaiah', sourceChapter: 34, sourceVerse: 4, type: 'allusion', note: '天が巻物のように—終末的な天体の異変' },
+    { verse: '12-14', source: 'ヨエル書 2:31', sourceBook: 'joel', sourceChapter: 2, sourceVerse: 31, type: 'allusion', note: '太陽が暗くなり月が血に—主の日の前兆' },
+  ],
+  7: [
+    { verse: '1-3', source: 'エゼキエル書 9:4-6', sourceBook: 'ezekiel', sourceChapter: 9, sourceVerse: '4-6', type: 'allusion', note: '額に印—エゼキエルの残れる者への印' },
+  ],
+  11: [
+    { verse: '3-6', source: 'ゼカリヤ書 4:2-14', sourceBook: 'zechariah', sourceChapter: 4, sourceVerse: '2-14', type: 'allusion', note: '二人の証人・二本のオリーブの木—ゼカリヤの燭台と油注がれた者' },
+    { verse: 15, source: 'ダニエル書 7:14', sourceBook: 'daniel', sourceChapter: 7, sourceVerse: 14, type: 'allusion', note: '世の国は主のものとなった—人の子への支配権授与' },
+  ],
+  12: [
+    { verse: '1-2', source: '創世記 37:9', sourceBook: 'genesis', sourceChapter: 37, sourceVerse: 9, type: 'allusion', note: '太陽・月・星—ヨセフの夢のイスラエルの象徴' },
+    { verse: '3-4', source: 'ダニエル書 7:7', sourceBook: 'daniel', sourceChapter: 7, sourceVerse: 7, type: 'allusion', note: '大きな赤い竜—ダニエルの第四の獣との関連' },
+    { verse: 9, source: '創世記 3:1', sourceBook: 'genesis', sourceChapter: 3, sourceVerse: 1, type: 'allusion', note: '古い蛇—エデンの園の誘惑者' },
+  ],
+  13: [
+    { verse: '1-2', source: 'ダニエル書 7:3-7', sourceBook: 'daniel', sourceChapter: 7, sourceVerse: '3-7', type: 'allusion', note: '海から上がる獣—ダニエルの四つの獣の特徴を合成' },
+    { verse: 5, source: 'ダニエル書 7:8', sourceBook: 'daniel', sourceChapter: 7, sourceVerse: 8, type: 'allusion', note: '大言壮語する口—小さな角の傲慢な言葉' },
+  ],
+  14: [
+    { verse: 14, source: 'ダニエル書 7:13', sourceBook: 'daniel', sourceChapter: 7, sourceVerse: 13, type: 'allusion', note: '人の子のような方—ダニエルのメシア幻' },
+    { verse: '19-20', source: 'ヨエル書 3:13', sourceBook: 'joel', sourceChapter: 3, sourceVerse: 13, type: 'allusion', note: '神の怒りの酒ぶね—ヨエルの終末の刈り入れ' },
+    { verse: '19-20', source: 'イザヤ書 63:3', sourceBook: 'isaiah', sourceChapter: 63, sourceVerse: 3, type: 'allusion', note: '酒ぶねを踏む—主の復讐の日の描写' },
+  ],
+  17: [
+    { verse: '1-6', source: 'エレミヤ書 51:7', sourceBook: 'jeremiah', sourceChapter: 51, sourceVerse: 7, type: 'allusion', note: '大淫婦バビロン—エレミヤのバビロン審判預言' },
+  ],
+  18: [
+    { verse: '2-3', source: 'イザヤ書 21:9', sourceBook: 'isaiah', sourceChapter: 21, sourceVerse: 9, type: 'allusion', note: '倒れた、倒れた、バビロン—イザヤのバビロン陥落預言' },
+    { verse: 4, source: 'エレミヤ書 51:45', sourceBook: 'jeremiah', sourceChapter: 51, sourceVerse: 45, type: 'allusion', note: 'バビロンから出よ—エレミヤの脱出命令' },
+  ],
+  19: [
+    { verse: '11-16', source: 'イザヤ書 63:1-6', sourceBook: 'isaiah', sourceChapter: 63, sourceVerse: '1-6', type: 'allusion', note: '血に染まった衣—エドムからの戦士の描写' },
+    { verse: 15, source: '詩篇 2:9', sourceBook: 'psalms', sourceChapter: 2, sourceVerse: 9, type: 'allusion', note: '鉄の杖で治める—メシア王の支配' },
+    { verse: '17-18', source: 'エゼキエル書 39:17-20', sourceBook: 'ezekiel', sourceChapter: 39, sourceVerse: '17-20', type: 'allusion', note: '鳥を招く神の宴会—ゴグの敗北後の情景' },
+  ],
+  20: [
+    { verse: '8-9', source: 'エゼキエル書 38:2-9', sourceBook: 'ezekiel', sourceChapter: 38, sourceVerse: '2-9', type: 'allusion', note: 'ゴグとマゴグ—エゼキエルの終末の戦い' },
+    { verse: '11-12', source: 'ダニエル書 7:9-10', sourceBook: 'daniel', sourceChapter: 7, sourceVerse: '9-10', type: 'allusion', note: '白い御座の裁き—ダニエルの審判の幻' },
+  ],
+  21: [
+    { verse: '1-2', source: 'イザヤ書 65:17', sourceBook: 'isaiah', sourceChapter: 65, sourceVerse: 17, type: 'allusion', note: '新しい天と地—イザヤの終末回復預言' },
+    { verse: 2, source: 'イザヤ書 61:10', sourceBook: 'isaiah', sourceChapter: 61, sourceVerse: 10, type: 'allusion', note: '花嫁のように飾った都—シオンの回復' },
+    { verse: 4, source: 'イザヤ書 25:8', sourceBook: 'isaiah', sourceChapter: 25, sourceVerse: 8, type: 'allusion', note: '涙をぬぐい取る—イザヤの救いの約束' },
+    { verse: '10-21', source: 'エゼキエル書 40-48章', sourceBook: 'ezekiel', sourceChapter: 40, sourceVerse: 1, type: 'allusion', note: '新しいエルサレムの描写—エゼキエルの神殿幻の成就' },
+  ],
+  22: [
+    { verse: '1-2', source: 'エゼキエル書 47:1-12', sourceBook: 'ezekiel', sourceChapter: 47, sourceVerse: '1-12', type: 'allusion', note: '命の水の川と木—エゼキエルの神殿から流れる川' },
+    { verse: 2, source: '創世記 2:9', sourceBook: 'genesis', sourceChapter: 2, sourceVerse: 9, type: 'allusion', note: '命の木—創世記の回復、円環的構造の完成' },
+    { verse: 3, source: 'ゼカリヤ書 14:11', sourceBook: 'zechariah', sourceChapter: 14, sourceVerse: 11, type: 'allusion', note: 'もはや呪いはない—ゼカリヤの終末預言' },
+    { verse: 16, source: 'イザヤ書 11:1', sourceBook: 'isaiah', sourceChapter: 11, sourceVerse: 1, type: 'allusion', note: 'ダビデの根また子孫—メシアの二重性' },
+    { verse: 16, source: '民数記 24:17', sourceBook: 'numbers', sourceChapter: 24, sourceVerse: 17, type: 'allusion', note: '明けの明星—バラムのメシア預言' },
+  ],
+};
+
 // 全データをエクスポート
 export const crossReferences: BookReferences = {
   matthew,
@@ -443,6 +525,7 @@ export const crossReferences: BookReferences = {
   romans,
   galatians,
   hebrews,
+  revelation,
 };
 
 // 特定の書物・章の引用を取得する関数
