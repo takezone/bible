@@ -413,6 +413,26 @@ const hebrews: ChapterReferences = {
   ],
 };
 
+// ガラテヤ人への手紙
+const galatians: ChapterReferences = {
+  3: [
+    { verse: 6, source: '創世記 15:6', sourceBook: 'genesis', sourceChapter: 15, sourceVerse: 6, type: 'quote', note: 'アブラハムは神を信じた' },
+    { verse: 8, source: '創世記 12:3', sourceBook: 'genesis', sourceChapter: 12, sourceVerse: 3, type: 'quote', note: 'すべての民族があなたによって祝福される' },
+    { verse: 10, source: '申命記 27:26', sourceBook: 'deuteronomy', sourceChapter: 27, sourceVerse: 26, type: 'quote', note: '律法に従わない者は呪われる' },
+    { verse: 11, source: 'ハバクク書 2:4', sourceBook: 'habakkuk', sourceChapter: 2, sourceVerse: 4, type: 'quote', note: '義人は信仰によって生きる' },
+    { verse: 12, source: 'レビ記 18:5', sourceBook: 'leviticus', sourceChapter: 18, sourceVerse: 5, type: 'quote', note: '律法を行う者はそれによって生きる' },
+    { verse: 13, source: '申命記 21:23', sourceBook: 'deuteronomy', sourceChapter: 21, sourceVerse: 23, type: 'quote', note: '木にかけられた者は呪われる' },
+    { verse: 16, source: '創世記 12:7', sourceBook: 'genesis', sourceChapter: 12, sourceVerse: 7, type: 'quote', note: 'あなたの子孫に与える' },
+  ],
+  4: [
+    { verse: 27, source: 'イザヤ書 54:1', sourceBook: 'isaiah', sourceChapter: 54, sourceVerse: 1, type: 'quote', note: '喜べ、子を産まない不妊の女よ' },
+    { verse: 30, source: '創世記 21:10', sourceBook: 'genesis', sourceChapter: 21, sourceVerse: 10, type: 'quote', note: '女奴隷とその子を追い出せ' },
+  ],
+  5: [
+    { verse: 14, source: 'レビ記 19:18', sourceBook: 'leviticus', sourceChapter: 19, sourceVerse: 18, type: 'quote', note: '隣人を自分のように愛せよ' },
+  ],
+};
+
 // 全データをエクスポート
 export const crossReferences: BookReferences = {
   matthew,
@@ -421,6 +441,7 @@ export const crossReferences: BookReferences = {
   john,
   acts,
   romans,
+  galatians,
   hebrews,
 };
 
