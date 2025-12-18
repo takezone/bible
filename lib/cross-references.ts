@@ -242,6 +242,37 @@ const acts: ChapterReferences = {
     { verse: '22-23', source: '申命記 18:15-19', sourceBook: 'deuteronomy', sourceChapter: 18, sourceVerse: '15-19', type: 'quote', note: 'モーセのような預言者を起こす' },
     { verse: 25, source: '創世記 22:18', sourceBook: 'genesis', sourceChapter: 22, sourceVerse: 18, type: 'quote', note: '地のすべての民族が祝福される' },
   ],
+  4: [
+    { verse: 11, source: '詩篇 118:22', sourceBook: 'psalms', sourceChapter: 118, sourceVerse: 22, type: 'quote', note: '隅の親石となった' },
+    { verse: '25-26', source: '詩篇 2:1-2', sourceBook: 'psalms', sourceChapter: 2, sourceVerse: '1-2', type: 'quote', note: '国々は何故騒ぎ立つのか' },
+  ],
+  7: [
+    { verse: '3', source: '創世記 12:1', sourceBook: 'genesis', sourceChapter: 12, sourceVerse: 1, type: 'quote', note: 'あなたの土地を離れよ' },
+    { verse: '6-7', source: '創世記 15:13-14', sourceBook: 'genesis', sourceChapter: 15, sourceVerse: '13-14', type: 'quote', note: '400年間苦しめられる' },
+    { verse: 27, source: '出エジプト記 2:14', sourceBook: 'exodus', sourceChapter: 2, sourceVerse: 14, type: 'quote', note: '誰がお前を支配者にしたか' },
+    { verse: 33, source: '出エジプト記 3:5', sourceBook: 'exodus', sourceChapter: 3, sourceVerse: 5, type: 'quote', note: '履物を脱げ' },
+    { verse: 37, source: '申命記 18:15', sourceBook: 'deuteronomy', sourceChapter: 18, sourceVerse: 15, type: 'quote', note: 'わたしのような預言者を起こす' },
+    { verse: '42-43', source: 'アモス書 5:25-27', sourceBook: 'amos', sourceChapter: 5, sourceVerse: '25-27', type: 'quote', note: '40年間荒野でいけにえを捧げたか' },
+    { verse: '49-50', source: 'イザヤ書 66:1-2', sourceBook: 'isaiah', sourceChapter: 66, sourceVerse: '1-2', type: 'quote', note: '天はわたしの王座' },
+  ],
+  8: [
+    { verse: '32-33', source: 'イザヤ書 53:7-8', sourceBook: 'isaiah', sourceChapter: 53, sourceVerse: '7-8', type: 'quote', note: '屠り場に引かれる羊のように' },
+  ],
+  13: [
+    { verse: 22, source: '詩篇 89:20', sourceBook: 'psalms', sourceChapter: 89, sourceVerse: 20, type: 'allusion', note: 'わたしの僕ダビデを見いだした' },
+    { verse: 22, source: 'サムエル記上 13:14', sourceBook: '1samuel', sourceChapter: 13, sourceVerse: 14, type: 'quote', note: '心にかなう者' },
+    { verse: 33, source: '詩篇 2:7', sourceBook: 'psalms', sourceChapter: 2, sourceVerse: 7, type: 'quote', note: 'あなたはわたしの子' },
+    { verse: 34, source: 'イザヤ書 55:3', sourceBook: 'isaiah', sourceChapter: 55, sourceVerse: 3, type: 'quote', note: 'ダビデへの確かな恵み' },
+    { verse: 35, source: '詩篇 16:10', sourceBook: 'psalms', sourceChapter: 16, sourceVerse: 10, type: 'quote', note: '聖なる者に朽ち果てることを許さない' },
+    { verse: 41, source: 'ハバクク書 1:5', sourceBook: 'habakkuk', sourceChapter: 1, sourceVerse: 5, type: 'quote', note: '驚け、そして滅びよ' },
+    { verse: 47, source: 'イザヤ書 49:6', sourceBook: 'isaiah', sourceChapter: 49, sourceVerse: 6, type: 'quote', note: '異邦人の光となる' },
+  ],
+  15: [
+    { verse: '16-17', source: 'アモス書 9:11-12', sourceBook: 'amos', sourceChapter: 9, sourceVerse: '11-12', type: 'quote', note: 'ダビデの倒れた幕屋を建て直す' },
+  ],
+  28: [
+    { verse: '26-27', source: 'イザヤ書 6:9-10', sourceBook: 'isaiah', sourceChapter: 6, sourceVerse: '9-10', type: 'quote', note: '聞いても悟らない' },
+  ],
 };
 
 // 全データをエクスポート
