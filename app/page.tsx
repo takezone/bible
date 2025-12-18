@@ -148,10 +148,10 @@ function BibleApp() {
     }
   }, [viewMode, selectedPlace]);
 
-  // 翻訳設定が変更されたらURLを更新
+  // 翻訳設定が変更されたらURLを更新（履歴は上書き）
   useEffect(() => {
     if (!initialized || !selectedBook || !selectedChapter) return;
-    updateURL(selectedBook.id, selectedChapter.chapter, selectedVerse);
+    updateURL(selectedBook.id, selectedChapter.chapter, selectedVerse, { replaceHistory: true });
   }, [displayMode, singleTranslation, leftTranslation, rightTranslation]);
 
   const handleSearch = (query: string) => {
