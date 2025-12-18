@@ -50,7 +50,7 @@ export default function GreekGuidePage() {
               </svg>
             </Link>
             <div>
-              <h1 className="text-2xl font-bold">ギリシャ語学習ガイド</h1>
+              <h1 className="text-2xl font-bold">原典ギリシャ語 学習ガイド</h1>
               <p className="text-blue-200">新約聖書を原語で読むための基礎知識</p>
             </div>
           </div>

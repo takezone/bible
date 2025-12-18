@@ -1,0 +1,761 @@
+// 新約聖書における旧約聖書の引用・参照データ
+// 形式: { [NT書物ID]: { [章番号]: 引用配列 } }
+
+export interface CrossReference {
+  verse: number | string;  // NT節番号（範囲も可: "4-6"）
+  source: string;          // 旧約の出典（例: "イザヤ書 40:3"）
+  sourceBook: string;      // 書物ID
+  sourceChapter: number;
+  sourceVerse: number | string;
+  type: 'quote' | 'allusion' | 'reference';  // 引用/暗示/参照
+  note?: string;           // 補足説明
+}
+
+export interface ChapterReferences {
+  [chapter: number]: CrossReference[];
+}
+
+export interface BookReferences {
+  [bookId: string]: ChapterReferences;
+}
+
+// マタイによる福音書
+const matthew: ChapterReferences = {
+  1: [
+    { verse: 23, source: 'イザヤ書 7:14', sourceBook: 'isaiah', sourceChapter: 7, sourceVerse: 14, type: 'quote', note: '処女懐胎の預言「インマヌエル」' },
+  ],
+  2: [
+    { verse: 6, source: 'ミカ書 5:2', sourceBook: 'micah', sourceChapter: 5, sourceVerse: 2, type: 'quote', note: 'メシアはベツレヘムから出る' },
+    { verse: 15, source: 'ホセア書 11:1', sourceBook: 'hosea', sourceChapter: 11, sourceVerse: 1, type: 'quote', note: '「エジプトからわが子を呼び出した」' },
+    { verse: 18, source: 'エレミヤ書 31:15', sourceBook: 'jeremiah', sourceChapter: 31, sourceVerse: 15, type: 'quote', note: 'ラケルの嘆き' },
+  ],
+  3: [
+    { verse: 3, source: 'イザヤ書 40:3', sourceBook: 'isaiah', sourceChapter: 40, sourceVerse: 3, type: 'quote', note: '荒野で叫ぶ者の声' },
+  ],
+  4: [
+    { verse: 4, source: '申命記 8:3', sourceBook: 'deuteronomy', sourceChapter: 8, sourceVerse: 3, type: 'quote', note: '人はパンだけで生きるのではない' },
+    { verse: 6, source: '詩篇 91:11-12', sourceBook: 'psalms', sourceChapter: 91, sourceVerse: '11-12', type: 'quote', note: '天使たちに命じて守らせる' },
+    { verse: 7, source: '申命記 6:16', sourceBook: 'deuteronomy', sourceChapter: 6, sourceVerse: 16, type: 'quote', note: '主を試みてはならない' },
+    { verse: 10, source: '申命記 6:13', sourceBook: 'deuteronomy', sourceChapter: 6, sourceVerse: 13, type: 'quote', note: '主のみを拝せよ' },
+    { verse: '15-16', source: 'イザヤ書 9:1-2', sourceBook: 'isaiah', sourceChapter: 9, sourceVerse: '1-2', type: 'quote', note: 'ガリラヤに大いなる光' },
+  ],
+  5: [
+    { verse: 21, source: '出エジプト記 20:13', sourceBook: 'exodus', sourceChapter: 20, sourceVerse: 13, type: 'quote', note: '殺してはならない' },
+    { verse: 27, source: '出エジプト記 20:14', sourceBook: 'exodus', sourceChapter: 20, sourceVerse: 14, type: 'quote', note: '姦淫してはならない' },
+    { verse: 31, source: '申命記 24:1', sourceBook: 'deuteronomy', sourceChapter: 24, sourceVerse: 1, type: 'reference', note: '離婚状について' },
+    { verse: 33, source: 'レビ記 19:12', sourceBook: 'leviticus', sourceChapter: 19, sourceVerse: 12, type: 'reference', note: '偽りの誓いをしてはならない' },
+    { verse: 38, source: '出エジプト記 21:24', sourceBook: 'exodus', sourceChapter: 21, sourceVerse: 24, type: 'quote', note: '目には目を、歯には歯を' },
+    { verse: 43, source: 'レビ記 19:18', sourceBook: 'leviticus', sourceChapter: 19, sourceVerse: 18, type: 'quote', note: '隣人を愛せよ' },
+  ],
+  8: [
+    { verse: 17, source: 'イザヤ書 53:4', sourceBook: 'isaiah', sourceChapter: 53, sourceVerse: 4, type: 'quote', note: '彼はわれわれの病を負った' },
+  ],
+  9: [
+    { verse: 13, source: 'ホセア書 6:6', sourceBook: 'hosea', sourceChapter: 6, sourceVerse: 6, type: 'quote', note: 'わたしが好むのはあわれみ' },
+  ],
+  11: [
+    { verse: 10, source: 'マラキ書 3:1', sourceBook: 'malachi', sourceChapter: 3, sourceVerse: 1, type: 'quote', note: '使者を遣わす' },
+  ],
+  12: [
+    { verse: 7, source: 'ホセア書 6:6', sourceBook: 'hosea', sourceChapter: 6, sourceVerse: 6, type: 'quote', note: 'あわれみを好む' },
+    { verse: '18-21', source: 'イザヤ書 42:1-4', sourceBook: 'isaiah', sourceChapter: 42, sourceVerse: '1-4', type: 'quote', note: '主の僕の歌' },
+  ],
+  13: [
+    { verse: '14-15', source: 'イザヤ書 6:9-10', sourceBook: 'isaiah', sourceChapter: 6, sourceVerse: '9-10', type: 'quote', note: '聞いても悟らない' },
+    { verse: 35, source: '詩篇 78:2', sourceBook: 'psalms', sourceChapter: 78, sourceVerse: 2, type: 'quote', note: 'たとえで語る' },
+  ],
+  15: [
+    { verse: '8-9', source: 'イザヤ書 29:13', sourceBook: 'isaiah', sourceChapter: 29, sourceVerse: 13, type: 'quote', note: '口先だけで敬う' },
+  ],
+  19: [
+    { verse: 4, source: '創世記 1:27', sourceBook: 'genesis', sourceChapter: 1, sourceVerse: 27, type: 'quote', note: '男と女に創造された' },
+    { verse: 5, source: '創世記 2:24', sourceBook: 'genesis', sourceChapter: 2, sourceVerse: 24, type: 'quote', note: '一体となる' },
+  ],
+  21: [
+    { verse: 5, source: 'ゼカリヤ書 9:9', sourceBook: 'zechariah', sourceChapter: 9, sourceVerse: 9, type: 'quote', note: 'ろばに乗って来る王' },
+    { verse: 9, source: '詩篇 118:26', sourceBook: 'psalms', sourceChapter: 118, sourceVerse: 26, type: 'quote', note: '主の名によって来る者' },
+    { verse: 13, source: 'イザヤ書 56:7', sourceBook: 'isaiah', sourceChapter: 56, sourceVerse: 7, type: 'quote', note: '祈りの家' },
+    { verse: 16, source: '詩篇 8:2', sourceBook: 'psalms', sourceChapter: 8, sourceVerse: 2, type: 'quote', note: '幼子の口から賛美' },
+    { verse: 42, source: '詩篇 118:22-23', sourceBook: 'psalms', sourceChapter: 118, sourceVerse: '22-23', type: 'quote', note: '捨てられた石が隅の親石に' },
+  ],
+  22: [
+    { verse: 32, source: '出エジプト記 3:6', sourceBook: 'exodus', sourceChapter: 3, sourceVerse: 6, type: 'quote', note: 'アブラハムの神' },
+    { verse: 37, source: '申命記 6:5', sourceBook: 'deuteronomy', sourceChapter: 6, sourceVerse: 5, type: 'quote', note: '心を尽くして神を愛せよ' },
+    { verse: 39, source: 'レビ記 19:18', sourceBook: 'leviticus', sourceChapter: 19, sourceVerse: 18, type: 'quote', note: '隣人を愛せよ' },
+    { verse: 44, source: '詩篇 110:1', sourceBook: 'psalms', sourceChapter: 110, sourceVerse: 1, type: 'quote', note: '主はわが主に言われた' },
+  ],
+  23: [
+    { verse: 39, source: '詩篇 118:26', sourceBook: 'psalms', sourceChapter: 118, sourceVerse: 26, type: 'quote', note: '主の名によって来る者' },
+  ],
+  24: [
+    { verse: 15, source: 'ダニエル書 9:27', sourceBook: 'daniel', sourceChapter: 9, sourceVerse: 27, type: 'reference', note: '荒らす憎むべきもの' },
+    { verse: 29, source: 'イザヤ書 13:10', sourceBook: 'isaiah', sourceChapter: 13, sourceVerse: 10, type: 'allusion', note: '日は暗くなり' },
+    { verse: 30, source: 'ダニエル書 7:13', sourceBook: 'daniel', sourceChapter: 7, sourceVerse: 13, type: 'quote', note: '人の子が雲に乗って来る' },
+  ],
+  26: [
+    { verse: 31, source: 'ゼカリヤ書 13:7', sourceBook: 'zechariah', sourceChapter: 13, sourceVerse: 7, type: 'quote', note: '羊飼いを打て' },
+  ],
+  27: [
+    { verse: 9, source: 'ゼカリヤ書 11:12-13', sourceBook: 'zechariah', sourceChapter: 11, sourceVerse: '12-13', type: 'quote', note: '銀三十枚' },
+    { verse: 35, source: '詩篇 22:18', sourceBook: 'psalms', sourceChapter: 22, sourceVerse: 18, type: 'quote', note: '衣を分け合う' },
+    { verse: 46, source: '詩篇 22:1', sourceBook: 'psalms', sourceChapter: 22, sourceVerse: 1, type: 'quote', note: 'わが神、なぜ見捨てたのか' },
+  ],
+};
+
+// マルコによる福音書
+const mark: ChapterReferences = {
+  1: [
+    { verse: 2, source: 'マラキ書 3:1', sourceBook: 'malachi', sourceChapter: 3, sourceVerse: 1, type: 'quote', note: '使者を遣わす' },
+    { verse: 3, source: 'イザヤ書 40:3', sourceBook: 'isaiah', sourceChapter: 40, sourceVerse: 3, type: 'quote', note: '荒野で叫ぶ者の声' },
+  ],
+  4: [
+    { verse: 12, source: 'イザヤ書 6:9-10', sourceBook: 'isaiah', sourceChapter: 6, sourceVerse: '9-10', type: 'quote', note: '見ても認めない' },
+  ],
+  7: [
+    { verse: '6-7', source: 'イザヤ書 29:13', sourceBook: 'isaiah', sourceChapter: 29, sourceVerse: 13, type: 'quote', note: '口先だけの敬い' },
+    { verse: 10, source: '出エジプト記 20:12', sourceBook: 'exodus', sourceChapter: 20, sourceVerse: 12, type: 'quote', note: '父母を敬え' },
+  ],
+  10: [
+    { verse: 6, source: '創世記 1:27', sourceBook: 'genesis', sourceChapter: 1, sourceVerse: 27, type: 'quote', note: '男と女に創造された' },
+    { verse: '7-8', source: '創世記 2:24', sourceBook: 'genesis', sourceChapter: 2, sourceVerse: 24, type: 'quote', note: '一体となる' },
+    { verse: 19, source: '出エジプト記 20:12-16', sourceBook: 'exodus', sourceChapter: 20, sourceVerse: '12-16', type: 'quote', note: '十戒' },
+  ],
+  11: [
+    { verse: 9, source: '詩篇 118:26', sourceBook: 'psalms', sourceChapter: 118, sourceVerse: 26, type: 'quote', note: '主の名によって来る者' },
+    { verse: 17, source: 'イザヤ書 56:7', sourceBook: 'isaiah', sourceChapter: 56, sourceVerse: 7, type: 'quote', note: '祈りの家' },
+  ],
+  12: [
+    { verse: '10-11', source: '詩篇 118:22-23', sourceBook: 'psalms', sourceChapter: 118, sourceVerse: '22-23', type: 'quote', note: '隅の親石' },
+    { verse: 26, source: '出エジプト記 3:6', sourceBook: 'exodus', sourceChapter: 3, sourceVerse: 6, type: 'quote', note: 'アブラハムの神' },
+    { verse: '29-30', source: '申命記 6:4-5', sourceBook: 'deuteronomy', sourceChapter: 6, sourceVerse: '4-5', type: 'quote', note: '聞け、イスラエルよ' },
+    { verse: 31, source: 'レビ記 19:18', sourceBook: 'leviticus', sourceChapter: 19, sourceVerse: 18, type: 'quote', note: '隣人を愛せよ' },
+    { verse: 36, source: '詩篇 110:1', sourceBook: 'psalms', sourceChapter: 110, sourceVerse: 1, type: 'quote', note: '主の右に座せ' },
+  ],
+  13: [
+    { verse: 14, source: 'ダニエル書 9:27', sourceBook: 'daniel', sourceChapter: 9, sourceVerse: 27, type: 'reference', note: '荒らす憎むべきもの' },
+    { verse: 26, source: 'ダニエル書 7:13', sourceBook: 'daniel', sourceChapter: 7, sourceVerse: 13, type: 'quote', note: '人の子が来る' },
+  ],
+  14: [
+    { verse: 27, source: 'ゼカリヤ書 13:7', sourceBook: 'zechariah', sourceChapter: 13, sourceVerse: 7, type: 'quote', note: '羊飼いを打て' },
+    { verse: 62, source: 'ダニエル書 7:13', sourceBook: 'daniel', sourceChapter: 7, sourceVerse: 13, type: 'allusion', note: '人の子' },
+  ],
+  15: [
+    { verse: 24, source: '詩篇 22:18', sourceBook: 'psalms', sourceChapter: 22, sourceVerse: 18, type: 'quote', note: '衣を分ける' },
+    { verse: 34, source: '詩篇 22:1', sourceBook: 'psalms', sourceChapter: 22, sourceVerse: 1, type: 'quote', note: 'エロイ、エロイ' },
+  ],
+};
+
+// ルカによる福音書
+const luke: ChapterReferences = {
+  1: [
+    { verse: '46-55', source: 'サムエル記上 2:1-10', sourceBook: '1samuel', sourceChapter: 2, sourceVerse: '1-10', type: 'allusion', note: 'マリアの賛歌（ハンナの祈りに類似）' },
+  ],
+  2: [
+    { verse: 23, source: '出エジプト記 13:2', sourceBook: 'exodus', sourceChapter: 13, sourceVerse: 2, type: 'quote', note: '初子は聖別される' },
+    { verse: 24, source: 'レビ記 12:8', sourceBook: 'leviticus', sourceChapter: 12, sourceVerse: 8, type: 'reference', note: '山鳩のささげ物' },
+  ],
+  3: [
+    { verse: '4-6', source: 'イザヤ書 40:3-5', sourceBook: 'isaiah', sourceChapter: 40, sourceVerse: '3-5', type: 'quote', note: '主の道を備えよ' },
+  ],
+  4: [
+    { verse: 4, source: '申命記 8:3', sourceBook: 'deuteronomy', sourceChapter: 8, sourceVerse: 3, type: 'quote', note: 'パンだけではない' },
+    { verse: 8, source: '申命記 6:13', sourceBook: 'deuteronomy', sourceChapter: 6, sourceVerse: 13, type: 'quote', note: '主を拝せよ' },
+    { verse: 12, source: '申命記 6:16', sourceBook: 'deuteronomy', sourceChapter: 6, sourceVerse: 16, type: 'quote', note: '主を試みるな' },
+    { verse: '18-19', source: 'イザヤ書 61:1-2', sourceBook: 'isaiah', sourceChapter: 61, sourceVerse: '1-2', type: 'quote', note: '貧しい者に福音を' },
+  ],
+  7: [
+    { verse: 27, source: 'マラキ書 3:1', sourceBook: 'malachi', sourceChapter: 3, sourceVerse: 1, type: 'quote', note: '使者を遣わす' },
+  ],
+  10: [
+    { verse: 27, source: '申命記 6:5', sourceBook: 'deuteronomy', sourceChapter: 6, sourceVerse: 5, type: 'quote', note: '心を尽くして神を愛せよ' },
+    { verse: 27, source: 'レビ記 19:18', sourceBook: 'leviticus', sourceChapter: 19, sourceVerse: 18, type: 'quote', note: '隣人を愛せよ' },
+  ],
+  13: [
+    { verse: 35, source: '詩篇 118:26', sourceBook: 'psalms', sourceChapter: 118, sourceVerse: 26, type: 'quote', note: '主の名によって来る者' },
+  ],
+  18: [
+    { verse: 20, source: '出エジプト記 20:12-16', sourceBook: 'exodus', sourceChapter: 20, sourceVerse: '12-16', type: 'quote', note: '十戒' },
+  ],
+  19: [
+    { verse: 38, source: '詩篇 118:26', sourceBook: 'psalms', sourceChapter: 118, sourceVerse: 26, type: 'quote', note: '王として来る者' },
+    { verse: 46, source: 'イザヤ書 56:7', sourceBook: 'isaiah', sourceChapter: 56, sourceVerse: 7, type: 'quote', note: '祈りの家' },
+  ],
+  20: [
+    { verse: 17, source: '詩篇 118:22', sourceBook: 'psalms', sourceChapter: 118, sourceVerse: 22, type: 'quote', note: '隅の親石' },
+    { verse: 37, source: '出エジプト記 3:6', sourceBook: 'exodus', sourceChapter: 3, sourceVerse: 6, type: 'quote', note: 'アブラハムの神' },
+    { verse: 42, source: '詩篇 110:1', sourceBook: 'psalms', sourceChapter: 110, sourceVerse: 1, type: 'quote', note: '主の右に座せ' },
+  ],
+  22: [
+    { verse: 37, source: 'イザヤ書 53:12', sourceBook: 'isaiah', sourceChapter: 53, sourceVerse: 12, type: 'quote', note: '罪人の一人に数えられた' },
+  ],
+  23: [
+    { verse: 46, source: '詩篇 31:5', sourceBook: 'psalms', sourceChapter: 31, sourceVerse: 5, type: 'quote', note: '霊を御手にゆだねます' },
+  ],
+};
+
+// ヨハネによる福音書
+const john: ChapterReferences = {
+  1: [
+    { verse: 23, source: 'イザヤ書 40:3', sourceBook: 'isaiah', sourceChapter: 40, sourceVerse: 3, type: 'quote', note: '荒野で叫ぶ声' },
+  ],
+  2: [
+    { verse: 17, source: '詩篇 69:9', sourceBook: 'psalms', sourceChapter: 69, sourceVerse: 9, type: 'quote', note: 'あなたの家を思う熱心' },
+  ],
+  6: [
+    { verse: 31, source: '詩篇 78:24', sourceBook: 'psalms', sourceChapter: 78, sourceVerse: 24, type: 'quote', note: '天からのパン' },
+    { verse: 45, source: 'イザヤ書 54:13', sourceBook: 'isaiah', sourceChapter: 54, sourceVerse: 13, type: 'quote', note: '神に教えられる' },
+  ],
+  10: [
+    { verse: 34, source: '詩篇 82:6', sourceBook: 'psalms', sourceChapter: 82, sourceVerse: 6, type: 'quote', note: 'あなたがたは神々である' },
+  ],
+  12: [
+    { verse: 13, source: '詩篇 118:26', sourceBook: 'psalms', sourceChapter: 118, sourceVerse: 26, type: 'quote', note: '主の名によって来る者' },
+    { verse: 15, source: 'ゼカリヤ書 9:9', sourceBook: 'zechariah', sourceChapter: 9, sourceVerse: 9, type: 'quote', note: 'ろばの子に乗って' },
+    { verse: 38, source: 'イザヤ書 53:1', sourceBook: 'isaiah', sourceChapter: 53, sourceVerse: 1, type: 'quote', note: '誰が信じたか' },
+    { verse: 40, source: 'イザヤ書 6:10', sourceBook: 'isaiah', sourceChapter: 6, sourceVerse: 10, type: 'quote', note: '目を見えなくした' },
+  ],
+  13: [
+    { verse: 18, source: '詩篇 41:9', sourceBook: 'psalms', sourceChapter: 41, sourceVerse: 9, type: 'quote', note: 'パンを食べた者が裏切る' },
+  ],
+  15: [
+    { verse: 25, source: '詩篇 35:19', sourceBook: 'psalms', sourceChapter: 35, sourceVerse: 19, type: 'quote', note: '理由なく憎んだ' },
+  ],
+  19: [
+    { verse: 24, source: '詩篇 22:18', sourceBook: 'psalms', sourceChapter: 22, sourceVerse: 18, type: 'quote', note: '衣をくじで分ける' },
+    { verse: 36, source: '詩篇 34:20', sourceBook: 'psalms', sourceChapter: 34, sourceVerse: 20, type: 'quote', note: '骨は一本も折られない' },
+    { verse: 37, source: 'ゼカリヤ書 12:10', sourceBook: 'zechariah', sourceChapter: 12, sourceVerse: 10, type: 'quote', note: '刺し貫いた者を見る' },
+  ],
+};
+
+// 使徒行伝
+const acts: ChapterReferences = {
+  1: [
+    { verse: 20, source: '詩篇 69:25', sourceBook: 'psalms', sourceChapter: 69, sourceVerse: 25, type: 'quote', note: 'その住まいは荒れ果てよ' },
+    { verse: 20, source: '詩篇 109:8', sourceBook: 'psalms', sourceChapter: 109, sourceVerse: 8, type: 'quote', note: 'その職は他の者に取らせよ' },
+  ],
+  2: [
+    { verse: '17-21', source: 'ヨエル書 2:28-32', sourceBook: 'joel', sourceChapter: 2, sourceVerse: '28-32', type: 'quote', note: '終わりの日に霊を注ぐ' },
+    { verse: 25, source: '詩篇 16:8-11', sourceBook: 'psalms', sourceChapter: 16, sourceVerse: '8-11', type: 'quote', note: 'わたしは絶えず主を目の前に置く' },
+    { verse: 34, source: '詩篇 110:1', sourceBook: 'psalms', sourceChapter: 110, sourceVerse: 1, type: 'quote', note: '主はわが主に言われた' },
+  ],
+  3: [
+    { verse: '22-23', source: '申命記 18:15-19', sourceBook: 'deuteronomy', sourceChapter: 18, sourceVerse: '15-19', type: 'quote', note: 'モーセのような預言者を起こす' },
+    { verse: 25, source: '創世記 22:18', sourceBook: 'genesis', sourceChapter: 22, sourceVerse: 18, type: 'quote', note: '地のすべての民族が祝福される' },
+  ],
+  4: [
+    { verse: 11, source: '詩篇 118:22', sourceBook: 'psalms', sourceChapter: 118, sourceVerse: 22, type: 'quote', note: '隅の親石となった' },
+    { verse: '25-26', source: '詩篇 2:1-2', sourceBook: 'psalms', sourceChapter: 2, sourceVerse: '1-2', type: 'quote', note: '国々は何故騒ぎ立つのか' },
+  ],
+  7: [
+    { verse: '3', source: '創世記 12:1', sourceBook: 'genesis', sourceChapter: 12, sourceVerse: 1, type: 'quote', note: 'あなたの土地を離れよ' },
+    { verse: '6-7', source: '創世記 15:13-14', sourceBook: 'genesis', sourceChapter: 15, sourceVerse: '13-14', type: 'quote', note: '400年間苦しめられる' },
+    { verse: 27, source: '出エジプト記 2:14', sourceBook: 'exodus', sourceChapter: 2, sourceVerse: 14, type: 'quote', note: '誰がお前を支配者にしたか' },
+    { verse: 33, source: '出エジプト記 3:5', sourceBook: 'exodus', sourceChapter: 3, sourceVerse: 5, type: 'quote', note: '履物を脱げ' },
+    { verse: 37, source: '申命記 18:15', sourceBook: 'deuteronomy', sourceChapter: 18, sourceVerse: 15, type: 'quote', note: 'わたしのような預言者を起こす' },
+    { verse: '42-43', source: 'アモス書 5:25-27', sourceBook: 'amos', sourceChapter: 5, sourceVerse: '25-27', type: 'quote', note: '40年間荒野でいけにえを捧げたか' },
+    { verse: '49-50', source: 'イザヤ書 66:1-2', sourceBook: 'isaiah', sourceChapter: 66, sourceVerse: '1-2', type: 'quote', note: '天はわたしの王座' },
+  ],
+  8: [
+    { verse: '32-33', source: 'イザヤ書 53:7-8', sourceBook: 'isaiah', sourceChapter: 53, sourceVerse: '7-8', type: 'quote', note: '屠り場に引かれる羊のように' },
+  ],
+  13: [
+    { verse: 22, source: '詩篇 89:20', sourceBook: 'psalms', sourceChapter: 89, sourceVerse: 20, type: 'allusion', note: 'わたしの僕ダビデを見いだした' },
+    { verse: 22, source: 'サムエル記上 13:14', sourceBook: '1samuel', sourceChapter: 13, sourceVerse: 14, type: 'quote', note: '心にかなう者' },
+    { verse: 33, source: '詩篇 2:7', sourceBook: 'psalms', sourceChapter: 2, sourceVerse: 7, type: 'quote', note: 'あなたはわたしの子' },
+    { verse: 34, source: 'イザヤ書 55:3', sourceBook: 'isaiah', sourceChapter: 55, sourceVerse: 3, type: 'quote', note: 'ダビデへの確かな恵み' },
+    { verse: 35, source: '詩篇 16:10', sourceBook: 'psalms', sourceChapter: 16, sourceVerse: 10, type: 'quote', note: '聖なる者に朽ち果てることを許さない' },
+    { verse: 41, source: 'ハバクク書 1:5', sourceBook: 'habakkuk', sourceChapter: 1, sourceVerse: 5, type: 'quote', note: '驚け、そして滅びよ' },
+    { verse: 47, source: 'イザヤ書 49:6', sourceBook: 'isaiah', sourceChapter: 49, sourceVerse: 6, type: 'quote', note: '異邦人の光となる' },
+  ],
+  15: [
+    { verse: '16-17', source: 'アモス書 9:11-12', sourceBook: 'amos', sourceChapter: 9, sourceVerse: '11-12', type: 'quote', note: 'ダビデの倒れた幕屋を建て直す' },
+  ],
+  28: [
+    { verse: '26-27', source: 'イザヤ書 6:9-10', sourceBook: 'isaiah', sourceChapter: 6, sourceVerse: '9-10', type: 'quote', note: '聞いても悟らない' },
+  ],
+};
+
+// ローマ人への手紙
+const romans: ChapterReferences = {
+  1: [
+    { verse: 17, source: 'ハバクク書 2:4', sourceBook: 'habakkuk', sourceChapter: 2, sourceVerse: 4, type: 'quote', note: '義人は信仰によって生きる' },
+  ],
+  3: [
+    { verse: '10-12', source: '詩篇 14:1-3', sourceBook: 'psalms', sourceChapter: 14, sourceVerse: '1-3', type: 'quote', note: '義人はいない、一人もいない' },
+    { verse: 13, source: '詩篇 5:9', sourceBook: 'psalms', sourceChapter: 5, sourceVerse: 9, type: 'quote', note: '彼らの喉は開いた墓' },
+    { verse: 13, source: '詩篇 140:3', sourceBook: 'psalms', sourceChapter: 140, sourceVerse: 3, type: 'quote', note: '蝮の毒が唇にある' },
+    { verse: 14, source: '詩篇 10:7', sourceBook: 'psalms', sourceChapter: 10, sourceVerse: 7, type: 'quote', note: '呪いと苦味で満ちている' },
+    { verse: '15-17', source: 'イザヤ書 59:7-8', sourceBook: 'isaiah', sourceChapter: 59, sourceVerse: '7-8', type: 'quote', note: '血を流すのに足が速い' },
+    { verse: 18, source: '詩篇 36:1', sourceBook: 'psalms', sourceChapter: 36, sourceVerse: 1, type: 'quote', note: '神への畏れがない' },
+  ],
+  4: [
+    { verse: 3, source: '創世記 15:6', sourceBook: 'genesis', sourceChapter: 15, sourceVerse: 6, type: 'quote', note: 'アブラハムは信じた' },
+    { verse: '7-8', source: '詩篇 32:1-2', sourceBook: 'psalms', sourceChapter: 32, sourceVerse: '1-2', type: 'quote', note: '罪を赦された人は幸い' },
+    { verse: 17, source: '創世記 17:5', sourceBook: 'genesis', sourceChapter: 17, sourceVerse: 5, type: 'quote', note: '多くの国民の父とした' },
+    { verse: 18, source: '創世記 15:5', sourceBook: 'genesis', sourceChapter: 15, sourceVerse: 5, type: 'quote', note: 'あなたの子孫はこのようになる' },
+  ],
+  8: [
+    { verse: 36, source: '詩篇 44:22', sourceBook: 'psalms', sourceChapter: 44, sourceVerse: 22, type: 'quote', note: '屠られる羊と見なされている' },
+  ],
+  9: [
+    { verse: 7, source: '創世記 21:12', sourceBook: 'genesis', sourceChapter: 21, sourceVerse: 12, type: 'quote', note: 'イサクによって子孫が起こる' },
+    { verse: 9, source: '創世記 18:10', sourceBook: 'genesis', sourceChapter: 18, sourceVerse: 10, type: 'quote', note: 'サラに男の子が生まれる' },
+    { verse: 12, source: '創世記 25:23', sourceBook: 'genesis', sourceChapter: 25, sourceVerse: 23, type: 'quote', note: '兄は弟に仕える' },
+    { verse: 13, source: 'マラキ書 1:2-3', sourceBook: 'malachi', sourceChapter: 1, sourceVerse: '2-3', type: 'quote', note: 'ヤコブを愛し、エサウを憎んだ' },
+    { verse: 15, source: '出エジプト記 33:19', sourceBook: 'exodus', sourceChapter: 33, sourceVerse: 19, type: 'quote', note: '憐れもうとする者を憐れむ' },
+    { verse: 17, source: '出エジプト記 9:16', sourceBook: 'exodus', sourceChapter: 9, sourceVerse: 16, type: 'quote', note: 'ファラオを立てた目的' },
+    { verse: 25, source: 'ホセア書 2:23', sourceBook: 'hosea', sourceChapter: 2, sourceVerse: 23, type: 'quote', note: 'わが民でない者をわが民と呼ぶ' },
+    { verse: 26, source: 'ホセア書 1:10', sourceBook: 'hosea', sourceChapter: 1, sourceVerse: 10, type: 'quote', note: '生ける神の子と呼ばれる' },
+    { verse: '27-28', source: 'イザヤ書 10:22-23', sourceBook: 'isaiah', sourceChapter: 10, sourceVerse: '22-23', type: 'quote', note: '残りの者だけが救われる' },
+    { verse: 29, source: 'イザヤ書 1:9', sourceBook: 'isaiah', sourceChapter: 1, sourceVerse: 9, type: 'quote', note: '子孫を残してくださらなければ' },
+    { verse: 33, source: 'イザヤ書 28:16', sourceBook: 'isaiah', sourceChapter: 28, sourceVerse: 16, type: 'quote', note: 'つまずきの石を置く' },
+  ],
+  10: [
+    { verse: 5, source: 'レビ記 18:5', sourceBook: 'leviticus', sourceChapter: 18, sourceVerse: 5, type: 'quote', note: '律法を行う者は生きる' },
+    { verse: '6-8', source: '申命記 30:12-14', sourceBook: 'deuteronomy', sourceChapter: 30, sourceVerse: '12-14', type: 'quote', note: '御言葉はあなたの近くにある' },
+    { verse: 11, source: 'イザヤ書 28:16', sourceBook: 'isaiah', sourceChapter: 28, sourceVerse: 16, type: 'quote', note: '信じる者は失望しない' },
+    { verse: 13, source: 'ヨエル書 2:32', sourceBook: 'joel', sourceChapter: 2, sourceVerse: 32, type: 'quote', note: '主の名を呼ぶ者は救われる' },
+    { verse: 15, source: 'イザヤ書 52:7', sourceBook: 'isaiah', sourceChapter: 52, sourceVerse: 7, type: 'quote', note: '良い知らせを伝える者の足は美しい' },
+    { verse: 16, source: 'イザヤ書 53:1', sourceBook: 'isaiah', sourceChapter: 53, sourceVerse: 1, type: 'quote', note: '誰が信じたか' },
+    { verse: 18, source: '詩篇 19:4', sourceBook: 'psalms', sourceChapter: 19, sourceVerse: 4, type: 'quote', note: '声は全地に響き渡った' },
+    { verse: 19, source: '申命記 32:21', sourceBook: 'deuteronomy', sourceChapter: 32, sourceVerse: 21, type: 'quote', note: '国でない者によって妬みを起こさせる' },
+    { verse: 20, source: 'イザヤ書 65:1', sourceBook: 'isaiah', sourceChapter: 65, sourceVerse: 1, type: 'quote', note: '求めない者に見いだされた' },
+    { verse: 21, source: 'イザヤ書 65:2', sourceBook: 'isaiah', sourceChapter: 65, sourceVerse: 2, type: 'quote', note: '不従順な民に手を差し伸べた' },
+  ],
+  11: [
+    { verse: '3-4', source: '列王記上 19:10,18', sourceBook: '1kings', sourceChapter: 19, sourceVerse: 10, type: 'quote', note: 'エリヤの訴えと神の答え' },
+    { verse: 8, source: 'イザヤ書 29:10', sourceBook: 'isaiah', sourceChapter: 29, sourceVerse: 10, type: 'quote', note: '眠りの霊を与えた' },
+    { verse: '9-10', source: '詩篇 69:22-23', sourceBook: 'psalms', sourceChapter: 69, sourceVerse: '22-23', type: 'quote', note: '食卓が罠となれ' },
+    { verse: 26, source: 'イザヤ書 59:20', sourceBook: 'isaiah', sourceChapter: 59, sourceVerse: 20, type: 'quote', note: '救い主がシオンから来る' },
+    { verse: 27, source: 'イザヤ書 27:9', sourceBook: 'isaiah', sourceChapter: 27, sourceVerse: 9, type: 'quote', note: '罪を取り除く契約' },
+    { verse: '34-35', source: 'イザヤ書 40:13', sourceBook: 'isaiah', sourceChapter: 40, sourceVerse: 13, type: 'quote', note: '主の心を知った者がいるか' },
+  ],
+  12: [
+    { verse: 19, source: '申命記 32:35', sourceBook: 'deuteronomy', sourceChapter: 32, sourceVerse: 35, type: 'quote', note: '復讐はわたしのもの' },
+    { verse: 20, source: '箴言 25:21-22', sourceBook: 'proverbs', sourceChapter: 25, sourceVerse: '21-22', type: 'quote', note: '敵が飢えていたら食べさせよ' },
+  ],
+  15: [
+    { verse: 3, source: '詩篇 69:9', sourceBook: 'psalms', sourceChapter: 69, sourceVerse: 9, type: 'quote', note: 'あなたを侮る者の侮りが降りかかった' },
+    { verse: 9, source: '詩篇 18:49', sourceBook: 'psalms', sourceChapter: 18, sourceVerse: 49, type: 'quote', note: '異邦人の中であなたをほめたたえる' },
+    { verse: 10, source: '申命記 32:43', sourceBook: 'deuteronomy', sourceChapter: 32, sourceVerse: 43, type: 'quote', note: '異邦人よ、主の民と共に喜べ' },
+    { verse: 11, source: '詩篇 117:1', sourceBook: 'psalms', sourceChapter: 117, sourceVerse: 1, type: 'quote', note: 'すべての異邦人よ、主をほめたたえよ' },
+    { verse: 12, source: 'イザヤ書 11:10', sourceBook: 'isaiah', sourceChapter: 11, sourceVerse: 10, type: 'quote', note: 'エッサイの根が立ち上がる' },
+    { verse: 21, source: 'イザヤ書 52:15', sourceBook: 'isaiah', sourceChapter: 52, sourceVerse: 15, type: 'quote', note: '聞いたことのない者が悟る' },
+  ],
+};
+
+// ヘブル人への手紙
+const hebrews: ChapterReferences = {
+  1: [
+    { verse: 5, source: '詩篇 2:7', sourceBook: 'psalms', sourceChapter: 2, sourceVerse: 7, type: 'quote', note: 'あなたはわたしの子' },
+    { verse: 5, source: 'サムエル記下 7:14', sourceBook: '2samuel', sourceChapter: 7, sourceVerse: 14, type: 'quote', note: 'わたしは彼の父となり' },
+    { verse: 6, source: '申命記 32:43', sourceBook: 'deuteronomy', sourceChapter: 32, sourceVerse: 43, type: 'quote', note: '神の御使いたちは拝せよ' },
+    { verse: 7, source: '詩篇 104:4', sourceBook: 'psalms', sourceChapter: 104, sourceVerse: 4, type: 'quote', note: '御使いたちを風とし' },
+    { verse: '8-9', source: '詩篇 45:6-7', sourceBook: 'psalms', sourceChapter: 45, sourceVerse: '6-7', type: 'quote', note: '神よ、あなたの王座は永遠' },
+    { verse: '10-12', source: '詩篇 102:25-27', sourceBook: 'psalms', sourceChapter: 102, sourceVerse: '25-27', type: 'quote', note: '主よ、あなたは初めに地の基を据えた' },
+    { verse: 13, source: '詩篇 110:1', sourceBook: 'psalms', sourceChapter: 110, sourceVerse: 1, type: 'quote', note: 'わたしの右に座せ' },
+  ],
+  2: [
+    { verse: '6-8', source: '詩篇 8:4-6', sourceBook: 'psalms', sourceChapter: 8, sourceVerse: '4-6', type: 'quote', note: '人とは何者か' },
+    { verse: 12, source: '詩篇 22:22', sourceBook: 'psalms', sourceChapter: 22, sourceVerse: 22, type: 'quote', note: '御名を兄弟たちに告げ知らせる' },
+    { verse: 13, source: 'イザヤ書 8:17', sourceBook: 'isaiah', sourceChapter: 8, sourceVerse: 17, type: 'quote', note: 'わたしは神に信頼する' },
+    { verse: 13, source: 'イザヤ書 8:18', sourceBook: 'isaiah', sourceChapter: 8, sourceVerse: 18, type: 'quote', note: '神が与えてくださった子どもたち' },
+  ],
+  3: [
+    { verse: '7-11', source: '詩篇 95:7-11', sourceBook: 'psalms', sourceChapter: 95, sourceVerse: '7-11', type: 'quote', note: '今日、御声を聞くなら心を頑なにするな' },
+    { verse: 15, source: '詩篇 95:7-8', sourceBook: 'psalms', sourceChapter: 95, sourceVerse: '7-8', type: 'quote', note: '今日、御声を聞くなら' },
+  ],
+  4: [
+    { verse: 3, source: '詩篇 95:11', sourceBook: 'psalms', sourceChapter: 95, sourceVerse: 11, type: 'quote', note: 'わたしの安息に入らせない' },
+    { verse: 4, source: '創世記 2:2', sourceBook: 'genesis', sourceChapter: 2, sourceVerse: 2, type: 'quote', note: '七日目にすべての業を休まれた' },
+    { verse: 7, source: '詩篇 95:7-8', sourceBook: 'psalms', sourceChapter: 95, sourceVerse: '7-8', type: 'quote', note: '今日、御声を聞くなら' },
+  ],
+  5: [
+    { verse: 5, source: '詩篇 2:7', sourceBook: 'psalms', sourceChapter: 2, sourceVerse: 7, type: 'quote', note: 'あなたはわたしの子' },
+    { verse: 6, source: '詩篇 110:4', sourceBook: 'psalms', sourceChapter: 110, sourceVerse: 4, type: 'quote', note: 'メルキゼデクの位に等しい祭司' },
+  ],
+  6: [
+    { verse: 14, source: '創世記 22:17', sourceBook: 'genesis', sourceChapter: 22, sourceVerse: 17, type: 'quote', note: '大いに祝福し、子孫を増やす' },
+  ],
+  7: [
+    { verse: '1-2', source: '創世記 14:17-20', sourceBook: 'genesis', sourceChapter: 14, sourceVerse: '17-20', type: 'reference', note: 'メルキゼデクがアブラハムを祝福' },
+    { verse: 17, source: '詩篇 110:4', sourceBook: 'psalms', sourceChapter: 110, sourceVerse: 4, type: 'quote', note: 'メルキゼデクの位に等しい祭司' },
+    { verse: 21, source: '詩篇 110:4', sourceBook: 'psalms', sourceChapter: 110, sourceVerse: 4, type: 'quote', note: '主は誓われた、思い直されない' },
+  ],
+  8: [
+    { verse: '8-12', source: 'エレミヤ書 31:31-34', sourceBook: 'jeremiah', sourceChapter: 31, sourceVerse: '31-34', type: 'quote', note: '新しい契約を結ぶ' },
+  ],
+  9: [
+    { verse: 20, source: '出エジプト記 24:8', sourceBook: 'exodus', sourceChapter: 24, sourceVerse: 8, type: 'quote', note: 'これは契約の血である' },
+  ],
+  10: [
+    { verse: '5-7', source: '詩篇 40:6-8', sourceBook: 'psalms', sourceChapter: 40, sourceVerse: '6-8', type: 'quote', note: 'いけにえを望まず、体を備えてくださった' },
+    { verse: '16-17', source: 'エレミヤ書 31:33-34', sourceBook: 'jeremiah', sourceChapter: 31, sourceVerse: '33-34', type: 'quote', note: '律法を心に書きつける' },
+    { verse: 30, source: '申命記 32:35', sourceBook: 'deuteronomy', sourceChapter: 32, sourceVerse: 35, type: 'quote', note: '復讐はわたしのもの' },
+    { verse: 30, source: '申命記 32:36', sourceBook: 'deuteronomy', sourceChapter: 32, sourceVerse: 36, type: 'quote', note: '主はその民を裁かれる' },
+    { verse: 37, source: 'ハバクク書 2:3-4', sourceBook: 'habakkuk', sourceChapter: 2, sourceVerse: '3-4', type: 'quote', note: '来るべき方は来られる' },
+    { verse: 38, source: 'ハバクク書 2:4', sourceBook: 'habakkuk', sourceChapter: 2, sourceVerse: 4, type: 'quote', note: '義人は信仰によって生きる' },
+  ],
+  11: [
+    { verse: 5, source: '創世記 5:24', sourceBook: 'genesis', sourceChapter: 5, sourceVerse: 24, type: 'reference', note: 'エノクは神と共に歩み、神が取られた' },
+    { verse: 18, source: '創世記 21:12', sourceBook: 'genesis', sourceChapter: 21, sourceVerse: 12, type: 'quote', note: 'イサクによって子孫が起こる' },
+    { verse: 21, source: '創世記 47:31', sourceBook: 'genesis', sourceChapter: 47, sourceVerse: 31, type: 'reference', note: 'ヤコブは杖の先に寄りかかって拝した' },
+  ],
+  12: [
+    { verse: '5-6', source: '箴言 3:11-12', sourceBook: 'proverbs', sourceChapter: 3, sourceVerse: '11-12', type: 'quote', note: '主の懲らしめを軽んじるな' },
+    { verse: 21, source: '申命記 9:19', sourceBook: 'deuteronomy', sourceChapter: 9, sourceVerse: 19, type: 'quote', note: 'モーセは恐れおののいた' },
+    { verse: 26, source: 'ハガイ書 2:6', sourceBook: 'haggai', sourceChapter: 2, sourceVerse: 6, type: 'quote', note: 'もう一度、天と地を揺り動かす' },
+    { verse: 29, source: '申命記 4:24', sourceBook: 'deuteronomy', sourceChapter: 4, sourceVerse: 24, type: 'quote', note: '神は焼き尽くす火である' },
+  ],
+  13: [
+    { verse: 5, source: '申命記 31:6', sourceBook: 'deuteronomy', sourceChapter: 31, sourceVerse: 6, type: 'quote', note: '決してあなたを離れず、見捨てない' },
+    { verse: 6, source: '詩篇 118:6', sourceBook: 'psalms', sourceChapter: 118, sourceVerse: 6, type: 'quote', note: '主がわたしの味方、何を恐れよう' },
+  ],
+};
+
+// コリント人への第一の手紙
+const firstCorinthians: ChapterReferences = {
+  1: [
+    { verse: 19, source: 'イザヤ書 29:14', sourceBook: 'isaiah', sourceChapter: 29, sourceVerse: 14, type: 'quote', note: '知恵ある者の知恵を滅ぼす' },
+    { verse: 31, source: 'エレミヤ書 9:24', sourceBook: 'jeremiah', sourceChapter: 9, sourceVerse: 24, type: 'quote', note: '誇る者は主を誇れ' },
+  ],
+  2: [
+    { verse: 9, source: 'イザヤ書 64:4', sourceBook: 'isaiah', sourceChapter: 64, sourceVerse: 4, type: 'quote', note: '目が見たことのないもの' },
+    { verse: 16, source: 'イザヤ書 40:13', sourceBook: 'isaiah', sourceChapter: 40, sourceVerse: 13, type: 'quote', note: '誰が主の心を知ったか' },
+  ],
+  3: [
+    { verse: 19, source: 'ヨブ記 5:13', sourceBook: 'job', sourceChapter: 5, sourceVerse: 13, type: 'quote', note: '知者をその悪知恵によって捕らえる' },
+    { verse: 20, source: '詩篇 94:11', sourceBook: 'psalms', sourceChapter: 94, sourceVerse: 11, type: 'quote', note: '知者の論議はむなしい' },
+  ],
+  5: [
+    { verse: 13, source: '申命記 17:7', sourceBook: 'deuteronomy', sourceChapter: 17, sourceVerse: 7, type: 'quote', note: '悪人をあなたがたの中から除け' },
+  ],
+  6: [
+    { verse: 16, source: '創世記 2:24', sourceBook: 'genesis', sourceChapter: 2, sourceVerse: 24, type: 'quote', note: '二人は一体となる' },
+  ],
+  9: [
+    { verse: 9, source: '申命記 25:4', sourceBook: 'deuteronomy', sourceChapter: 25, sourceVerse: 4, type: 'quote', note: '脱穀する牛に口籠をかけるな' },
+  ],
+  10: [
+    { verse: 7, source: '出エジプト記 32:6', sourceBook: 'exodus', sourceChapter: 32, sourceVerse: 6, type: 'quote', note: '民は座って飲み食いし、立って踊った' },
+    { verse: 26, source: '詩篇 24:1', sourceBook: 'psalms', sourceChapter: 24, sourceVerse: 1, type: 'quote', note: '地とそこに満ちるものは主のもの' },
+  ],
+  14: [
+    { verse: 21, source: 'イザヤ書 28:11-12', sourceBook: 'isaiah', sourceChapter: 28, sourceVerse: '11-12', type: 'quote', note: '異なる舌で民に語る' },
+  ],
+  15: [
+    { verse: 25, source: '詩篇 110:1', sourceBook: 'psalms', sourceChapter: 110, sourceVerse: 1, type: 'quote', note: '敵を足の下に置く' },
+    { verse: 27, source: '詩篇 8:6', sourceBook: 'psalms', sourceChapter: 8, sourceVerse: 6, type: 'quote', note: 'すべてを足の下に従わせた' },
+    { verse: 32, source: 'イザヤ書 22:13', sourceBook: 'isaiah', sourceChapter: 22, sourceVerse: 13, type: 'quote', note: '食べ飲みしよう、明日は死ぬのだから' },
+    { verse: 45, source: '創世記 2:7', sourceBook: 'genesis', sourceChapter: 2, sourceVerse: 7, type: 'quote', note: '最初の人アダムは生きた魂となった' },
+    { verse: 54, source: 'イザヤ書 25:8', sourceBook: 'isaiah', sourceChapter: 25, sourceVerse: 8, type: 'quote', note: '死は勝利に飲み込まれた' },
+    { verse: 55, source: 'ホセア書 13:14', sourceBook: 'hosea', sourceChapter: 13, sourceVerse: 14, type: 'quote', note: '死よ、お前の勝利はどこにあるのか' },
+  ],
+};
+
+// コリント人への第二の手紙
+const secondCorinthians: ChapterReferences = {
+  4: [
+    { verse: 13, source: '詩篇 116:10', sourceBook: 'psalms', sourceChapter: 116, sourceVerse: 10, type: 'quote', note: '信じた、だから語った' },
+  ],
+  6: [
+    { verse: 2, source: 'イザヤ書 49:8', sourceBook: 'isaiah', sourceChapter: 49, sourceVerse: 8, type: 'quote', note: '恵みの時に応え、救いの日に助けた' },
+    { verse: 16, source: 'レビ記 26:12', sourceBook: 'leviticus', sourceChapter: 26, sourceVerse: 12, type: 'quote', note: '彼らの中に住み、歩む' },
+    { verse: 17, source: 'イザヤ書 52:11', sourceBook: 'isaiah', sourceChapter: 52, sourceVerse: 11, type: 'quote', note: '彼らから出て行き、離れよ' },
+    { verse: 18, source: 'サムエル記下 7:14', sourceBook: '2samuel', sourceChapter: 7, sourceVerse: 14, type: 'quote', note: 'わたしはあなたがたの父となる' },
+  ],
+  8: [
+    { verse: 15, source: '出エジプト記 16:18', sourceBook: 'exodus', sourceChapter: 16, sourceVerse: 18, type: 'quote', note: '多く集めた者も余ることなく' },
+  ],
+  9: [
+    { verse: 9, source: '詩篇 112:9', sourceBook: 'psalms', sourceChapter: 112, sourceVerse: 9, type: 'quote', note: '惜しみなく分け与え、貧しい者に施す' },
+  ],
+  10: [
+    { verse: 17, source: 'エレミヤ書 9:24', sourceBook: 'jeremiah', sourceChapter: 9, sourceVerse: 24, type: 'quote', note: '誇る者は主を誇れ' },
+  ],
+  13: [
+    { verse: 1, source: '申命記 19:15', sourceBook: 'deuteronomy', sourceChapter: 19, sourceVerse: 15, type: 'quote', note: '二人または三人の証人の証言によって' },
+  ],
+};
+
+// ガラテヤ人への手紙
+const galatians: ChapterReferences = {
+  3: [
+    { verse: 6, source: '創世記 15:6', sourceBook: 'genesis', sourceChapter: 15, sourceVerse: 6, type: 'quote', note: 'アブラハムは神を信じた' },
+    { verse: 8, source: '創世記 12:3', sourceBook: 'genesis', sourceChapter: 12, sourceVerse: 3, type: 'quote', note: 'すべての民族があなたによって祝福される' },
+    { verse: 10, source: '申命記 27:26', sourceBook: 'deuteronomy', sourceChapter: 27, sourceVerse: 26, type: 'quote', note: '律法に従わない者は呪われる' },
+    { verse: 11, source: 'ハバクク書 2:4', sourceBook: 'habakkuk', sourceChapter: 2, sourceVerse: 4, type: 'quote', note: '義人は信仰によって生きる' },
+    { verse: 12, source: 'レビ記 18:5', sourceBook: 'leviticus', sourceChapter: 18, sourceVerse: 5, type: 'quote', note: '律法を行う者はそれによって生きる' },
+    { verse: 13, source: '申命記 21:23', sourceBook: 'deuteronomy', sourceChapter: 21, sourceVerse: 23, type: 'quote', note: '木にかけられた者は呪われる' },
+    { verse: 16, source: '創世記 12:7', sourceBook: 'genesis', sourceChapter: 12, sourceVerse: 7, type: 'quote', note: 'あなたの子孫に与える' },
+  ],
+  4: [
+    { verse: 27, source: 'イザヤ書 54:1', sourceBook: 'isaiah', sourceChapter: 54, sourceVerse: 1, type: 'quote', note: '喜べ、子を産まない不妊の女よ' },
+    { verse: 30, source: '創世記 21:10', sourceBook: 'genesis', sourceChapter: 21, sourceVerse: 10, type: 'quote', note: '女奴隷とその子を追い出せ' },
+  ],
+  5: [
+    { verse: 14, source: 'レビ記 19:18', sourceBook: 'leviticus', sourceChapter: 19, sourceVerse: 18, type: 'quote', note: '隣人を自分のように愛せよ' },
+  ],
+};
+
+// エペソ人への手紙
+const ephesians: ChapterReferences = {
+  1: [
+    { verse: 22, source: '詩篇 8:6', sourceBook: 'psalms', sourceChapter: 8, sourceVerse: 6, type: 'quote', note: 'すべてのものを足の下に従わせた' },
+  ],
+  4: [
+    { verse: 8, source: '詩篇 68:18', sourceBook: 'psalms', sourceChapter: 68, sourceVerse: 18, type: 'quote', note: '高い所に上り、捕虜を連れ、人々に贈り物を与えた' },
+    { verse: 25, source: 'ゼカリヤ書 8:16', sourceBook: 'zechariah', sourceChapter: 8, sourceVerse: 16, type: 'quote', note: '互いに真実を語れ' },
+    { verse: 26, source: '詩篇 4:4', sourceBook: 'psalms', sourceChapter: 4, sourceVerse: 4, type: 'quote', note: '怒っても罪を犯すな' },
+  ],
+  5: [
+    { verse: 2, source: '詩篇 40:6', sourceBook: 'psalms', sourceChapter: 40, sourceVerse: 6, type: 'allusion', note: 'ささげ物といけにえ' },
+    { verse: 14, source: 'イザヤ書 26:19', sourceBook: 'isaiah', sourceChapter: 26, sourceVerse: 19, type: 'allusion', note: '眠っている者よ、起きよ' },
+    { verse: 14, source: 'イザヤ書 60:1', sourceBook: 'isaiah', sourceChapter: 60, sourceVerse: 1, type: 'allusion', note: '起きよ、光を放て' },
+    { verse: 31, source: '創世記 2:24', sourceBook: 'genesis', sourceChapter: 2, sourceVerse: 24, type: 'quote', note: '人は父母を離れ、妻と結ばれ、一体となる' },
+  ],
+  6: [
+    { verse: '2-3', source: '出エジプト記 20:12', sourceBook: 'exodus', sourceChapter: 20, sourceVerse: 12, type: 'quote', note: '父と母を敬え—約束を伴う最初の戒め' },
+    { verse: 14, source: 'イザヤ書 11:5', sourceBook: 'isaiah', sourceChapter: 11, sourceVerse: 5, type: 'allusion', note: '真理の帯—メシアの義' },
+    { verse: 14, source: 'イザヤ書 59:17', sourceBook: 'isaiah', sourceChapter: 59, sourceVerse: 17, type: 'quote', note: '正義の胸当て' },
+    { verse: 15, source: 'イザヤ書 52:7', sourceBook: 'isaiah', sourceChapter: 52, sourceVerse: 7, type: 'allusion', note: '平和の福音を宣べ伝える備え' },
+    { verse: 17, source: 'イザヤ書 59:17', sourceBook: 'isaiah', sourceChapter: 59, sourceVerse: 17, type: 'quote', note: '救いのかぶと' },
+  ],
+};
+
+// ペテロの第一の手紙
+const firstPeter: ChapterReferences = {
+  1: [
+    { verse: 16, source: 'レビ記 11:44-45', sourceBook: 'leviticus', sourceChapter: 11, sourceVerse: '44-45', type: 'quote', note: '聖なる者となれ、わたしは聖であるから' },
+    { verse: '24-25', source: 'イザヤ書 40:6-8', sourceBook: 'isaiah', sourceChapter: 40, sourceVerse: '6-8', type: 'quote', note: '草は枯れ、花はしぼむ、しかし主の言葉は永遠' },
+  ],
+  2: [
+    { verse: 3, source: '詩篇 34:8', sourceBook: 'psalms', sourceChapter: 34, sourceVerse: 8, type: 'allusion', note: '主が恵み深いことを味わった' },
+    { verse: 6, source: 'イザヤ書 28:16', sourceBook: 'isaiah', sourceChapter: 28, sourceVerse: 16, type: 'quote', note: 'シオンに選ばれた尊い隅の親石を置く' },
+    { verse: 7, source: '詩篇 118:22', sourceBook: 'psalms', sourceChapter: 118, sourceVerse: 22, type: 'quote', note: '家を建てる者が捨てた石が隅の親石となった' },
+    { verse: 8, source: 'イザヤ書 8:14', sourceBook: 'isaiah', sourceChapter: 8, sourceVerse: 14, type: 'quote', note: 'つまずきの石、妨げの岩' },
+    { verse: 9, source: '出エジプト記 19:6', sourceBook: 'exodus', sourceChapter: 19, sourceVerse: 6, type: 'quote', note: '王である祭司、聖なる国民' },
+    { verse: 9, source: 'イザヤ書 43:20-21', sourceBook: 'isaiah', sourceChapter: 43, sourceVerse: '20-21', type: 'quote', note: '選ばれた民、神の栄誉を語り告げる' },
+    { verse: 10, source: 'ホセア書 2:23', sourceBook: 'hosea', sourceChapter: 2, sourceVerse: 23, type: 'quote', note: '民でなかった者が今は神の民' },
+    { verse: 22, source: 'イザヤ書 53:9', sourceBook: 'isaiah', sourceChapter: 53, sourceVerse: 9, type: 'quote', note: '罪を犯さず、偽りもなかった' },
+    { verse: 24, source: 'イザヤ書 53:5', sourceBook: 'isaiah', sourceChapter: 53, sourceVerse: 5, type: 'quote', note: 'その傷によって癒された' },
+    { verse: 25, source: 'イザヤ書 53:6', sourceBook: 'isaiah', sourceChapter: 53, sourceVerse: 6, type: 'quote', note: '羊のようにさまよっていた' },
+  ],
+  3: [
+    { verse: '10-12', source: '詩篇 34:12-16', sourceBook: 'psalms', sourceChapter: 34, sourceVerse: '12-16', type: 'quote', note: 'いのちを愛し、良い日を見たい者は' },
+    { verse: '14-15', source: 'イザヤ書 8:12-13', sourceBook: 'isaiah', sourceChapter: 8, sourceVerse: '12-13', type: 'allusion', note: '彼らの恐れを恐れるな' },
+  ],
+  4: [
+    { verse: 18, source: '箴言 11:31', sourceBook: 'proverbs', sourceChapter: 11, sourceVerse: 31, type: 'quote', note: '義人でさえかろうじて救われるなら' },
+  ],
+  5: [
+    { verse: 5, source: '箴言 3:34', sourceBook: 'proverbs', sourceChapter: 3, sourceVerse: 34, type: 'quote', note: '神は高ぶる者に敵対し、へりくだる者に恵みを与える' },
+    { verse: 7, source: '詩篇 55:22', sourceBook: 'psalms', sourceChapter: 55, sourceVerse: 22, type: 'allusion', note: '思い煩いを主にゆだねよ' },
+  ],
+};
+
+// ヤコブの手紙
+const james: ChapterReferences = {
+  1: [
+    { verse: '10-11', source: 'イザヤ書 40:6-7', sourceBook: 'isaiah', sourceChapter: 40, sourceVerse: '6-7', type: 'allusion', note: '草の花のように過ぎ去る' },
+  ],
+  2: [
+    { verse: 8, source: 'レビ記 19:18', sourceBook: 'leviticus', sourceChapter: 19, sourceVerse: 18, type: 'quote', note: '隣人を自分のように愛せよ' },
+    { verse: 11, source: '出エジプト記 20:13-14', sourceBook: 'exodus', sourceChapter: 20, sourceVerse: '13-14', type: 'quote', note: '姦淫するな、殺すな' },
+    { verse: 23, source: '創世記 15:6', sourceBook: 'genesis', sourceChapter: 15, sourceVerse: 6, type: 'quote', note: 'アブラハムは神を信じた、義と認められた' },
+    { verse: 25, source: 'ヨシュア記 2:1-21', sourceBook: 'joshua', sourceChapter: 2, sourceVerse: '1-21', type: 'reference', note: 'ラハブが使者をかくまった' },
+  ],
+  4: [
+    { verse: 6, source: '箴言 3:34', sourceBook: 'proverbs', sourceChapter: 3, sourceVerse: 34, type: 'quote', note: '神は高ぶる者に敵対し、へりくだる者に恵みを与える' },
+  ],
+  5: [
+    { verse: 4, source: '申命記 24:14-15', sourceBook: 'deuteronomy', sourceChapter: 24, sourceVerse: '14-15', type: 'allusion', note: '日雇いの賃金を留め置くな' },
+    { verse: 11, source: 'ヨブ記 1:21-22', sourceBook: 'job', sourceChapter: 1, sourceVerse: '21-22', type: 'reference', note: 'ヨブの忍耐' },
+    { verse: 11, source: 'ヨブ記 42:10-17', sourceBook: 'job', sourceChapter: 42, sourceVerse: '10-17', type: 'reference', note: '主がヨブに与えた結末' },
+    { verse: '17-18', source: '列王記上 17:1', sourceBook: '1kings', sourceChapter: 17, sourceVerse: 1, type: 'reference', note: 'エリヤが雨を止めた' },
+    { verse: '17-18', source: '列王記上 18:42-45', sourceBook: '1kings', sourceChapter: 18, sourceVerse: '42-45', type: 'reference', note: 'エリヤの祈りで雨が降った' },
+  ],
+};
+
+// ペテロの第二の手紙
+const secondPeter: ChapterReferences = {
+  2: [
+    { verse: 4, source: '創世記 6:1-4', sourceBook: 'genesis', sourceChapter: 6, sourceVerse: '1-4', type: 'allusion', note: '罪を犯した御使いたち—ノアの時代の堕天使' },
+    { verse: 5, source: '創世記 6:5-8:22', sourceBook: 'genesis', sourceChapter: 6, sourceVerse: 5, type: 'reference', note: 'ノアと洪水—義の宣教者として8人が救われた' },
+    { verse: '6-8', source: '創世記 19:1-29', sourceBook: 'genesis', sourceChapter: 19, sourceVerse: '1-29', type: 'reference', note: 'ソドムとゴモラの滅び、義人ロトの救出' },
+    { verse: '15-16', source: '民数記 22-24章', sourceBook: 'numbers', sourceChapter: 22, sourceVerse: 1, type: 'reference', note: 'バラムの道—報酬のために不義を愛した預言者' },
+    { verse: 22, source: '箴言 26:11', sourceBook: 'proverbs', sourceChapter: 26, sourceVerse: 11, type: 'quote', note: '犬は自分の吐いた物に戻る' },
+  ],
+  3: [
+    { verse: '5-6', source: '創世記 1:6-10', sourceBook: 'genesis', sourceChapter: 1, sourceVerse: '6-10', type: 'reference', note: '天と地の創造—水による世界の形成' },
+    { verse: '5-6', source: '創世記 7:11-24', sourceBook: 'genesis', sourceChapter: 7, sourceVerse: '11-24', type: 'reference', note: '洪水による世界の滅び' },
+    { verse: 8, source: '詩篇 90:4', sourceBook: 'psalms', sourceChapter: 90, sourceVerse: 4, type: 'quote', note: '主の前では一日は千年のよう' },
+    { verse: 13, source: 'イザヤ書 65:17', sourceBook: 'isaiah', sourceChapter: 65, sourceVerse: 17, type: 'quote', note: '新しい天と新しい地を待ち望む' },
+    { verse: 13, source: 'イザヤ書 66:22', sourceBook: 'isaiah', sourceChapter: 66, sourceVerse: 22, type: 'quote', note: '新しい天と新しい地' },
+  ],
+};
+
+// ユダの手紙（旧約と外典への言及が特徴的）
+const jude: ChapterReferences = {
+  1: [
+    { verse: 5, source: '民数記 14:29-35', sourceBook: 'numbers', sourceChapter: 14, sourceVerse: '29-35', type: 'reference', note: 'エジプトから救い出された民の不信仰と滅び' },
+    { verse: 6, source: '創世記 6:1-4', sourceBook: 'genesis', sourceChapter: 6, sourceVerse: '1-4', type: 'allusion', note: '自分の領域を守らなかった御使いたち' },
+    { verse: 7, source: '創世記 19:1-25', sourceBook: 'genesis', sourceChapter: 19, sourceVerse: '1-25', type: 'reference', note: 'ソドムとゴモラ—永遠の火の刑罰の実例' },
+    { verse: 9, source: '申命記 34:5-6', sourceBook: 'deuteronomy', sourceChapter: 34, sourceVerse: '5-6', type: 'allusion', note: 'モーセの死と埋葬—御使いミカエルとの関連' },
+    { verse: 11, source: '創世記 4:3-8', sourceBook: 'genesis', sourceChapter: 4, sourceVerse: '3-8', type: 'reference', note: 'カインの道—弟を殺した最初の殺人者' },
+    { verse: 11, source: '民数記 22:1-35', sourceBook: 'numbers', sourceChapter: 22, sourceVerse: '1-35', type: 'reference', note: 'バラムの迷い—報酬のための偽預言' },
+    { verse: 11, source: '民数記 16:1-35', sourceBook: 'numbers', sourceChapter: 16, sourceVerse: '1-35', type: 'reference', note: 'コラの反逆—祭司職への反抗と裁き' },
+    { verse: '14-15', source: '創世記 5:18-24', sourceBook: 'genesis', sourceChapter: 5, sourceVerse: '18-24', type: 'reference', note: 'エノクの預言—アダムから七代目の預言者' },
+  ],
+};
+
+// コロサイ人への手紙
+const colossians: ChapterReferences = {
+  1: [
+    { verse: 15, source: '創世記 1:26-27', sourceBook: 'genesis', sourceChapter: 1, sourceVerse: '26-27', type: 'allusion', note: '見えない神のかたち—神の像として創造されたアダムとの対比' },
+  ],
+  2: [
+    { verse: 3, source: '箴言 2:3-5', sourceBook: 'proverbs', sourceChapter: 2, sourceVerse: '3-5', type: 'allusion', note: '知恵と知識の宝—箴言の知恵探求' },
+    { verse: 22, source: 'イザヤ書 29:13', sourceBook: 'isaiah', sourceChapter: 29, sourceVerse: 13, type: 'allusion', note: '人間の戒めと教え' },
+  ],
+  3: [
+    { verse: 10, source: '創世記 1:26-27', sourceBook: 'genesis', sourceChapter: 1, sourceVerse: '26-27', type: 'allusion', note: '造り主のかたちに従って新しくされる' },
+  ],
+};
+
+// テモテへの第二の手紙
+const secondTimothy: ChapterReferences = {
+  2: [
+    { verse: 19, source: '民数記 16:5', sourceBook: 'numbers', sourceChapter: 16, sourceVerse: 5, type: 'quote', note: '主はご自分に属する者を知っておられる—コラの反逆への答え' },
+  ],
+  3: [
+    { verse: 8, source: '出エジプト記 7:11-12', sourceBook: 'exodus', sourceChapter: 7, sourceVerse: '11-12', type: 'reference', note: 'ヤンネとヤンブレ—モーセに逆らったエジプトの魔術師' },
+  ],
+  4: [
+    { verse: 14, source: '詩篇 62:12', sourceBook: 'psalms', sourceChapter: 62, sourceVerse: 12, type: 'allusion', note: '行いに応じて報いる' },
+    { verse: 17, source: 'ダニエル書 6:22', sourceBook: 'daniel', sourceChapter: 6, sourceVerse: 22, type: 'allusion', note: '獅子の口から救い出された—ダニエルの経験' },
+  ],
+};
+
+// ヨハネの黙示録（旧約の暗示が非常に多い書物）
+const revelation: ChapterReferences = {
+  1: [
+    { verse: 7, source: 'ダニエル書 7:13', sourceBook: 'daniel', sourceChapter: 7, sourceVerse: 13, type: 'allusion', note: '雲に乗って来る—ダニエルの「人の子」の幻' },
+    { verse: 7, source: 'ゼカリヤ書 12:10', sourceBook: 'zechariah', sourceChapter: 12, sourceVerse: 10, type: 'allusion', note: '刺し貫いた者を見て嘆く—メシア受難の預言' },
+    { verse: 8, source: 'イザヤ書 44:6', sourceBook: 'isaiah', sourceChapter: 44, sourceVerse: 6, type: 'allusion', note: '「アルファとオメガ」—イザヤの「最初であり最後」' },
+    { verse: '12-16', source: 'ダニエル書 7:9', sourceBook: 'daniel', sourceChapter: 7, sourceVerse: 9, type: 'allusion', note: '白い髪、火の目—ダニエルの「日の老いたる者」の描写と融合' },
+    { verse: '12-16', source: 'ダニエル書 10:5-6', sourceBook: 'daniel', sourceChapter: 10, sourceVerse: '5-6', type: 'allusion', note: '金の帯、輝く姿—ダニエルに現れた天使の姿' },
+  ],
+  2: [
+    { verse: 7, source: '創世記 2:9', sourceBook: 'genesis', sourceChapter: 2, sourceVerse: 9, type: 'allusion', note: '命の木—エデンの園の命の木の回復' },
+    { verse: 17, source: '出エジプト記 16:33-34', sourceBook: 'exodus', sourceChapter: 16, sourceVerse: '33-34', type: 'allusion', note: '隠されたマナ—荒野で与えられた天からのパン' },
+    { verse: 27, source: '詩篇 2:9', sourceBook: 'psalms', sourceChapter: 2, sourceVerse: 9, type: 'allusion', note: '鉄の杖で治める—メシア詩篇の王権' },
+  ],
+  4: [
+    { verse: '2-3', source: 'イザヤ書 6:1', sourceBook: 'isaiah', sourceChapter: 6, sourceVerse: 1, type: 'allusion', note: '天の御座—イザヤの神殿幻に類似' },
+    { verse: '6-8', source: 'エゼキエル書 1:5-10', sourceBook: 'ezekiel', sourceChapter: 1, sourceVerse: '5-10', type: 'allusion', note: '四つの生き物—エゼキエルのケルビムの幻' },
+    { verse: 8, source: 'イザヤ書 6:3', sourceBook: 'isaiah', sourceChapter: 6, sourceVerse: 3, type: 'allusion', note: '「聖なるかな」の賛美—イザヤのセラフィムの賛美' },
+  ],
+  5: [
+    { verse: 5, source: '創世記 49:9', sourceBook: 'genesis', sourceChapter: 49, sourceVerse: 9, type: 'allusion', note: 'ユダの獅子—ヤコブの祝福におけるユダへの預言' },
+    { verse: 5, source: 'イザヤ書 11:1', sourceBook: 'isaiah', sourceChapter: 11, sourceVerse: 1, type: 'allusion', note: 'ダビデの根—エッサイの根から出るメシア' },
+    { verse: 6, source: 'イザヤ書 53:7', sourceBook: 'isaiah', sourceChapter: 53, sourceVerse: 7, type: 'allusion', note: '屠られた小羊—苦難の僕の象徴' },
+  ],
+  6: [
+    { verse: '1-8', source: 'ゼカリヤ書 1:8-11', sourceBook: 'zechariah', sourceChapter: 1, sourceVerse: '8-11', type: 'allusion', note: '四頭の馬—ゼカリヤの色の異なる馬の幻' },
+    { verse: '1-8', source: 'ゼカリヤ書 6:1-8', sourceBook: 'zechariah', sourceChapter: 6, sourceVerse: '1-8', type: 'allusion', note: '四つの戦車—神の裁きを執行する使者' },
+    { verse: '12-14', source: 'イザヤ書 34:4', sourceBook: 'isaiah', sourceChapter: 34, sourceVerse: 4, type: 'allusion', note: '天が巻物のように—終末的な天体の異変' },
+    { verse: '12-14', source: 'ヨエル書 2:31', sourceBook: 'joel', sourceChapter: 2, sourceVerse: 31, type: 'allusion', note: '太陽が暗くなり月が血に—主の日の前兆' },
+  ],
+  7: [
+    { verse: '1-3', source: 'エゼキエル書 9:4-6', sourceBook: 'ezekiel', sourceChapter: 9, sourceVerse: '4-6', type: 'allusion', note: '額に印—エゼキエルの残れる者への印' },
+  ],
+  11: [
+    { verse: '3-6', source: 'ゼカリヤ書 4:2-14', sourceBook: 'zechariah', sourceChapter: 4, sourceVerse: '2-14', type: 'allusion', note: '二人の証人・二本のオリーブの木—ゼカリヤの燭台と油注がれた者' },
+    { verse: 15, source: 'ダニエル書 7:14', sourceBook: 'daniel', sourceChapter: 7, sourceVerse: 14, type: 'allusion', note: '世の国は主のものとなった—人の子への支配権授与' },
+  ],
+  12: [
+    { verse: '1-2', source: '創世記 37:9', sourceBook: 'genesis', sourceChapter: 37, sourceVerse: 9, type: 'allusion', note: '太陽・月・星—ヨセフの夢のイスラエルの象徴' },
+    { verse: '3-4', source: 'ダニエル書 7:7', sourceBook: 'daniel', sourceChapter: 7, sourceVerse: 7, type: 'allusion', note: '大きな赤い竜—ダニエルの第四の獣との関連' },
+    { verse: 9, source: '創世記 3:1', sourceBook: 'genesis', sourceChapter: 3, sourceVerse: 1, type: 'allusion', note: '古い蛇—エデンの園の誘惑者' },
+  ],
+  13: [
+    { verse: '1-2', source: 'ダニエル書 7:3-7', sourceBook: 'daniel', sourceChapter: 7, sourceVerse: '3-7', type: 'allusion', note: '海から上がる獣—ダニエルの四つの獣の特徴を合成' },
+    { verse: 5, source: 'ダニエル書 7:8', sourceBook: 'daniel', sourceChapter: 7, sourceVerse: 8, type: 'allusion', note: '大言壮語する口—小さな角の傲慢な言葉' },
+  ],
+  14: [
+    { verse: 14, source: 'ダニエル書 7:13', sourceBook: 'daniel', sourceChapter: 7, sourceVerse: 13, type: 'allusion', note: '人の子のような方—ダニエルのメシア幻' },
+    { verse: '19-20', source: 'ヨエル書 3:13', sourceBook: 'joel', sourceChapter: 3, sourceVerse: 13, type: 'allusion', note: '神の怒りの酒ぶね—ヨエルの終末の刈り入れ' },
+    { verse: '19-20', source: 'イザヤ書 63:3', sourceBook: 'isaiah', sourceChapter: 63, sourceVerse: 3, type: 'allusion', note: '酒ぶねを踏む—主の復讐の日の描写' },
+  ],
+  17: [
+    { verse: '1-6', source: 'エレミヤ書 51:7', sourceBook: 'jeremiah', sourceChapter: 51, sourceVerse: 7, type: 'allusion', note: '大淫婦バビロン—エレミヤのバビロン審判預言' },
+  ],
+  18: [
+    { verse: '2-3', source: 'イザヤ書 21:9', sourceBook: 'isaiah', sourceChapter: 21, sourceVerse: 9, type: 'allusion', note: '倒れた、倒れた、バビロン—イザヤのバビロン陥落預言' },
+    { verse: 4, source: 'エレミヤ書 51:45', sourceBook: 'jeremiah', sourceChapter: 51, sourceVerse: 45, type: 'allusion', note: 'バビロンから出よ—エレミヤの脱出命令' },
+  ],
+  19: [
+    { verse: '11-16', source: 'イザヤ書 63:1-6', sourceBook: 'isaiah', sourceChapter: 63, sourceVerse: '1-6', type: 'allusion', note: '血に染まった衣—エドムからの戦士の描写' },
+    { verse: 15, source: '詩篇 2:9', sourceBook: 'psalms', sourceChapter: 2, sourceVerse: 9, type: 'allusion', note: '鉄の杖で治める—メシア王の支配' },
+    { verse: '17-18', source: 'エゼキエル書 39:17-20', sourceBook: 'ezekiel', sourceChapter: 39, sourceVerse: '17-20', type: 'allusion', note: '鳥を招く神の宴会—ゴグの敗北後の情景' },
+  ],
+  20: [
+    { verse: '8-9', source: 'エゼキエル書 38:2-9', sourceBook: 'ezekiel', sourceChapter: 38, sourceVerse: '2-9', type: 'allusion', note: 'ゴグとマゴグ—エゼキエルの終末の戦い' },
+    { verse: '11-12', source: 'ダニエル書 7:9-10', sourceBook: 'daniel', sourceChapter: 7, sourceVerse: '9-10', type: 'allusion', note: '白い御座の裁き—ダニエルの審判の幻' },
+  ],
+  21: [
+    { verse: '1-2', source: 'イザヤ書 65:17', sourceBook: 'isaiah', sourceChapter: 65, sourceVerse: 17, type: 'allusion', note: '新しい天と地—イザヤの終末回復預言' },
+    { verse: 2, source: 'イザヤ書 61:10', sourceBook: 'isaiah', sourceChapter: 61, sourceVerse: 10, type: 'allusion', note: '花嫁のように飾った都—シオンの回復' },
+    { verse: 4, source: 'イザヤ書 25:8', sourceBook: 'isaiah', sourceChapter: 25, sourceVerse: 8, type: 'allusion', note: '涙をぬぐい取る—イザヤの救いの約束' },
+    { verse: '10-21', source: 'エゼキエル書 40-48章', sourceBook: 'ezekiel', sourceChapter: 40, sourceVerse: 1, type: 'allusion', note: '新しいエルサレムの描写—エゼキエルの神殿幻の成就' },
+  ],
+  22: [
+    { verse: '1-2', source: 'エゼキエル書 47:1-12', sourceBook: 'ezekiel', sourceChapter: 47, sourceVerse: '1-12', type: 'allusion', note: '命の水の川と木—エゼキエルの神殿から流れる川' },
+    { verse: 2, source: '創世記 2:9', sourceBook: 'genesis', sourceChapter: 2, sourceVerse: 9, type: 'allusion', note: '命の木—創世記の回復、円環的構造の完成' },
+    { verse: 3, source: 'ゼカリヤ書 14:11', sourceBook: 'zechariah', sourceChapter: 14, sourceVerse: 11, type: 'allusion', note: 'もはや呪いはない—ゼカリヤの終末預言' },
+    { verse: 16, source: 'イザヤ書 11:1', sourceBook: 'isaiah', sourceChapter: 11, sourceVerse: 1, type: 'allusion', note: 'ダビデの根また子孫—メシアの二重性' },
+    { verse: 16, source: '民数記 24:17', sourceBook: 'numbers', sourceChapter: 24, sourceVerse: 17, type: 'allusion', note: '明けの明星—バラムのメシア預言' },
+  ],
+};
+
+// 全データをエクスポート
+export const crossReferences: BookReferences = {
+  matthew,
+  mark,
+  luke,
+  john,
+  acts,
+  romans,
+  '1corinthians': firstCorinthians,
+  '2corinthians': secondCorinthians,
+  galatians,
+  ephesians,
+  colossians,
+  '2timothy': secondTimothy,
+  hebrews,
+  james,
+  '1peter': firstPeter,
+  '2peter': secondPeter,
+  jude,
+  revelation,
+};
+
+// 特定の書物・章の引用を取得する関数
+export function getCrossReferences(bookId: string, chapter: number): CrossReference[] {
+  const bookRefs = crossReferences[bookId];
+  if (!bookRefs) return [];
+  return bookRefs[chapter] || [];
+}
+
+// 新約聖書かどうかを判定
+export function isNewTestament(bookId: string): boolean {
+  const ntBooks = [
+    'matthew', 'mark', 'luke', 'john', 'acts',
+    'romans', '1corinthians', '2corinthians', 'galatians', 'ephesians',
+    'philippians', 'colossians', '1thessalonians', '2thessalonians',
+    '1timothy', '2timothy', 'titus', 'philemon', 'hebrews',
+    'james', '1peter', '2peter', '1john', '2john', '3john', 'jude', 'revelation'
+  ];
+  return ntBooks.includes(bookId);
+}

@@ -90,8 +90,8 @@ function GreekStudyContent() {
                 </svg>
               </Link>
               <div>
-                <h1 className="text-xl font-bold">ギリシャ語学習</h1>
-                <p className="text-blue-200 text-sm">新約聖書原語学習モード</p>
+                <h1 className="text-xl font-bold">原典ギリシャ語学習</h1>
+                <p className="text-blue-200 text-sm">新約聖書を原語で読む</p>
               </div>
             </div>
 

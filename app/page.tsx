@@ -53,19 +53,16 @@ function BibleApp() {
   // 地名モード用の状態
   const [selectedPlace, setSelectedPlace] = useState<Place | null>(null);
 
-  // URLパラメーターから初期値を設定（初回のみ）
-  const [initialized, setInitialized] = useState(false);
-
-  useEffect(() => {
-    if (initialized) return;
-
-    const book = searchParams.get('book');
-    const chapterNum = searchParams.get('chapter');
-    const verseNum = searchParams.get('verse');
-    const mode = searchParams.get('mode') as 'single' | 'parallel' | null;
-    const translationParam = searchParams.get('translation') as Translation | null;
-    const leftParam = searchParams.get('left') as Translation | null;
-    const rightParam = searchParams.get('right') as Translation | null;
+  // URLパラメーターから状態を同期する関数
+  const syncStateFromURL = (urlSearchParams?: URLSearchParams) => {
+    const params = urlSearchParams || new URLSearchParams(window.location.search);
+    const book = params.get('book');
+    const chapterNum = params.get('chapter');
+    const verseNum = params.get('verse');
+    const mode = params.get('mode') as 'single' | 'parallel' | null;
+    const translationParam = params.get('translation') as Translation | null;
+    const leftParam = params.get('left') as Translation | null;
+    const rightParam = params.get('right') as Translation | null;
 
     // 翻訳設定をURLから復元
     if (mode) {
@@ -92,19 +89,43 @@ function BibleApp() {
         setSelectedChapter(chapter);
         if (verseNum) {
           setSelectedVerse(parseInt(verseNum));
+        } else {
+          setSelectedVerse(null);
         }
-        setInitialized(true);
-        return;
+        return true;
       }
     }
+    return false;
+  };
 
-    // URLパラメーターがない場合は創世記1章を表示
-    const bible = getBibleData('kougo');
-    const genesis = bible.books[0];
-    setSelectedBook(genesis);
-    setSelectedChapter(genesis.chapters[0]);
+  // 初回ロード時にURLから状態を復元
+  const [initialized, setInitialized] = useState(false);
+
+  useEffect(() => {
+    if (initialized) return;
+
+    const synced = syncStateFromURL();
+    if (!synced) {
+      // URLパラメーターがない場合は創世記1章を表示
+      const bible = getBibleData('kougo');
+      const genesis = bible.books[0];
+      setSelectedBook(genesis);
+      setSelectedChapter(genesis.chapters[0]);
+    }
     setInitialized(true);
-  }, [searchParams, initialized, singleTranslation, leftTranslation]);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
+  // ブラウザの戻る/進むボタンに対応
+  useEffect(() => {
+    const handlePopState = () => {
+      syncStateFromURL();
+    };
+
+    window.addEventListener('popstate', handlePopState);
+    return () => window.removeEventListener('popstate', handlePopState);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [singleTranslation, leftTranslation]);
 
   // ページタイトルを更新
   useEffect(() => {
@@ -127,10 +148,10 @@ function BibleApp() {
     }
   }, [viewMode, selectedPlace]);
 
-  // 翻訳設定が変更されたらURLを更新
+  // 翻訳設定が変更されたらURLを更新（履歴は上書き）
   useEffect(() => {
     if (!initialized || !selectedBook || !selectedChapter) return;
-    updateURL(selectedBook.id, selectedChapter.chapter, selectedVerse);
+    updateURL(selectedBook.id, selectedChapter.chapter, selectedVerse, { replaceHistory: true });
   }, [displayMode, singleTranslation, leftTranslation, rightTranslation]);
 
   const handleSearch = (query: string) => {
@@ -284,6 +305,7 @@ function BibleApp() {
       single?: Translation;
       left?: Translation;
       right?: Translation;
+      replaceHistory?: boolean; // trueの場合は履歴を上書き（デフォルトは履歴追加）
     }
   ) => {
     const params = new URLSearchParams();
@@ -301,7 +323,14 @@ function BibleApp() {
       params.set('left', options?.left ?? leftTranslation);
       params.set('right', options?.right ?? rightTranslation);
     }
-    router.replace(`/?${params.toString()}`, { scroll: false });
+    const url = `/?${params.toString()}`;
+    // デフォルトでブラウザ履歴に追加（戻るボタンで戻れるように）
+    // replaceHistoryがtrueの場合のみ履歴を上書き
+    if (options?.replaceHistory) {
+      router.replace(url, { scroll: false });
+    } else {
+      router.push(url, { scroll: false });
+    }
   };
 
   const handleNavigateToBible = (bookId: string, chapterNum: number, verseNum: number) => {
@@ -371,13 +400,13 @@ function BibleApp() {
               </button>
             </div>
 
-            {/* 原語学習リンク */}
+            {/* 原典学習リンク */}
             <Link
               href="/greek"
               className="hidden sm:flex items-center gap-1.5 px-3 py-1.5 bg-blue-600 text-white rounded-lg text-sm font-medium hover:bg-blue-700 transition-colors"
             >
               <span className="text-base">🇬🇷</span>
-              <span>原語学習</span>
+              <span>原典学習</span>
             </Link>
 
             <div className="flex-1"></div>
@@ -477,6 +506,7 @@ function BibleApp() {
                   onPreviousChapter={handlePreviousChapter}
                   onNextChapter={handleNextChapter}
                   onVerseClick={handleVerseClick}
+                  onNavigateToReference={handleNavigateToBible}
                 />
               )}
             </div>
