@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import { getBook, getChapter } from '@/lib/bible-data';
 import { getCrossReferences, isNewTestament, type CrossReference } from '@/lib/cross-references';
+import { parseRubyText } from '@/lib/ruby-parser';
 import type { Book, Chapter, Translation } from '@/types/bible';
 
 export type FontSize = 'sm' | 'lg' | 'xl';
@@ -40,6 +41,14 @@ export function ChapterViewer({
 }: ChapterViewerProps) {
   // 旧約引用データを取得
   const references = isNewTestament(book.id) ? getCrossReferences(book.id, chapter.chapter) : [];
+
+  // テキストをレンダリング（文語訳の場合はルビを適用）
+  const renderText = (text: string, translation: Translation) => {
+    if (translation === 'bungo') {
+      return parseRubyText(text);
+    }
+    return text;
+  };
   // 翻訳名のマッピング
   const translationNames: Record<Translation, string> = {
     kougo: '口語訳',
@@ -231,8 +240,8 @@ export function ChapterViewer({
                     fontSize === 'lg' ? 'text-xl' :
                     'text-2xl'
                   }`}>
-                    <p>{verse.text}</p>
-                    {verse.ruby && (
+                    <p>{renderText(verse.text, singleTranslation)}</p>
+                    {verse.ruby && singleTranslation !== 'bungo' && (
                       <p className={`text-gray-500 mt-1 ${
                         fontSize === 'sm' ? 'text-xs' :
                         fontSize === 'lg' ? 'text-sm' :
@@ -289,8 +298,8 @@ export function ChapterViewer({
                           fontSize === 'lg' ? 'text-xl' :
                           'text-2xl'
                         }`}>
-                          <p>{leftVerse.text}</p>
-                          {leftVerse.ruby && (
+                          <p>{renderText(leftVerse.text, leftTranslation)}</p>
+                          {leftVerse.ruby && leftTranslation !== 'bungo' && (
                             <p className={`text-gray-500 mt-1 ${
                               fontSize === 'sm' ? 'text-xs' :
                               fontSize === 'lg' ? 'text-sm' :
@@ -316,8 +325,8 @@ export function ChapterViewer({
                           fontSize === 'lg' ? 'text-xl' :
                           'text-2xl'
                         }`}>
-                          <p>{rightVerse?.text}</p>
-                          {rightVerse?.ruby && (
+                          <p>{rightVerse && renderText(rightVerse.text, rightTranslation)}</p>
+                          {rightVerse?.ruby && rightTranslation !== 'bungo' && (
                             <p className={`text-gray-500 mt-1 ${
                               fontSize === 'sm' ? 'text-xs' :
                               fontSize === 'lg' ? 'text-sm' :
@@ -365,8 +374,8 @@ export function ChapterViewer({
                         fontSize === 'lg' ? 'text-xl' :
                         'text-2xl'
                       }`}>
-                        <p>{leftVerse.text}</p>
-                        {leftVerse.ruby && (
+                        <p>{renderText(leftVerse.text, leftTranslation)}</p>
+                        {leftVerse.ruby && leftTranslation !== 'bungo' && (
                           <p className={`text-gray-500 mt-1 ${
                             fontSize === 'sm' ? 'text-xs' :
                             fontSize === 'lg' ? 'text-sm' :
@@ -398,8 +407,8 @@ export function ChapterViewer({
                           fontSize === 'lg' ? 'text-xl' :
                           'text-2xl'
                         }`}>
-                          <p>{rightVerse.text}</p>
-                          {rightVerse.ruby && (
+                          <p>{renderText(rightVerse.text, rightTranslation)}</p>
+                          {rightVerse.ruby && rightTranslation !== 'bungo' && (
                             <p className={`text-gray-500 mt-1 ${
                               fontSize === 'sm' ? 'text-xs' :
                               fontSize === 'lg' ? 'text-sm' :
