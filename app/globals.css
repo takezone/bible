@@ -28,12 +28,14 @@ body {
 /* ルビのスタイル */
 ruby {
   ruby-align: center;
+  ruby-position: over;
 }
 
 ruby rt {
   font-size: 0.5em;
-  color: #6b7280;
+  color: #374151;
   font-weight: normal;
+  text-align: center;
 }
 
 /* フォントサイズに応じたルビサイズ調整 */

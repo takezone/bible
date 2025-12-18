@@ -6,8 +6,13 @@ import React from 'react';
  */
 export function parseRubyText(text: string): React.ReactNode {
   // 「漢字（ふりがな）」のパターンにマッチする正規表現
-  // 漢字/カタカナ/ひらがな/特殊文字の後に全角括弧でひらがな/カタカナ
-  const rubyPattern = /([^\s（）、。「」『』]+?)（([ぁ-んァ-ヶー]+?)）/g;
+  // CJK統合漢字、CJK統合漢字拡張、異体字セレクタを含む漢字の後に全角括弧でひらがな/カタカナ
+  // \u4E00-\u9FFF: CJK統合漢字
+  // \u3400-\u4DBF: CJK統合漢字拡張A
+  // \uF900-\uFAFF: CJK互換漢字
+  // \u{20000}-\u{2A6DF}: CJK統合漢字拡張B
+  // \u{E0100}-\u{E01EF}: 異体字セレクタ
+  const rubyPattern = /([\u4E00-\u9FFF\u3400-\u4DBF\uF900-\uFAFF\u{20000}-\u{2A6DF}\u{E0100}-\u{E01EF}]+)（([ぁ-んァ-ヶー]+)）/gu;
 
   const parts: React.ReactNode[] = [];
   let lastIndex = 0;
@@ -24,7 +29,7 @@ export function parseRubyText(text: string): React.ReactNode {
     const baseText = match[1];
     const rubyText = match[2];
     parts.push(
-      <ruby key={key++} className="ruby-text">
+      <ruby key={key++}>
         {baseText}
         <rt>{rubyText}</rt>
       </ruby>
