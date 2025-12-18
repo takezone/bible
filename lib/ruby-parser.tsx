@@ -12,7 +12,9 @@ export function parseRubyText(text: string): React.ReactNode {
   // \uF900-\uFAFF: CJK互換漢字
   // \u{20000}-\u{2A6DF}: CJK統合漢字拡張B
   // \u{E0100}-\u{E01EF}: 異体字セレクタ
-  const rubyPattern = /([\u4E00-\u9FFF\u3400-\u4DBF\uF900-\uFAFF\u{20000}-\u{2A6DF}\u{E0100}-\u{E01EF}]+)（([ぁ-んァ-ヶー]+)）/gu;
+  // ひらがな: ぁ-ん + 踊り字（ゝゞ）
+  // カタカナ: ァ-ヶ + 長音（ー）+ 踊り字（ヽヾ）
+  const rubyPattern = /([\u4E00-\u9FFF\u3400-\u4DBF\uF900-\uFAFF\u{20000}-\u{2A6DF}\u{E0100}-\u{E01EF}]+)（([ぁ-んゝゞァ-ヶーヽヾ]+)）/gu;
 
   const parts: React.ReactNode[] = [];
   let lastIndex = 0;
