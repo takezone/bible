@@ -11,13 +11,15 @@ const isDebugMode = () => {
 };
 
 export function parseRubyText(text: string): React.ReactNode {
-  // シンプルなアプローチ: 括弧・空白・ひらがな・句読点以外の文字 + （ひらがな/カタカナ）
+  // シンプルなアプローチ: 括弧・空白・ひらがな・カタカナ・句読点以外の文字 + （ひらがな/カタカナ）
   // ひらがな範囲: ぁ-ゟ (U+3041-U+309F)
+  // カタカナ範囲: ァ-ヿ (U+30A0-U+30FF)
   // 句読点・記号: 。、！？・「」『』：；
   // ルビ部分: ひらがな + カタカナ + 踊り字（ゝゞヽヾ）+ 長音（ー）
   const hiragana = '\u3041-\u309F';
+  const katakana = '\u30A0-\u30FF';
   const punctuation = '。、！？・「」『』：；';
-  const excluded = `（）\\s${hiragana}${punctuation}`;
+  const excluded = `（）\\s${hiragana}${katakana}${punctuation}`;
   const rubyChars = 'ぁ-んゝゞァ-ヶーヽヾ';
   const rubyPattern = new RegExp(`([^${excluded}]+)（([${rubyChars}]+)）`, 'gu');
 
@@ -90,7 +92,7 @@ export function parseRubyText(text: string): React.ReactNode {
           </div>
         )}
         <div style={{ background: '#2196f3', color: 'white', padding: '4px', fontSize: '10px', marginBottom: '4px' }}>
-          [Pattern] excluded hiragana range: U+3041-U+309F
+          [Pattern] excluded: ひらがな(U+3041-309F) + カタカナ(U+30A0-30FF) + 句読点
         </div>
         <div style={{ background: '#9c27b0', color: 'white', padding: '4px', fontSize: '10px', marginBottom: '4px' }}>
           [Self-test] 視(FA61)（み）: {new RegExp(`([^${excluded}]+)（([${rubyChars}]+)）`, 'gu').test('\uFA61（み）') ? '✓' : '✗'}
