@@ -53,12 +53,29 @@ export function parseRubyText(text: string): React.ReactNode {
   // デバッグモード: マッチ情報を表示
   if (isDebugMode() && text.includes('（')) {
     const debugMatches = [...text.matchAll(new RegExp(`([^${excluded}]+)（([${rubyChars}]+)）`, 'gu'))];
+
+    // マッチしなかった（...）パターンを検出
+    const allParenPatterns = [...text.matchAll(/(.?)（([^）]+)）/gu)];
+    const unmatchedPatterns = allParenPatterns.filter(p => {
+      const fullMatch = p[1] + '（' + p[2] + '）';
+      return !debugMatches.some(m => m[0] === fullMatch || m[0].endsWith(fullMatch));
+    });
+
     return (
       <>
         <div style={{ background: '#ffeb3b', padding: '4px', fontSize: '10px', marginBottom: '4px' }}>
           [DEBUG] マッチ数: {debugMatches.length} / ruby要素数: {parts.filter(p => typeof p !== 'string').length}
           {debugMatches.length > 0 && ` / 最初: ${debugMatches[0][0]}`}
         </div>
+        {unmatchedPatterns.length > 0 && (
+          <div style={{ background: '#ff5722', color: 'white', padding: '4px', fontSize: '10px', marginBottom: '4px' }}>
+            [未マッチ] {unmatchedPatterns.map(p => {
+              const char = p[1];
+              const code = char ? 'U+' + char.codePointAt(0)?.toString(16).toUpperCase() : 'なし';
+              return `${p[1]}（${p[2]}）[${code}]`;
+            }).join(', ')}
+          </div>
+        )}
         {parts}
       </>
     );
