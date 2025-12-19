@@ -11,27 +11,32 @@ const isDebugMode = () => {
 };
 
 export function parseRubyText(text: string): React.ReactNode {
-  // シンプルなアプローチ: 括弧・空白・ひらがな・カタカナ・句読点以外の文字 + （ひらがな/カタカナ）
+  // CJK互換漢字（U+F900-U+FAFF）をNFKC正規化で通常漢字に変換
+  // これによりブラウザの正規表現エンジンで正しくマッチするようになる
+  const normalizedText = text.normalize('NFKC');
+
+  // シンプルなアプローチ: 括弧・空白・ひらがな・カタカナ・句読点以外の文字 + (ひらがな/カタカナ)
+  // NFKC正規化後は全角括弧（）が半角()に変換されるため、半角を使用
   // ひらがな範囲: ぁ-ゟ (U+3041-U+309F)
   // カタカナ範囲: ァ-ヿ (U+30A0-U+30FF)
-  // 句読点・記号: 。、！？・「」『』：；
+  // 句読点・記号: 。、！？・「」『』：；（NFKC後も変化なし）
   // ルビ部分: ひらがな + カタカナ + 踊り字（ゝゞヽヾ）+ 長音（ー）
   const hiragana = '\u3041-\u309F';
   const katakana = '\u30A0-\u30FF';
   const punctuation = '。、！？・「」『』：；';
-  const excluded = `（）\\s${hiragana}${katakana}${punctuation}`;
+  const excluded = `()\\s${hiragana}${katakana}${punctuation}`;
   const rubyChars = 'ぁ-んゝゞァ-ヶーヽヾ';
-  const rubyPattern = new RegExp(`([^${excluded}]+)（([${rubyChars}]+)）`, 'gu');
+  const rubyPattern = new RegExp(`([^${excluded}]+)\\(([${rubyChars}]+)\\)`, 'gu');
 
   const parts: React.ReactNode[] = [];
   let lastIndex = 0;
   let match;
   let key = 0;
 
-  while ((match = rubyPattern.exec(text)) !== null) {
+  while ((match = rubyPattern.exec(normalizedText)) !== null) {
     // マッチより前のテキストを追加
     if (match.index > lastIndex) {
-      parts.push(text.slice(lastIndex, match.index));
+      parts.push(normalizedText.slice(lastIndex, match.index));
     }
 
     // rubyタグで囲む
@@ -48,16 +53,16 @@ export function parseRubyText(text: string): React.ReactNode {
   }
 
   // 残りのテキストを追加
-  if (lastIndex < text.length) {
-    parts.push(text.slice(lastIndex));
+  if (lastIndex < normalizedText.length) {
+    parts.push(normalizedText.slice(lastIndex));
   }
 
-  // デバッグモード: マッチ情報を表示
-  if (isDebugMode() && text.includes('（')) {
-    const debugMatches = [...text.matchAll(new RegExp(`([^${excluded}]+)（([${rubyChars}]+)）`, 'gu'))];
+  // デバッグモード: マッチ情報を表示（NFKC後は半角括弧）
+  if (isDebugMode() && normalizedText.includes('(')) {
+    const debugMatches = [...normalizedText.matchAll(new RegExp(`([^${excluded}]+)\\(([${rubyChars}]+)\\)`, 'gu'))];
 
-    // マッチしなかった（...）パターンを検出 - 直前の1-3文字を取得
-    const allParenPatterns = [...text.matchAll(/(.{0,3})（([^）]+)）/gu)];
+    // マッチしなかった(...)パターンを検出 - 直前の1-3文字を取得
+    const allParenPatterns = [...normalizedText.matchAll(/(.{0,3})\(([^)]+)\)/gu)];
     const unmatchedPatterns = allParenPatterns.filter(p => {
       // この括弧パターンがデバッグマッチのいずれかに含まれているかチェック
       const parenStart = p.index! + p[1].length;
@@ -95,13 +100,12 @@ export function parseRubyText(text: string): React.ReactNode {
           [Pattern] excluded: ひらがな(U+3041-309F) + カタカナ(U+30A0-30FF) + 句読点
         </div>
         <div style={{ background: '#9c27b0', color: 'white', padding: '4px', fontSize: '10px', marginBottom: '4px' }}>
-          [Self-test] 視(FA61)（み）: {new RegExp(`([^${excluded}]+)（([${rubyChars}]+)）`, 'gu').test('\uFA61（み）') ? '✓' : '✗'}
-          | 視(8996)（み）: {new RegExp(`([^${excluded}]+)（([${rubyChars}]+)）`, 'gu').test('\u8996（み）') ? '✓' : '✗'}
-          | 神(FA19)（かみ）: {new RegExp(`([^${excluded}]+)（([${rubyChars}]+)）`, 'gu').test('\uFA19（かみ）') ? '✓' : '✗'}
+          [Self-test NFKC] 視(FA61→NFKC): {new RegExp(`([^${excluded}]+)\\(([${rubyChars}]+)\\)`, 'gu').test('\uFA61（み）'.normalize('NFKC')) ? '✓' : '✗'}
+          | 神(FA19→NFKC): {new RegExp(`([^${excluded}]+)\\(([${rubyChars}]+)\\)`, 'gu').test('\uFA19（かみ）'.normalize('NFKC')) ? '✓' : '✗'}
         </div>
         <div style={{ background: '#607d8b', color: 'white', padding: '4px', fontSize: '10px', marginBottom: '4px', wordBreak: 'break-all' }}>
-          [入力テキスト] 長さ: {text.length} / CJK互換: {[...text].filter(c => { const code = c.codePointAt(0) || 0; return code >= 0xF900 && code <= 0xFAFF; }).map(c => `${c}(${c.codePointAt(0)?.toString(16).toUpperCase()})`).join(' ') || 'なし'}
-          / IVS: {[...text].filter(c => { const code = c.codePointAt(0) || 0; return code >= 0xE0100 && code <= 0xE01EF; }).length || 'なし'}
+          [NFKC正規化] 元: {text.length}文字 → 後: {normalizedText.length}文字
+          / CJK互換→通常変換: {text.length !== normalizedText.length ? '実行済' : '変化なし'}
         </div>
         {parts}
       </>
