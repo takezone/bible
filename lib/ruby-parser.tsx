@@ -54,12 +54,20 @@ export function parseRubyText(text: string): React.ReactNode {
   if (isDebugMode() && text.includes('（')) {
     const debugMatches = [...text.matchAll(new RegExp(`([^${excluded}]+)（([${rubyChars}]+)）`, 'gu'))];
 
-    // マッチしなかった（...）パターンを検出
-    const allParenPatterns = [...text.matchAll(/(.?)（([^）]+)）/gu)];
+    // マッチしなかった（...）パターンを検出 - 直前の1-3文字を取得
+    const allParenPatterns = [...text.matchAll(/(.{0,3})（([^）]+)）/gu)];
     const unmatchedPatterns = allParenPatterns.filter(p => {
-      const fullMatch = p[1] + '（' + p[2] + '）';
-      return !debugMatches.some(m => m[0] === fullMatch || m[0].endsWith(fullMatch));
+      // この括弧パターンがデバッグマッチのいずれかに含まれているかチェック
+      const parenStart = p.index! + p[1].length;
+      return !debugMatches.some(m => {
+        const matchEnd = m.index! + m[0].length;
+        const matchParenStart = m.index! + m[1].length;
+        return matchParenStart === parenStart;
+      });
     });
+
+    // 各文字のUnicodeコードを取得するヘルパー
+    const charCodes = (str: string) => [...str].map(c => `${c}(${c.codePointAt(0)?.toString(16).toUpperCase()})`).join(' ');
 
     return (
       <>
@@ -68,14 +76,31 @@ export function parseRubyText(text: string): React.ReactNode {
           {debugMatches.length > 0 && ` / 最初: ${debugMatches[0][0]}`}
         </div>
         {unmatchedPatterns.length > 0 && (
-          <div style={{ background: '#ff5722', color: 'white', padding: '4px', fontSize: '10px', marginBottom: '4px' }}>
-            [未マッチ] {unmatchedPatterns.map(p => {
-              const char = p[1];
-              const code = char ? 'U+' + char.codePointAt(0)?.toString(16).toUpperCase() : 'なし';
-              return `${p[1]}（${p[2]}）[${code}]`;
-            }).join(', ')}
+          <div style={{ background: '#ff5722', color: 'white', padding: '4px', fontSize: '10px', marginBottom: '4px', wordBreak: 'break-all' }}>
+            [未マッチ] {unmatchedPatterns.map((p, i) => {
+              const context = p[1];
+              const ruby = p[2];
+              return (
+                <span key={i}>
+                  「{context}（{ruby}）」= [{charCodes(context)}]
+                  {i < unmatchedPatterns.length - 1 ? ', ' : ''}
+                </span>
+              );
+            })}
           </div>
         )}
+        <div style={{ background: '#2196f3', color: 'white', padding: '4px', fontSize: '10px', marginBottom: '4px' }}>
+          [Pattern] excluded hiragana range: U+3041-U+309F
+        </div>
+        <div style={{ background: '#9c27b0', color: 'white', padding: '4px', fontSize: '10px', marginBottom: '4px' }}>
+          [Self-test] 視(FA61)（み）: {new RegExp(`([^${excluded}]+)（([${rubyChars}]+)）`, 'gu').test('\uFA61（み）') ? '✓' : '✗'}
+          | 視(8996)（み）: {new RegExp(`([^${excluded}]+)（([${rubyChars}]+)）`, 'gu').test('\u8996（み）') ? '✓' : '✗'}
+          | が、視（み）: {(() => {
+            const testText = 'が、\uFA61（み）';
+            const matches = [...testText.matchAll(new RegExp(`([^${excluded}]+)（([${rubyChars}]+)）`, 'gu'))];
+            return matches.length > 0 ? `✓ base="${matches[0][1]}"` : '✗';
+          })()}
+        </div>
         {parts}
       </>
     );
