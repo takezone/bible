@@ -53,11 +53,53 @@ export function parseRubyText(text: string): React.ReactNode {
   // デバッグモード: マッチ情報を表示
   if (isDebugMode() && text.includes('（')) {
     const debugMatches = [...text.matchAll(new RegExp(`([^${excluded}]+)（([${rubyChars}]+)）`, 'gu'))];
+
+    // マッチしなかった（...）パターンを検出 - 直前の1-3文字を取得
+    const allParenPatterns = [...text.matchAll(/(.{0,3})（([^）]+)）/gu)];
+    const unmatchedPatterns = allParenPatterns.filter(p => {
+      // この括弧パターンがデバッグマッチのいずれかに含まれているかチェック
+      const parenStart = p.index! + p[1].length;
+      return !debugMatches.some(m => {
+        const matchEnd = m.index! + m[0].length;
+        const matchParenStart = m.index! + m[1].length;
+        return matchParenStart === parenStart;
+      });
+    });
+
+    // 各文字のUnicodeコードを取得するヘルパー
+    const charCodes = (str: string) => [...str].map(c => `${c}(${c.codePointAt(0)?.toString(16).toUpperCase()})`).join(' ');
+
     return (
       <>
         <div style={{ background: '#ffeb3b', padding: '4px', fontSize: '10px', marginBottom: '4px' }}>
           [DEBUG] マッチ数: {debugMatches.length} / ruby要素数: {parts.filter(p => typeof p !== 'string').length}
           {debugMatches.length > 0 && ` / 最初: ${debugMatches[0][0]}`}
+        </div>
+        {unmatchedPatterns.length > 0 && (
+          <div style={{ background: '#ff5722', color: 'white', padding: '4px', fontSize: '10px', marginBottom: '4px', wordBreak: 'break-all' }}>
+            [未マッチ] {unmatchedPatterns.map((p, i) => {
+              const context = p[1];
+              const ruby = p[2];
+              return (
+                <span key={i}>
+                  「{context}（{ruby}）」= [{charCodes(context)}]
+                  {i < unmatchedPatterns.length - 1 ? ', ' : ''}
+                </span>
+              );
+            })}
+          </div>
+        )}
+        <div style={{ background: '#2196f3', color: 'white', padding: '4px', fontSize: '10px', marginBottom: '4px' }}>
+          [Pattern] excluded hiragana range: U+3041-U+309F
+        </div>
+        <div style={{ background: '#9c27b0', color: 'white', padding: '4px', fontSize: '10px', marginBottom: '4px' }}>
+          [Self-test] 視(FA61)（み）: {new RegExp(`([^${excluded}]+)（([${rubyChars}]+)）`, 'gu').test('\uFA61（み）') ? '✓' : '✗'}
+          | 視(8996)（み）: {new RegExp(`([^${excluded}]+)（([${rubyChars}]+)）`, 'gu').test('\u8996（み）') ? '✓' : '✗'}
+          | 神(FA19)（かみ）: {new RegExp(`([^${excluded}]+)（([${rubyChars}]+)）`, 'gu').test('\uFA19（かみ）') ? '✓' : '✗'}
+        </div>
+        <div style={{ background: '#607d8b', color: 'white', padding: '4px', fontSize: '10px', marginBottom: '4px', wordBreak: 'break-all' }}>
+          [入力テキスト] 長さ: {text.length} / CJK互換: {[...text].filter(c => { const code = c.codePointAt(0) || 0; return code >= 0xF900 && code <= 0xFAFF; }).map(c => `${c}(${c.codePointAt(0)?.toString(16).toUpperCase()})`).join(' ') || 'なし'}
+          / IVS: {[...text].filter(c => { const code = c.codePointAt(0) || 0; return code >= 0xE0100 && code <= 0xE01EF; }).length || 'なし'}
         </div>
         {parts}
       </>
