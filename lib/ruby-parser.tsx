@@ -15,6 +15,16 @@ export function parseRubyText(text: string): React.ReactNode {
   const rubyChars = 'ぁ-んゝゞァ-ヶーヽヾ';
   const rubyPattern = new RegExp(`([^${excluded}]+)（([${rubyChars}]+)）`, 'gu');
 
+  // デバッグ: 最初の100文字と正規表現の動作確認
+  if (typeof window !== 'undefined' && text.includes('（')) {
+    const matches = [...text.matchAll(new RegExp(`([^${excluded}]+)（([${rubyChars}]+)）`, 'gu'))];
+    console.log('[parseRubyText] テキスト先頭:', text.slice(0, 50));
+    console.log('[parseRubyText] マッチ数:', matches.length);
+    if (matches.length > 0) {
+      console.log('[parseRubyText] 最初のマッチ:', matches[0][0]);
+    }
+  }
+
   const parts: React.ReactNode[] = [];
   let lastIndex = 0;
   let match;
