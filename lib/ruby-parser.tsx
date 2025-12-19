@@ -4,6 +4,12 @@ import React from 'react';
  * 文語訳聖書のテキスト「漢字（ふりがな）」形式をHTML rubyタグに変換する
  * 例: "元始（はじめ）に神（かみ）" → <ruby>元始<rt>はじめ</rt></ruby>に<ruby>神<rt>かみ</rt></ruby>
  */
+// デバッグモード（URLに?debug=rubyがある場合に有効）
+const isDebugMode = () => {
+  if (typeof window === 'undefined') return false;
+  return new URLSearchParams(window.location.search).get('debug') === 'ruby';
+};
+
 export function parseRubyText(text: string): React.ReactNode {
   // シンプルなアプローチ: 括弧・空白・ひらがな・句読点以外の文字 + （ひらがな/カタカナ）
   // ひらがな範囲: ぁ-ゟ (U+3041-U+309F)
@@ -14,16 +20,6 @@ export function parseRubyText(text: string): React.ReactNode {
   const excluded = `（）\\s${hiragana}${punctuation}`;
   const rubyChars = 'ぁ-んゝゞァ-ヶーヽヾ';
   const rubyPattern = new RegExp(`([^${excluded}]+)（([${rubyChars}]+)）`, 'gu');
-
-  // デバッグ: 最初の100文字と正規表現の動作確認
-  if (typeof window !== 'undefined' && text.includes('（')) {
-    const matches = [...text.matchAll(new RegExp(`([^${excluded}]+)（([${rubyChars}]+)）`, 'gu'))];
-    console.log('[parseRubyText] テキスト先頭:', text.slice(0, 50));
-    console.log('[parseRubyText] マッチ数:', matches.length);
-    if (matches.length > 0) {
-      console.log('[parseRubyText] 最初のマッチ:', matches[0][0]);
-    }
-  }
 
   const parts: React.ReactNode[] = [];
   let lastIndex = 0;
@@ -52,6 +48,20 @@ export function parseRubyText(text: string): React.ReactNode {
   // 残りのテキストを追加
   if (lastIndex < text.length) {
     parts.push(text.slice(lastIndex));
+  }
+
+  // デバッグモード: マッチ情報を表示
+  if (isDebugMode() && text.includes('（')) {
+    const debugMatches = [...text.matchAll(new RegExp(`([^${excluded}]+)（([${rubyChars}]+)）`, 'gu'))];
+    return (
+      <>
+        <div style={{ background: '#ffeb3b', padding: '4px', fontSize: '10px', marginBottom: '4px' }}>
+          [DEBUG] マッチ数: {debugMatches.length} / ruby要素数: {parts.filter(p => typeof p !== 'string').length}
+          {debugMatches.length > 0 && ` / 最初: ${debugMatches[0][0]}`}
+        </div>
+        {parts}
+      </>
+    );
   }
 
   return <>{parts}</>;
