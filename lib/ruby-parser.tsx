@@ -95,11 +95,11 @@ export function parseRubyText(text: string): React.ReactNode {
         <div style={{ background: '#9c27b0', color: 'white', padding: '4px', fontSize: '10px', marginBottom: '4px' }}>
           [Self-test] 視(FA61)（み）: {new RegExp(`([^${excluded}]+)（([${rubyChars}]+)）`, 'gu').test('\uFA61（み）') ? '✓' : '✗'}
           | 視(8996)（み）: {new RegExp(`([^${excluded}]+)（([${rubyChars}]+)）`, 'gu').test('\u8996（み）') ? '✓' : '✗'}
-          | が、視（み）: {(() => {
-            const testText = 'が、\uFA61（み）';
-            const matches = [...testText.matchAll(new RegExp(`([^${excluded}]+)（([${rubyChars}]+)）`, 'gu'))];
-            return matches.length > 0 ? `✓ base="${matches[0][1]}"` : '✗';
-          })()}
+          | 神(FA19)（かみ）: {new RegExp(`([^${excluded}]+)（([${rubyChars}]+)）`, 'gu').test('\uFA19（かみ）') ? '✓' : '✗'}
+        </div>
+        <div style={{ background: '#607d8b', color: 'white', padding: '4px', fontSize: '10px', marginBottom: '4px', wordBreak: 'break-all' }}>
+          [入力テキスト] 長さ: {text.length} / CJK互換: {[...text].filter(c => { const code = c.codePointAt(0) || 0; return code >= 0xF900 && code <= 0xFAFF; }).map(c => `${c}(${c.codePointAt(0)?.toString(16).toUpperCase()})`).join(' ') || 'なし'}
+          / IVS: {[...text].filter(c => { const code = c.codePointAt(0) || 0; return code >= 0xE0100 && code <= 0xE01EF; }).length || 'なし'}
         </div>
         {parts}
       </>
