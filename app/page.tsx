@@ -3,7 +3,7 @@
 import { useState, useEffect, Suspense } from 'react';
 import Link from 'next/link';
 import { useSearchParams, useRouter } from 'next/navigation';
-import { getBibleData, searchVerses, getBook, getChapter, getPreviousBook, getNextBook } from '@/lib/bible-data';
+import { getBibleData, searchVerses, getBook, getChapter, getPreviousBook, getNextBook, loadBibleData, loadMultipleTranslations, isTranslationLoaded } from '@/lib/bible-data';
 import type { Book, Chapter, Verse, Translation } from '@/types/bible';
 import { BookSelector } from '@/components/BookSelector';
 import { ChapterViewer, type FontSize } from '@/components/ChapterViewer';
@@ -52,6 +52,10 @@ function BibleApp() {
 
   // 地名モード用の状態
   const [selectedPlace, setSelectedPlace] = useState<Place | null>(null);
+
+  // データ読み込み状態
+  const [isLoading, setIsLoading] = useState(true);
+  const [loadingMessage, setLoadingMessage] = useState('聖書データを読み込み中...');
 
   // URLパラメーターから状態を同期する関数
   const syncStateFromURL = (urlSearchParams?: URLSearchParams) => {
@@ -124,15 +128,55 @@ function BibleApp() {
   useEffect(() => {
     if (initialized) return;
 
-    const synced = syncStateFromURL();
-    if (!synced) {
-      // URLパラメーターがない場合は創世記1章を表示
-      const bible = getBibleData('kougo');
-      const genesis = bible.books[0];
-      setSelectedBook(genesis);
-      setSelectedChapter(genesis.chapters[0]);
-    }
-    setInitialized(true);
+    const initializeApp = async () => {
+      setIsLoading(true);
+
+      // URLパラメーターを解析して必要な翻訳を特定
+      const params = new URLSearchParams(window.location.search);
+      const mode = params.get('mode') as 'single' | 'parallel' | null;
+      const translationParam = params.get('translation') as Translation | null;
+      const leftParam = params.get('left') as Translation | null;
+      const rightParam = params.get('right') as Translation | null;
+
+      // 必要な翻訳を特定
+      const translationsToLoad: Translation[] = [];
+
+      if (mode === 'single' && translationParam) {
+        translationsToLoad.push(translationParam);
+      } else if (mode === 'parallel') {
+        if (leftParam) translationsToLoad.push(leftParam);
+        if (rightParam) translationsToLoad.push(rightParam);
+      }
+
+      // デフォルト翻訳を追加（まだない場合）
+      if (!translationsToLoad.includes('kougo')) {
+        translationsToLoad.push('kougo');
+      }
+      if (mode !== 'single' && !translationsToLoad.includes('web')) {
+        translationsToLoad.push('web');
+      }
+
+      // 翻訳データを動的に読み込み
+      setLoadingMessage(`翻訳データを読み込み中...`);
+      await loadMultipleTranslations(translationsToLoad);
+
+      // URLから状態を復元
+      const synced = syncStateFromURL();
+      if (!synced) {
+        // URLパラメーターがない場合は創世記1章を表示
+        const bible = getBibleData('kougo');
+        if (bible) {
+          const genesis = bible.books[0];
+          setSelectedBook(genesis);
+          setSelectedChapter(genesis.chapters[0]);
+        }
+      }
+
+      setIsLoading(false);
+      setInitialized(true);
+    };
+
+    initializeApp();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -168,13 +212,44 @@ function BibleApp() {
     }
   }, [viewMode, selectedPlace]);
 
+  // 翻訳が変更されたときにデータを読み込む
+  useEffect(() => {
+    if (!initialized) return;
+
+    const loadTranslationData = async () => {
+      const translationsToLoad: Translation[] = [];
+
+      if (displayMode === 'single') {
+        if (!isTranslationLoaded(singleTranslation)) {
+          translationsToLoad.push(singleTranslation);
+        }
+      } else {
+        if (!isTranslationLoaded(leftTranslation)) {
+          translationsToLoad.push(leftTranslation);
+        }
+        if (!isTranslationLoaded(rightTranslation)) {
+          translationsToLoad.push(rightTranslation);
+        }
+      }
+
+      if (translationsToLoad.length > 0) {
+        setIsLoading(true);
+        setLoadingMessage('翻訳データを読み込み中...');
+        await loadMultipleTranslations(translationsToLoad);
+        setIsLoading(false);
+      }
+    };
+
+    loadTranslationData();
+  }, [initialized, displayMode, singleTranslation, leftTranslation, rightTranslation]);
+
   // 翻訳設定が変更されたらURLを更新（履歴は上書き）
   useEffect(() => {
     if (!initialized || !selectedBook || !selectedChapter) return;
     updateURL(selectedBook.id, selectedChapter.chapter, selectedVerse, { replaceHistory: true });
   }, [displayMode, singleTranslation, leftTranslation, rightTranslation]);
 
-  const handleSearch = (query: string) => {
+  const handleSearch = async (query: string) => {
     setSearchQuery(query);
     if (query.trim().length < 2) {
       setSearchResults([]);
@@ -185,7 +260,7 @@ function BibleApp() {
     setIsSearching(true);
     // 選択中の翻訳で検索（単体モードの場合はその翻訳、並列モードの場合は左側の翻訳）
     const searchTranslation = displayMode === 'single' ? singleTranslation : leftTranslation;
-    const results = searchVerses(searchTranslation, query);
+    const results = await searchVerses(searchTranslation, query);
     setSearchResults(results);
   };
 
@@ -389,8 +464,30 @@ function BibleApp() {
     }
   };
 
+  // ローディング中はローディング画面を表示
+  if (isLoading && !selectedBook) {
+    return (
+      <div className="min-h-screen bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>
+          <p className="text-gray-600">{loadingMessage}</p>
+        </div>
+      </div>
+    );
+  }
+
   return (
     <div className="min-h-screen bg-gray-50">
+      {/* ローディングオーバーレイ（翻訳切り替え時） */}
+      {isLoading && (
+        <div className="fixed inset-0 bg-white bg-opacity-75 flex items-center justify-center z-50">
+          <div className="text-center">
+            <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-blue-500 mx-auto mb-2"></div>
+            <p className="text-gray-600 text-sm">{loadingMessage}</p>
+          </div>
+        </div>
+      )}
+
       <header className="bg-white border-b border-gray-200 sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-2 sm:px-4 py-3">
           <div className="flex items-center gap-2 sm:gap-4">

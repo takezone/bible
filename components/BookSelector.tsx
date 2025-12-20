@@ -13,6 +13,19 @@ interface BookSelectorProps {
 export function BookSelector({ translation, selectedBook, onSelectBook }: BookSelectorProps) {
   const bible = getBibleData(translation);
 
+  // データがまだ読み込まれていない場合
+  if (!bible) {
+    return (
+      <div className="bg-white rounded-lg shadow p-4">
+        <div className="animate-pulse space-y-2">
+          {[...Array(10)].map((_, i) => (
+            <div key={i} className="h-8 bg-gray-200 rounded"></div>
+          ))}
+        </div>
+      </div>
+    );
+  }
+
   // 選択中の書物のインデックスを取得（旧約/新約の判定用）
   const selectedBookIndex = selectedBook
     ? bible.books.findIndex(b => b.id === selectedBook.id)

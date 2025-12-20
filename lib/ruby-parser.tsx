@@ -20,12 +20,12 @@ export function parseRubyText(text: string): React.ReactNode {
   // ひらがな範囲: ぁ-ゟ (U+3041-U+309F)
   // カタカナ範囲: ァ-ヿ (U+30A0-U+30FF)
   // 句読点・記号: 。、！？・「」『』：；（NFKC後も変化なし）
-  // ルビ部分: ひらがな + カタカナ + 踊り字（ゝゞヽヾ）+ 長音（ー）
+  // ルビ部分: ひらがな + カタカナ + 踊り字（ゝゞヽヾ）+ 長音（ー）+ くの字点（〳〴〵）
   const hiragana = '\u3041-\u309F';
   const katakana = '\u30A0-\u30FF';
   const punctuation = '。、！？・「」『』：；';
   const excluded = `()\\s${hiragana}${katakana}${punctuation}`;
-  const rubyChars = 'ぁ-んゝゞァ-ヶーヽヾ';
+  const rubyChars = 'ぁ-んゝゞァ-ヶーヽヾ\u3033-\u3035';
   const rubyPattern = new RegExp(`([^${excluded}]+)\\(([${rubyChars}]+)\\)`, 'gu');
 
   const parts: React.ReactNode[] = [];
