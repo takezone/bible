@@ -8,7 +8,8 @@ import {
   getPlaceTypeName,
   getPeriodName,
   getAllPlaceTypes,
-  getAllPeriods
+  getAllPeriods,
+  getMapsForPlace
 } from '@/lib/places-data';
 import type { Place, PlaceType, Period } from '@/types/places';
 
@@ -17,7 +18,14 @@ export default function PlacesPage() {
   const [selectedType, setSelectedType] = useState<PlaceType | 'all'>('all');
   const [selectedPeriod, setSelectedPeriod] = useState<Period | 'all'>('all');
   const [selectedPlace, setSelectedPlace] = useState<Place | null>(null);
+  const [selectedMapIndex, setSelectedMapIndex] = useState(0);
   const [language, setLanguage] = useState<'ja' | 'en'>('ja');
+
+  // 選択された地名に関連する地図を取得
+  const selectedPlaceMaps = useMemo(() => {
+    if (!selectedPlace) return [];
+    return getMapsForPlace(selectedPlace);
+  }, [selectedPlace]);
 
   // フィルター適用
   const filteredPlaces = useMemo(() => {
@@ -175,7 +183,10 @@ export default function PlacesPage() {
                   {filteredPlaces.map((place) => (
                     <button
                       key={place.id}
-                      onClick={() => setSelectedPlace(place)}
+                      onClick={() => {
+                        setSelectedPlace(place);
+                        setSelectedMapIndex(0);
+                      }}
                       className="w-full p-4 hover:bg-gray-50 transition-colors text-left"
                     >
                       <div className="flex items-start justify-between gap-4">
@@ -319,6 +330,59 @@ export default function PlacesPage() {
                   ))}
                 </div>
               </div>
+
+              {/* 関連する地図 */}
+              {selectedPlaceMaps.length > 0 && (
+                <div className="mb-4">
+                  <h3 className="font-bold text-gray-900 mb-2">
+                    {language === 'ja' ? '関連する地図' : 'Related Maps'}
+                  </h3>
+
+                  {/* 地図選択タブ（複数の地図がある場合） */}
+                  {selectedPlaceMaps.length > 1 && (
+                    <div className="flex gap-2 mb-3 overflow-x-auto pb-1">
+                      {selectedPlaceMaps.map((map, index) => (
+                        <button
+                          key={map.period}
+                          onClick={() => setSelectedMapIndex(index)}
+                          className={`px-3 py-1.5 rounded-lg text-sm font-medium whitespace-nowrap transition-colors ${
+                            selectedMapIndex === index
+                              ? 'bg-blue-600 text-white'
+                              : 'bg-gray-100 text-gray-700 hover:bg-gray-200'
+                          }`}
+                        >
+                          {map.title[language]}
+                        </button>
+                      ))}
+                    </div>
+                  )}
+
+                  {/* 地図画像 */}
+                  <div className="space-y-2">
+                    <div className="relative rounded-lg overflow-hidden border border-gray-200">
+                      <img
+                        src={selectedPlaceMaps[selectedMapIndex].imageUrl}
+                        alt={selectedPlaceMaps[selectedMapIndex].title[language]}
+                        className="w-full h-auto"
+                        loading="lazy"
+                      />
+                    </div>
+
+                    {/* 地図情報 */}
+                    <div className="text-sm text-gray-600">
+                      <p className="font-medium">{selectedPlaceMaps[selectedMapIndex].title[language]}</p>
+                      {selectedPlaceMaps[selectedMapIndex].description && (
+                        <p className="text-gray-500 text-xs mt-1">
+                          {selectedPlaceMaps[selectedMapIndex].description[language]}
+                        </p>
+                      )}
+                      <p className="text-xs text-gray-400 mt-1">
+                        {language === 'ja' ? '出典' : 'Source'}: {selectedPlaceMaps[selectedMapIndex].source}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )}
 
               {/* 聖書の引用 */}
               {selectedPlace.biblicalReferences && selectedPlace.biblicalReferences.length > 0 && (
