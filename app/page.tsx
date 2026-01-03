@@ -13,7 +13,10 @@ import { Credits } from '@/components/Credits';
 import { SettingsModal } from '@/components/SettingsModal';
 import { PlacesList } from '@/components/PlacesList';
 import { PlaceDetail } from '@/components/PlaceDetail';
+import { ReadingDrawer } from '@/components/ReadingDrawer';
+import { BookmarkModal } from '@/components/BookmarkModal';
 import { getAllPlaces } from '@/lib/places-data';
+import { useReadingState } from '@/hooks/useReadingState';
 import type { Place } from '@/types/places';
 
 function BibleApp() {
@@ -56,6 +59,21 @@ function BibleApp() {
   // データ読み込み状態
   const [isLoading, setIsLoading] = useState(true);
   const [loadingMessage, setLoadingMessage] = useState('聖書データを読み込み中...');
+
+  // 読書機能
+  const {
+    lastPosition,
+    bookmarks,
+    history,
+    isLoaded: isReadingStateLoaded,
+    savePosition,
+    addBookmark,
+    deleteBookmark,
+    isBookmarked,
+    clearHistory,
+  } = useReadingState();
+  const [isReadingDrawerOpen, setIsReadingDrawerOpen] = useState(false);
+  const [isBookmarkModalOpen, setIsBookmarkModalOpen] = useState(false);
 
   // URLパラメーターから状態を同期する関数
   const syncStateFromURL = (urlSearchParams?: URLSearchParams) => {
@@ -201,6 +219,18 @@ function BibleApp() {
       document.title = 'Bible-ONE';
     }
   }, [viewMode, selectedBook, selectedChapter, selectedPlace]);
+
+  // 読書位置を自動保存
+  useEffect(() => {
+    if (viewMode === 'bible' && selectedBook && selectedChapter && isReadingStateLoaded) {
+      savePosition({
+        bookId: selectedBook.id,
+        bookName: selectedBook.name,
+        chapter: selectedChapter.chapter,
+        verse: selectedVerse || undefined,
+      });
+    }
+  }, [viewMode, selectedBook, selectedChapter, selectedVerse, isReadingStateLoaded, savePosition]);
 
   // 地名モードに切り替えた時に最初の地名を選択
   useEffect(() => {
@@ -557,6 +587,38 @@ function BibleApp() {
               />
             </div>
 
+            {/* しおりボタン（聖書閲覧中のみ表示） */}
+            {viewMode === 'bible' && selectedBook && selectedChapter && (
+              <button
+                onClick={() => setIsBookmarkModalOpen(true)}
+                className="flex-shrink-0 p-2 hover:bg-gray-100 rounded-full transition-colors"
+                aria-label="しおりを追加"
+                title="しおりを追加"
+              >
+                <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
+                </svg>
+              </button>
+            )}
+
+            {/* 読書メニューボタン */}
+            <button
+              onClick={() => setIsReadingDrawerOpen(true)}
+              className="flex-shrink-0 p-2 hover:bg-gray-100 rounded-full transition-colors relative"
+              aria-label="読書メニュー"
+              title="続きから読む・しおり・履歴"
+            >
+              <svg className="w-6 h-6 text-gray-700" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
+              </svg>
+              {/* しおりバッジ */}
+              {bookmarks.length > 0 && (
+                <span className="absolute -top-1 -right-1 w-5 h-5 bg-blue-600 text-white text-xs rounded-full flex items-center justify-center">
+                  {bookmarks.length > 9 ? '9+' : bookmarks.length}
+                </span>
+              )}
+            </button>
+
             {/* 設定アイコン */}
             <button
               onClick={() => setIsSettingsOpen(true)}
@@ -697,6 +759,52 @@ function BibleApp() {
       </main>
 
       <Credits />
+
+      {/* 読書ドロワー */}
+      <ReadingDrawer
+        isOpen={isReadingDrawerOpen}
+        onClose={() => setIsReadingDrawerOpen(false)}
+        lastPosition={lastPosition}
+        bookmarks={bookmarks}
+        history={history}
+        onNavigate={(bookId, chapter, verse) => {
+          const translation = displayMode === 'single' ? singleTranslation : leftTranslation;
+          const book = getBook(translation, bookId) || getBook('kougo', bookId);
+          if (book) {
+            const chapterData = getChapter(translation, bookId, chapter) || getChapter('kougo', bookId, chapter);
+            if (chapterData) {
+              setSelectedBook(book);
+              setSelectedChapter(chapterData);
+              setSelectedVerse(verse || null);
+              setViewMode('bible');
+              updateURL(bookId, chapter, verse || null);
+            }
+          }
+        }}
+        onDeleteBookmark={deleteBookmark}
+        onClearHistory={clearHistory}
+      />
+
+      {/* しおり追加モーダル */}
+      {selectedBook && selectedChapter && (
+        <BookmarkModal
+          isOpen={isBookmarkModalOpen}
+          onClose={() => setIsBookmarkModalOpen(false)}
+          onSave={(title, note) => {
+            addBookmark({
+              bookId: selectedBook.id,
+              bookName: selectedBook.name,
+              chapter: selectedChapter.chapter,
+              verse: selectedVerse || undefined,
+              title,
+              note,
+            });
+          }}
+          bookName={selectedBook.name}
+          chapter={selectedChapter.chapter}
+          verse={selectedVerse || undefined}
+        />
+      )}
     </div>
   );
 }
